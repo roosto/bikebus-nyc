@@ -47,11 +47,8 @@ fastify.post("/bus/location", function (request, reply) {
   // Build the params object to pass to the template
   let params = { };
 
-  // If the user submitted a color through the form it'll be passed here in the request body
-  let color = request.body.color;
-
   // The Handlebars template will use the parameter values to update the page with the chosen color
-  return reply.view("/src/pages/index.hbs", params);
+  return request.body;
 });
 
 

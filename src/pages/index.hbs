@@ -33,9 +33,7 @@
               busLatitude = pos.coords.latitude;
               busLongitude = pos.coords.longitude;
               
-              const previewElement = document.getElementById('location-preview');
-              previewElement.prepend(busLatitude + ", " + busLongitude + "\n")
-              console.log(busLatitude, busLongitude)
+              updateBusLocation(busLatitude, busLongitude);
             }
 
             function error(err) {
@@ -50,20 +48,35 @@
 
             id = navigator.geolocation.watchPosition(success, error, options);
           
-            fetch('https://example.com/profile', {
-              method: 'POST', // or 'PUT'
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(data),
-            })
-              .then((response) => response.json())
-              .then((data) => {
-                console.log('Success:', data);
+            function updateLocationPreview(lat, long)
+            {
+              const previewElement = document.getElementById('location-preview');
+              previewElement.prepend(lat + ", " + long + "\n")
+              console.log(lat, long)
+            }
+          
+            function updateBusLocation(lat, long)
+            {
+              fetch('/bus/location', {
+                method: 'POST', // or 'PUT'
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  'latitude': lat,
+                  'longitude': long
+                }),
               })
-              .catch((error) => {
-                console.error('Error:', error);
-              });
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log('Success:', data)
+                  updateLocationPreview(data.latitude, data.longitude)
+                })
+                .catch((error) => {
+                  console.error('Error:', error)
+                })
+            }
+            
         </script>
   </body>
 </html>
