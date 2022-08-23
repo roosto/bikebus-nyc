@@ -31,7 +31,7 @@ fastify.register(require("@fastify/view"), {
  *
  * Returns src/pages/index.hbs with data built into it
  */
-fastify.get("/track", function (request, reply) {
+fastify.get("/", function (request, reply) {
   // params is an object we'll pass to our handlebars template
   let params = { 
     currentLatitude: 40.5,
@@ -39,26 +39,24 @@ fastify.get("/track", function (request, reply) {
   };
 
   // The Handlebars code will be able to access the parameter values and build them into the page
-  return reply.view("/src/pages/track.hbs", params);
+  return reply.view("/src/pages/index.hbs", params);
 });
 
-/**
- * Our POST route to handle and react to form submissions
- *
- * Accepts body data indicating the user choice
- */
-fastify.post("/", function (request, reply) {
+
+fastify.post("/bus/location", function (request, reply) {
   // Build the params object to pass to the template
-  let params = { seo: seo };
+  let params = { };
 
   // If the user submitted a color through the form it'll be passed here in the request body
   let color = request.body.color;
 
- 
-  }
-
   // The Handlebars template will use the parameter values to update the page with the chosen color
   return reply.view("/src/pages/index.hbs", params);
+});
+
+
+fastify.get("/bus/location", function (request, reply) {
+  //
 });
 
 // Run the server and report out to the logs
