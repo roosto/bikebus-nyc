@@ -11,6 +11,8 @@ const fastify = require("fastify")({
   logger: false,
 });
 
+const storage = require('node-persist');
+
 // ADD FAVORITES ARRAY VARIABLE FROM TODO HERE
 
 // Setup our static files
@@ -46,7 +48,8 @@ fastify.get("/", function (request, reply) {
 fastify.post("/bus/location", function (request, reply) {
   // Build the params object to pass to the template
   let params = { };
-
+  
+  
   // The Handlebars template will use the parameter values to update the page with the chosen color
   return request.body;
 });
