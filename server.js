@@ -45,18 +45,21 @@ fastify.get("/", function (request, reply) {
 });
 
 
-fastify.post("/bus/location", function (request, reply) {
+fastify.post("/bus/location", async function (request, reply) {
   // Build the params object to pass to the template
   let params = { };
   
+  await storage.init();
+  await storage.setItem('latitude', request.body.latitude);
+  await storage.setItem('longitude', request.body.longitude);
   
   // The Handlebars template will use the parameter values to update the page with the chosen color
   return request.body;
 });
 
 
-fastify.get("/bus/location", function (request, reply) {
-  //
+fastify.get("/bus/location", async function (request, reply) {
+  return await storage.values();
 });
 
 // Run the server and report out to the logs
@@ -71,3 +74,4 @@ fastify.listen(
     fastify.log.info(`server listening on ${address}`);
   }
 );
+
