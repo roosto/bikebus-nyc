@@ -60,9 +60,9 @@
           
             function updateMap(lat, long)
             {
-              //
+                addBusPositionMarker(lat, long);
             }
-          
+        
           
             function getBusLocation()
             {
@@ -82,8 +82,6 @@
         </script>
         <script>
             const mapZoomLevel = 13
-            let busLatitude = 0
-            let busLongitude = 0
 
             const routeBounds = [
                 [41.874, -87.66377961], //bottom left
@@ -98,12 +96,10 @@
                 zoomControl: false,
             }).fitBounds(routeBounds);
 
-            var layer = L.tileLayer('assets/bike_bus/tiles/{z}/{x}/{y}.jpg', {
+            var layer = L.tileLayer('https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/{z}.{x}.{y}.jpg', {
                 attribution: 'Chicago, Bike Grid Now!'
             }).addTo(map);
 
-
-            addBusPositionMarker(busLatitude, busLongitude);
 
             var marker, circle;
 
