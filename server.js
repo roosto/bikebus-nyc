@@ -33,17 +33,22 @@ fastify.register(require("@fastify/view"), {
  *
  * Returns src/pages/index.hbs with data built into it
  */
-fastify.get("/", function (request, reply) {
+fastify.get("/", async function (request, reply) {
+  await storage.init();
+
   // params is an object we'll pass to our handlebars template
   let params = { 
-    currentLatitude: 40.5,
-    currentLongitude: 80.9
+    latitude: await storage.getItem('latitude'),
+    longitude: await storage.getItem('longitude')
   };
 
   // The Handlebars code will be able to access the parameter values and build them into the page
   return reply.view("/src/pages/index.hbs", params);
 });
 
+fastify.get("/beacon", function (request, reply) {
+  return reply.view("/src/pages/beacon.hbs");
+});
 
 fastify.post("/bus/location", async function (request, reply) {
   // Build the params object to pass to the template
@@ -59,6 +64,7 @@ fastify.post("/bus/location", async function (request, reply) {
 
 
 fastify.get("/bus/location", async function (request, reply) {
+  await storage.init();
   return await storage.values();
 });
 
