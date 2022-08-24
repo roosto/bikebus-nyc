@@ -18,35 +18,12 @@
         <!-- This is the start of content for our page -->
         <h1 class="title">Bike Bus Tracking Page</h1>
         
-        
-        {{#if true}}
-          <pre id="location-preview"></pre>
-        {{/if}}
     
         <script>
-          
-            let id;
-            let target;
-            let options;
-
-            function success(pos) {
-              busLatitude = pos.coords.latitude;
-              busLongitude = pos.coords.longitude;
-              
-              updateBusLocation(busLatitude, busLongitude);
-            }
-
-            function error(err) {
-              console.error(`ERROR(${err.code}): ${err.message}`);
-            }
-
-            options = {
-              enableHighAccuracy: true,
-              //timeout: 5000,
-              //maximumAge: 0
-            };
-
-            id = navigator.geolocation.watchPosition(success, error, options);
+            
+            const interval = setInterval(function() {
+               getBusLocation();
+             }, 5000);
           
             function updateLocationPreview(lat, long)
             {
@@ -55,17 +32,10 @@
               console.log(lat, long)
             }
           
-            function updateBusLocation(lat, long)
+            function getBusLocation()
             {
               fetch('/bus/location', {
-                method: 'POST', // or 'PUT'
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                  'latitude': lat,
-                  'longitude': long
-                }),
+                method: 'GET', // or 'PUT'
               })
                 .then((response) => response.json())
                 .then((data) => {

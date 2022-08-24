@@ -65,7 +65,11 @@ fastify.post("/bus/location", async function (request, reply) {
 
 fastify.get("/bus/location", async function (request, reply) {
   await storage.init();
-  return await storage.values();
+  let response = { 
+    latitude: await storage.getItem('latitude'),
+    longitude: await storage.getItem('longitude')
+  };
+  return response;
 });
 
 // Run the server and report out to the logs

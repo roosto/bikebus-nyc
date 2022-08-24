@@ -51,7 +51,11 @@
             function updateLocationPreview(lat, long)
             {
               const previewElement = document.getElementById('location-preview');
-              previewElement.prepend(Date() + ": " + lat + ", " + long + "\n")
+              const now = new Date();
+              let hour = now.getHours();
+              let minute = now.getMinutes();
+              let seconds = now.getSeconds();
+              previewElement.prepend(hour + ":" + minute + ":" + seconds + " " + lat + ", " + long + "\n")
               console.log(lat, long)
             }
           
