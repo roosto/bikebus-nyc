@@ -13,24 +13,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Bike Bus Tracking Page</title> 
+    
+    <style>
+          body {
+              background-color:white;
+          }
+
+          div#map {
+              height: 638px;
+              width: 215px;
+              background-color:white;
+              margin-left:auto;
+              margin-right: auto;
+          }
+          @livewireStyles
+      </style>
+
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+         crossorigin=""/>
+
+     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    
   </head>
   <body>
         <!-- This is the start of content for our page -->
         <h1 class="title">Bike Bus Tracking Page</h1>
         
+        <div id="map"></div>
     
         <script>
             
             const interval = setInterval(function() {
                getBusLocation();
              }, 5000);
-          
-            function updateLocationPreview(lat, long)
+            
+            function trackBusLocation()
             {
-              const previewElement = document.getElementById('location-preview');
-              previewElement.prepend(lat + ", " + long + "\n")
-              console.log(lat, long)
+              getBusLocation();
+              setTimeout(function() {
+                trackBusLocation();
+              }, 5000);
             }
+          
+            function updateMap(lat, long)
+            {
+              //
+            }
+          
           
             function getBusLocation()
             {
@@ -40,13 +72,63 @@
                 .then((response) => response.json())
                 .then((data) => {
                   console.log('Success:', data)
-                  updateLocationPreview(data.latitude, data.longitude)
+                  updateMap(data.latitude, data.longitude)
                 })
                 .catch((error) => {
                   console.error('Error:', error)
                 })
             }
             
+        </script>
+        <script>
+            const mapZoomLevel = 13
+            let busLatitude = 0
+            let busLongitude = 0
+
+            const routeBounds = [
+                [41.874, -87.66377961], //bottom left
+                [41.95482090, -87.62669311] //top right
+            ];
+
+            var map = L.map('map', {
+                maxZoom: mapZoomLevel,
+                minZoom: mapZoomLevel,
+                maxBounds: routeBounds,
+                maxBoundsViscosity: 1.0,
+                zoomControl: false,
+            }).fitBounds(routeBounds);
+
+            var layer = L.tileLayer('assets/bike_bus/tiles/{z}/{x}/{y}.jpg', {
+                attribution: 'Chicago, Bike Grid Now!'
+            }).addTo(map);
+
+
+            addBusPositionMarker(busLatitude, busLongitude);
+
+            var marker, circle;
+
+            function addBusPositionMarker(latitude, longitude) {
+              if (marker) {
+                  map.removeLayer(marker)
+              }
+
+              if (circle) {
+                  map.removeLayer(circle)
+              }
+
+              marker = L.marker([latitude, longitude])
+              // circle = L.circle([latitude, longitude], {
+              //     radius: 150,
+              //     fillColor: "yellow",
+              //     weight: 6,
+              //  })
+
+              var featureGroup = L.featureGroup([marker, /*circle */]).addTo(map)
+            }
+
+            //41.918175, -87.648526 armitage and halsted
+            //41.951209, -87.649606 broadway and halsted
+            //41.883148, -87.647396 washington and halsted
         </script>
   </body>
 </html>
