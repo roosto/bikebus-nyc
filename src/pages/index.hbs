@@ -12,13 +12,18 @@
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Bike Bus Tracking Page</title> 
+    <title>Halsted Bike Bus Tracker</title> 
     
     <style>
           body {
               background-color:white;
           }
 
+          h1.title {
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+          }
+      
           div#map {
               height: 638px;
               width: 215px;
@@ -40,12 +45,11 @@
   </head>
   <body>
         <!-- This is the start of content for our page -->
-        <h1 class="title">Bike Bus Tracking Page</h1>
+        <h1 class="title">Halsted Bike Bus Tracker</h1>
         
         <div id="map"></div>
-    
+        <!-- update_map.js -->
         <script>
-            
             trackBusLocation()
             
             function trackBusLocation()
@@ -53,7 +57,7 @@
               getBusLocation();
               setTimeout(function() {
                 trackBusLocation();
-              }, 5000);
+              }, 30000);
             }
           
             function updateMap(lat, long)
@@ -78,6 +82,7 @@
             }
             
         </script>
+        <!-- map.js -->
         <script>
             const mapZoomLevel = 13
 
