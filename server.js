@@ -46,11 +46,11 @@ fastify.get("/", async function (request, reply) {
   return reply.view("/src/pages/index.hbs", params);
 });
 
-fastify.get("/beacon", function (request, reply) {
+fastify.get("/beacon/"+process.env.beacon_hash, function (request, reply) {
   return reply.view("/src/pages/beacon.hbs");
 });
 
-fastify.post("/bus/location", async function (request, reply) {
+fastify.post("/bus/location/"+process.env.beacon_hash, async function (request, reply) {
   // Build the params object to pass to the template
   let params = { };
   
