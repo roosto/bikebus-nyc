@@ -26,7 +26,7 @@
       
           div#map {
               height: 638px;
-              width: 215px;
+              width: 315px;
               background-color:white;
               margin-left:auto;
               margin-right: auto;
@@ -87,8 +87,8 @@
             const mapZoomLevel = 13
 
             const routeBounds = [
-                [41.874, -87.66377961], //bottom left
-                [41.95482090, -87.62669311] //top right
+                [41.874, -87.64377961], //bottom left
+                [41.94002090, -87.64669311] //top right
             ];
 
             var map = L.map('map', {
@@ -99,7 +99,7 @@
                 zoomControl: false,
             }).fitBounds(routeBounds);
 
-            var layer = L.tileLayer('https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/{z}.{x}.{y}.2.png', {
+            var layer = L.tileLayer('https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.{z}.{x}.{y}.jpg', {
                 attribution: 'Chicago, Bike Grid Now!'
             }).addTo(map);
 
