@@ -24,12 +24,17 @@
             text-align: center;
           }
       
+          img#header-image {
+            width: 100%;
+          }
+      
           div#map {
               height: 638px;
               width: 315px;
               background-color:white;
               margin-left:auto;
               margin-right: auto;
+              margin-top: -50px;
           }
           @livewireStyles
       </style>
@@ -46,7 +51,9 @@
   <body>
         <!-- This is the start of content for our page -->
         <h1 class="title">Halsted Bike Bus Tracker</h1>
-        
+        <div class="header">
+          <img id="header-image" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199" />    
+        </div>
         <div id="map"></div>
         <!-- update_map.js -->
         <script>
@@ -99,7 +106,7 @@
                 zoomControl: false,
             }).fitBounds(routeBounds);
 
-            var layer = L.tileLayer('https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.{z}.{x}.{y}.jpg', {
+            var layer = L.tileLayer('https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.{z}.{x}.{y}.jpg?v=1', {
                 attribution: 'Chicago, Bike Grid Now!'
             }).addTo(map);
 
