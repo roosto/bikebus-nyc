@@ -50,13 +50,13 @@ fastify.get("/beacon/"+process.env.beacon_hash, function (request, reply) {
   return reply.view("/src/pages/beacon.hbs");
 });
 
-fastify.post("/bus/location/"+process.env.beacon_hash, async function (request, reply) {
+fastify.post("/bus/location", async function (request, reply) {
   // Build the params object to pass to the template
   let params = { };
   
   await storage.init();
-  await storage.setItem('latitude', request.body.latitude);
-  await storage.setItem('longitude', request.body.longitude);
+  await storage.setItem('latitude', 0);
+  await storage.setItem('longitude', 0);
   
   // The Handlebars template will use the parameter values to update the page with the chosen color
   return request.body;
