@@ -21,7 +21,12 @@
           }
       
           h1 {
-            margin: 0 0 -35px 0;
+            width:100%;
+            min-width: 315px;
+            max-width:500px;
+            margin-right:auto;
+            margin-left:auto;
+            margin-bottom: -35px;
           }
       
           h1 img {
@@ -56,15 +61,14 @@
         <h1>
           <img src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199" />    
         </h1>
-        <div id="map"></div>
-        <div id="legend">
-         
+        <div id="info">
             <h2>
               Run #H-002
             </h2>
             <p>Service is scheduled to run Wed, August 31.</p>
-          
         </div>
+        <div id="map"></div>
+
         <!-- update_map.js -->
         <script>
             trackBusLocation()
