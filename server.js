@@ -55,8 +55,8 @@ fastify.post("/bus/location", async function (request, reply) {
   let params = { };
   
   await storage.init();
-  await storage.setItem('latitude', 0);
-  await storage.setItem('longitude', 0);
+  await storage.setItem('latitude', request.body.latitude);
+  await storage.setItem('longitude', request.body.longitude);
   
   // The Handlebars template will use the parameter values to update the page with the chosen color
   return request.body;
