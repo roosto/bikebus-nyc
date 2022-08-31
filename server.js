@@ -13,8 +13,6 @@ const fastify = require("fastify")({
 
 const storage = require('node-persist');
 
-// ADD FAVORITES ARRAY VARIABLE FROM TODO HERE
-
 // Setup our static files
 fastify.register(require("@fastify/static"), {
   root: path.join(__dirname, "public"),
@@ -65,14 +63,11 @@ fastify.get("/beacon/"+process.env.beacon_hash, function (request, reply) {
 });
 
 fastify.post("/bus/location/"+process.env.beacon_hash, async function (request, reply) {
-  // Build the params object to pass to the template
-  let params = { };
   
   await storage.init();
   await storage.setItem('latitude', request.body.latitude);
   await storage.setItem('longitude', request.body.longitude);
   
-  // The Handlebars template will use the parameter values to update the page with the chosen color
   return request.body;
 });
 
