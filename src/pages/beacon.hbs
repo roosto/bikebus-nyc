@@ -15,6 +15,17 @@
     <title>Bike Bus Beacon</title> 
     
     <style>
+      div#conductor-header {
+        background-color:white;
+        width:100%;
+        position:fixed;
+        height: 100px;
+        top: 0;
+      }
+      div#conductor-header-spaceholder {
+        height:100px;
+        padding-top: 0;
+      }
       iframe#tracker {
         height: 900px;
         width: 100%;
@@ -23,12 +34,12 @@
   </head>
   <body>
         <!-- This is the start of content for our page -->
+        <div id="conductor-header">
         <h1 class="title">Bike Bus Beacon</h1>
         
-        
         <pre id="location-preview"></pre>
-        
-    
+        </div>
+        <div id="conductor-header-spaceholder"></div>
         <iframe id="tracker" src="/"> </iframe>
         
       
@@ -73,7 +84,7 @@
             const beacon_hash = "{{beacon_hash}}";
             function updateBusLocation(lat, long)
             {
-              fetch('/bus/'+beacon_hash+'/location', {
+              fetch('/bus/location/'+beacon_hash, {
                 method: 'POST', // or 'PUT'
                 headers: {
                   'Content-Type': 'application/json',

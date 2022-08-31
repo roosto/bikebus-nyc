@@ -69,8 +69,8 @@ fastify.post("/bus/location/"+process.env.beacon_hash, async function (request, 
 fastify.get("/bus/location", async function (request, reply) {
   await storage.init();
   let response = { 
-    latitude: 0, //await storage.getItem('latitude'),
-    longitude: 0,// await storage.getItem('longitude')
+    latitude: await storage.getItem('latitude'),
+    longitude: 0//await storage.getItem('longitude')
   };
   return response;
 });
