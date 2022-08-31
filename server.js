@@ -28,9 +28,9 @@ fastify.register(require("@fastify/view"), {
   },
 }); 
 
-const backupLink = 'https://stackoverflow.com/';
+const backupLink = 'https://maps.app.goo.gl/mwGvmkbGF5hvXiRA8';
 const fallback = false;
-const busIsRunning = false;
+const busIsRunning = true;
 
 /**
  * Our home page route
