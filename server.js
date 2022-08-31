@@ -46,24 +46,14 @@ fastify.get("/", async function (request, reply) {
   return reply.view("/src/pages/index.hbs", params);
 });
 
-fastify.get("/test", async function (request, reply) {
-  await storage.init();
-
-  // params is an object we'll pass to our handlebars template
-  let params = { 
-    latitude: await storage.getItem('latitude'),
-    longitude: await storage.getItem('longitude')
-  };
-
-  // The Handlebars code will be able to access the parameter values and build them into the page
-  return reply.view("/src/pages/test.hbs", params);
-});
-
 fastify.get("/beacon/"+process.env.beacon_hash, function (request, reply) {
-  return reply.view("/src/pages/beacon.hbs");
+  const params = {
+    beacon_hash: process.env.beacon_hash
+  };
+  return reply.view("/src/pages/beacon.hbs", params);
 });
 
-fastify.post("/bus/location", async function (request, reply) {
+fastify.post("/bus/location/"+process.env.beacon_hash, async function (request, reply) {
   // Build the params object to pass to the template
   let params = { };
   
@@ -79,8 +69,8 @@ fastify.post("/bus/location", async function (request, reply) {
 fastify.get("/bus/location", async function (request, reply) {
   await storage.init();
   let response = { 
-    latitude: await storage.getItem('latitude'),
-    longitude: await storage.getItem('longitude')
+    latitude: 0, //await storage.getItem('latitude'),
+    longitude: 0,// await storage.getItem('longitude')
   };
   return response;
 });

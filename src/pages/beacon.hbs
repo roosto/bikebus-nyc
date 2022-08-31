@@ -25,11 +25,11 @@
         <!-- This is the start of content for our page -->
         <h1 class="title">Bike Bus Beacon</h1>
         
-        {{#if true}}
-          <pre id="location-preview"></pre>
-        {{/if}}
+        
+        <pre id="location-preview"></pre>
+        
     
-<!--         <iframe id="tracker" src="/" /> -->
+        <iframe id="tracker" src="/"> </iframe>
         
       
         <!-- beacon.js -->
@@ -58,20 +58,22 @@
 
             id = navigator.geolocation.watchPosition(success, error, options);
           
+            const previewElement = document.getElementById('location-preview');
+          
             function updateLocationPreview(lat, long)
             {
-              const previewElement = document.getElementById('location-preview');
               const now = new Date();
               let hour = now.getHours();
               let minute = now.getMinutes();
               let seconds = now.getSeconds();
-              previewElement.prepend(hour + ":" + minute + ":" + seconds + " " + lat + ", " + long + "\n")
+              previewElement.textContent = hour + ":" + minute + ":" + seconds + " " + lat + ", " + long + "\n";
               console.log(lat, long)
             }
           
+            const beacon_hash = "{{beacon_hash}}";
             function updateBusLocation(lat, long)
             {
-              fetch('/bus/location', {
+              fetch('/bus/'+beacon_hash+'/location', {
                 method: 'POST', // or 'PUT'
                 headers: {
                   'Content-Type': 'application/json',
