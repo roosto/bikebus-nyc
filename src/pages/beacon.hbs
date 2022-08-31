@@ -11,18 +11,28 @@
     <meta charset="utf-8" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  
     <title>Bike Bus Beacon</title> 
+    
+    <style>
+      iframe#tracker {
+        height: 900px;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
         <!-- This is the start of content for our page -->
         <h1 class="title">Bike Bus Beacon</h1>
         
-        
         {{#if true}}
           <pre id="location-preview"></pre>
         {{/if}}
     
+<!--         <iframe id="tracker" src="/" /> -->
+        
+      
+        <!-- beacon.js -->
         <script>
           
             let id;
