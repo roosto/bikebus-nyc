@@ -28,9 +28,9 @@ fastify.register(require("@fastify/view"), {
   },
 }); 
 
-const backupLink = 'https://maps.app.goo.gl/mwGvmkbGF5hvXiRA8';
+const backupLink = '';
 const fallback = false;
-const busIsRunning = true;
+let busIsRunning = false;
 
 /**
  * Our home page route
@@ -47,7 +47,7 @@ fastify.get("/", async function (request, reply) {
   // params is an object we'll pass to our handlebars template
   let params = { 
     latitude: await storage.getItem('latitude'),
-    longitude: await storage.getItem('longitude')
+    longitude: await storage.getItem('longitude'),
   };
 
   // The Handlebars code will be able to access the parameter values and build them into the page
@@ -59,7 +59,7 @@ fastify.get("/beacon/"+process.env.beacon_hash, function (request, reply) {
     return reply.redirect(backupLink);
   }
   const params = {
-    beacon_hash: process.env.beacon_hash
+    beacon_hash: process.env.beacon_hash,
   };
   return reply.view("/src/pages/beacon.hbs", params);
 });
@@ -78,10 +78,20 @@ fastify.post("/bus/location/"+process.env.beacon_hash, async function (request, 
 
 
 fastify.get("/bus/location", async function (request, reply) {
-  await storage.init();
+  
+  let latitude;
+  let longitude;
+  
+  if(busIsRunning)
+  {
+     await storage.init();
+     latitude = await storage.getItem('latitude');
+     longitude = await storage.getItem('longitude');
+  }
+   
   let response = { 
-    latitude: await storage.getItem('latitude'),
-    longitude: busIsRunning ? await storage.getItem('longitude') : 0
+    latitude: latitude || 0,
+    longitude: longitude || 0
   };
   return response;
 });
