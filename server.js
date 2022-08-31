@@ -26,14 +26,17 @@ fastify.register(require("@fastify/view"), {
   engine: {
     handlebars: require("handlebars"),
   },
-});
+}); 
 
+const backupLink = 'https://stackoverflow.com/';
+const busIsRunning = false;
 /**
  * Our home page route
  *
  * Returns src/pages/index.hbs with data built into it
  */
 fastify.get("/", async function (request, reply) {
+  //return reply.redirect(backupLink);
   await storage.init();
 
   // params is an object we'll pass to our handlebars template
@@ -47,6 +50,7 @@ fastify.get("/", async function (request, reply) {
 });
 
 fastify.get("/beacon/"+process.env.beacon_hash, function (request, reply) {
+  //return reply.redirect(backupLink);
   const params = {
     beacon_hash: process.env.beacon_hash
   };
@@ -70,7 +74,7 @@ fastify.get("/bus/location", async function (request, reply) {
   await storage.init();
   let response = { 
     latitude: await storage.getItem('latitude'),
-    longitude: 0//await storage.getItem('longitude')
+    longitude: busIsRunning ? await storage.getItem('longitude') : 0
   };
   return response;
 });
