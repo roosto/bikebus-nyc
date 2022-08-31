@@ -29,14 +29,19 @@ fastify.register(require("@fastify/view"), {
 }); 
 
 const backupLink = 'https://stackoverflow.com/';
+const fallback = false;
 const busIsRunning = false;
+
 /**
  * Our home page route
  *
  * Returns src/pages/index.hbs with data built into it
  */
 fastify.get("/", async function (request, reply) {
-  //return reply.redirect(backupLink);
+  if(fallback) {
+    return reply.redirect(backupLink);
+  }
+  
   await storage.init();
 
   // params is an object we'll pass to our handlebars template
@@ -50,7 +55,9 @@ fastify.get("/", async function (request, reply) {
 });
 
 fastify.get("/beacon/"+process.env.beacon_hash, function (request, reply) {
-  //return reply.redirect(backupLink);
+  if(fallback) {
+    return reply.redirect(backupLink);
+  }
   const params = {
     beacon_hash: process.env.beacon_hash
   };
