@@ -19,17 +19,22 @@
         background-color:white;
         width:100%;
         position:fixed;
-        height: 100px;
+        height: 175px;
         top: 0;
       }
       div#conductor-header-spaceholder {
-        height:100px;
+        height:175px;
         padding-top: 0;
       }
       iframe#tracker {
         height: 900px;
         width: 100%;
       }
+      
+      h1 span.clock {
+          font-size:2em;  
+      }
+      
       span#clock-seconds {
         color: grey;
       }
@@ -38,11 +43,10 @@
   <body>
         <!-- This is the start of content for our page -->
         <div id="conductor-header">
-        <h1 class="title">Bike Bus Beacon</h1>
-        <h2 id = "clock">
-          <span id="clock-hours-minutes"></span>
-          <span id="clock-seconds"></span>
-        </h2>
+        <h1 class="title">
+          Bike Bus Beacon <br />
+          <span class="clock" id="clock-hours-minutes"></span><span class="clock" id="clock-seconds"></span>
+        </h1>
         <pre id="location-preview"></pre>
         </div>
         <div id="conductor-header-spaceholder"></div>
@@ -83,6 +87,9 @@
               let hour = now.getHours();
               let minute = now.getMinutes();
               let seconds = now.getSeconds();
+              hour = hour % 12;
+              hour = hour ? hour : 12; // the hour '0' should be '12'
+              minute = minute < 10 ? '0'+minute : minute;
               previewElement.textContent = hour + ":" + minute + ":" + seconds + " " + lat + ", " + long + "\n";
               console.log(lat, long)
             }
@@ -111,13 +118,20 @@
             }
           
             const clockHoursAndMinutes = document.getElementById('clock-hours-minutes');
+            const clockSeconds = document.getElementById('clock-seconds'); 
             function clock()
             {
               const now = new Date();
-              const hour = now.getHours();
+              let hour = now.getHours();
               let minute = now.getMinutes();
-              let seconds = now.getSeconds();
-              clockHoursAndMinutes.textContent = hour + ":" + minute + ":" + seconds;
+              const seconds = now.getSeconds();
+              hour = hour % 12;
+              hour = hour ? hour : 12; // the hour '0' should be '12'
+              minute = minute < 10 ? '0'+minute : minute;
+              clockHoursAndMinutes.textContent = hour + ":" + minute;
+              clockSeconds.textContent = ":" + seconds;
+              
+              setTimeout(clock, 1000)
             }
             clock();
         </script>
