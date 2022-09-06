@@ -40,6 +40,10 @@ fastify.get("/", async function (request, reply) {
     return reply.redirect(backupLink);
   }
   
+  if(!busIsRunning) {
+    return reply.view("/src/pages/preview.hbs");
+  }
+  
   await storage.init();
 
   // params is an object we'll pass to our handlebars template
