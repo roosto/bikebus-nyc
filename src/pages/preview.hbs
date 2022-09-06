@@ -14,10 +14,31 @@
     <title>Halsted Bike Bus Tracker</title>
 
     <style>
-      body { background-color:white; font-family: sans-serif, helvetica, arial;
-      } img.preview { width: 50%; min-width:400px; float:left; margin-left: auto; margin-right:auto; } div.preview-container {
-        width: 100%; margin-left:auto; margin-right: auto;
+      body { 
+        background-color:white; 
+        font-family: sans-serif, helvetica, arial;
+      } 
+      
+      img.preview { 
+        width: 50%; 
+        float:left; 
+      } 
+      
+      @media (max-width: 500px) {
+      img.preview {
+/*         margin-left: auto; 
+        margin-right:auto;  */
+        width: 100% !important;
       }
+    }
+      
+
+      
+/*       div.preview-container {
+        width: 100%; 
+        margin-left:auto; 
+        margin-right: auto;
+      } */
     </style>
   </head>
   <body>
@@ -26,6 +47,13 @@
     <h2>
       Brought to you by CHICAGO, BIKE GRID NOW!
     </h2>
+    <p>
+      Track both routes live on this page on Wednesday, September 7th.
+    </p>
+    <ul>
+      <li><a href="https://bikegridnow.org/events/oC4yLGLQclItnyakpUJa">RSVP and route details for the Halsted Bike Bus</a></li>
+      <li><a href="https://bikegridnow.org/events/N8l4SpGUwws1JMRw8kPD">RSVP and route details for the Milwaukee Bike Bus</a></li>
+    </ul>
     <div class="preview-container">
       <img class="preview" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/BIKE-BUS-FLYER_09.07_v2.png?v=1662474216634" />
       <img class="preview" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/BIKE-BUS-FLYER_MILWAUKEE_09.07_b.png?v=1662474208581" />      
