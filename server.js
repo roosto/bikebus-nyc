@@ -97,6 +97,7 @@ fastify.get("/:route", async function (request, reply) {
   let params = { 
     
     route: route,
+    title: route.charAt(0).toUpperCase() + route.slice(1),
     busRunInfo: bus.runInfo,
     busHeaderImageSrc: bus.headerImageSrc,
     busHeaderImageAlt: bus.headerImageAlt,

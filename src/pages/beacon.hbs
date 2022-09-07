@@ -23,7 +23,7 @@
         top: 0;
       }
       div#conductor-header-spaceholder {
-        height:175px;
+        height:195px;
         padding-top: 0;
       }
       iframe#tracker {
@@ -38,6 +38,7 @@
       span#clock-seconds {
         color: grey;
       }
+      
     </style>
   </head>
   <body>
@@ -47,6 +48,11 @@
           Bike Bus Beacon <br />
           <span class="clock" id="clock-hours-minutes"></span><span class="clock" id="clock-seconds"></span>
         </h1>
+  
+        <label>
+          <input type="checkbox" id="publish-location-checkbox"/> Publish my location
+        </label>
+        
         <pre id="location-preview"></pre>
         </div>
         <div id="conductor-header-spaceholder"></div>
@@ -59,11 +65,10 @@
             let id;
             let target;
             let options;
-
+            const publishLocationCheckbox = document.getElementById('publish-location-checkbox');
             function success(pos) {
               busLatitude = pos.coords.latitude;
               busLongitude = pos.coords.longitude;
-              
               updateBusLocation(busLatitude, busLongitude);
             }
 
