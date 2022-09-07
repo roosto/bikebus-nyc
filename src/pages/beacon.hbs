@@ -50,7 +50,7 @@
         </h1>
   
         <label>
-          <input type="checkbox" id="publish-location-checkbox" checked/> Publish my location
+          <input type="checkbox" id="publish-location-checkbox" checked/> Publish location
         </label>
         
         <pre id="location-preview"></pre>
@@ -61,18 +61,30 @@
       
         <!-- beacon.js -->
         <script>
+            
+            let lastBusLatitude;
+            let lastBusLongitude;
+
+            const publishLocationCheckbox = document.getElementById('publish-location-checkbox');
+            publishLocationCheckbox.addEventListener('change', (event) => {
+              if (event.currentTarget.checked) {
+                updateBusLocation(lastBusLatitude, lastBusLongitude);
+              } else {
+                updateBusLocation(0, 0);
+              }
+            });
           
             let id;
             let target;
             let options;
-            const publishLocationCheckbox = document.getElementById('publish-location-checkbox');
+          
             function success(pos) {
-              busLatitude = pos.coords.latitude;
-              busLongitude = pos.coords.longitude;
+              lastBusLatitude = pos.coords.latitude;
+              lastBusLongitude = pos.coords.longitude;
               
               if(publishLocationCheckbox.checked)
               {
-                updateBusLocation(busLatitude, busLongitude);
+                updateBusLocation(lastBusLatitude, lastBusLongitude);
               }
               else
               {
