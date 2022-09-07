@@ -88,7 +88,7 @@
           
             function getBusLocation()
             {
-              fetch('/bus/{{routelocation', {
+              fetch('/bus/{{route}}/location', {
                 method: 'GET', // or 'PUT'
               })
                 .then((response) => response.json())

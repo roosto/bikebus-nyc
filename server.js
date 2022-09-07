@@ -28,7 +28,7 @@ fastify.register(require("@fastify/view"), {
 
 const backupLink = '';
 const fallback = false;
-let busIsRunning = false;
+let busIsRunning = true;
 
 //eventually the cms or bus_info.json
 let routes = {
@@ -63,9 +63,7 @@ let routes = {
  * Returns src/pages/index.hbs with data built into it
  */
 
-fastify.get("/:route", async function (request, reply) {
-  busIsRunning = true;
-  
+fastify.get("/:route", async function (request, reply) {  
   const { route } = request.params;
   
   if(!busIsRunning || route == "") {
