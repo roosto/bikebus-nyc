@@ -26,8 +26,7 @@ fastify.register(require("@fastify/view"), {
   },
 }); 
 
-const backupLink = '';
-const fallback = false;
+const fallbackAll = true;
 let busIsRunning = false;
 
 //eventually the cms or bus_info.json
@@ -41,7 +40,9 @@ let routes = {
             bottomLeft: [41.874, -87.64377961], //bottom left
             topRight: [41.94002090, -87.64669311] //top right
     },
-    mapWidth: "315px"
+    mapWidth: "315px",
+    backupLink: "",
+    fallback: false
   },
   milwaukee: {
     runInfo: "Run #M-001 //  Wednesday, September 7th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
@@ -52,7 +53,9 @@ let routes = {
             bottomLeft: [41.874, -87.6977961], //bottom left , -87.708574
             topRight: [41.91202090, -87.63069311] //top right
     },
-    mapWidth: "650px"
+    mapWidth: "650px",
+    backupLink: "",
+    fallback: false
   }
 };
 
@@ -87,8 +90,8 @@ fastify.get("/:route", async function (request, reply) {
   
   
   
-  if(fallback) {
-    return reply.redirect(backupLink);
+  if(fallbackAll || bus.fallback) {
+    return reply.redirect(bus.backupLink);
   }
   
   await storage.init();
@@ -125,8 +128,8 @@ fastify.get("/beacon/:route/"+process.env.beacon_hash, function (request, reply)
       .send('Route not found.');
   }
   
-  if(fallback) {
-    return reply.redirect(backupLink);
+  if(fallbackAll || routes[route]) {
+    return reply.redirect(routes[route].backupLink);
   }
   const params = {
     beacon_hash: process.env.beacon_hash,
