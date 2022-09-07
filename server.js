@@ -41,8 +41,7 @@ let routes = {
             bottomLeft: [41.874, -87.64377961], //bottom left
             topRight: [41.94002090, -87.64669311] //top right
     },
-    mapWidth: "315px",
-    headerWidth: "500px",
+    mapWidth: "315px"
   },
   milwaukee: {
     runInfo: "Run #M-001 //  Wednesday, September 7th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
@@ -53,8 +52,7 @@ let routes = {
             bottomLeft: [41.874, -87.6977961], //bottom left , -87.708574
             topRight: [41.91202090, -87.63069311] //top right
     },
-    mapWidth: "650px",
-    headerWidth: "650px"
+    mapWidth: "650px"
   }
 };
 
@@ -100,6 +98,7 @@ fastify.get("/:route", async function (request, reply) {
   // params is an object we'll pass to our handlebars template
   let params = { 
     
+    route: route,
     busRunInfo: bus.runInfo,
     busHeaderImageSrc: bus.headerImageSrc,
     busHeaderImageAlt: bus.headerImageAlt,
@@ -116,27 +115,56 @@ fastify.get("/:route", async function (request, reply) {
   return reply.view("/src/pages/index.hbs", params);
 });
 
-fastify.get("/beacon/"+process.env.beacon_hash, function (request, reply) {
+fastify.get("/beacon/:route/"+process.env.beacon_hash, function (request, reply) {
+  
+  const { route } = request.params;
+  if(!routes.hasOwnProperty(route))
+  {
+    return reply
+      .code(404)
+      .type('text/plain')
+      .send('Route not found.');
+  }
+  
   if(fallback) {
     return reply.redirect(backupLink);
   }
   const params = {
     beacon_hash: process.env.beacon_hash,
+    route: route
   };
   return reply.view("/src/pages/beacon.hbs", params);
 });
 
-fastify.post("/bus/location/"+process.env.beacon_hash, async function (request, reply) {
+fastify.post("/bus/:route/location/"+process.env.beacon_hash, async function (request, reply) {
+  
+  const { route } = request.params;
+  if(!routes.hasOwnProperty(route))
+  {
+    return reply
+      .code(404)
+      .type('text/plain')
+      .send('Route not found.');
+  }
   
   await storage.init();
-  await storage.setItem('latitude', request.body.latitude);
-  await storage.setItem('longitude', request.body.longitude);
+  await storage.setItem(route+'.latitude', request.body.latitude);
+  await storage.setItem(route+'.longitude', request.body.longitude);
   
   return request.body;
 });
 
 
-fastify.get("/bus/location", async function (request, reply) {
+fastify.get("/bus/:route/location", async function (request, reply) {
+  
+  const { route } = request.params;
+  if(!routes.hasOwnProperty(route))
+  {
+    return reply
+      .code(404)
+      .type('text/plain')
+      .send('Route not found.');
+  }
   
   let latitude;
   let longitude;
@@ -144,9 +172,9 @@ fastify.get("/bus/location", async function (request, reply) {
   if(busIsRunning)
   {
      await storage.init();
-     let coords = [41.889964, -87.659841];
-     latitude = coords[0] //await storage.getItem('latitude');
-     longitude = coords[1] //await storage.getItem('longitude');
+     //let coords = [41.889964, -87.659841];
+     latitude = await storage.getItem(route+'.latitude');
+     longitude = await storage.getItem(route+'.longitude');
   }
    
   let response = { 
