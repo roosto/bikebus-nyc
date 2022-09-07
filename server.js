@@ -27,7 +27,7 @@ fastify.register(require("@fastify/view"), {
 }); 
 
 const fallbackAll = false;
-let busIsRunning = false;
+let busIsRunning = true;
 
 //eventually the cms or bus_info.json
 let routes = {
@@ -150,8 +150,8 @@ fastify.post("/bus/:route/location/"+process.env.beacon_hash, async function (re
   }
   
   //41.883148, -87.647396 washington and halsted
-  // request.body.latitude = 41.883148;
-  // request.body.longitude = -87.647396;
+   // request.body.latitude = 0;
+   // request.body.longitude = 0;
   
   await storage.init();
   await storage.setItem(route+'.latitude', request.body.latitude);
