@@ -26,7 +26,7 @@ fastify.register(require("@fastify/view"), {
   },
 }); 
 
-const fallbackAll = true;
+const fallbackAll = false;
 let busIsRunning = false;
 
 //eventually the cms or bus_info.json
@@ -128,7 +128,7 @@ fastify.get("/beacon/:route/"+process.env.beacon_hash, function (request, reply)
       .send('Route not found.');
   }
   
-  if(fallbackAll || routes[route]) {
+  if(fallbackAll || routes[route].fallback) {
     return reply.redirect(routes[route].backupLink);
   }
   const params = {
