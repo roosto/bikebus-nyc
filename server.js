@@ -28,7 +28,7 @@ fastify.register(require("@fastify/view"), {
 
 const backupLink = '';
 const fallback = false;
-let busIsRunning = true;
+let busIsRunning = false;
 
 //eventually the cms or bus_info.json
 let routes = {
@@ -66,8 +66,8 @@ let routes = {
 fastify.get("/:route", async function (request, reply) {  
   const { route } = request.params;
   
-  if(!busIsRunning || route == "") {
-    return reply.view("/src/pages/preview.hbs");
+  if(route == "") {
+    return reply.view("/src/pages/index.hbs");
   }
   
   let bus;
@@ -111,7 +111,7 @@ fastify.get("/:route", async function (request, reply) {
   };
 
   // The Handlebars code will be able to access the parameter values and build them into the page
-  return reply.view("/src/pages/index.hbs", params);
+  return reply.view("/src/pages/tracker.hbs", params);
 });
 
 fastify.get("/beacon/:route/"+process.env.beacon_hash, function (request, reply) {
