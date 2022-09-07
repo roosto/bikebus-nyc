@@ -36,13 +36,21 @@ let routes = {
     runInfo: "Run #H-003 // Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
     headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000",
     headerImageAlt: "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
-    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617"
+    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617",
+    trackerBounds: {
+            bottomLeft: [41.874, -87.64377961], //bottom left
+            topRight: [41.94002090, -87.64669311] //top right
+    },
   },
   milwaukee: {
     runInfo: "Run #M-001 //  Wednesday, September 7th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
     headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526324223",
     headerImageAlt: "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
-    trackerTileSrcPattern: ""    
+    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.6.22.{z}.{x}.{y}.jpg?v=1662528192255",
+    trackerBounds: {
+            bottomLeft: [41.874, -87.64377961], //bottom left
+            topRight: [41.91202090, -87.63569311] //top right
+    },
   }
 };
 
@@ -92,6 +100,7 @@ fastify.get("/:route", async function (request, reply) {
     busHeaderImageSrc: bus.headerImageSrc,
     busHeaderImageAlt: bus.headerImageAlt,
     busTrackerTileSrcPattern: bus.trackerTileSrcPattern,
+    busTrackerBounds: bus.trackerBounds,
     
     latitude: await storage.getItem('latitude'),
     longitude: await storage.getItem('longitude'),
