@@ -41,6 +41,7 @@ let routes = {
             bottomLeft: [41.874, -87.64377961], //bottom left
             topRight: [41.94002090, -87.64669311] //top right
     },
+    mapWidth: "315px"
   },
   milwaukee: {
     runInfo: "Run #M-001 //  Wednesday, September 7th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
@@ -48,9 +49,10 @@ let routes = {
     headerImageAlt: "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.6.22.{z}.{x}.{y}.jpg?v=1662528192255",
     trackerBounds: {
-            bottomLeft: [41.874, -87.64377961], //bottom left
-            topRight: [41.91202090, -87.63569311] //top right
+            bottomLeft: [41.874, -87.6977961], //bottom left , -87.708574
+            topRight: [41.91202090, -87.63069311] //top right
     },
+    mapWidth: "650px"
   }
 };
 
@@ -101,6 +103,7 @@ fastify.get("/:route", async function (request, reply) {
     busHeaderImageAlt: bus.headerImageAlt,
     busTrackerTileSrcPattern: bus.trackerTileSrcPattern,
     busTrackerBounds: bus.trackerBounds,
+    mapWidth: bus.mapWidth,
     
     latitude: await storage.getItem('latitude'),
     longitude: await storage.getItem('longitude'),
