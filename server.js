@@ -31,12 +31,17 @@ const fallback = false;
 let busIsRunning = false;
 
 //eventually the cms or bus_info.json
-let bus = {};
+let routes = {};
+routes.halsted.runInfo = "Run #H-003 Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am."
+routes.halsted.headerImageSrc = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199"
+routes.halsted.headerImageAlt = "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!"
+routes.halsted.trackerTileSrcPattern = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617"
 
-bus.halsted.runInfo = "Run #H-003 Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am."
-bus.halsted.headerImageSrc = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199"
-bus.halsted.headerImageAlt = "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!"
-bus.halsted.trackerTileSrcPattern = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617"
+let milwaukeeBus = {};
+routes.milwaukee.runInfo = "Run #M-003 Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am."
+routes.milwaukee.headerImageSrc = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199"
+routes.milwaukee.headerImageAlt = "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!"
+milwaukeeBus.trackerTileSrcPattern = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617"
 
 /**
  * Our home page route
@@ -64,8 +69,19 @@ fastify.get("/", async function (request, reply) {
   return reply.view("/src/pages/index.hbs", params);
 });
 
-fastify.get("/test", async function (request, reply) {
+fastify.get("/:route", async function (request, reply) {
   busIsRunning = true;
+  
+  const { route } = request.params;
+  let bus;
+  if(route == "mke")
+  {
+     bus = milwaukeeBus;
+  }
+  else
+  {
+    bus = halstedBus;
+  }
   
   if(fallback) {
     return reply.redirect(backupLink);
@@ -79,10 +95,12 @@ fastify.get("/test", async function (request, reply) {
 
   // params is an object we'll pass to our handlebars template
   let params = { 
-    busRunInfo: "Run #H-003 Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
-    busHeaderImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199",
-    busHeaderImageAlt: "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
-    busTrackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617",
+    
+    busRunInfo: bus.runInfo,
+    busHeaderImageSrc: bus.headerImageSrc,
+    busHeaderImageAlt: bus.headerImageAlt,
+    busTrackerTileSrcPattern: bus.trackerTileSrcPattern,
+    
     latitude: await storage.getItem('latitude'),
     longitude: await storage.getItem('longitude'),
   };
