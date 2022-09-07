@@ -30,6 +30,14 @@ const backupLink = '';
 const fallback = false;
 let busIsRunning = false;
 
+//eventually the cms or bus_info.json
+let bus = {};
+
+bus.halsted.runInfo = "Run #H-003 Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am."
+bus.halsted.headerImageSrc = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199"
+bus.halsted.headerImageAlt = "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!"
+bus.halsted.trackerTileSrcPattern = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617"
+
 /**
  * Our home page route
  *
@@ -71,6 +79,10 @@ fastify.get("/test", async function (request, reply) {
 
   // params is an object we'll pass to our handlebars template
   let params = { 
+    busRunInfo: "Run #H-003 Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
+    busHeaderImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199",
+    busHeaderImageAlt: "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    busTrackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617",
     latitude: await storage.getItem('latitude'),
     longitude: await storage.getItem('longitude'),
   };
