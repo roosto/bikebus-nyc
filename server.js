@@ -107,8 +107,9 @@ fastify.get("/bus/location", async function (request, reply) {
   if(busIsRunning)
   {
      await storage.init();
-     latitude = await storage.getItem('latitude');
-     longitude = await storage.getItem('longitude');
+     let coords = [41.889964, -87.659841];
+     latitude = coords[0] //await storage.getItem('latitude');
+     longitude = coords[1] //await storage.getItem('longitude');
   }
    
   let response = { 
