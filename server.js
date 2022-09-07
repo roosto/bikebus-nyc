@@ -31,17 +31,21 @@ const fallback = false;
 let busIsRunning = false;
 
 //eventually the cms or bus_info.json
-let routes = {};
-routes.halsted.runInfo = "Run #H-003 Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am."
-routes.halsted.headerImageSrc = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199"
-routes.halsted.headerImageAlt = "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!"
-routes.halsted.trackerTileSrcPattern = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617"
+let routes = {
+  halsted: {
+    runInfo: "Run #H-003 Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
+    headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199",
+    headerImageAlt: "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617"
+  },
+  milwaukee: {
+    runInfo: "",
+    headerImageRc: "",
+    headerImageAlt: "",
+    trackerTileSrcPattern: ""    
+  }
+};
 
-let milwaukeeBus = {};
-routes.milwaukee.runInfo = "Run #M-003 Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am."
-routes.milwaukee.headerImageSrc = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header.png?v=1661792004199"
-routes.milwaukee.headerImageAlt = "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!"
-milwaukeeBus.trackerTileSrcPattern = "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617"
 
 /**
  * Our home page route
@@ -74,14 +78,20 @@ fastify.get("/:route", async function (request, reply) {
   
   const { route } = request.params;
   let bus;
-  if(route == "mke")
+  
+  if(!routes.hasOwnProperty(route))
   {
-     bus = milwaukeeBus;
+    return reply
+      .code(404)
+      .type('text/plain')
+      .send('Route not found.');
   }
   else
   {
-    bus = halstedBus;
+    bus = routes[route];
   }
+  
+  
   
   if(fallback) {
     return reply.redirect(backupLink);
