@@ -27,7 +27,7 @@ fastify.register(require("@fastify/view"), {
 }); 
 
 const fallbackAll = false;
-let busIsRunning = true;
+let busIsRunning = false;
 
 //eventually the cms or bus_info.json
 let routes = {
