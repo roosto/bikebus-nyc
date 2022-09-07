@@ -28,7 +28,7 @@ fastify.register(require("@fastify/view"), {
 
 const backupLink = '';
 const fallback = false;
-let busIsRunning = false;
+let busIsRunning = true;
 
 /**
  * Our home page route
