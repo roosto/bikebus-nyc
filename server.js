@@ -41,6 +41,7 @@ let routes = {
             topRight: [41.94002090, -87.64669311] //top right
     },
     mapWidth: "315px",
+    mapHeight: "638px",
     backupLink: "",
     fallback: false
   },
@@ -50,10 +51,11 @@ let routes = {
     headerImageAlt: "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.6.22.{z}.{x}.{y}.jpg?v=1662528192255",
     trackerBounds: {
-            bottomLeft: [41.874, -87.6977961], //bottom left , -87.708574
+            bottomLeft: [41.892, -87.677961], //bottom left , -87.708574
             topRight: [41.91202090, -87.63069311] //top right
     },
     mapWidth: "650px",
+    mapHeight: "490px",
     backupLink: "",
     fallback: false
   }
@@ -107,6 +109,7 @@ fastify.get("/:route", async function (request, reply) {
     busTrackerTileSrcPattern: bus.trackerTileSrcPattern,
     busTrackerBounds: bus.trackerBounds,
     mapWidth: bus.mapWidth,
+    mapHeight: bus.mapHeight,
     headerWidth: bus.headerWidth,
     
     latitude: await storage.getItem('latitude'),
