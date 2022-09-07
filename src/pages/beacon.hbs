@@ -50,7 +50,7 @@
         </h1>
   
         <label>
-          <input type="checkbox" id="publish-location-checkbox"/> Publish my location
+          <input type="checkbox" id="publish-location-checkbox" checked/> Publish my location
         </label>
         
         <pre id="location-preview"></pre>
@@ -69,7 +69,17 @@
             function success(pos) {
               busLatitude = pos.coords.latitude;
               busLongitude = pos.coords.longitude;
-              updateBusLocation(busLatitude, busLongitude);
+              
+              if(publishLocationCheckbox.checked)
+              {
+                updateBusLocation(busLatitude, busLongitude);
+              }
+              else
+              {
+                updateBusLocation(0, 0);
+              }
+              
+              
             }
 
             function error(err) {

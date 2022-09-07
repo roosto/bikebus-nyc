@@ -147,8 +147,8 @@ fastify.post("/bus/:route/location/"+process.env.beacon_hash, async function (re
   }
   
   //41.883148, -87.647396 washington and halsted
-  request.body.latitude = 41.883148;
-  request.body.longitude = -87.647396;
+  // request.body.latitude = 41.883148;
+  // request.body.longitude = -87.647396;
   
   await storage.init();
   await storage.setItem(route+'.latitude', request.body.latitude);
