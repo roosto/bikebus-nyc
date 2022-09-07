@@ -41,7 +41,8 @@ let routes = {
             bottomLeft: [41.874, -87.64377961], //bottom left
             topRight: [41.94002090, -87.64669311] //top right
     },
-    mapWidth: "315px"
+    mapWidth: "315px",
+    headerWidth: "500px",
   },
   milwaukee: {
     runInfo: "Run #M-001 //  Wednesday, September 7th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
@@ -52,7 +53,8 @@ let routes = {
             bottomLeft: [41.874, -87.6977961], //bottom left , -87.708574
             topRight: [41.91202090, -87.63069311] //top right
     },
-    mapWidth: "650px"
+    mapWidth: "650px",
+    headerWidth: "650px"
   }
 };
 
@@ -104,6 +106,7 @@ fastify.get("/:route", async function (request, reply) {
     busTrackerTileSrcPattern: bus.trackerTileSrcPattern,
     busTrackerBounds: bus.trackerBounds,
     mapWidth: bus.mapWidth,
+    headerWidth: bus.headerWidth,
     
     latitude: await storage.getItem('latitude'),
     longitude: await storage.getItem('longitude'),
