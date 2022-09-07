@@ -52,32 +52,18 @@ let routes = {
  *
  * Returns src/pages/index.hbs with data built into it
  */
-fastify.get("/", async function (request, reply) {
-  if(fallback) {
-    return reply.redirect(backupLink);
-  }
-  
-  if(!busIsRunning) {
-    return reply.view("/src/pages/preview.hbs");
-  }
-  
-  await storage.init();
-
-  // params is an object we'll pass to our handlebars template
-  let params = { 
-    latitude: await storage.getItem('latitude'),
-    longitude: await storage.getItem('longitude'),
-  };
-
-  // The Handlebars code will be able to access the parameter values and build them into the page
-  return reply.view("/src/pages/index.hbs", params);
-});
 
 fastify.get("/:route", async function (request, reply) {
   busIsRunning = true;
   
   const { route } = request.params;
+  
+  if(!busIsRunning || route == "") {
+    return reply.view("/src/pages/preview.hbs");
+  }
+  
   let bus;
+  
   
   if(!routes.hasOwnProperty(route))
   {
@@ -95,10 +81,6 @@ fastify.get("/:route", async function (request, reply) {
   
   if(fallback) {
     return reply.redirect(backupLink);
-  }
-  
-  if(!busIsRunning) {
-    return reply.view("/src/pages/preview.hbs");
   }
   
   await storage.init();
