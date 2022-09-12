@@ -32,7 +32,7 @@ let busIsRunning = false;
 //eventually the cms or bus_info.json
 let routes = {
   halsted: {
-    runInfo: "Run #H-003 // Wednesday, September 7th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
+    runInfo: "Run #H-004 // Wednesday, September 14th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
     headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000",
     headerImageAlt: "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617",
@@ -46,7 +46,7 @@ let routes = {
     fallback: false
   },
   milwaukee: {
-    runInfo: "Run #M-001 //  Wednesday, September 7th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
+    runInfo: "Run #M-002 //  Wednesday, September 14th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
     headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526324223",
     headerImageAlt: "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.6.22.{z}.{x}.{y}.jpg?v=1662528192255",
