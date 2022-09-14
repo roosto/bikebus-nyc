@@ -35,7 +35,7 @@ let routes = {
     runInfo: "Run #H-004 // Wednesday, September 14th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
     headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000",
     headerImageAlt: "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
-    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus.9.6.22.{z}.{x}.{y}.jpg?v=16617",
+    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     trackerBounds: {
             bottomLeft: [41.874, -87.64377961], //bottom left
             topRight: [41.94002090, -87.64669311] //top right
