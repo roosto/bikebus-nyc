@@ -69,7 +69,10 @@
 
             const publishLocationCheckbox = document.getElementById('publish-location-checkbox');
             publishLocationCheckbox.addEventListener('change', (event) => {
-              if (! event.currentTarget.checked) {
+              console.log('change');
+              if (event.currentTarget.checked) {
+                updateBusLocation(lastBusLatitude,lastBusLongitude);
+              } else {
                 updateBusLocation(0,0);
               } 
             });
@@ -135,9 +138,11 @@
             
             function transmitBusLocation()
             {
+              console.log('heartbeat');
+              console.log([lastBusLatitude, newBusLatitude, lastBusLongitude, newBusLongitude]);
               if(lastBusLatitude != newBusLatitude || lastBusLongitude != newBusLongitude)
               {
-                console.log(lastBus)
+
                 lastBusLatitude = newBusLatitude;
                 lastBusLongitude = newBusLongitude; 
                               
