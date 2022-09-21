@@ -64,14 +64,14 @@
             
             let lastBusLatitude;
             let lastBusLongitude;
+            let newBusLatitude;
+            let newBusLongitude;
 
             const publishLocationCheckbox = document.getElementById('publish-location-checkbox');
             publishLocationCheckbox.addEventListener('change', (event) => {
-              if (event.currentTarget.checked) {
-                updateBusLocation(lastBusLatitude, lastBusLongitude);
-              } else {
-                updateBusLocation(0, 0);
-              }
+              if (! event.currentTarget.checked) {
+                newBusLatitude = newBusLongitude = 0;
+              } 
             });
           
             let id;
@@ -79,18 +79,16 @@
             let options;
           
             function success(pos) {
-              lastBusLatitude = pos.coords.latitude;
-              lastBusLongitude = pos.coords.longitude;
               
               if(publishLocationCheckbox.checked)
               {
-                updateBusLocation(lastBusLatitude, lastBusLongitude);
+                newBusLatitude = pos.coords.latitude;
+                newBusLongitude = pos.coords.longitude;
               }
               else
               {
-                updateBusLocation(0, 0);
+                newBusLatitude = newBusLongitude = 0;
               }
-              
               
             }
 
@@ -146,8 +144,15 @@
             
             function transmitBusLocation()
             {
-              if(last)
+              if(lastBusLatitude != newBusLatitude || lastBusLongitude != newBusLongitude)
+              {
+                lastBusLatitude = newBusLatitude;
+                lastBusLongitude = newBusLongitude;
+                updateBusLocation(newBusLatitude, newBusLongitude);
+              }
+              setTimeout(transmitBusLocation, 3000)
             }
+            transmitBusLocation();
           
             const clockHoursAndMinutes = document.getElementById('clock-hours-minutes');
             const clockSeconds = document.getElementById('clock-seconds'); 
