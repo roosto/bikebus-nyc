@@ -12,6 +12,7 @@ const fastify = require("fastify")({
 });
 
 const storage = require('node-persist');
+const cache = require('nano-cache');
 
 // Setup our static files
 fastify.register(require("@fastify/static"), {
@@ -159,7 +160,8 @@ fastify.post("/bus/:route/location/"+process.env.beacon_hash, async function (re
   await storage.init();
   await storage.setItem(route+'.latitude', request.body.latitude);
   await storage.setItem(route+'.longitude', request.body.longitude);
-  
+  cache.del(route+'.latitude');
+  cache.del(route+'.longitude');
   return request.body;
 });
 
@@ -182,8 +184,8 @@ fastify.get("/bus/:route/location", async function (request, reply) {
   {
      await storage.init();
      //let coords = [41.889964, -87.659841];
-     latitude = await storage.getItem(route+'.latitude');
-     longitude = await storage.getItem(route+'.longitude');
+     latitude = cache.get(route+'.latitude') || await storage.getItem(route+'.latitude');
+     longitude = cache.get(route+'.longitude') || await storage.getItem(route+'.longitude');
   }
    
   let response = { 
