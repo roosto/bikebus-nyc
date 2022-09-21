@@ -28,7 +28,7 @@ fastify.register(require("@fastify/view"), {
 }); 
 
 const fallbackAll = false;
-let busIsRunning = true;
+let busIsRunning = false;
 
 //eventually the cms or bus_info.json
 let routes = {
@@ -43,7 +43,7 @@ let routes = {
     },
     mapWidth: "315px",
     mapHeight: "638px",
-    backupLink: "https://maps.app.goo.gl/ii9Duap1roBYUMkDA",
+    backupLink: "",
     fallback: false
   },
   milwaukee: {
