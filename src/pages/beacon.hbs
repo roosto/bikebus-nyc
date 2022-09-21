@@ -70,7 +70,7 @@
             const publishLocationCheckbox = document.getElementById('publish-location-checkbox');
             publishLocationCheckbox.addEventListener('change', (event) => {
               if (! event.currentTarget.checked) {
-                newBusLatitude = newBusLongitude = 0;
+                updateBusLocation(0,0);
               } 
             });
           
@@ -79,17 +79,8 @@
             let options;
           
             function success(pos) {
-              
-              if(publishLocationCheckbox.checked)
-              {
                 newBusLatitude = pos.coords.latitude;
-                newBusLongitude = pos.coords.longitude;
-              }
-              else
-              {
-                newBusLatitude = newBusLongitude = 0;
-              }
-              
+                newBusLongitude = pos.coords.longitude;             
             }
 
             function error(err) {
@@ -146,9 +137,14 @@
             {
               if(lastBusLatitude != newBusLatitude || lastBusLongitude != newBusLongitude)
               {
+                console.log(lastBus)
                 lastBusLatitude = newBusLatitude;
-                lastBusLongitude = newBusLongitude;
-                updateBusLocation(newBusLatitude, newBusLongitude);
+                lastBusLongitude = newBusLongitude; 
+                              
+                if(publishLocationCheckbox.checked)
+                {
+                  updateBusLocation(newBusLatitude, newBusLongitude);
+                }
               }
               setTimeout(transmitBusLocation, 3000)
             }

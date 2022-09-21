@@ -184,8 +184,19 @@ fastify.get("/bus/:route/location", async function (request, reply) {
   {
      await storage.init();
      //let coords = [41.889964, -87.659841];
-     latitude = cache.get(route+'.latitude') || await storage.getItem(route+'.latitude');
-     longitude = cache.get(route+'.longitude') || await storage.getItem(route+'.longitude');
+     latitude = cache.get(route+'.latitude');
+     if(latitude === null)
+     {
+       latitude = await storage.getItem(route+'.latitude');
+       cache.set(route+'.latitude', latitude);
+     }
+    
+     longitude = cache.get(route+'.longitude');
+     if(longitude === null)
+     {
+       longitude = await storage.getItem(route+'.longitude');
+       cache.set(route+'.longitude', longitude);
+     }
   }
    
   let response = { 
