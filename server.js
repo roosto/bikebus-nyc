@@ -33,7 +33,7 @@ let busIsRunning = true;
 //eventually the cms or bus_info.json
 let routes = {
   halsted: {
-    runInfo: "Run #H-004 // Wednesday, September 14th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am. Terminus at Daley Plaza for the City Council Bike Jam!",
+    runInfo: "Run #H-005 // Wednesday, September 21st, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am. Terminus at Daley Plaza for the City Council Bike Jam!",
     headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000",
     headerImageAlt: "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.21.22.{z}.{x}.{y}.png",
@@ -47,7 +47,7 @@ let routes = {
     fallback: false
   },
   milwaukee: {
-    runInfo: "Run #M-002 //  Wednesday, September 14th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am. Terminus at CTA HQ (567 W Lake St) for the I'M LATE PROTEST. Tell President Dorval how late you arrived due to the innacurate CTA tracker and lake of reliable service.",
+    runInfo: "Run #M-003 //  Wednesday, September 21st, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am. Terminus at Daley Plaza for the City Council Bike Jam!",
     headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526324223",
     headerImageAlt: "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.21.22.{z}.{x}.{y}.png",
