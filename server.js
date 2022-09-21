@@ -50,7 +50,7 @@ let routes = {
     runInfo: "Run #M-002 //  Wednesday, September 14th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am. Terminus at CTA HQ (567 W Lake St) for the I'M LATE PROTEST. Tell President Dorval how late you arrived due to the innacurate CTA tracker and lake of reliable service.",
     headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526324223",
     headerImageAlt: "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
-    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.14-3.22.{z}.{x}.{y}.jpg?",
+    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.21.22.{z}.{x}.{y}.jpg",
     trackerBounds: {
             bottomLeft: [41.892, -87.677961], //bottom left , -87.708574
             topRight: [41.91202090, -87.63069311] //top right
