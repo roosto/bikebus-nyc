@@ -43,7 +43,7 @@ let routes = {
     },
     mapWidth: "315px",
     mapHeight: "638px",
-    backupLink: "",
+    backupLink: "https://maps.app.goo.gl/ii9Duap1roBYUMkDA",
     fallback: false
   },
   milwaukee: {
