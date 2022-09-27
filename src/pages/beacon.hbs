@@ -11,29 +11,79 @@
     <meta charset="utf-8" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  
     <title>Bike Bus Beacon</title> 
+    
+    <style>
+      div#conductor-header {
+        background-color:white;
+        width:100%;
+        position:fixed;
+        height: 175px;
+        top: 0;
+      }
+      div#conductor-header-spaceholder {
+        height:195px;
+        padding-top: 0;
+      }
+      iframe#tracker {
+        height: 900px;
+        width: 100%;
+      }
+      
+      h1 span.clock {
+          font-size:2em;  
+      }
+      
+      span#clock-seconds {
+        color: grey;
+      }
+      
+    </style>
   </head>
   <body>
         <!-- This is the start of content for our page -->
-        <h1 class="title">Bike Bus Beacon</h1>
+        <div id="conductor-header">
+        <h1 class="title">
+          Bike Bus Beacon <br />
+          <span class="clock" id="clock-hours-minutes"></span><span class="clock" id="clock-seconds"></span>
+        </h1>
+  
+        <label>
+          <input type="checkbox" id="publish-location-checkbox" checked/> Publish location
+        </label>
         
+        <pre id="location-preview"></pre>
+        </div>
+        <div id="conductor-header-spaceholder"></div>
+        <iframe id="tracker" src="/{{route}}"> </iframe>
         
-        {{#if true}}
-          <pre id="location-preview"></pre>
-        {{/if}}
-    
+      
+        <!-- beacon.js -->
         <script>
+            
+            let lastBusLatitude;
+            let lastBusLongitude;
+            let newBusLatitude;
+            let newBusLongitude;
+
+            const publishLocationCheckbox = document.getElementById('publish-location-checkbox');
+            publishLocationCheckbox.addEventListener('change', (event) => {
+              console.log('change');
+              if (event.currentTarget.checked) {
+                updateBusLocation(lastBusLatitude,lastBusLongitude);
+              } else {
+                updateBusLocation(0,0);
+              } 
+            });
           
             let id;
             let target;
             let options;
-
+          
             function success(pos) {
-              busLatitude = pos.coords.latitude;
-              busLongitude = pos.coords.longitude;
-              
-              updateBusLocation(busLatitude, busLongitude);
+                newBusLatitude = pos.coords.latitude;
+                newBusLongitude = pos.coords.longitude;             
             }
 
             function error(err) {
@@ -48,20 +98,25 @@
 
             id = navigator.geolocation.watchPosition(success, error, options);
           
+            const previewElement = document.getElementById('location-preview');
+          
             function updateLocationPreview(lat, long)
             {
-              const previewElement = document.getElementById('location-preview');
               const now = new Date();
               let hour = now.getHours();
               let minute = now.getMinutes();
               let seconds = now.getSeconds();
-              previewElement.prepend(hour + ":" + minute + ":" + seconds + " " + lat + ", " + long + "\n")
+              hour = hour % 12;
+              hour = hour ? hour : 12; // the hour '0' should be '12'
+              minute = minute < 10 ? '0'+minute : minute;
+              previewElement.textContent = hour + ":" + minute + ":" + seconds + " " + lat + ", " + long + "\n";
               console.log(lat, long)
             }
           
+            const beacon_hash = "{{beacon_hash}}";
             function updateBusLocation(lat, long)
             {
-              fetch('/bus/location', {
+              fetch('/bus/{{route}}/location/'+beacon_hash, {
                 method: 'POST', // or 'PUT'
                 headers: {
                   'Content-Type': 'application/json',
@@ -81,6 +136,42 @@
                 })
             }
             
+            function transmitBusLocation()
+            {
+              console.log('heartbeat');
+              console.log([lastBusLatitude, newBusLatitude, lastBusLongitude, newBusLongitude]);
+              if(lastBusLatitude != newBusLatitude || lastBusLongitude != newBusLongitude)
+              {
+
+                lastBusLatitude = newBusLatitude;
+                lastBusLongitude = newBusLongitude; 
+                              
+                if(publishLocationCheckbox.checked)
+                {
+                  updateBusLocation(newBusLatitude, newBusLongitude);
+                }
+              }
+              setTimeout(transmitBusLocation, 3000)
+            }
+            transmitBusLocation();
+          
+            const clockHoursAndMinutes = document.getElementById('clock-hours-minutes');
+            const clockSeconds = document.getElementById('clock-seconds'); 
+            function clock()
+            {
+              const now = new Date();
+              let hour = now.getHours();
+              let minute = now.getMinutes();
+              const seconds = now.getSeconds();
+              hour = hour % 12;
+              hour = hour ? hour : 12; // the hour '0' should be '12'
+              minute = minute < 10 ? '0'+minute : minute;
+              clockHoursAndMinutes.textContent = hour + ":" + minute;
+              clockSeconds.textContent = ":" + seconds;
+              
+              setTimeout(clock, 1000)
+            }
+            clock();
         </script>
   </body>
 </html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- 
+      This is the main Handlebars template for the site 
+      - When the user visits the homepage or submits a color the app calls the endpoints in server.js
+      - The server script passes data in here and the Handlebars code builds it into the HTML page
+    -->
+    
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{{title}} Bike Bus Tracker</title> 
+    
+    <style>
+          body {
+              background-color:white;
+              font-family: sans-serif, helvetica, arial;
+          }
+      
+          h1 {
+            width:100%;
+            min-width: 315px;
+            max-width:500px;
+            margin-right:auto;
+            margin-left:auto;
+            margin-bottom: -35px;
+          }
+      
+          h1 img {
+            width: 100%;
+          }
+          
+          h2#info {
+            font-size:.8em;
+            text-align: center;
+/*             transform: rotate(5deg); */
+          }
+          div#map {
+              height: {{mapHeight}};
+              width: {{mapWidth}};
+              background-color:white;
+              margin-left:auto;  
+              margin-right: auto; 
+              margin-top: -2px;
+              z-index: -1;
+          }
+      </style>
+
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+         crossorigin=""/>
+
+     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    
+  </head>
+  <body>
+        <!-- This is the start of content for our page -->
+        <h1>
+          <img alt="{{busHeaderImageAlt}}" src="{{busHeaderImageSrc}}" />    
+        </h1>
+        <div id="map"></div>
+        <h2 id="info">
+          {{busRunInfo}} Track the bus live on the map above.
+           Brought to you by <a href="bikegridnow.org">Chicago, Bike Grid Now!</a>
+        </h2>
+        <!-- update_map.js -->
+        <script>
+            trackBusLocation()
+            
+            function trackBusLocation()
+            {
+              getBusLocation();
+              setTimeout(function() {
+                trackBusLocation();
+              }, 10000);
+            }
+          
+            function updateMap(lat, long)
+            {
+                addBusPositionMarker(lat, long);
+            }
+        
+          
+            function getBusLocation()
+            {
+              fetch('/bus/{{route}}/location', {
+                method: 'GET', // or 'PUT'
+              })
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log('Success:', data)
+                  updateMap(data.latitude, data.longitude)
+                })
+                .catch((error) => {
+                  console.error('Error:', error)
+                })
+            }
+            
+        </script>
+        <!-- map.js -->
+        <script>
+            const mapZoomLevel = 13
+
+            const routeBounds = [
+                [{{busTrackerBounds.bottomLeft}}], //bottom left
+                [{{busTrackerBounds.topRight}}] //top right
+            ];
+
+            var map = L.map('map', {
+                maxZoom: mapZoomLevel,
+                minZoom: mapZoomLevel,
+                maxBounds: routeBounds,
+                maxBoundsViscosity: 1.0,
+                zoomControl: false,
+            }).fitBounds(routeBounds);
+
+            var layer = L.tileLayer('{{busTrackerTileSrcPattern}}', {
+                attribution: 'Chicago, Bike Grid Now!'
+            }).addTo(map);
+
+
+            var marker, circle;
+
+            function addBusPositionMarker(latitude, longitude) {
+              if (marker) {
+                  map.removeLayer(marker)
+              }
+
+              if (circle) {
+                  map.removeLayer(circle)
+              }
+
+              marker = L.marker([latitude, longitude])
+              // circle = L.circle([latitude, longitude], {
+              //     radius: 150,
+              //     fillColor: "yellow",
+              //     weight: 6,
+              //  })
+
+              var featureGroup = L.featureGroup([marker, /*circle */]).addTo(map)
+            }
+
+            //41.918175, -87.648526 armitage and halsted
+            //41.951209, -87.649606 broadway and halsted
+            //41.883148, -87.647396 washington and halsted
+        </script>
+  </body>
+</html>
+

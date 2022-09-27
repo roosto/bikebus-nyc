@@ -1,133 +1,108 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    
+
     <!-- 
       This is the main Handlebars template for the site 
       - When the user visits the homepage or submits a color the app calls the endpoints in server.js
       - The server script passes data in here and the Handlebars code builds it into the HTML page
     -->
-    
+
     <meta charset="utf-8" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Halsted Bike Bus Tracker</title> 
-    
+    <title>Bike Bus Tracker</title>
+
     <style>
-          body {
-              background-color:white;
-          }
-
-          h1.title {
-            font-family: Helvetica, Arial, sans-serif;
-            text-align: center;
-          }
+      body { 
+        background-color:white; 
+        font-family: sans-serif, helvetica, arial;
+        text-align: center;
+      } 
       
-          div#map {
-              height: 638px;
-              width: 215px;
-              background-color:white;
-              margin-left:auto;
-              margin-right: auto;
-          }
-          @livewireStyles
-      </style>
+      h2 {
+        margin-left: auto;
+        margin-right: auto;
+        width:400px;
+        max-width:100%;
+      }
+      
+      img.preview { 
+        width: 50%; 
+        float:left; 
+      } 
+      img.bus-link-img {
+        width:100%;
+      }
+      @media (max-width: 500px) {
+      img.preview {
+/*         margin-left: auto; 
+        margin-right:auto;  */
+        width: 100% !important;
+      }
+      
+    }
+      
 
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-         crossorigin=""/>
-
-     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-        crossorigin=""></script>
-    
+      
+/*       div.preview-container {
+        width: 100%; 
+        margin-left:auto; 
+        margin-right: auto;
+      } */
+    </style>
   </head>
   <body>
-        <!-- This is the start of content for our page -->
-        <h1 class="title">Halsted Bike Bus Tracker</h1>
-        
-        <div id="map"></div>
-        <!-- update_map.js -->
-        <script>
-            trackBusLocation()
-            
-            function trackBusLocation()
-            {
-              getBusLocation();
-              setTimeout(function() {
-                trackBusLocation();
-              }, 30000);
-            }
-          
-            function updateMap(lat, long)
-            {
-                addBusPositionMarker(lat, long);
-            }
-        
-          
-            function getBusLocation()
-            {
-              fetch('/bus/location', {
-                method: 'GET', // or 'PUT'
-              })
-                .then((response) => response.json())
-                .then((data) => {
-                  console.log('Success:', data)
-                  updateMap(data.latitude, data.longitude)
-                })
-                .catch((error) => {
-                  console.error('Error:', error)
-                })
-            }
-            
-        </script>
-        <!-- map.js -->
-        <script>
-            const mapZoomLevel = 13
-
-            const routeBounds = [
-                [41.874, -87.66377961], //bottom left
-                [41.95482090, -87.62669311] //top right
-            ];
-
-            var map = L.map('map', {
-                maxZoom: mapZoomLevel,
-                minZoom: mapZoomLevel,
-                maxBounds: routeBounds,
-                maxBoundsViscosity: 1.0,
-                zoomControl: false,
-            }).fitBounds(routeBounds);
-
-            var layer = L.tileLayer('https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/{z}.{x}.{y}.jpg', {
-                attribution: 'Chicago, Bike Grid Now!'
-            }).addTo(map);
+    <!-- This is the start of content for our page -->
+    <h1>Bike Bus Tracker</h1>
+<!--     <a href="/halsted"> -->
+    <a href="https://bikegridnow.org/events/n-halsted-bike-bus-run-6" style="display:inline-block; background-color:yellow; color: black;">
+      <h2>
+<!--             Track the Halsted Bike Bus<br /> -->
+            North Halsted Bike Bus Info &rarr;<br />
+<!--       <img class="bus-link-img" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000" /> -->
+      </h2>
+    </a>
+    
+<!--     <a href="/milwaukee"> -->
+        <a href="https://bikegridnow.org/events/milwaukee-bike-bus-run-4" style="display:inline-block; background-color:lightblue; color: black;">
+      <h2>
+<!--       Track the Milwaukee Bike Bus<br /> -->
+       Milwaukee Bike Bus Info &rarr;<br />
 
 
-            var marker, circle;
+<!--       <img class="bus-link-img" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526286000" /> -->
 
-            function addBusPositionMarker(latitude, longitude) {
-              if (marker) {
-                  map.removeLayer(marker)
-              }
 
-              if (circle) {
-                  map.removeLayer(circle)
-              }
+      </h2>
+    </a>
+    
+    <!--     <a href="/pilsen"> -->
+        <a href="https://bikegridnow.org/events/s-halsted-bike-bus-run-1" style="display:inline-block; background-color:pink; color: black;">
+      <h2>
+<!--       Track the South Halsted Bike Bus<br /> -->
+       South Halsted Bike Bus Info &rarr;<br />
 
-              marker = L.marker([latitude, longitude])
-              // circle = L.circle([latitude, longitude], {
-              //     radius: 150,
-              //     fillColor: "yellow",
-              //     weight: 6,
-              //  })
 
-              var featureGroup = L.featureGroup([marker, /*circle */]).addTo(map)
-            }
+<!--       <img class="bus-link-img" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526286000" /> -->
 
-            //41.918175, -87.648526 armitage and halsted
-            //41.951209, -87.649606 broadway and halsted
-            //41.883148, -87.647396 washington and halsted
-        </script>
+
+      </h2>
+    </a>
+    
+    <h3>
+      Brought to you by <a href="https://bikegridnow.org">CHICAGO, BIKE GRID NOW!</a>
+    </h3>
+    <p>
+      Track <b>all three</b> routes live on this page on <b>Wednesday, September 28th</b> beginning at 7:30am.
+    </p>
+<!--     <ul>
+      <li><a href="https://bikegridnow.org/events/oC4yLGLQclItnyakpUJa">RSVP and route details for the Halsted Bike Bus</a></li>
+      <li><a href="https://bikegridnow.org/events/N8l4SpGUwws1JMRw8kPD">RSVP and route details for the Milwaukee Bike Bus</a></li>
+    </ul>
+    <div class="preview-container">
+      <img class="preview" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/BIKE-BUS-FLYER_09.07_v2.png?v=1662474216634" />
+      <img class="preview" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/BIKE-BUS-FLYER_MILWAUKEE_09.07_b.png?v=1662474208581" />      
+    </div> -->
   </body>
 </html>

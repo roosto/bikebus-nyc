@@ -12,8 +12,7 @@ const fastify = require("fastify")({
 });
 
 const storage = require('node-persist');
-
-// ADD FAVORITES ARRAY VARIABLE FROM TODO HERE
+const cache = require('nano-cache');
 
 // Setup our static files
 fastify.register(require("@fastify/static"), {
@@ -26,48 +25,183 @@ fastify.register(require("@fastify/view"), {
   engine: {
     handlebars: require("handlebars"),
   },
-});
+}); 
+
+const fallbackAll = false;
+let busIsRunning = false;
+
+//eventually the cms or bus_info.json
+let routes = {
+  halsted: {
+    runInfo: "Run #H-005 // Wednesday, September 21st, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am. Terminus at Daley Plaza for the City Council Bike Jam!",
+    headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000",
+    headerImageAlt: "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.21.22.{z}.{x}.{y}.png",
+    trackerBounds: {
+            bottomLeft: [41.874, -87.64377961], //bottom left
+            topRight: [41.94002090, -87.64669311] //top right
+    },
+    mapWidth: "315px",
+    mapHeight: "638px",
+    backupLink: "",
+    fallback: false
+  },
+  milwaukee: {
+    runInfo: "Run #M-003 //  Wednesday, September 21st, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am. Terminus at Daley Plaza for the City Council Bike Jam!",
+    headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526324223",
+    headerImageAlt: "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.21.22.{z}.{x}.{y}.png",
+    trackerBounds: {
+            bottomLeft: [41.892, -87.677961], //bottom left , -87.708574
+            topRight: [41.91202090, -87.63069311] //top right
+    },
+    mapWidth: "650px",
+    mapHeight: "490px",
+    backupLink: "",
+    fallback: false
+  }
+};
+
 
 /**
  * Our home page route
  *
  * Returns src/pages/index.hbs with data built into it
  */
-fastify.get("/", async function (request, reply) {
+
+fastify.get("/:route", async function (request, reply) {  
+  const { route } = request.params;
+  
+  if(route == "") {
+    return reply.view("/src/pages/index.hbs");
+  }
+  
+  let bus;
+  
+  
+  if(!routes.hasOwnProperty(route))
+  {
+    return reply
+      .code(404)
+      .type('text/plain')
+      .send('Route not found.');
+  }
+  else
+  {
+    bus = routes[route];
+  }
+  
+  
+  
+  if(fallbackAll || bus.fallback) {
+    return reply.redirect(bus.backupLink);
+  }
+  
   await storage.init();
 
   // params is an object we'll pass to our handlebars template
   let params = { 
+    
+    route: route,
+    title: route.charAt(0).toUpperCase() + route.slice(1),
+    busRunInfo: bus.runInfo,
+    busHeaderImageSrc: bus.headerImageSrc,
+    busHeaderImageAlt: bus.headerImageAlt,
+    busTrackerTileSrcPattern: bus.trackerTileSrcPattern,
+    busTrackerBounds: bus.trackerBounds,
+    mapWidth: bus.mapWidth,
+    mapHeight: bus.mapHeight,
+    headerWidth: bus.headerWidth,
+    
     latitude: await storage.getItem('latitude'),
-    longitude: await storage.getItem('longitude')
+    longitude: await storage.getItem('longitude'),
   };
 
   // The Handlebars code will be able to access the parameter values and build them into the page
-  return reply.view("/src/pages/index.hbs", params);
+  return reply.view("/src/pages/tracker.hbs", params);
 });
 
-fastify.get("/beacon/"+process.env.beacon_hash, function (request, reply) {
-  return reply.view("/src/pages/beacon.hbs");
+fastify.get("/beacon/:route/"+process.env.beacon_hash, function (request, reply) {
+  
+  const { route } = request.params;
+  if(!routes.hasOwnProperty(route))
+  {
+    return reply
+      .code(404)
+      .type('text/plain')
+      .send('Route not found.');
+  }
+  
+  if(fallbackAll || routes[route].fallback) {
+    return reply.redirect(routes[route].backupLink);
+  }
+  const params = {
+    beacon_hash: process.env.beacon_hash,
+    route: route
+  };
+  return reply.view("/src/pages/beacon.hbs", params);
 });
 
-fastify.post("/bus/location/"+process.env.beacon_hash, async function (request, reply) {
-  // Build the params object to pass to the template
-  let params = { };
+fastify.post("/bus/:route/location/"+process.env.beacon_hash, async function (request, reply) {
+  
+  const { route } = request.params;
+  if(!routes.hasOwnProperty(route))
+  {
+    return reply
+      .code(404)
+      .type('text/plain')
+      .send('Route not found.');
+  }
+  
+  //41.883148, -87.647396 washington and halsted
+   // request.body.latitude = 0;
+   // request.body.longitude = 0;
   
   await storage.init();
-  await storage.setItem('latitude', request.body.latitude);
-  await storage.setItem('longitude', request.body.longitude);
-  
-  // The Handlebars template will use the parameter values to update the page with the chosen color
+  await storage.setItem(route+'.latitude', request.body.latitude);
+  await storage.setItem(route+'.longitude', request.body.longitude);
+  cache.del(route+'.latitude');
+  cache.del(route+'.longitude');
   return request.body;
 });
 
 
-fastify.get("/bus/location", async function (request, reply) {
-  await storage.init();
+fastify.get("/bus/:route/location", async function (request, reply) {
+  
+  const { route } = request.params;
+  if(!routes.hasOwnProperty(route))
+  {
+    return reply
+      .code(404)
+      .type('text/plain')
+      .send('Route not found.');
+  }
+  
+  let latitude;
+  let longitude;
+  
+  if(busIsRunning)
+  {
+     await storage.init();
+     //let coords = [41.889964, -87.659841];
+     latitude = cache.get(route+'.latitude');
+     if(latitude === null)
+     {
+       latitude = await storage.getItem(route+'.latitude');
+       cache.set(route+'.latitude', latitude);
+     }
+    
+     longitude = cache.get(route+'.longitude');
+     if(longitude === null)
+     {
+       longitude = await storage.getItem(route+'.longitude');
+       cache.set(route+'.longitude', longitude);
+     }
+  }
+   
   let response = { 
-    latitude: await storage.getItem('latitude'),
-    longitude: await storage.getItem('longitude')
+    latitude: latitude || 0,
+    longitude: longitude || 0
   };
   return response;
 });
