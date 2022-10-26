@@ -21,47 +21,23 @@ fastify.register(require("@fastify/static"), {
 });
 
 // View is a templating manager for fastify
+const handlebars = require('handlebars');
+
+handlebars.registerHelper('toJSON', function(object){
+  return new handlebars.SafeString(JSON.stringify(object));
+});
+
 fastify.register(require("@fastify/view"), {
   engine: {
-    handlebars: require("handlebars"),
+    handlebars: handlebars,
   },
 }); 
 
 const fallbackAll = false;
-let busIsRunning = false;
+let busIsRunning = true;
 
 //eventually the cms or bus_info.json
-let routes = {
-  halsted: {
-    runInfo: "Run #H-005 // Wednesday, September 21st, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am. Terminus at Daley Plaza for the City Council Bike Jam!",
-    headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000",
-    headerImageAlt: "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
-    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.21.22.{z}.{x}.{y}.png",
-    trackerBounds: {
-            bottomLeft: [41.874, -87.64377961], //bottom left
-            topRight: [41.94002090, -87.64669311] //top right
-    },
-    mapWidth: "315px",
-    mapHeight: "638px",
-    backupLink: "",
-    fallback: false
-  },
-  milwaukee: {
-    runInfo: "Run #M-003 //  Wednesday, September 21st, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am. Terminus at Daley Plaza for the City Council Bike Jam!",
-    headerImageSrc: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526324223",
-    headerImageAlt: "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
-    trackerTileSrcPattern: "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.21.22.{z}.{x}.{y}.png",
-    trackerBounds: {
-            bottomLeft: [41.892, -87.677961], //bottom left , -87.708574
-            topRight: [41.91202090, -87.63069311] //top right
-    },
-    mapWidth: "650px",
-    mapHeight: "490px",
-    backupLink: "",
-    fallback: false
-  }
-};
-
+const routes = require("./public/routes.json");
 
 /**
  * Our home page route
@@ -90,9 +66,7 @@ fastify.get("/:route", async function (request, reply) {
   {
     bus = routes[route];
   }
-  
-  
-  
+    
   if(fallbackAll || bus.fallback) {
     return reply.redirect(bus.backupLink);
   }
@@ -103,7 +77,7 @@ fastify.get("/:route", async function (request, reply) {
   let params = { 
     
     route: route,
-    title: route.charAt(0).toUpperCase() + route.slice(1),
+    title: bus.title,
     busRunInfo: bus.runInfo,
     busHeaderImageSrc: bus.headerImageSrc,
     busHeaderImageAlt: bus.headerImageAlt,
@@ -111,10 +85,8 @@ fastify.get("/:route", async function (request, reply) {
     busTrackerBounds: bus.trackerBounds,
     mapWidth: bus.mapWidth,
     mapHeight: bus.mapHeight,
-    headerWidth: bus.headerWidth,
-    
-    latitude: await storage.getItem('latitude'),
-    longitude: await storage.getItem('longitude'),
+    headerWidth: bus.headerWidth, 
+    stops: bus.stops,   
   };
 
   // The Handlebars code will be able to access the parameter values and build them into the page
@@ -165,7 +137,6 @@ fastify.post("/bus/:route/location/"+process.env.beacon_hash, async function (re
   return request.body;
 });
 
-
 fastify.get("/bus/:route/location", async function (request, reply) {
   
   const { route } = request.params;
@@ -187,14 +158,14 @@ fastify.get("/bus/:route/location", async function (request, reply) {
      latitude = cache.get(route+'.latitude');
      if(latitude === null)
      {
-       latitude = await storage.getItem(route+'.latitude');
+     latitude = await storage.getItem(route+'.latitude');
        cache.set(route+'.latitude', latitude);
      }
     
      longitude = cache.get(route+'.longitude');
      if(longitude === null)
      {
-       longitude = await storage.getItem(route+'.longitude');
+     longitude = await storage.getItem(route+'.longitude');
        cache.set(route+'.longitude', longitude);
      }
   }

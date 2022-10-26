@@ -1,0 +1,101 @@
+{
+  "bergen": {
+    "title": "Bergen Bike Train Tracker",
+    "runInfo": "Track the bike train live on the map above beginning at 7:00am on Wednesday, October 26th, 2022.",
+    "trackerBounds" : 
+    {
+            "bottomLeft": [40.685828, -73.911150], 
+            "topRight": [40.667982, -73.991364] 
+    },
+    "trackerTileSrcPattern": "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png",
+    "mapWidth": "550px",
+    "mapHeight": "250px",
+    "backupLink": "",
+    "fallback": false,
+    "stops" : [
+      {
+        "name": "Rockaway Av",
+        "subtitle": "",
+        "time": "7:00 - 7:15",
+        "coordinates": [40.673982, -73.911150]
+      },
+      {
+        "name": "Howard Av",
+        "subtitle": "",
+        "time": "7:20",
+        "coordinates": [40.674435, -73.919460]
+      },
+      {
+        "name": "Rochester Av",
+        "subtitle": "",
+        "time": "7:25",
+        "coordinates": [40.674895, -73.927767]
+      },
+      {
+        "name": "Brooklyn Ave",
+        "subtitle": "",
+        "time": "7:30",
+        "coordinates": [40.675787, -73.944390]
+      },
+      {
+        "name": "Classon Av",
+        "subtitle": "",
+        "time": "7:35",
+        "coordinates": [40.677523, -73.959131]
+      },
+      {
+        "name": "Grand Av",
+        "subtitle": "",
+        "time": "7:40",
+        "coordinates": [40.678175, -73.962225]
+      },
+      {
+        "name": "Vanderbilt Av",
+        "subtitle": "",
+        "time": "7:45",
+        "coordinates": [40.679430, -73.968222]
+      },
+      {
+        "name": "Fifth Av",
+        "subtitle": "",
+        "time": "7:50",
+        "coordinates": [40.681495, -73.977019]
+      },
+      {
+        "name": "Bond St",
+        "subtitle": "",
+        "time": "7:55",
+        "coordinates": [40.685020, -73.986126]
+      },
+      {
+        "name": "Court St",
+        "subtitle": "",
+        "time": "8:00",
+        "coordinates": [40.687828, -73.993264]
+      }
+    ]
+  },
+  "milwaukee": {
+    "runInfo": "Run #M-002 //  Wednesday, September 14th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am. Terminus at CTA HQ (567 W Lake St) for the I'M LATE PROTEST. Tell President Dorval how late you arrived due to the innacurate CTA tracker and lake of reliable service.",
+    "headerImageSrc": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526324223",
+    "headerImageAlt": "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.14-3.22.{z}.{x}.{y}.jpg?",
+    "trackerBounds": {
+            "bottomLeft": [41.892, -87.677961],
+            "topRight": [41.91202090, -87.63069311]
+    },
+    "mapWidth": "650px",
+    "mapHeight": "490px",
+    "backupLink": "",
+    "fallback": false,
+    "stops": [
+      {
+        "name": "New Wave Coffee",
+        "subtitle": "2557 N Milwaukee Ave",
+        "time": "7:30 - 7:45",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.928048, -87.705137]
+      }
+    ]
+  }
+}

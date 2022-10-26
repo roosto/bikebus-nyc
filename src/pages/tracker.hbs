@@ -21,6 +21,9 @@
           }
       
           h1 {
+            text-align: center;
+          }
+          /* h1 {
             width:100%;
             min-width: 315px;
             max-width:500px;
@@ -31,7 +34,7 @@
       
           h1 img {
             width: 100%;
-          }
+          } */
           
           h2#info {
             font-size:.8em;
@@ -40,12 +43,52 @@
           }
           div#map {
               height: {{mapHeight}};
-              width: {{mapWidth}};
+              width: 100%;
               background-color:white;
-              margin-left:auto;  
-              margin-right: auto; 
-              margin-top: -2px;
-              z-index: -1;
+          }
+        
+          
+          .marker-container {
+            display: flex;
+            width: 300px;
+            line-height: 1.0;
+            /* background-color: rgba(255, 255, 255, 0.844); */
+            transform: rotate(65deg);
+          }
+          .marker-box {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            font-size: 1em;
+          }
+          
+          .marker-box-center {
+              flex-grow: 0;
+          }
+          
+          div.marker-box-center > img {
+            width: 20px !important;
+          }
+          .marker-box:first-child > div {             
+            margin-left: auto; 
+            margin-right: 1em;
+          }
+          
+          .marker-box:last-child  > div { 
+            margin-right: auto;  
+            margin-left: 1em;
+          }
+          
+          /* non-essential */
+          .marker-box {
+            align-items: center;
+            /* border: 1px solid #ccc; */
+            /* background-color: lightgreen; */
+            height: 40px;
+          }
+          .leaflet-bar a {
+            opacity: .25;
+          }
           }
       </style>
 
@@ -61,13 +104,42 @@
   <body>
         <!-- This is the start of content for our page -->
         <h1>
-          <img alt="{{busHeaderImageAlt}}" src="{{busHeaderImageSrc}}" />    
+          {{#if busHeaderImageSrc}}
+          <img alt="{{busHeaderImageAlt}}" src="{{busHeaderImageSrc}}" />
+          {{else}}
+            {{title}}   
+          {{/if}}
         </h1>
         <div id="map"></div>
         <h2 id="info">
-          {{busRunInfo}} Track the bus live on the map above.
-           Brought to you by <a href="bikegridnow.org">Chicago, Bike Grid Now!</a>
+          {{busRunInfo}} Track the bus live on the map above. <br /> <a href="https://bit.ly/bergenbiketrain">Learn more about the Bergen Bike Train.</a>
         </h2>
+        
+        <!-- stop markers -->
+        {{#each stops}}
+          <div id="stop-marker-{{@index}}" class="marker-container">
+             <div class="marker-box">
+               <div><b>{{this.time}}</b></div>
+               
+             </div>
+             <div class="marker-box marker-box-center">
+               {{#if this.icon}}
+               <img src="{{this.icon}}" />
+               {{else}}
+               <img src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus_stop_circle.svg?v=1664245520908" />
+               {{/if}}
+             </div>
+             <div class="marker-box">
+               <div>
+                 <b>{{this.name}}</b> 
+                 {{#if this.subtitle}}
+                 <br />
+                 <span>{{this.subtitle}}</span>
+                 {{/if}}
+               </div>
+             </div>
+          </div>
+        {{/each}}
         <!-- update_map.js -->
         <script>
             trackBusLocation()
@@ -104,7 +176,7 @@
         </script>
         <!-- map.js -->
         <script>
-            const mapZoomLevel = 13
+            const mapZoomLevel = 12.6
 
             const routeBounds = [
                 [{{busTrackerBounds.bottomLeft}}], //bottom left
@@ -112,42 +184,86 @@
             ];
 
             var map = L.map('map', {
-                maxZoom: mapZoomLevel,
-                minZoom: mapZoomLevel,
-                maxBounds: routeBounds,
-                maxBoundsViscosity: 1.0,
-                zoomControl: false,
+                // maxZoom: mapZoomLevel,
+                // minZoom: mapZoomLevel,
+                // maxBounds: routeBounds,
+                // maxBoundsViscosity: 1.0,
+                 // zoomControl: true,
             }).fitBounds(routeBounds);
 
-            var layer = L.tileLayer('{{busTrackerTileSrcPattern}}', {
-                attribution: 'Chicago, Bike Grid Now!'
-            }).addTo(map);
+            // var layer = L.tileLayer('{{busTrackerTileSrcPattern}}', {
+            //     attribution: 'Chicago, Bike Grid Now!'
+            // }).addTo(map);
+            
+            L.tileLayer(
+            'https://api.mapbox.com/styles/v1/streicherd/cl9p4eshq002q15s1n9ga158e/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RyZWljaGVyZCIsImEiOiJjbDkxZ2JuaDQxMXRpM25vNmRjdzNlZXVzIn0.BkniqpkfdbK_szBJGdr0KQ', {
+                tileSize: 512,
+                zoomOffset: -1,
+                attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);          
 
-
-            var marker, circle;
-
+            var busPositionMarker;
             function addBusPositionMarker(latitude, longitude) {
-              if (marker) {
-                  map.removeLayer(marker)
+              if (busPositionMarker) {
+                  map.removeLayer(busPositionMarker)
               }
-
-              if (circle) {
-                  map.removeLayer(circle)
-              }
-
-              marker = L.marker([latitude, longitude])
-              // circle = L.circle([latitude, longitude], {
-              //     radius: 150,
-              //     fillColor: "yellow",
-              //     weight: 6,
-              //  })
-
-              var featureGroup = L.featureGroup([marker, /*circle */]).addTo(map)
+            
+              busPositionMarker = L.marker([latitude, longitude])
             }
-
+            
+            /* Stops */
+            const stops = {{toJSON stops}}
+                        
+            stops.forEach((stop, index) => {
+              addStopMarker(map, stop.coordinates[0], stop.coordinates[1], document.getElementById('stop-marker-'+index));
+            })
+            
+            let routePolylinePoints = stops.map(stop => stop.coordinates);
+            L.polyline(routePolylinePoints, {
+              // color: '#FBE40F',
+              color: '#EFB143',
+              weight: 10,
+            }).addTo(map);
+            
+            function addStopMarker(map, latitude, longitude, element)
+            {              
+                
+                let testIcon = L.divIcon({
+                  className: '', //just need to override the default class
+                  html: element,
+                  iconAnchor: [150, 20]
+                })  
+                
+                let stopMarker = L.marker([latitude, longitude], { icon: testIcon }); 
+                
+                stopMarker.addTo(map);                                                
+            }
+            
+            
+            function drawRouteBetweenPoints(a, b)
+            {
+              console.log([a, b]);
+              L.polyline([a, b]).addTo(map);
+            }
+            
+            /* Icons */
+            // const stopIcon = L.icon({
+            //     iconUrl: 'https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus_stop_circle.svg?v=1664245520908',
+            //     iconSize:     [16, 16], // size of the icon
+            // });
+            // 
+            // const coffeeIcon = L.icon({
+            //     iconUrl: 'https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910',
+            //     iconSize:     [20, 25], // size of the icon
+            // });
             //41.918175, -87.648526 armitage and halsted
             //41.951209, -87.649606 broadway and halsted
             //41.883148, -87.647396 washington and halsted
+            
+            // {{#each stops}}
+            //     addStopMarker(map, {{this.coordinates.[0]}}, {{this.coordinates.[1]}}, document.getElementById('stop-marker-{{@index}}'));  
+            //     // addStopMarker(map, {{this.coordinates.[0]}}, {{this.coordinates.[1]}}, "{{this.type}}", "{{this.name}}", "{{this.subtitle}}");       
+            // {{/each}}
         </script>
   </body>
 </html>
