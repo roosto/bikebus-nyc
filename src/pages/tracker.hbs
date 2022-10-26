@@ -208,7 +208,7 @@
                   map.removeLayer(busPositionMarker)
               }
             
-              busPositionMarker = L.marker([latitude, longitude])
+              busPositionMarker = L.marker([latitude, longitude]).addTo(map);
             }
             
             /* Stops */
