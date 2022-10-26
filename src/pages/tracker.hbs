@@ -112,7 +112,7 @@
         </h1>
         <div id="map"></div>
         <h2 id="info">
-          {{busRunInfo}} Track the bus live on the map above. <br /> <a href="https://bit.ly/bergenbiketrain">Learn more about the Bergen Bike Train.</a>
+          {{busRunInfo}} <br /> <a href="https://bit.ly/bergenbiketrain">Learn more about the Bergen Bike Train.</a>
         </h2>
         
         <!-- stop markers -->
@@ -208,7 +208,7 @@
                   map.removeLayer(busPositionMarker)
               }
             
-              busPositionMarker = L.marker([latitude, longitude]).addTo(map);
+              busPositionMarker = L.marker([latitude, longitude]).addTo(map)
             }
             
             /* Stops */

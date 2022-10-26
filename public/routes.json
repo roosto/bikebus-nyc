@@ -97,7 +97,7 @@
   },
   "bergen": {
     "title": "Bergen Bike Train Tracker",
-    "runInfo": "Track the bike train live on the map above beginning at 7:00am on Wednesday, October 26th, 2022.",
+    "runInfo": "Track the bike train live on the map above beginning at 7:00am every Wednesday morning.",
     "trackerBounds" : 
     {
             "bottomLeft": [40.685828, -73.911150], 
