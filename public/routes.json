@@ -1,4 +1,100 @@
 {
+  "halsted": {
+    "runInfo": "Run #H-004 // Wednesday, September 14th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am. Terminus at CTA HQ (567 W Lake St) for the I'M LATE PROTEST. Tell President Dorval how late you arrived due to the innacurate CTA tracker and lake of reliable service.",
+    "headerImageSrc": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000",
+    "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
+    "trackerBounds": {
+            "bottomLeft": [41.874, -87.64377961], 
+            "topRight": [41.94002090, -87.64669311]
+    },
+    "mapWidth": "315px",
+    "mapHeight": "638px",
+    "backupLink": "",
+    "fallback": false,
+    "stops" : [
+      {
+        "name": "Elevate Coffee",
+        "subtitle": "3344 N Halsted St",
+        "time": "7:30 - 7:45",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.943228, -87.649478]
+      },
+      {
+        "name": "Clark / Barry",
+        "subtitle": "",
+        "time": "7:47",
+        "coordinates": [41.938190, -87.649239]
+      },
+      {
+        "name": "Wellington",
+        "subtitle": "",
+        "time": "7:49",
+        "coordinates": [41.936386, -87.649141]
+      },
+      {
+        "name": "Diversey",
+        "subtitle": "",
+        "time": "7:50",
+        "coordinates": [41.932717, -87.649009]
+      },
+      {
+        "name": "Fullerton",
+        "subtitle": "",
+        "time": "7:55",
+        "coordinates": [41.925443, -87.648751]
+      },
+      {
+        "name": "Armitage",
+        "subtitle": "",
+        "time": "7:58",
+        "coordinates": [41.918175, -87.648526]
+      },
+      {
+        "name": "Clybourn",
+        "subtitle": "",
+        "time": "8:02",
+        "coordinates": [41.910008, -87.648262]
+      },
+      {
+        "name": "Division",
+        "subtitle": "",
+        "time": "8:06",
+        "coordinates": [41.903635, -87.648074]
+      },
+      {
+        "name": "Milwaukee / Grand",
+        "subtitle": "",
+        "time": "8:14",
+        "coordinates": [41.891181, -87.647617]
+      },
+      {
+        "name": "Hubbard",
+        "subtitle": "",
+        "time": "8:15",
+        "coordinates": [41.890089, -87.647597]
+      },
+      {
+        "name": "Fulton",
+        "subtitle": "",
+        "time": "8:16",
+        "coordinates": [41.886798, -87.647497]
+      },
+      {
+        "name": "Washington",
+        "subtitle": "",
+        "time": "8:17",
+        "coordinates": [41.883148, -87.647396]
+      },
+      {
+        "name": "Chicago French Market",
+        "subtitle": "",
+        "time": "8:20",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.884089, -87.641134]
+      }
+    ]
+  },
   "bergen": {
     "title": "Bergen Bike Train Tracker",
     "runInfo": "Track the bike train live on the map above beginning at 7:00am on Wednesday, October 26th, 2022.",
