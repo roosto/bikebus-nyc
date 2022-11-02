@@ -27,6 +27,23 @@
         max-width:100%;
       }
       
+      a.bus-link-txt {
+        display:inline-block;
+        color: black;
+      }
+      
+      a.north-halsted {
+        background-color: yellow;
+      }
+      
+      a.south-halsted {
+        background-color: pink;
+      }
+      
+      a.milwaukee {
+        background-color: lightblue;
+      }
+      
       img.preview { 
         width: 50%; 
         float:left; 
@@ -55,20 +72,23 @@
   <body>
     <!-- This is the start of content for our page -->
     <h1>Bike Bus Tracker</h1>
-<!--     <a href="/halsted"> -->
-    <a href="https://bikegridnow.org/events/n-halsted-bike-bus-run-6" style="display:inline-block; background-color:yellow; color: black;">
+    
+    <a class="bus-link-txt north-halsted" href="/north-halsted">
+    <!-- <a class="bus-link-txt north-halsted" href="https://bikegridnow.org/events/n-halsted-bike-bus-run-8"> -->
+        
       <h2>
-<!--             Track the Halsted Bike Bus<br /> -->
-            North Halsted Bike Bus Info &rarr;<br />
+            Track the North Halsted Bike Bus<br />
+            <!-- North Halsted Bike Bus Info &rarr;<br /> -->
 <!--       <img class="bus-link-img" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000" /> -->
       </h2>
     </a>
     
-<!--     <a href="/milwaukee"> -->
-        <a href="https://bikegridnow.org/events/milwaukee-bike-bus-run-4" style="display:inline-block; background-color:lightblue; color: black;">
+    <a class="bus-link-txt milwaukee" href="/milwaukee">
+     <!-- <a class="bus-link-txt milwaukee" href="https://bikegridnow.org/events/milwaukee-bike-bus-run-6"> -->
+       
       <h2>
-<!--       Track the Milwaukee Bike Bus<br /> -->
-       Milwaukee Bike Bus Info &rarr;<br />
+      Track the Milwaukee Bike Bus<br />
+       <!-- Milwaukee Bike Bus Info &rarr;<br /> -->
 
 
 <!--       <img class="bus-link-img" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526286000" /> -->
@@ -77,11 +97,11 @@
       </h2>
     </a>
     
-    <!--     <a href="/pilsen"> -->
-        <a href="https://bikegridnow.org/events/s-halsted-bike-bus-run-1" style="display:inline-block; background-color:pink; color: black;">
+        <a class="bus-link-txt south-halsted" href="south-halsted">
+         <!-- <a class="bus-link-txt south-halsted" href="https://bikegridnow.org/events/s-halsted-bike-bus-run-3"> -->
       <h2>
-<!--       Track the South Halsted Bike Bus<br /> -->
-       South Halsted Bike Bus Info &rarr;<br />
+      Track the South Halsted Bike Bus<br />
+       <!-- South Halsted Bike Bus Info &rarr;<br /> -->
 
 
 <!--       <img class="bus-link-img" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526286000" /> -->
@@ -94,7 +114,7 @@
       Brought to you by <a href="https://bikegridnow.org">CHICAGO, BIKE GRID NOW!</a>
     </h3>
     <p>
-      Track <b>all three</b> routes live on this page on <b>Wednesday, September 28th</b> beginning at 7:30am.
+      Track <b>all three</b> routes live on this page on <b>every Wednesday</b> beginning at 7:30am.
     </p>
 <!--     <ul>
       <li><a href="https://bikegridnow.org/events/oC4yLGLQclItnyakpUJa">RSVP and route details for the Halsted Bike Bus</a></li>

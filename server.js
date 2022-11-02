@@ -33,7 +33,6 @@ fastify.register(require("@fastify/view"), {
   },
 }); 
 
-const fallbackAll = false;
 let busIsRunning = true;
 
 //eventually the cms or bus_info.json
@@ -66,11 +65,7 @@ fastify.get("/:route", async function (request, reply) {
   {
     bus = routes[route];
   }
-    
-  if(fallbackAll || bus.fallback) {
-    return reply.redirect(bus.backupLink);
-  }
-  
+      
   await storage.init();
 
   // params is an object we'll pass to our handlebars template
@@ -81,11 +76,10 @@ fastify.get("/:route", async function (request, reply) {
     busRunInfo: bus.runInfo,
     busHeaderImageSrc: bus.headerImageSrc,
     busHeaderImageAlt: bus.headerImageAlt,
-    busTrackerTileSrcPattern: bus.trackerTileSrcPattern,
     busTrackerBounds: bus.trackerBounds,
-    mapWidth: bus.mapWidth,
     mapHeight: bus.mapHeight,
-    headerWidth: bus.headerWidth, 
+    color: bus.color,
+    globalMarkerClass: bus.globalMarkerClass, 
     stops: bus.stops,   
   };
 
@@ -104,9 +98,6 @@ fastify.get("/beacon/:route/"+process.env.beacon_hash, function (request, reply)
       .send('Route not found.');
   }
   
-  if(fallbackAll || routes[route].fallback) {
-    return reply.redirect(routes[route].backupLink);
-  }
   const params = {
     beacon_hash: process.env.beacon_hash,
     route: route
@@ -124,10 +115,6 @@ fastify.post("/bus/:route/location/"+process.env.beacon_hash, async function (re
       .type('text/plain')
       .send('Route not found.');
   }
-  
-  //41.883148, -87.647396 washington and halsted
-   // request.body.latitude = 0;
-   // request.body.longitude = 0;
   
   await storage.init();
   await storage.setItem(route+'.latitude', request.body.latitude);
@@ -154,7 +141,6 @@ fastify.get("/bus/:route/location", async function (request, reply) {
   if(busIsRunning)
   {
      await storage.init();
-     //let coords = [41.889964, -87.659841];
      latitude = cache.get(route+'.latitude');
      if(latitude === null)
      {

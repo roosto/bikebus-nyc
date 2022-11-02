@@ -1,17 +1,15 @@
 {
-  "halsted": {
-    "runInfo": "Run #H-004 // Wednesday, September 14th, 2022. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am. Terminus at CTA HQ (567 W Lake St) for the I'M LATE PROTEST. Tell President Dorval how late you arrived due to the innacurate CTA tracker and lake of reliable service.",
-    "headerImageSrc": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000",
+  "north-halsted": {
+    "title": "North Halsted Bike Bus Tracker",
+    "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.874, -87.64377961], 
-            "topRight": [41.94002090, -87.64669311]
+            "bottomLeft": [41.883148, -87.647396], 
+            "topRight": [41.943228, -87.631674]
     },
-    "mapWidth": "315px",
-    "mapHeight": "638px",
-    "backupLink": "",
-    "fallback": false,
+    "color": "#FBE40F",
+    "mapHeight": "538px",
     "stops" : [
       {
         "name": "Elevate Coffee",
@@ -30,7 +28,8 @@
         "name": "Wellington",
         "subtitle": "",
         "time": "7:49",
-        "coordinates": [41.936386, -87.649141]
+        "coordinates": [41.936386, -87.649141],
+        "markerClass": ""
       },
       {
         "name": "Diversey",
@@ -72,7 +71,8 @@
         "name": "Hubbard",
         "subtitle": "",
         "time": "8:15",
-        "coordinates": [41.890089, -87.647597]
+        "coordinates": [41.890089, -87.647597],
+        "markerClass": "push-down"
       },
       {
         "name": "Fulton",
@@ -84,30 +84,195 @@
         "name": "Washington",
         "subtitle": "",
         "time": "8:17",
-        "coordinates": [41.883148, -87.647396]
+        "coordinates": [41.883148, -87.647396],
+        "markerClass": "label-left"
       },
       {
-        "name": "Chicago French Market",
-        "subtitle": "",
+        "name": "City Hall",
+        "subtitle": "#PlowTheSidewalks",
         "time": "8:20",
+        "coordinates": [41.883247, -87.631674],
+        "markerClass": "label-right push-down-4x"
+      }
+    ]
+  },
+  "milwaukee": {
+    "title": "Milwaukee Bike Bus Tracker",
+    "runInfo": "The Milwaukee Bike Bus runs every Wednesday morning. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
+    "headerImageAlt": "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.14-3.22.{z}.{x}.{y}.jpg?",
+    "trackerBounds": {
+            "bottomLeft": [41.883247, -87.705137],
+            "topRight": [41.928048, -87.631674]
+    },
+    "color": "#84CBF1",
+    "mapHeight": "490px",
+    "stops": [
+      {
+        "name": "New Wave Coffee",
+        "subtitle": "2557 N Milwaukee Ave",
+        "time": "7:30 - 7:45",
         "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
-        "coordinates": [41.884089, -87.641134]
+        "coordinates": [41.928048, -87.705137]
+      },
+      {
+        "name": "California & Milwaukee",
+        "subtitle": "in front of Cozy Corner",
+        "time": "7:50",
+        "coordinates": [41.922904, -87.697351]
+      },
+      {
+        "name": "Leavitt & Milwaukee",
+        "subtitle": "606 trail connection",
+        "time": "7:54",
+        "coordinates": [41.913579, -87.682410]
+      },
+      {
+        "name": "Damen & Milwaukee",
+        "time": "7:56",
+        "coordinates": [41.910387, -87.677465]
+      },
+      {
+        "name": "Division & Damen",
+        "time": "8:00",
+        "coordinates": [41.903188, -87.677251]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.899543, -87.677148]
+      },
+      {
+        "name": "Augusta & Wolcott",
+        "time": "8:02",
+        "coordinates": [41.899588, -87.674710],
+        "markerClass": "label-left"
+      },
+      {
+        "name": "Noble & Augusta",
+        "time": "8:05",
+        "coordinates": [41.899785, -87.662501],
+        "markerClass": "label-right push-down-4x"
+      },
+      {
+        "name": "Hubbard & Noble",
+        "time": "8:10",
+        "coordinates": [41.889941, -87.662231],
+        "markerClass": "label-left"
+      },
+      {
+        "name": "Halsted & Hubbard",
+        "subtitle": "",
+        "time": "8:13",
+        "coordinates": [41.890089, -87.647597],
+        "markerClass": "label-right"
+      },
+      {
+        "name": "Fulton & Halsted",
+        "subtitle": "",
+        "time": "8:15",
+        "coordinates": [41.886798, -87.647497]
+      },
+      {
+        "name": "Washington & Halsted",
+        "subtitle": "",
+        "time": "8:17",
+        "coordinates": [41.883148, -87.647396],
+        "markerClass": "label-left"
+      },
+      {
+        "name": "City Hall",
+        "subtitle": "#PlowTheSidewalks",
+        "time": "8:20",
+        "coordinates": [41.883247, -87.631674],
+        "markerClass": "label-right push-down-4x"
+      }
+    ]
+  },
+  "south-halsted": {
+    "title": "South Halsted Bike Bus Tracker",
+    "runInfo": "The South Halsted Bike Bus runs every Wednesday morning. Meet at 7:40 am at Cafe Jumping Bean. Roll out at 7:55 am.",
+    "headerImageAlt": "The South Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "trackerBounds": {
+            "bottomLeft": [41.7620, -87.64377961],
+            "topRight": [41.970, -87.64669311]
+    },
+    "mapHeight": "378px",
+    "color": "#D78AB2",
+    "stops" : [
+      {
+        "name": "Cafe Jumping Bean",
+        "subtitle": "1439 S 18th St.",
+        "time": "7:40 - 7:55",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.857856, -87.662854],
+        "markerClass": "rotate-35"
+      },
+      {
+        "name": "18th St. & Carpenter",
+        "subtitle": "",
+        "time": "7:59",
+        "coordinates": [41.857998, -87.653289],
+        "markerClass": "rotate-35"
+      },
+      {
+        "name": "Halsted & 18th St.",
+        "subtitle": "",
+        "time": "8:02",
+        "coordinates": [41.858091, -87.646654],
+        "markerClass": "rotate-35"
+      },
+      {
+        "name": "14th Pl. & Halsted",
+        "subtitle": "",
+        "time": "8:04",
+        "coordinates": [41.862345, -87.646772]
+      },
+      {
+        "name": "Roosevelt & Halsted",
+        "subtitle": "",
+        "time": "8:07",
+        "coordinates": [41.867208, -87.646918]
+      },
+      {
+        "name": "Harrison & Halsted",
+        "subtitle": "",
+        "time": "8:10",
+        "coordinates": [41.874365, -87.647124]
+      },
+      {
+        "name": "Jackson & Halsted",
+        "subtitle": "",
+        "time": "8:13",
+        "coordinates": [41.877942, -87.647224]
+      },
+      {
+        "name": "Washington & Halsted",
+        "subtitle": "",
+        "time": "8:17",
+        "coordinates": [41.883148, -87.647396],
+        "markerClass": "label-left"
+      },
+      {
+        "name": "City Hall",
+        "subtitle": "#PlowTheSidewalks",
+        "time": "8:20",
+        "coordinates": [41.883247, -87.631674],
+        "markerClass": "label-right push-down-4x"
       }
     ]
   },
   "bergen": {
     "title": "Bergen Bike Train Tracker",
     "runInfo": "Track the bike train live on the map above beginning at 7:00am every Wednesday morning.",
-    "trackerBounds" : 
+    "trackerBounds": 
     {
             "bottomLeft": [40.685828, -73.911150], 
             "topRight": [40.667982, -73.991364] 
     },
     "trackerTileSrcPattern": "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png",
-    "mapWidth": "550px",
     "mapHeight": "250px",
-    "backupLink": "",
-    "fallback": false,
+    "color": "#EFB143",
+    "globalMarkerClass": "rotate-65",
     "stops" : [
       {
         "name": "Rockaway Av",
@@ -168,29 +333,6 @@
         "subtitle": "",
         "time": "8:00",
         "coordinates": [40.687828, -73.993264]
-      }
-    ]
-  },
-  "milwaukee": {
-    "runInfo": "Run #M-002 //  Wednesday, September 14th, 2022. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am. Terminus at CTA HQ (567 W Lake St) for the I'M LATE PROTEST. Tell President Dorval how late you arrived due to the innacurate CTA tracker and lake of reliable service.",
-    "headerImageSrc": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526324223",
-    "headerImageAlt": "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
-    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.14-3.22.{z}.{x}.{y}.jpg?",
-    "trackerBounds": {
-            "bottomLeft": [41.892, -87.677961],
-            "topRight": [41.91202090, -87.63069311]
-    },
-    "mapWidth": "650px",
-    "mapHeight": "490px",
-    "backupLink": "",
-    "fallback": false,
-    "stops": [
-      {
-        "name": "New Wave Coffee",
-        "subtitle": "2557 N Milwaukee Ave",
-        "time": "7:30 - 7:45",
-        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
-        "coordinates": [41.928048, -87.705137]
       }
     ]
   }

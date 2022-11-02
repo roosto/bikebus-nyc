@@ -23,23 +23,10 @@
           h1 {
             text-align: center;
           }
-          /* h1 {
-            width:100%;
-            min-width: 315px;
-            max-width:500px;
-            margin-right:auto;
-            margin-left:auto;
-            margin-bottom: -35px;
-          }
-      
-          h1 img {
-            width: 100%;
-          } */
           
           h2#info {
             font-size:.8em;
             text-align: center;
-/*             transform: rotate(5deg); */
           }
           div#map {
               height: {{mapHeight}};
@@ -52,9 +39,11 @@
             display: flex;
             width: 300px;
             line-height: 1.0;
-            /* background-color: rgba(255, 255, 255, 0.844); */
-            transform: rotate(65deg);
           }
+                    
+          
+          /* Markers */
+          
           .marker-box {
             flex: 1;
             display: flex;
@@ -86,10 +75,57 @@
             /* background-color: lightgreen; */
             height: 40px;
           }
+      
+          /* Marker Modifiers */
+          .marker-container.rotate-35 {
+            transform: rotate(35deg);
+          }
+                    
+          .marker-container.rotate-65 {
+            transform: rotate(65deg);
+          }
+          
+          .marker-container.push-down .marker-box:not(.marker-box-center) {
+            padding-top: 5px;
+          }
+          
+          .marker-container.push-down-4x .marker-box:not(.marker-box-center) {
+            padding-top: 20px;
+          }
+          
+          .marker-container.label-left {
+            /* background-color: blue; */
+          }
+          
+            .marker-container.label-left .marker-box:last-child {
+              /* background-color: rgba(255, 0, 0, 0.264); */
+              position:relative;
+              left: -160px;
+              top: 1em;
+            }    
+            
+            .marker-container.label-left .marker-box:last-child > div {
+              margin-right: 1em;
+              margin-left: auto;
+            }
+            
+        
+          .marker-container.label-right .marker-box:first-child {
+            /* background-color: rgba(255, 0, 0, 0.264); */
+            position:relative;
+            left: 160px;
+            top: -1.6em;
+          }    
+          
+            .marker-container.label-right .marker-box:first-child > div {
+              margin-right: auto;
+              margin-left: 1em;
+            }       
+      
           .leaflet-bar a {
             opacity: .25;
           }
-          }
+          
       </style>
 
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
@@ -112,12 +148,14 @@
         </h1>
         <div id="map"></div>
         <h2 id="info">
-          {{busRunInfo}} <br /> <a href="https://bit.ly/bergenbiketrain">Learn more about the Bergen Bike Train.</a>
-        </h2>
-        
+          {{busRunInfo}} 
+           Brought to you by <a href="bikegridnow.org">Chicago, Bike Grid Now!</a> 
+           <br /><br />
+           On Wednesday, November 2, all buses terminate at City Hall for the #PlowTheSidewalks rally with Better Streets Chicago and Access Living.
+        </h2>        
         <!-- stop markers -->
         {{#each stops}}
-          <div id="stop-marker-{{@index}}" class="marker-container">
+          <div id="stop-marker-{{@index}}" class="marker-container {{../globalMarkerClass}} {{this.markerClass}}">
              <div class="marker-box">
                <div><b>{{this.time}}</b></div>
                
@@ -176,24 +214,14 @@
         </script>
         <!-- map.js -->
         <script>
-            const mapZoomLevel = 12.6
-
             const routeBounds = [
                 [{{busTrackerBounds.bottomLeft}}], //bottom left
                 [{{busTrackerBounds.topRight}}] //top right
             ];
 
             var map = L.map('map', {
-                // maxZoom: mapZoomLevel,
-                // minZoom: mapZoomLevel,
-                // maxBounds: routeBounds,
-                // maxBoundsViscosity: 1.0,
-                 // zoomControl: true,
+                   minZoom: 13
             }).fitBounds(routeBounds);
-
-            // var layer = L.tileLayer('{{busTrackerTileSrcPattern}}', {
-            //     attribution: 'Chicago, Bike Grid Now!'
-            // }).addTo(map);
             
             L.tileLayer(
             'https://api.mapbox.com/styles/v1/streicherd/cl9p4eshq002q15s1n9ga158e/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RyZWljaGVyZCIsImEiOiJjbDkxZ2JuaDQxMXRpM25vNmRjdzNlZXVzIn0.BkniqpkfdbK_szBJGdr0KQ', {
@@ -215,13 +243,17 @@
             const stops = {{toJSON stops}}
                         
             stops.forEach((stop, index) => {
-              addStopMarker(map, stop.coordinates[0], stop.coordinates[1], document.getElementById('stop-marker-'+index));
+              const element = document.getElementById('stop-marker-'+index);
+              if(!stop.waypointOnly) {
+                addStopMarker(map, stop.coordinates[0], stop.coordinates[1], element);
+              } else {
+                element.remove();
+              }
             })
             
             let routePolylinePoints = stops.map(stop => stop.coordinates);
             L.polyline(routePolylinePoints, {
-              // color: '#FBE40F',
-              color: '#EFB143',
+              color: '{{color}}',
               weight: 10,
             }).addTo(map);
             
@@ -245,25 +277,6 @@
               console.log([a, b]);
               L.polyline([a, b]).addTo(map);
             }
-            
-            /* Icons */
-            // const stopIcon = L.icon({
-            //     iconUrl: 'https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus_stop_circle.svg?v=1664245520908',
-            //     iconSize:     [16, 16], // size of the icon
-            // });
-            // 
-            // const coffeeIcon = L.icon({
-            //     iconUrl: 'https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910',
-            //     iconSize:     [20, 25], // size of the icon
-            // });
-            //41.918175, -87.648526 armitage and halsted
-            //41.951209, -87.649606 broadway and halsted
-            //41.883148, -87.647396 washington and halsted
-            
-            // {{#each stops}}
-            //     addStopMarker(map, {{this.coordinates.[0]}}, {{this.coordinates.[1]}}, document.getElementById('stop-marker-{{@index}}'));  
-            //     // addStopMarker(map, {{this.coordinates.[0]}}, {{this.coordinates.[1]}}, "{{this.type}}", "{{this.name}}", "{{this.subtitle}}");       
-            // {{/each}}
         </script>
   </body>
 </html>
