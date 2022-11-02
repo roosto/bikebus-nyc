@@ -87,6 +87,13 @@ fastify.get("/:route", async function (request, reply) {
   return reply.view("/src/pages/tracker.hbs", params);
 });
 
+fastify.get("/beacon-instructions", async function (request, reply) {  
+  const params = { }
+
+  // The Handlebars code will be able to access the parameter values and build them into the page
+  return reply.view("/src/pages/tracker-instructions.hbs", params);
+});
+
 fastify.get("/beacon/:route/"+process.env.beacon_hash, function (request, reply) {
   
   const { route } = request.params;
