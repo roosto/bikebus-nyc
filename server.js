@@ -33,7 +33,7 @@ fastify.register(require("@fastify/view"), {
   },
 }); 
 
-let busIsRunning = false;
+let busIsRunning = true;
 
 //eventually the cms or bus_info.json
 const routes = require("./public/routes.json");
