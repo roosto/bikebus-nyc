@@ -47,7 +47,7 @@
         display: block;
         background-color: white;
         width:100%;
-        height: 100%;
+        height: 900px;
         position: absolute;
       }
       
@@ -59,26 +59,35 @@
     </style>
   </head>
   <body>
-        <!-- This is the start of content for our page -->
-      <div class="tracking-error has-error">
-          Not tracking!
-      </div>  
+        <!-- This is the start of content for our page --> 
       <div id="conductor-header">
         <h1 class="title">
           Bike Bus Beacon <br />
-          <div class="tracking-error has-error">
+        </h1>
+          <div class="tracking-error" id="location-error-message-container">
           <h2>
             Not tracking.
           </h2>
           <p>
             Reload the page and make sure to accept the prompt to share your location.
           </p>
+              <p>
+                If you have an iPhone and you don't get a location prompt when you first open the beacon:
+            </p>
+              <ol>
+                <li>Open your <b>Settings</b> app</li>
+                <li>Go to <b>Privacy &amp; Security</b> &gt <b>Location Services</b> &gt <b>Safari Websites</b></li>
+                <li>Choose <b>While Using the App</b></li>
+                <li>Refresh this page and accept the location sharing prompt.</li>
+            </ol>
             <p>
-              If you have an iPhone and you don't get a location prompt when you first open the beacon, open your <b>Settings</b> app, go to <b>Privacy &amp; Security</b> &gt <b>Location Services</b> &gt <b>Safari Websites</b>, then choose <b>While Using the App</b>. 
+              Still not working? Find <a href="/beacon-instructions">more troubleshooting ideas here</a>.
             </p>
         </div>
+        <h2>
           <span class="clock" id="clock-hours-minutes"></span><span class="clock" id="clock-seconds"></span>
-        </h1>
+        </h2>
+        
         <label>
           <input type="checkbox" id="publish-location-checkbox" checked/> Publish location
         </label>
@@ -111,13 +120,16 @@
             let id;
             let target;
             let options;
+            let errorMessageContainer = document.getElementById('location-error-message-container');
           
             function success(pos) {
                 newBusLatitude = pos.coords.latitude;
-                newBusLongitude = pos.coords.longitude;             
+                newBusLongitude = pos.coords.longitude;
+                errorMessageContainer.classList.remove('has-error');
             }
 
             function error(err) {
+              errorMessageContainer.classList.add('has-error');
               console.error(`ERROR(${err.code}): ${err.message}`);
               
             }
