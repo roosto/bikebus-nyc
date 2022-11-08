@@ -77,21 +77,26 @@
       {
         "name": "Fulton",
         "subtitle": "",
-        "time": "8:16",
+        "time": "8:17",
         "coordinates": [41.886798, -87.647497]
       },
       {
         "name": "Washington",
         "subtitle": "",
-        "time": "8:17",
+        "time": "8:19",
         "coordinates": [41.883148, -87.647396],
         "markerClass": "label-left"
       },
       {
-        "name": "City Hall",
-        "subtitle": "#PlowTheSidewalks",
+        "waypointOnly": true,
+        "coordinates": [41.883176, -87.641253]
+      },
+      {
+        "name": "Chicago French Market",
+        "subtitle": "",
         "time": "8:20",
-        "coordinates": [41.883247, -87.631674],
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.884089, -87.641134],
         "markerClass": "label-right push-down-4x"
       }
     ]
@@ -180,10 +185,15 @@
         "markerClass": "label-left"
       },
       {
-        "name": "City Hall",
-        "subtitle": "#PlowTheSidewalks",
+        "waypointOnly": true,
+        "coordinates": [41.883176, -87.641253]
+      },
+      {
+        "name": "Chicago French Market",
+        "subtitle": "",
         "time": "8:20",
-        "coordinates": [41.883247, -87.631674],
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.884089, -87.641134],
         "markerClass": "label-right push-down-4x"
       }
     ]
@@ -253,10 +263,15 @@
         "markerClass": "label-left"
       },
       {
-        "name": "City Hall",
-        "subtitle": "#PlowTheSidewalks",
+        "waypointOnly": true,
+        "coordinates": [41.883176, -87.641253]
+      },
+      {
+        "name": "Chicago French Market",
+        "subtitle": "",
         "time": "8:20",
-        "coordinates": [41.883247, -87.631674],
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.884089, -87.641134],
         "markerClass": "label-right push-down-4x"
       }
     ]
