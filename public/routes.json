@@ -91,7 +91,8 @@
         "name": "Kinzie and Clinton",
         "subtitle": "",
         "time": "8:22",
-        "coordinates": [41.889067, -87.641354]
+        "coordinates": [41.889067, -87.641354],
+        "markerClass": "label-left"
       },
       {
         "name": "Chicago French Market",
