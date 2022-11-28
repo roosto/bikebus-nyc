@@ -56,23 +56,22 @@
         "coordinates": [41.910008, -87.648262]
       },
       {
-        "name": "Division",
+        "name": "Larrabee / Division",
         "subtitle": "",
         "time": "8:06",
-        "coordinates": [41.903635, -87.648074]
+        "coordinates": [41.903713, -87.643215]
       },
       {
-        "name": "Milwaukee / Grand",
+        "name": "Chicago",
         "subtitle": "",
-        "time": "8:14",
-        "coordinates": [41.891181, -87.647617]
+        "time": "8:11",
+        "coordinates": [41.904276, -87.643233]
       },
       {
-        "name": "Hubbard",
+        "name": "Kinzie and Clinton",
         "subtitle": "",
-        "time": "8:15",
-        "coordinates": [41.890089, -87.647597],
-        "markerClass": "push-down"
+        "time": "8:22",
+        "coordinates": [41.889067, -87.641354]
       },
       {
         "name": "Fulton",
