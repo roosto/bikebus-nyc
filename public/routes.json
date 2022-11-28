@@ -95,6 +95,10 @@
         "markerClass": "label-left"
       },
       {
+        "waypointOnly": true,
+        "coordinates": [41.884167, -87.641289]
+      },  
+      {
         "name": "Chicago French Market",
         "subtitle": "",
         "time": "8:26",
