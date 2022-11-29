@@ -126,26 +126,39 @@
         "time": "5:30 - 5:45",
         "coordinates": [41.901729, -87.656718]
       },
+      
       {
         "waypointOnly": true,
-        "coordinates": [41.904462, -87.659363]
-      },
-      {
-        "waypointOnly": true,
-        "coordinates": [41.907186, -87.659993]
-      }, 
-            {
-        "waypointOnly": true,
-        "coordinates": [41.910727, -87.662143]
-      },
-      {
-        "waypointOnly": true,
-        "coordinates": [41.923714, -87.675273]
-      },
-      {
-        "waypointOnly": true,
-        "coordinates": [41.907186, -87.659993]
+        "coordinates": [41.901261, -87.656678]
       },  
+      {
+        "waypointOnly": true,
+        "coordinates": [41.904509, -87.659379]
+      }, 
+      {
+        "waypointOnly": true,
+        "coordinates": [41.907113, -87.659952]
+      },  
+      {
+        "waypointOnly": true,
+        "coordinates": [41.910700, -87.662138]
+      },  
+      {
+        "waypointOnly": true,
+        "coordinates": [41.918458, -87.667924]
+      },  
+      {
+        "waypointOnly": true,
+        "coordinates": [41.923588, -87.675220]
+      }, 
+      {
+        "waypointOnly": true,
+        "coordinates": [41.925896, -87.675359]
+      }, 
+      {
+        "waypointOnly": true,
+        "coordinates": [41.925826, -87.678430]
+      },       
       {
         "name": "Revolution Brewing Brewery and Taproom",
         "subtitle": "",
