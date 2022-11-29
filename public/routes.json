@@ -175,7 +175,7 @@
         "name": "Revolution Brewing Brewery and Taproom",
         "subtitle": "3340 N. Kedzie Ave.",
         "time": "6:15",
-        "markerClass": "label-left",
+        "markerClass": "",
         "coordinates": [41.942078, -87.708317]
       }
     ]
