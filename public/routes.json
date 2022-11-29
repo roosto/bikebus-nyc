@@ -179,22 +179,21 @@
         "markerClass": "label-right"
       },
       {
-        "name": "Fulton & Halsted",
-        "subtitle": "",
-        "time": "8:15",
-        "coordinates": [41.886798, -87.647497]
-      },
-      {
-        "name": "Washington & Halsted",
-        "subtitle": "",
-        "time": "8:17",
-        "coordinates": [41.883148, -87.647396],
-        "markerClass": "label-left"
+        "waypointOnly": true,
+        "coordinates": [41.890114, -87.645924]
       },
       {
         "waypointOnly": true,
-        "coordinates": [41.883176, -87.641253]
+        "coordinates": [41.889041, -87.644330]
       },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.889067, -87.641354]
+      },    
+      {
+        "waypointOnly": true,
+        "coordinates": [41.884089, -87.641289]
+      },        
       {
         "name": "Chicago French Market",
         "subtitle": "",
