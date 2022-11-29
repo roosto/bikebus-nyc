@@ -114,8 +114,8 @@
     "headerImageAlt": "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.14-3.22.{z}.{x}.{y}.jpg?",
     "trackerBounds": {
-            "bottomLeft": [41.883247, -87.705137],
-            "topRight": [41.928048, -87.631674]
+            "bottomLeft": [41.901729, -87.708317],
+            "topRight": [41.942078, -87.656718]
     },
     "color": "#69C00C",
     "mapHeight": "490px",
@@ -153,16 +153,29 @@
       }, 
       {
         "waypointOnly": true,
-        "coordinates": [41.925896, -87.675359]
-      }, 
+        "coordinates": [41.925543, -87.675465]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.925755, -87.675718]
+      },
       {
         "waypointOnly": true,
         "coordinates": [41.925826, -87.678430]
-      },       
+      }, 
+      {
+        "waypointOnly": true,
+        "coordinates": [41.942769, -87.703216]
+      },      
+       {
+        "waypointOnly": true,
+        "coordinates": [41.942737, -87.707711]
+      }, 
       {
         "name": "Revolution Brewing Brewery and Taproom",
-        "subtitle": "",
+        "subtitle": "3340 N. Kedzie Ave.",
         "time": "6:15",
+        "markerClass": "label-left",
         "coordinates": [41.942078, -87.708317]
       }
     ]
