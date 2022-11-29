@@ -1,0 +1,434 @@
+{
+  "north-halsted": {
+    "title": "North Halsted Bike Bus Tracker",
+    "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
+    "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
+    "trackerBounds": {
+            "bottomLeft": [41.883148, -87.647396], 
+            "topRight": [41.943228, -87.631674]
+    },
+    "color": "#FBE40F",
+    "mapHeight": "538px",
+    "stops" : [
+      {
+        "name": "Elevate Coffee",
+        "subtitle": "3344 N Halsted St",
+        "time": "7:30 - 7:45",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.943228, -87.649478]
+      },
+      {
+        "name": "Clark / Barry",
+        "subtitle": "",
+        "time": "7:47",
+        "coordinates": [41.938190, -87.649239]
+      },
+      {
+        "name": "Wellington",
+        "subtitle": "",
+        "time": "7:49",
+        "coordinates": [41.936386, -87.649141],
+        "markerClass": ""
+      },
+      {
+        "name": "Diversey",
+        "subtitle": "",
+        "time": "7:50",
+        "coordinates": [41.932717, -87.649009]
+      },
+      {
+        "name": "Fullerton",
+        "subtitle": "",
+        "time": "7:55",
+        "coordinates": [41.925443, -87.648751]
+      },
+      {
+        "name": "Armitage",
+        "subtitle": "",
+        "time": "7:58",
+        "coordinates": [41.918175, -87.648526]
+      },
+      {
+        "name": "Clybourn",
+        "subtitle": "",
+        "time": "8:02",
+        "coordinates": [41.910008, -87.648262]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.906430, -87.643296]
+      },
+      {
+        "name": "Larrabee and Division",
+        "subtitle": "",
+        "time": "8:06",
+        "coordinates": [41.903713, -87.643215]
+      },
+      {
+        "name": "Chicago and Larrabee",
+        "subtitle": "",
+        "time": "8:11",
+        "coordinates": [41.896474, -87.642924]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.896491, -87.641557]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.893479, -87.641460]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.889310, -87.638133]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.889113, -87.638123]
+      },      
+      {
+        "name": "Kinzie and Clinton",
+        "subtitle": "",
+        "time": "8:22",
+        "coordinates": [41.889067, -87.641354],
+        "markerClass": "label-left"
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.884089, -87.641289]
+      },  
+      {
+        "name": "Chicago French Market",
+        "subtitle": "",
+        "time": "8:26",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.884089, -87.641134],
+        "markerClass": "label-right push-down-4x"
+      }
+    ]
+  },
+  "active-trans-party": {
+    "title": "Active Trans Bike Bus Tracker",
+    "runInfo": "Terminus at Revolution Brewing for the Active Transportation Alliance Annual Meeting.",
+    "headerImageAlt": "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.14-3.22.{z}.{x}.{y}.jpg?",
+    "trackerBounds": {
+            "bottomLeft": [41.901729, -87.708317],
+            "topRight": [41.942078, -87.656718]
+    },
+    "color": "#69C00C",
+    "mapHeight": "490px",
+    "stops": [
+      {
+        "name": "Goose Island Overlook Park",
+        "subtitle": "1111 N Elston Ave",
+        "time": "5:30 - 5:45",
+        "coordinates": [41.901729, -87.656718]
+      },
+      
+      {
+        "waypointOnly": true,
+        "coordinates": [41.901261, -87.656678]
+      },  
+      {
+        "waypointOnly": true,
+        "coordinates": [41.904509, -87.659379]
+      }, 
+      {
+        "waypointOnly": true,
+        "coordinates": [41.907113, -87.659952]
+      },  
+      {
+        "waypointOnly": true,
+        "coordinates": [41.910700, -87.662138]
+      },  
+      {
+        "waypointOnly": true,
+        "coordinates": [41.918458, -87.667924]
+      },  
+      {
+        "waypointOnly": true,
+        "coordinates": [41.923588, -87.675220]
+      }, 
+      {
+        "waypointOnly": true,
+        "coordinates": [41.925543, -87.675465]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.925755, -87.675718]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.925826, -87.678430]
+      }, 
+      {
+        "waypointOnly": true,
+        "coordinates": [41.942769, -87.703216]
+      },      
+       {
+        "waypointOnly": true,
+        "coordinates": [41.942737, -87.707711]
+      }, 
+      {
+        "name": "Revolution Brewing Brewery and Taproom",
+        "subtitle": "3340 N. Kedzie Ave.",
+        "time": "6:15",
+        "markerClass": "",
+        "coordinates": [41.942078, -87.708317]
+      }
+    ]
+  },
+  "milwaukee": {
+    "title": "Milwaukee Bike Bus Tracker",
+    "runInfo": "The Milwaukee Bike Bus runs every Wednesday morning. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
+    "headerImageAlt": "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.14-3.22.{z}.{x}.{y}.jpg?",
+    "trackerBounds": {
+            "bottomLeft": [41.883247, -87.705137],
+            "topRight": [41.928048, -87.631674]
+    },
+    "color": "#84CBF1",
+    "mapHeight": "490px",
+    "stops": [
+      {
+        "name": "New Wave Coffee",
+        "subtitle": "2557 N Milwaukee Ave",
+        "time": "7:30 - 7:45",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.928048, -87.705137]
+      },
+      {
+        "name": "California & Milwaukee",
+        "subtitle": "in front of Cozy Corner",
+        "time": "7:50",
+        "coordinates": [41.922904, -87.697351]
+      },
+      {
+        "name": "Leavitt & Milwaukee",
+        "subtitle": "606 trail connection",
+        "time": "7:54",
+        "coordinates": [41.913579, -87.682410]
+      },
+      {
+        "name": "Damen & Milwaukee",
+        "time": "7:56",
+        "coordinates": [41.910387, -87.677465]
+      },
+      {
+        "name": "Division & Damen",
+        "time": "8:00",
+        "coordinates": [41.903188, -87.677251]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.899543, -87.677148]
+      },
+      {
+        "name": "Augusta & Wolcott",
+        "time": "8:02",
+        "coordinates": [41.899588, -87.674710],
+        "markerClass": "label-left"
+      },
+      {
+        "name": "Noble & Augusta",
+        "time": "8:05",
+        "coordinates": [41.899785, -87.662501],
+        "markerClass": "label-right push-down-4x"
+      },
+      {
+        "name": "Hubbard & Noble",
+        "time": "8:10",
+        "coordinates": [41.889941, -87.662231],
+        "markerClass": "label-left"
+      },
+      {
+        "name": "Halsted & Hubbard",
+        "subtitle": "",
+        "time": "8:13",
+        "coordinates": [41.890089, -87.647597]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.890114, -87.645924]
+      },
+      {
+        "name": "Kinzie & Clinton",
+        "subtitle": "",
+        "time": "8:17",
+        "coordinates": [41.889041, -87.644330],
+        "markerClass": "label-left push-down-4x"
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.889067, -87.641354]
+      },    
+      {
+        "waypointOnly": true,
+        "coordinates": [41.884089, -87.641289]
+      },        
+      {
+        "name": "Chicago French Market",
+        "subtitle": "",
+        "time": "8:20",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.884089, -87.641134],
+        "markerClass": "label-right push-down-4x"
+      }
+    ]
+  },
+  "south-halsted": {
+    "title": "South Halsted Bike Bus Tracker",
+    "runInfo": "The South Halsted Bike Bus runs every Wednesday morning. Meet at 7:40 am at Cafe Jumping Bean. Roll out at 7:55 am.",
+    "headerImageAlt": "The South Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "trackerBounds": {
+            "bottomLeft": [41.7620, -87.64377961],
+            "topRight": [41.970, -87.64669311]
+    },
+    "mapHeight": "378px",
+    "color": "#D78AB2",
+    "stops" : [
+      {
+        "name": "Cafe Jumping Bean",
+        "subtitle": "1439 S 18th St.",
+        "time": "7:40 - 7:55",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.857856, -87.662854],
+        "markerClass": "rotate-35"
+      },
+      {
+        "name": "18th St. & Carpenter",
+        "subtitle": "",
+        "time": "7:59",
+        "coordinates": [41.857998, -87.653289],
+        "markerClass": "rotate-35"
+      },
+      {
+        "name": "Halsted & 18th St.",
+        "subtitle": "",
+        "time": "8:02",
+        "coordinates": [41.858091, -87.646654],
+        "markerClass": "rotate-35"
+      },
+      {
+        "name": "14th Pl. & Halsted",
+        "subtitle": "",
+        "time": "8:04",
+        "coordinates": [41.862345, -87.646772]
+      },
+      {
+        "name": "Roosevelt & Halsted",
+        "subtitle": "",
+        "time": "8:07",
+        "coordinates": [41.867208, -87.646918]
+      },
+      {
+        "name": "Harrison & Halsted",
+        "subtitle": "",
+        "time": "8:10",
+        "coordinates": [41.874365, -87.647124]
+      },
+      {
+        "name": "Jackson & Halsted",
+        "subtitle": "",
+        "time": "8:13",
+        "coordinates": [41.877942, -87.647224]
+      },
+      {
+        "name": "Washington & Halsted",
+        "subtitle": "",
+        "time": "8:17",
+        "coordinates": [41.883148, -87.647396],
+        "markerClass": "label-left"
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.883176, -87.641253]
+      },
+      {
+        "name": "Chicago French Market",
+        "subtitle": "",
+        "time": "8:20",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.884089, -87.641134],
+        "markerClass": "label-right push-down-4x"
+      }
+    ]
+  },
+  "bergen": {
+    "title": "Bergen Bike Train Tracker",
+    "runInfo": "Track the bike train live on the map above beginning at 7:00am every Wednesday morning.",
+    "trackerBounds": 
+    {
+            "bottomLeft": [40.685828, -73.911150], 
+            "topRight": [40.667982, -73.991364] 
+    },
+    "trackerTileSrcPattern": "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png",
+    "mapHeight": "250px",
+    "color": "#EFB143",
+    "globalMarkerClass": "rotate-65",
+    "stops" : [
+      {
+        "name": "Rockaway Av",
+        "subtitle": "",
+        "time": "7:00 - 7:15",
+        "coordinates": [40.673982, -73.911150]
+      },
+      {
+        "name": "Howard Av",
+        "subtitle": "",
+        "time": "7:20",
+        "coordinates": [40.674435, -73.919460]
+      },
+      {
+        "name": "Rochester Av",
+        "subtitle": "",
+        "time": "7:25",
+        "coordinates": [40.674895, -73.927767]
+      },
+      {
+        "name": "Brooklyn Ave",
+        "subtitle": "",
+        "time": "7:30",
+        "coordinates": [40.675787, -73.944390]
+      },
+      {
+        "name": "Classon Av",
+        "subtitle": "",
+        "time": "7:35",
+        "coordinates": [40.677523, -73.959131]
+      },
+      {
+        "name": "Grand Av",
+        "subtitle": "",
+        "time": "7:40",
+        "coordinates": [40.678175, -73.962225]
+      },
+      {
+        "name": "Vanderbilt Av",
+        "subtitle": "",
+        "time": "7:45",
+        "coordinates": [40.679430, -73.968222]
+      },
+      {
+        "name": "Fifth Av",
+        "subtitle": "",
+        "time": "7:50",
+        "coordinates": [40.681495, -73.977019]
+      },
+      {
+        "name": "Bond St",
+        "subtitle": "",
+        "time": "7:55",
+        "coordinates": [40.685020, -73.986126]
+      },
+      {
+        "name": "Court St",
+        "subtitle": "",
+        "time": "8:00",
+        "coordinates": [40.687828, -73.993264]
+      }
+    ]
+  }
+}
