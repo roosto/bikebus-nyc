@@ -247,7 +247,9 @@
         "name": "Halsted & Hubbard",
         "subtitle": "",
         "time": "8:13",
-        "coordinates": [41.890089, -87.647597]
+        "coordinates": [41.890089, -87.647597],
+        "markerClass": "push-up-2x"
+ 
       },
       {
         "waypointOnly": true,
@@ -258,7 +260,7 @@
         "subtitle": "",
         "time": "8:17",
         "coordinates": [41.889041, -87.644330],
-        "markerClass": "label-left push-down-4x"
+        "markerClass": "push-down"
       },
       {
         "waypointOnly": true,
@@ -267,7 +269,7 @@
       {
         "waypointOnly": true,
         "coordinates": [41.884089, -87.641289]
-      },        
+      },  
       {
         "name": "Chicago French Market",
         "subtitle": "",
@@ -344,7 +346,15 @@
       },
       {
         "waypointOnly": true,
-        "coordinates": [41.883176, -87.641253]
+        "coordinates": [41.885665, -87.647467]
+      },   
+      {
+        "waypointOnly": true,
+        "coordinates": [41.885712, -87.641305]
+      },  
+      {
+        "waypointOnly": true,
+        "coordinates": [41.884089, -87.641305]
       },
       {
         "name": "Chicago French Market",
