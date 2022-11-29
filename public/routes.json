@@ -110,97 +110,47 @@
   },
   "active-trans-party": {
     "title": "Active Trans Bike Bus Tracker",
-    "runInfo": "Terminus at Revolution Brewing ",
+    "runInfo": "Terminus at Revolution Brewing for the Active Transportation Alliance Annual Meeting.",
     "headerImageAlt": "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/mke.9.14-3.22.{z}.{x}.{y}.jpg?",
     "trackerBounds": {
             "bottomLeft": [41.883247, -87.705137],
             "topRight": [41.928048, -87.631674]
     },
-    "color": "#84CBF1",
+    "color": "#69C00C",
     "mapHeight": "490px",
     "stops": [
       {
-        "name": "New Wave Coffee",
-        "subtitle": "2557 N Milwaukee Ave",
-        "time": "7:30 - 7:45",
-        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
-        "coordinates": [41.928048, -87.705137]
-      },
-      {
-        "name": "California & Milwaukee",
-        "subtitle": "in front of Cozy Corner",
-        "time": "7:50",
-        "coordinates": [41.922904, -87.697351]
-      },
-      {
-        "name": "Leavitt & Milwaukee",
-        "subtitle": "606 trail connection",
-        "time": "7:54",
-        "coordinates": [41.913579, -87.682410]
-      },
-      {
-        "name": "Damen & Milwaukee",
-        "time": "7:56",
-        "coordinates": [41.910387, -87.677465]
-      },
-      {
-        "name": "Division & Damen",
-        "time": "8:00",
-        "coordinates": [41.903188, -87.677251]
+        "name": "Goose Island Overlook Park",
+        "subtitle": "1111 N Elston Ave",
+        "time": "5:30 - 5:45",
+        "coordinates": [41.901729, -87.656718]
       },
       {
         "waypointOnly": true,
-        "coordinates": [41.899543, -87.677148]
+        "coordinates": [41.904462, -87.659363]
       },
       {
-        "name": "Augusta & Wolcott",
-        "time": "8:02",
-        "coordinates": [41.899588, -87.674710],
-        "markerClass": "label-left"
+        "waypointOnly": true,
+        "coordinates": [41.907186, -87.659993]
+      }, 
+            {
+        "waypointOnly": true,
+        "coordinates": [41.910727, -87.662143]
       },
       {
-        "name": "Noble & Augusta",
-        "time": "8:05",
-        "coordinates": [41.899785, -87.662501],
-        "markerClass": "label-right push-down-4x"
+        "waypointOnly": true,
+        "coordinates": [41.923714, -87.675273]
       },
       {
-        "name": "Hubbard & Noble",
-        "time": "8:10",
-        "coordinates": [41.889941, -87.662231],
-        "markerClass": "label-left"
-      },
+        "waypointOnly": true,
+        "coordinates": [41.907186, -87.659993]
+      },  
       {
-        "name": "Halsted & Hubbard",
+        "name": "Revolution Brewing Brewery and Taproom",
         "subtitle": "",
-        "time": "8:13",
-        "coordinates": [41.890089, -87.647597],
-        "markerClass": "label-right"
-      },
-      {
-        "waypointOnly": true,
-        "coordinates": [41.890114, -87.645924]
-      },
-      {
-        "waypointOnly": true,
-        "coordinates": [41.889041, -87.644330]
-      },
-      {
-        "waypointOnly": true,
-        "coordinates": [41.889067, -87.641354]
-      },    
-      {
-        "waypointOnly": true,
-        "coordinates": [41.884089, -87.641289]
-      },        
-      {
-        "name": "Chicago French Market",
-        "subtitle": "",
-        "time": "8:20",
-        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
-        "coordinates": [41.884089, -87.641134],
-        "markerClass": "label-right push-down-4x"
+        "time": "6:15",
+        "coordinates": [41.942078, -87.708317]
       }
     ]
   },
