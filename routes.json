@@ -50,9 +50,70 @@
         "coordinates": [41.917755, -87.677613]
       },
       {
+        "note": "begin logan / common route",
         "waypointOnly": true,
         "coordinates": [41.917494, -87.697193]
-      }
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.899280, -87.696786]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.899221, -87.703051]
+      },
+            {
+"waypointOnly": true,
+"coordinates": [41.896911, -87.703014]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.896672, -87.702485]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.890635, -87.702314]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.890442, -87.702409]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.890370, -87.702650]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.890206, -87.716252]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.889353, -87.716585]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.886559, -87.716517]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.884634, -87.716868]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.883348, -87.715482]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.882875, -87.715205]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.882715, -87.715215]
+  },
+      {
+"waypointOnly": true,
+"coordinates": [41.882700, -87.716045]
+  }
       
      
       
