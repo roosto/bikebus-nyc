@@ -1,4 +1,113 @@
 {
+  "cmc": {
+    "title": "North Halsted Bike Bus Tracker",
+    "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
+    "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
+    "trackerBounds": {
+            "bottomLeft": [41.883148, -87.647396], 
+            "topRight": [41.943228, -87.631674]
+    },
+    "color": "#FBE40F",
+    "mapHeight": "538px",
+    "stops" : [
+      {
+        "name": "Elevate Coffee",
+        "subtitle": "3344 N Halsted St",
+        "time": "7:30 - 7:45",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.943228, -87.649478]
+      },
+      {
+        "name": "Clark / Barry",
+        "subtitle": "",
+        "time": "7:47",
+        "coordinates": [41.938190, -87.649239]
+      },
+      {
+        "name": "Wellington",
+        "subtitle": "",
+        "time": "7:49",
+        "coordinates": [41.936386, -87.649141],
+        "markerClass": ""
+      },
+      {
+        "name": "Diversey",
+        "subtitle": "",
+        "time": "7:50",
+        "coordinates": [41.932717, -87.649009]
+      },
+      {
+        "name": "Fullerton",
+        "subtitle": "",
+        "time": "7:55",
+        "coordinates": [41.925443, -87.648751]
+      },
+      {
+        "name": "Armitage",
+        "subtitle": "",
+        "time": "7:58",
+        "coordinates": [41.918175, -87.648526]
+      },
+      {
+        "name": "Clybourn",
+        "subtitle": "",
+        "time": "8:02",
+        "coordinates": [41.910008, -87.648262]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.906430, -87.643296]
+      },
+      {
+        "name": "Larrabee and Division",
+        "subtitle": "",
+        "time": "8:06",
+        "coordinates": [41.903713, -87.643215]
+      },
+      {
+        "name": "Chicago and Larrabee",
+        "subtitle": "",
+        "time": "8:11",
+        "coordinates": [41.896474, -87.642924]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.896491, -87.641557]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.893479, -87.641460]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.889310, -87.638133]
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.889113, -87.638123]
+      },      
+      {
+        "name": "Kinzie and Clinton",
+        "subtitle": "",
+        "time": "8:22",
+        "coordinates": [41.889067, -87.641354],
+        "markerClass": "label-left"
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.884089, -87.641289]
+      },  
+      {
+        "name": "Chicago French Market",
+        "subtitle": "",
+        "time": "8:26",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.884089, -87.641134],
+        "markerClass": "label-right push-down-4x"
+      }
+    ]
+  },
   "north-halsted": {
     "title": "North Halsted Bike Bus Tracker",
     "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
