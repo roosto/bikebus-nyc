@@ -1,8 +1,54 @@
 {
+    "forum-south-halsted": {
+    "title": "South Halsted Mayoral Candidate Forum Bike Bus Tracker",
+    "runInfo": "Meet at Elevate Coffee at noon. Ride this bus to the 1pm Bike Jam and then attend the forum at 2pm",
+    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
+    "trackerBounds": {
+            "bottomLeft": [41.7620, -87.64377961],
+            "topRight": [41.970, -87.64669311]
+    },
+    "mapHeight": "378px",
+    "color": "#D78AB2",
+    "stops" : [
+      {
+        "name": "Palmisano Park",
+        "subtitle": "921-919 W 29th St",
+        "time": "12:00 - 12:10",
+        "coordinates": [41.84164263223722, -87.64905514837193]
+      },
+      {
+        "name": "Throop and 29th St",
+        "coordinates": [41.84046405281008, -87.6514946888226]
+      },
+            {
+        "name": "25th St and Throop",
+        "coordinates": [41.84653860871015, -87.65677094724916]
+      },
+                  {
+        "name": "Loomis and 25th St",
+        "coordinates": [41.844665801000296, -87.66013901310374],
+        "markerClass": "label-left"
+      },
+      {
+        "note": "loomis bends",
+        "waypointOnly": true,
+        "coordinates": [41.84626978803901, -87.66095697198551]
+      },
+                        {
+        "name": "Wolcott and Loomis",
+        "coordinates": [41.87172422875504, -87.66165214711152]
+      },
+      {
+        "name": "Mayoral Forum",
+        "subtitle": "UIC Student Center West",
+        "coordinates": [41.870672, -87.674453],
+        "marker-class": "push-up-2x"
+      }
+    ]
+  },
   "forum-north-halsted": {
     "title": "North Halsted Mayoral Candidate Forum Bike Bus Tracker",
-    "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
-    "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "runInfo": "Meet at Elevate Coffee at noon. Ride this bus to the 1pm Bike Jam and then attend the forum at 2pm",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
             "bottomLeft": [41.870672, -87.674453], 
@@ -14,7 +60,7 @@
       {
         "name": "Elevate Coffee",
         "subtitle": "3344 N Halsted St",
-        "time": "7:30 - 7:45",
+        "time": "12:00 - 12:10",
         "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
         "coordinates": [41.943228, -87.649478]
       },
@@ -45,9 +91,8 @@
         "coordinates": [41.869148, -87.673699]
       },
       {
-        "name": "UIC Student Center West",
-        "subtitle": "",
-        "time": "8:26",
+        "name": "Mayoral Forum",
+        "subtitle": "UIC Student Center West",
         "coordinates": [41.870672, -87.674453],
         "marker-class": "push-up-2x"
       }
@@ -337,7 +382,6 @@
   "south-halsted": {
     "title": "South Halsted Bike Bus Tracker",
     "runInfo": "The South Halsted Bike Bus runs every Wednesday morning. Meet at 7:40 am at Cafe Jumping Bean. Roll out at 7:55 am.",
-    "headerImageAlt": "The South Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerBounds": {
             "bottomLeft": [41.7620, -87.64377961],
             "topRight": [41.970, -87.64669311]
