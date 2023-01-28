@@ -1,11 +1,11 @@
 {
     "forum-south-halsted": {
     "title": "South Halsted Mayoral Candidate Forum Bike Bus Tracker",
-    "runInfo": "Meet at Elevate Coffee at noon. Ride this bus to the 1pm Bike Jam and then attend the forum at 2pm",
+    "runInfo": "Meet at Palmisano Park at 12:40. Ride this bus to the 1pm Bike Jam and then attend the forum at 2pm",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.7620, -87.64377961],
-            "topRight": [41.970, -87.64669311]
+            "bottomLeft": [41.84046405281008, -87.674453],
+            "topRight": [41.87172422875504, -87.66165214711152]
     },
     "mapHeight": "378px",
     "color": "#D78AB2",
@@ -13,16 +13,19 @@
       {
         "name": "Palmisano Park",
         "subtitle": "921-919 W 29th St",
-        "time": "12:00 - 12:10",
-        "coordinates": [41.84164263223722, -87.64905514837193]
+        "time": "12:40",
+        "coordinates": [41.84164263223722, -87.64905514837193],
+        "markerClass": "label-right"
       },
       {
         "name": "Throop and 29th St",
-        "coordinates": [41.84046405281008, -87.6514946888226]
+        "coordinates": [41.84046405281008, -87.6514946888226],
+        "markerClass": "label-left"
       },
             {
         "name": "25th St and Throop",
-        "coordinates": [41.84653860871015, -87.65677094724916]
+        "coordinates": [41.84653860871015, -87.65677094724916],
+        "markerClass": "push-up-2x"
       },
                   {
         "name": "Loomis and 25th St",
@@ -39,10 +42,21 @@
         "coordinates": [41.87172422875504, -87.66165214711152]
       },
       {
+        "name": "Polk and Wolcott",
+        "waypointOnly": true,
+        "coordinates": [41.871505505002126, -87.67379298511369],
+        "markerClass": "push-up-2x"
+      },
+      {
+        "note": "turn into venue",
+        "waypointOnly": true,
+        "coordinates": [41.870739, -87.673822]
+      },
+      {
         "name": "Mayoral Forum",
         "subtitle": "UIC Student Center West",
         "coordinates": [41.870672, -87.674453],
-        "marker-class": "push-up-2x"
+        "markerClass": "label-left"
       }
     ]
   },
