@@ -1,211 +1,48 @@
 {
-    "cmc-logan": {
-        "title": "CMC Logan",
-        "trackerBounds": {
-                "bottomLeft": [41.883148, -87.647396], 
-                "topRight": [41.943228, -87.631674]
-        },
-        "color": "#33ECA4",
-        "mapHeight": "538px",
-        "stops" : [
-          {
-            "name": "California L Stop",
-            "subtitle": "2210 N. California Ave.",
-            "time": "5:20 - 5:35",
-            "coordinates": [41.922055, -87.697358]
-          },
-          {
-            "note": "begin logan / common route",
-            "waypointOnly": true,
-            "coordinates": [41.917494, -87.697193]
-          },
-          {
-            "waypointOnly": true,
-            "coordinates": [41.899280, -87.696786]
-          },
-          {
-            "waypointOnly": true,
-            "coordinates": [41.899221, -87.703051]
-          },
-                {
-    "waypointOnly": true,
-    "coordinates": [41.896911, -87.703014]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.896672, -87.702485]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.890635, -87.702314]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.890442, -87.702409]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.890370, -87.702650]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.890206, -87.716252]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.889353, -87.716585]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.886559, -87.716517]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.884634, -87.716868]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.883348, -87.715482]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.882875, -87.715205]
-      },
-          {
-    "waypointOnly": true,
-    "coordinates": [41.882715, -87.715215]
-      },
-          
-    
-                {
-            "name": "Garfield Park Field House",
-            "coordinates": [41.882700, -87.716045]
-          }
-         
-          
-         
-          
-        ]
-      },
-  "cmc-lakeview": {
-    "title": "CMC Lakeview",
+  "forum-north-halsted": {
+    "title": "North Halsted Bike Bus Tracker",
+    "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
+    "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
             "bottomLeft": [41.883148, -87.647396], 
             "topRight": [41.943228, -87.631674]
     },
-    "color": "#33ECA4",
+    "color": "#FBE40F",
     "mapHeight": "538px",
     "stops" : [
       {
         "name": "Elevate Coffee",
         "subtitle": "3344 N Halsted St",
-        "time": "5:00 - 5:15",
+        "time": "7:30 - 7:45",
         "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
         "coordinates": [41.943228, -87.649478]
       },
-     
       {
+        "note": "halsted and lincoln",
         "waypointOnly": true,
-        "coordinates": [41.918175, -87.648526]
-      },
-      
-      {
-        "waypointOnly": true,
-        "coordinates": [41.918040, -87.658217]
-      },
-      
-      {
-        "waypointOnly": true,
-        "coordinates": [41.917201, -87.658276]
+        "coordinates": [41.925443, -87.648751]
       },
       {
+        "note": "wells and lincoln",
         "waypointOnly": true,
-        "coordinates": [41.917035, -87.663915]
+        "coordinates": [41.915484, -87.634830]
       },
       {
+        "note": "wells and lincoln",
         "waypointOnly": true,
-        "coordinates": [41.916143, -87.667905]
-      },
-      {
-        "waypointOnly": true,
-        "coordinates": [41.915972, -87.677583]
-      },
-      {
-        "waypointOnly": true,
-        "coordinates": [41.917755, -87.677613]
-      },
-      {
-        "note": "begin logan / common route",
-        "waypointOnly": true,
-        "coordinates": [41.917494, -87.697193]
-      },
-      {
-        "waypointOnly": true,
-        "coordinates": [41.899280, -87.696786]
-      },
-      {
-        "waypointOnly": true,
-        "coordinates": [41.899221, -87.703051]
+        "coordinates": [41.874492, -87.633657]
       },
             {
-"waypointOnly": true,
-"coordinates": [41.896911, -87.703014]
-  },
+        "note": "harrison and halsted",
+        "waypointOnly": true,
+        "coordinates": [41.874359, -87.647104]
+      },
       {
-"waypointOnly": true,
-"coordinates": [41.896672, -87.702485]
-  },
-      {
-"waypointOnly": true,
-"coordinates": [41.890635, -87.702314]
-  },
-      {
-"waypointOnly": true,
-"coordinates": [41.890442, -87.702409]
-  },
-      {
-"waypointOnly": true,
-"coordinates": [41.890370, -87.702650]
-  },
-      {
-"waypointOnly": true,
-"coordinates": [41.890206, -87.716252]
-  },
-      {
-"waypointOnly": true,
-"coordinates": [41.889353, -87.716585]
-  },
-      {
-"waypointOnly": true,
-"coordinates": [41.886559, -87.716517]
-  },
-      {
-"waypointOnly": true,
-"coordinates": [41.884634, -87.716868]
-  },
-      {
-"waypointOnly": true,
-"coordinates": [41.883348, -87.715482]
-  },
-      {
-"waypointOnly": true,
-"coordinates": [41.882875, -87.715205]
-  },
-      {
-"waypointOnly": true,
-"coordinates": [41.882715, -87.715215]
-  },
-      
-
-            {
-        "name": "Garfield Park Field House",
-        "coordinates": [41.882700, -87.716045]
+        "note": "taylor and morgan",
+        "waypointOnly": true,
+        "coordinates": [41.869536, -87.651199]
       }
-     
-      
-     
-      
     ]
   },
   "north-halsted": {
