@@ -357,23 +357,23 @@
         "markerClass": "label-left"
       },
       {
-        "name": "Halsted & Hubbard",
-        "subtitle": "",
-        "time": "8:13",
-        "coordinates": [41.890089, -87.647597],
+        "name": "Green & Hubbard",
+        "coordinates": [41.890074, -87.648751],
         "markerClass": "push-up-2x"
  
       },
       {
-        "waypointOnly": true,
-        "coordinates": [41.890114, -87.645924]
-      },
+        "name": "Kinzie & Green",
+        "subtitle": "",
+        "coordinates": [41.889035, -87.648728],
+        "markerClass": "label-left push-down "
+      },      
       {
         "name": "Kinzie & Clinton",
         "subtitle": "",
         "time": "8:17",
-        "coordinates": [41.889041, -87.644330],
-        "markerClass": "push-down"
+        "coordinates": [41.889067, -87.641354],
+        "markerClass": "label-right push-down-2x"
       },
       {
         "waypointOnly": true,
