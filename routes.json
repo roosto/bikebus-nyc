@@ -359,21 +359,23 @@
       {
         "name": "Green & Hubbard",
         "coordinates": [41.890074, -87.648751],
-        "markerClass": "push-up-2x"
+        "markerClass": "label-left push-up-2x",
+        "waypointOnly": true
  
       },
       {
         "name": "Kinzie & Green",
         "subtitle": "",
         "coordinates": [41.889035, -87.648728],
-        "markerClass": "label-left push-down "
+        "markerClass": "push-down ",
+        "waypointOnly": true
       },      
       {
         "name": "Kinzie & Clinton",
         "subtitle": "",
         "time": "8:17",
         "coordinates": [41.889067, -87.641354],
-        "markerClass": "label-right push-down-2x"
+        "markerClass": "label-right push-down-4x"
       },
       {
         "waypointOnly": true,
