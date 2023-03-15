@@ -90,7 +90,7 @@
       {
         "name": "Kinzie and Clinton",
         "subtitle": "",
-        "time": "8:22",
+        "time": "8:18",
         "coordinates": [41.889067, -87.641354],
         "markerClass": "label-left"
       },
@@ -101,9 +101,24 @@
       {
         "name": "Chicago French Market",
         "subtitle": "",
-        "time": "8:26",
-        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "time": "8:20",
+        "icon-temp-hide": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
         "coordinates": [41.884089, -87.641134],
+        "markerClass": "label-left"
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.884089, -87.641289]
+      }, 
+      {
+        "waypointOnly": true,
+        "coordinates": [41.883170, -87.641262]
+      },
+      {
+        "name": "Daley Plaza",
+        "subtitle": "",
+        "time": "8:25",
+        "coordinates": [41.883235, -87.630246],
         "markerClass": "label-right push-down-4x"
       }
     ]
@@ -358,11 +373,26 @@
         "coordinates": [41.884089, -87.641305]
       },
       {
-        "name": "Chicago French Market",
+        "name": "French Market",
         "subtitle": "",
         "time": "8:20",
-        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "icon-temp-hide": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
         "coordinates": [41.884089, -87.641134],
+        "markerClass": "label-right push-up-2x"
+      },
+      {
+        "waypointOnly": true,
+        "coordinates": [41.884089, -87.641289]
+      }, 
+      {
+        "waypointOnly": true,
+        "coordinates": [41.883170, -87.641262]
+      },
+      {
+        "name": "Daley Plaza",
+        "subtitle": "",
+        "time": "8:25",
+        "coordinates": [41.883235, -87.630246],
         "markerClass": "label-right push-down-4x"
       }
     ]
