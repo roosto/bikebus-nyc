@@ -5,14 +5,39 @@
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.866514, -87.696271], 
-            "topRight": [41.929005, -87.653734]
+            "bottomLeft": [41.826740, -87.675128], 
+            "topRight": [41.866514, -87.696271]
     },
     "color": "#FBE40F",
     "mapHeight": "538px",
     "stops" : [
-       {
-        "name": "Douglass Park Path",
+                        {
+        "name": "McKinley Park",
+        "coordinates": [41.826740, -87.675128]
+      },
+     {
+        "name": "Loomis and 21st St",
+        "coordinates": [41.854242, -87.661213],
+        "waypointOnly": true
+      },
+      
+            {
+        "name": "California and 21st St",
+        "coordinates": [41.853737, -87.695500],
+        "waypointOnly": true
+      },
+      {
+        "name": "12th Pl and California",
+        "coordinates": [41.865689, -87.695900],
+        "waypointOnly": true
+      },
+      {
+        "name": "Douglass Park Path 1",
+        "coordinates": [41.865713, -87.696518],
+        "waypointOnly": true
+      },
+      {
+        "name": "Douglass Park Path 2",
         "coordinates": [41.865682, -87.696797],
         "waypointOnly": true
       },
