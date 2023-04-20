@@ -1,6 +1,6 @@
 {
-   "earth-day-south": {
-    "title": "Pedal for the Planet Bus Tracker: McKinley Park and Bronzeville",
+   "earth-day-mckinley": {
+    "title": "Pedal for the Planet Bus Tracker: McKinley Park",
     "runInfo": "TKTKTKTK",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
@@ -11,9 +11,45 @@
     "color": "#FBE40F",
     "mapHeight": "538px",
     "stops" : [
-                        {
+      
+      {
+        "name": "BACK OUT TO DAMEN AND 35th",
+        "coordinates": [41.830392, -87.675279],
+        "waypointOnly": true
+      },
+      {
         "name": "McKinley Park",
-        "coordinates": [41.826740, -87.675128]
+        "coordinates": [41.826740, -87.675128],
+      },
+                                   {
+        "name": "Damen and 35th",
+        "coordinates": [41.830392, -87.675279],
+        "waypointOnly": true
+      },
+                             {
+        "name": "Racine and 35th",
+        "coordinates": [41.830617, -87.655733],
+        "waypointOnly": true
+      },
+                       {
+        "name": "31st and Racine",
+        "coordinates": [41.837914, -87.656018],
+        "waypointOnly": true
+      },
+                       {
+        "name": "Loomis and 31st",
+        "coordinates": [41.837935, -87.654363],
+        "waypointOnly": true
+      },
+                 {
+        "name": "Loomis south of the river",
+        "coordinates": [41.844915, -87.660348],
+        "waypointOnly": true
+      },
+           {
+        "name": "Loomis north of the river",
+        "coordinates": [41.846283, -87.660951],
+        "waypointOnly": true
       },
      {
         "name": "Loomis and 21st St",
