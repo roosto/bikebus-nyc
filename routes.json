@@ -1,12 +1,37 @@
 {
-  "earth-day-north": {
-    "title": "Pedal for the Planet Bus Tracker: Lakeview and Wicker Park",
-    "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
+   "earth-day-south": {
+    "title": "Pedal for the Planet Bus Tracker: McKinley Park and Bronzeville",
+    "runInfo": "TKTKTKTK",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.883148, -87.647396], 
-            "topRight": [41.943228, -87.631674]
+            "bottomLeft": [41.866514, -87.696271], 
+            "topRight": [41.929005, -87.653734]
+    },
+    "color": "#FBE40F",
+    "mapHeight": "538px",
+    "stops" : [
+       {
+        "name": "Douglass Park Path",
+        "coordinates": [41.865682, -87.696797],
+        "waypointOnly": true
+      },
+      {
+        "name": "Douglass Park",
+        "coordinates": [41.865876, -87.696927],
+        "subtitle": "Bike Jam!",
+        "time": "12:00pm"
+      }
+      ]
+  }, 
+ "earth-day-north": {
+    "title": "Pedal for the Planet Bus Tracker: Lakeview and Wicker Park",
+    "runInfo": "TKTKTKTK",
+    "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
+    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
+    "trackerBounds": {
+            "bottomLeft": [41.866514, -87.696271], 
+            "topRight": [41.929005, -87.653734]
     },
     "color": "#FBE40F",
     "mapHeight": "538px",
@@ -33,9 +58,14 @@
         "waypointOnly": true
       },
       {
+        "name": "Park #567",
+        "coordinates": [41.914080, -87.682431],
+        "subtitle": "Bloomingdale and Milwaukee",
+        "time": "11:15am"
+      },
+      {
         "name": "Leavitt & Harrison",
-        "coordinates": [41.873970, -87.681342],
-        "waypointOnly": true
+        "coordinates": [41.873970, -87.681342]
       },
       {
         "name": "Francisco & Harrison",
