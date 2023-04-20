@@ -15,12 +15,43 @@
         "name": "Jonquil Park",
         "subtitle": "Wrightwood & Lincoln",
         "time": "11:00am",
-        "coordinates": [41.929005, -87.653734]
+        "coordinates": [41.929005, -87.653734],
+        "markerClass": "label-right"
       },
       {
         "name": "Southport & Wrightwood",
-        "time": "11:00am",
-        "coordinates": [41.929005, -87.653734]
+        "coordinates": [41.928855, -87.663419],
+        "waypointOnly": true
+      },
+      {
+        "name": "Webster & Southport",
+        "coordinates": [41.921619, -87.663192]
+      },
+      {
+        "name": "Leavitt & Webster",
+        "coordinates": [41.921315, -87.682636],
+        "waypointOnly": true
+      },
+      {
+        "name": "Leavitt & Harrison",
+        "coordinates": [41.873970, -87.681342],
+        "waypointOnly": true
+      },
+      {
+        "name": "Francisco & Harrison",
+        "coordinates": [41.873775, -87.698545],
+        "waypointOnly": true
+      },
+      {
+        "name": "Francisco & Roosevelt",
+        "coordinates": [41.866482, -87.698334],
+        "waypointOnly": true
+      },
+      {
+        "name": "Douglass Park",
+        "coordinates": [41.866514, -87.696271],
+        "subtitle": "Bike Jam!",
+        "time": "12:00pm"
       }
       ]
   },
