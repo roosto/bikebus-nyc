@@ -1,5 +1,6 @@
 {
    "earth-day-bronzeville": {
+    "ctu" : true,
     "title": "Pedal for the Planet Bus Tracker: Bronzeville",
     "runInfo": "",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
@@ -90,6 +91,7 @@
       ]
   },  
   "earth-day-mckinley": {
+    "ctu" : true,
     "title": "Pedal for the Planet Bus Tracker: McKinley Park",
     "runInfo": "",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
@@ -181,6 +183,7 @@
       ]
   }, 
  "earth-day-north": {
+    "ctu" : true,
     "title": "Pedal for the Planet Bus Tracker: Lakeview and Wicker Park",
     "runInfo": "",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",

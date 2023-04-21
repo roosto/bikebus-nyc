@@ -70,7 +70,7 @@ fastify.get("/:route", async function (request, reply) {
 
   // params is an object we'll pass to our handlebars template
   let params = { 
-    
+    ctu: bus.ctu || false,
     route: route,
     title: bus.title,
     busRunInfo: bus.runInfo,
