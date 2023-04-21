@@ -1,14 +1,14 @@
 {
    "earth-day-bronzeville": {
     "title": "Pedal for the Planet Bus Tracker: Bronzeville",
-    "runInfo": "TKTKTKTK",
+    "runInfo": "",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
             "bottomLeft": [41.814902, -87.696927], 
             "topRight": [41.865876, -87.611600]
     },
-    "color": "#FBE40F",
+    "color": "#41DE34",
     "mapHeight": "300px",
     "minZoomLevel": 12,
     "stops" : [
@@ -91,14 +91,14 @@
   },  
   "earth-day-mckinley": {
     "title": "Pedal for the Planet Bus Tracker: McKinley Park",
-    "runInfo": "TKTKTKTK",
+    "runInfo": "",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
             "bottomLeft": [41.826740, -87.696927], 
             "topRight": [41.866514, -87.654363]
     },
-    "color": "#FBE40F",
+    "color": "#41DE34",
     "mapHeight": "538px",
     "stops" : [
       {
@@ -182,14 +182,14 @@
   }, 
  "earth-day-north": {
     "title": "Pedal for the Planet Bus Tracker: Lakeview and Wicker Park",
-    "runInfo": "TKTKTKTK",
+    "runInfo": "",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
             "bottomLeft": [41.866514, -87.696271], 
             "topRight": [41.929005, -87.653734]
     },
-    "color": "#FBE40F",
+    "color": "#41DE34",
     "mapHeight": "538px",
     "stops" : [
       {
