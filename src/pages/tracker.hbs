@@ -221,7 +221,11 @@
             ];
 
             var map = L.map('map', {
+                  {{#if busMinZoomLevel}}
+                   minZoom: {{busMinZoomLevel}}
+                  {{else}}
                    minZoom: 13
+                  {{/if}}
             }).fitBounds(routeBounds);
             
             L.tileLayer(

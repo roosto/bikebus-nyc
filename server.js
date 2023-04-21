@@ -77,6 +77,7 @@ fastify.get("/:route", async function (request, reply) {
     busHeaderImageSrc: bus.headerImageSrc,
     busHeaderImageAlt: bus.headerImageAlt,
     busTrackerBounds: bus.trackerBounds,
+    busMinZoomLevel: bus.minZoomLevel,
     mapHeight: bus.mapHeight,
     color: bus.color,
     globalMarkerClass: bus.globalMarkerClass, 

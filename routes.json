@@ -6,17 +6,17 @@
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
             "bottomLeft": [41.814902, -87.696927], 
-            "topRight": [41.865876, -87.611600]
+            "topRight": [41.865876, -87.581600]
     },
     "color": "#FBE40F",
-    "mapHeight": "700px",
+    "mapHeight": "300px",
+    "minZoomLevel": 5,
     "stops" : [
                           {
         "name": "Armstrong Park",
         "subtitle": "44th St. & St. Lawrence",
         "time": "11:00am",
-        "coordinates": [41.814902, -87.611600],
-        "markerClass": "label-right"
+        "coordinates": [41.814902, -87.611600]
       },
                     {
         "name": "44th St and MLK",
@@ -430,6 +430,7 @@
     },
     "color": "#84CBF1",
     "mapHeight": "490px",
+    "minZoomLevel": 13,
     "stops": [
       {
         "name": "New Wave Coffee",
