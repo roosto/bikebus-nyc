@@ -16,7 +16,7 @@
                           {
         "name": "Armstrong Park",
         "subtitle": "44th St. & St. Lawrence",
-        "time": "11:00am",
+        "time": "11:00am - 11:10am",
         "coordinates": [41.814902, -87.611600],
         "markerClass": "label-left"
       },
@@ -85,7 +85,7 @@
         "name": "Douglass Park",
         "coordinates": [41.865876, -87.696927],
         "subtitle": "Bike Jam!",
-        "time": "12:00pm",
+        "time": "12:10pm",
         "markerClass": "label-right"
       }
       ]
@@ -107,7 +107,7 @@
         "name": "McKinley Park",
         "coordinates": [41.826688, -87.680057],
         "subtitle": "37th and Leavitt",
-        "time": "11:15am"
+        "time": "11:15am - 11:25am"
       },
                   {
         "name": "Damen and 37th",
@@ -177,7 +177,7 @@
         "name": "Douglass Park",
         "coordinates": [41.865876, -87.696927],
         "subtitle": "Bike Jam!",
-        "time": "12:00pm",
+        "time": "12:10pm",
         "markerClass": "label-right"
       }
       ]
@@ -198,7 +198,7 @@
       {
         "name": "Jonquil Park",
         "subtitle": "Wrightwood & Lincoln",
-        "time": "11:00am",
+        "time": "11:00am - 11:10am",
         "coordinates": [41.929005, -87.653734],
         "markerClass": "label-right"
       },
@@ -217,10 +217,10 @@
         "waypointOnly": true
       },
       {
-        "name": "Park #567",
+        "name": "Wicker Park: Park #567",
         "coordinates": [41.914080, -87.682431],
         "subtitle": "Bloomingdale and Milwaukee",
-        "time": "11:15am"
+        "time": "11:15am - 11:25am"
       },
       {
         "name": "Leavitt & Harrison",
@@ -240,7 +240,7 @@
         "name": "Douglass Park",
         "coordinates": [41.866514, -87.696271],
         "subtitle": "Bike Jam!",
-        "time": "12:00pm"
+        "time": "12:10pm"
       }
       ]
   },
