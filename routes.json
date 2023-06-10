@@ -1792,15 +1792,19 @@
     "title": " Jammiversary Bus: West Loop",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.883148, -87.647396], 
-            "topRight": [41.943228, -87.631674]
+            "bottomLeft": [41.88290, -87.70533], 
+            "topRight": [41.89125, -87.61046]
     },
     "color": "#BE00B4",
-    "mapHeight": "538px",
+    "mapHeight": "400px",
+    "minZoomLevel": 12,
     "stops" : 
        [ 
            {
-    "waypointOnly": true,
+            "name": "Park #578",
+        "subtitle": "Washington & Wolcott",
+        "time": "5:30 - 5:45pm",
+        "markerClass": "label-left",
     "coordinates": [41.883665, -87.674941]
   },    {
     "waypointOnly": true,
@@ -2480,15 +2484,18 @@
     "title": " Jammiversary Bus: Wicker Park",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.883148, -87.647396], 
-            "topRight": [41.943228, -87.631674]
+            "bottomLeft": [41.88864, -87.70779], 
+            "topRight": [41.91977, -87.61186]
     },
     "color": "#BE00B4",
-    "mapHeight": "538px",
+    "mapHeight": "400px",
+    "minZoomLevel": 12,
     "stops" : 
        [
          {
-    "waypointOnly": true,
+            "name": "Ehrler Park",
+        "subtitle": "2229 W Cortland St",
+        "time": "5:30 - 5:45pm",
     "coordinates": [41.915296, -87.68425]
   },    {
     "waypointOnly": true,
