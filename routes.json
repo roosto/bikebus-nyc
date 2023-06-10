@@ -8,7 +8,7 @@
     },
     "color": "#BE00B4",
     "mapHeight": "438px",
-      "minZoomLevel": 11,
+      "minZoomLevel": 12,
     "stops" : 
        [ 
   {
@@ -2918,7 +2918,7 @@
     "waypointOnly": true,
     "coordinates": [41.889796, -87.672473]
   },    {
-    "waypointOnly": true,
+
     "coordinates": [41.889801, -87.672093]
   },    {
     "waypointOnly": true,
@@ -3471,15 +3471,17 @@
     "title": " Jammiversary Bus: Lakeview",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.883148, -87.647396], 
-            "topRight": [41.943228, -87.631674]
+            "bottomLeft": [41.88325, -87.67272], 
+            "topRight": [41.93201, -87.61402]
     },
     "color": "#BE00B4",
-    "mapHeight": "538px",
+    "mapHeight": "458px",
     "stops" : 
        [ 
            {
-    "waypointOnly": true,
+        "name": "Jonquil Park",
+        "subtitle": "Sheffield & Wrightwood",
+        "time": "5:30 - 5:45pm",
     "coordinates": [41.928676,-87.654762]
   },   {
     "waypointOnly": true,
