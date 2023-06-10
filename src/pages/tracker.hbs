@@ -164,6 +164,8 @@
         </h2>        
         <!-- stop markers -->
         {{#each stops}}
+        {{#if this.waypointOnly}}
+        {{else}}
           <div id="stop-marker-{{@index}}" class="marker-container {{../globalMarkerClass}} {{this.markerClass}}">
              <div class="marker-box">
                <div><b>{{this.time}}</b></div>
@@ -186,6 +188,7 @@
                </div>
              </div>
           </div>
+          {{/if}}
         {{/each}}
         <!-- update_map.js -->
         <script>
