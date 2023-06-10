@@ -164,8 +164,7 @@
         </h2>        
         <!-- stop markers -->
         {{#each stops}}
-        {{#if this.waypointOnly}}
-        {{else}}
+          {{#unless this.waypointOnly}}
           <div id="stop-marker-{{@index}}" class="marker-container {{../globalMarkerClass}} {{this.markerClass}}">
              <div class="marker-box">
                <div><b>{{this.time}}</b></div>
@@ -188,7 +187,7 @@
                </div>
              </div>
           </div>
-          {{/if}}
+          {{/unless}}
         {{/each}}
         <!-- update_map.js -->
         <script>
@@ -259,11 +258,9 @@
             const stops = {{toJSON stops}}
                         
             stops.forEach((stop, index) => {
-              const element = document.getElementById('stop-marker-'+index);
               if(!stop.waypointOnly) {
+                const element = document.getElementById('stop-marker-'+index);
                 addStopMarker(map, stop.coordinates[0], stop.coordinates[1], element);
-              } else {
-                element.remove();
               }
             })
             
