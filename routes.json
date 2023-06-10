@@ -1,13 +1,26 @@
 {
-"jamapalooza-jonquil": {
-    "title": " Jammiversary Bus: JonquilPark",
-    "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
+  "jammiversary-erhler": {
+    "title": " Jammiversary Bus: Erhler Park",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
             "bottomLeft": [41.883148, -87.647396], 
             "topRight": [41.943228, -87.631674]
     },
-    "color": "#FBE40F",
+    "color": "#BE00B4",
+    "mapHeight": "538px",
+    "stops" : 
+       [
+         
+    ]
+  }, 
+"jammiversary-jonquil": {
+    "title": " Jammiversary Bus: Jonquil Park",
+    "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
+    "trackerBounds": {
+            "bottomLeft": [41.883148, -87.647396], 
+            "topRight": [41.943228, -87.631674]
+    },
+    "color": "#BE00B4",
     "mapHeight": "538px",
     "stops" : 
        [ {
