@@ -7,12 +7,17 @@
             "topRight": [41.88333, -87.60070]
     },
     "color": "#BE00B4",
-    "mapHeight": "650px",
+    "mapHeight": "438px",
+      "minZoomLevel": 11,
     "stops" : 
        [ 
   {
-    "waypointOnly": true,
-    "coordinates": [41.806029524264204,-87.59395122528076]
+    "coordinates": [41.806029524264204,-87.59395122528076],
+        "name": "Kenwood Park",
+        "subtitle": "49th and Kenwood Ave",
+        "time": "5:30 - 5:45pm",
+        "markerClass": "label-left"
+
   },   {
     "waypointOnly": true,
     "coordinates": [41.80599753490745,-87.59674072265625]
@@ -110,7 +115,8 @@
     "waypointOnly": true,
     "coordinates": [41.88259820125285,-87.62948513031006]
   },   {
-    "waypointOnly": true,
+        "name": "Jammiversary",
+        "subtitle": "The Picasso",
     "coordinates": [41.88310941663835,-87.6295280456543]
   }
     ]
@@ -883,7 +889,8 @@
     "waypointOnly": true,
     "coordinates": [41.883367,-87.630567]
   },   {
-    "waypointOnly": true,
+    "name": "Jammiversary",
+    "subtitle": "The Picasso",
     "coordinates": [41.883367,-87.63022]
   }  
     ] 
@@ -1770,6 +1777,8 @@
     "waypointOnly": true,
     "coordinates": [41.883242,-87.63258]
   },   {
+    "name": "Jammiversary",
+        "subtitle": "The Picasso",
     "waypointOnly": true,
     "coordinates": [41.883243,-87.63242]
   }
@@ -2456,7 +2465,8 @@
     "waypointOnly": true,
     "coordinates": [41.883367, -87.630567]
   },    {
-    "waypointOnly": true,
+    "name": "Jammiversary",
+        "subtitle": "The Picasso",
     "coordinates": [41.883367, -87.63022]
   }
     ]
