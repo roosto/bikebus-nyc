@@ -3,14 +3,116 @@
     "title": " Jammiversary Bus: Hyde Park",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.883148, -87.647396], 
-            "topRight": [41.943228, -87.631674]
+            "bottomLeft": [41.80306, -87.62794], 
+            "topRight": [41.88333, -87.60070]
     },
     "color": "#BE00B4",
-    "mapHeight": "538px",
+    "mapHeight": "650px",
     "stops" : 
        [ 
-         
+  {
+    "waypointOnly": true,
+    "coordinates": [41.806029524264204,-87.59395122528076]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.80599753490745,-87.59674072265625]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.81405834766633,-87.5969123840332]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.814154303613435,-87.59686946868896]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.81802440698513,-87.59965896606445]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.82135058994058,-87.60163307189941]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.82742682420505,-87.60540962219238]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.83120019521289,-87.60828495025635]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.83116821842697,-87.61060237884521]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.833694335300436,-87.6115894317627]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.8336303842045,-87.61622428894043]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.83465359407157,-87.61626720428467]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.83465359407157,-87.61703968048096]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.83474951915798,-87.6174259185791]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.83471754414518,-87.62184619903564]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.84200743368794,-87.62197494506836]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.84200743368794,-87.62042999267578]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.84571600613617,-87.62051582336426]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.845620097487455,-87.62678146362305]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.847666117477075,-87.62682437896729]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.848689102934486,-87.62699604034424]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.84923255730516,-87.62699604034424]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.849264525065536,-87.62540817260742]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.87055150516221,-87.62592315673828]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.870519548041614,-87.62858390808105]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.872277165949896,-87.6286268234253]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.872277165949896,-87.62922763824463]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.87448210916051,-87.62927055358887]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.87448210916051,-87.62918472290039]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.87569639323101,-87.62922763824463]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.87777340460667,-87.62927055358887]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.88259820125285,-87.62939929962158]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.88259820125285,-87.62948513031006]
+  },   {
+    "waypointOnly": true,
+    "coordinates": [41.88310941663835,-87.6295280456543]
+  }
     ]
   },    
   "jammiversary-pilsen": {
