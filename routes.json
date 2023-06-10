@@ -125,11 +125,11 @@
     "title": " Jammiversary Bus: Pilsen",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.883148, -87.647396], 
+            "bottomLeft": [41.85605, -87.68256], 
             "topRight": [41.88399, -87.60850]
     },
     "color": "#BE00B4",
-    "mapHeight": "538px",
+    "mapHeight": "338px",
     "stops" : 
        [ 
          {
@@ -902,15 +902,17 @@
     "title": " Jammiversary Bus: Bridgeport",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.883148, -87.647396], 
-            "topRight": [41.943228, -87.631674]
+            "bottomLeft": [41.84232, -87.65407], 
+            "topRight": [41.88350, -87.60884]
     },
     "color": "#BE00B4",
-    "mapHeight": "538px",
+    "mapHeight": "400px",
     "stops" : 
        [ 
            {
-    "waypointOnly": true,
+            "name": "Sintic Park",
+        "subtitle": "28th & Wallace",
+        "time": "5:30 - 5:45pm",
     "coordinates": [41.842666,-87.641247]
   },   {
     "waypointOnly": true,
@@ -1782,7 +1784,6 @@
   },   {
     "name": "Jammiversary",
         "subtitle": "The Picasso",
-    "waypointOnly": true,
     "coordinates": [41.883243,-87.63242]
   }
     ]
@@ -2475,7 +2476,7 @@
     ]
   },   
 
-  "jammiversary-wicker": {
+  "jammiversary-wicker-park": {
     "title": " Jammiversary Bus: Wicker Park",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
