@@ -401,9 +401,8 @@
           "name": "Chicago French Market",
           "subtitle": "",
           "time": "8:20",
-          "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
           "coordinates": [41.884089, -87.641134],
-          "markerClass": "label-right push-down-4x"
+          "markerClass": "label-left push-down-4x"
         },
         {
             "waypointOnly": true,
@@ -418,7 +417,7 @@
             "subtitle": "Rally for Safe Streets",
             "time": "8:25",
             "coordinates": [41.883197, -87.630172],
-            "markerClass": "label-right"
+            "markerClass": "label-right push-down-4x"
           }
       ]
     },
@@ -605,7 +604,7 @@
           "subtitle": "",
           "time": "8:20",
           "coordinates": [41.884089, -87.641134],
-          "markerClass": "label-right push-down-4x"
+          "markerClass": "label-left push-up-8x"
         },
         {
             "waypointOnly": true,
