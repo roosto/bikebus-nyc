@@ -1,5 +1,5 @@
 {
-  "north-halsted": {
+  "north-halsted-city-hall": {
     "title": "North Halsted Bike Bus Tracker",
     "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
@@ -123,7 +123,7 @@
       
     ]
   },
-  "north-halsted-standard": {
+  "north-halsted": {
     "title": "North Halsted Bike Bus Tracker",
     "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
@@ -304,7 +304,7 @@
       }
     ]
   },
-  "milwaukee": {
+  "milwaukee-city-hall": {
       "title": "Milwaukee Bike Bus Tracker",
       "runInfo": "The Milwaukee Bike Bus runs every Wednesday morning. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
       "headerImageAlt": "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
@@ -421,7 +421,7 @@
           }
       ]
     },
-  "milwaukee-standard": {
+  "milwaukee": {
     "title": "Milwaukee Bike Bus Tracker",
     "runInfo": "The Milwaukee Bike Bus runs every Wednesday morning. Meet at 7:30 am at New Wave Coffee. Roll out at 7:45 am.",
     "headerImageAlt": "The Milwaukee Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
@@ -524,7 +524,7 @@
       }
     ]
   },
-  "south-halsted": {
+  "south-halsted-city-hall": {
       "title": "South Halsted Bike Bus Tracker",
       "runInfo": "The South Halsted Bike Bus runs every Wednesday morning. Meet at 7:40 am at Cafe Jumping Bean. Roll out at 7:55 am.",
       "trackerBounds": {
@@ -623,7 +623,7 @@
           }
       ]
     },
-  "south-halsted-standard": {
+  "south-halsted": {
     "title": "South Halsted Bike Bus Tracker",
     "runInfo": "The South Halsted Bike Bus runs every Wednesday morning. Meet at 7:40 am at Cafe Jumping Bean. Roll out at 7:55 am.",
     "trackerBounds": {
