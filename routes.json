@@ -129,12 +129,35 @@
     "headerImageAlt": "The Halsted Bike Bus. Brought to you by CHICAGO, BIKE GRID NOW!",
     "trackerTileSrcPattern": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/halsted.9.14.22.{z}.{x}.{y}.jpg?v=16617",
     "trackerBounds": {
-            "bottomLeft": [41.883148, -87.647396], 
-            "topRight": [41.943228, -87.631674]
+            "bottomLeft": [41.883739, -87.666798], 
+            "topRight": [41.969721, -87.643148]
     },
+    "minZoomLevel": 11,
     "color": "#FBE40F",
     "mapHeight": "538px",
     "stops" : [
+           {
+        "name": "Ridman's Coffee",
+        "subtitle": "4758 N Clark St",
+        "time": "7:10 - 7:20",
+        "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/coffee_stop.svg?v=1664245520910",
+        "coordinates": [41.968787, -87.667639]
+      },
+      {
+        "waypointOnly": true,
+        "name": "Clark at Ridman's",
+        "coordinates": [41.968803, -87.667547]
+      },
+            {
+        "waypointOnly": true,
+        "name": "Clark and Wilson",
+        "coordinates": [41.965274, -87.666754]
+      },
+      {
+        "waypointOnly": true,
+        "name": "Wilson and Clarendon",
+        "coordinates": [41.965505, -87.650011]
+      },
       {
         "name": "Elevate Coffee",
         "subtitle": "3344 N Halsted St",
