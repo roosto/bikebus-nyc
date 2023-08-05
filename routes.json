@@ -32,7 +32,10 @@
                         },                    
                         { 
                             "coordinates": [ 42.008626, -87.692565],
-                            "waypointOnly": true
+                            "name": "Lunt & Campbell",
+                            "time": "10:20 am",
+                            "markerClass": "label-left"
+ 
                         },
                         { 
                             "coordinates": [ 42.001598, -87.692355],
@@ -41,6 +44,12 @@
                         { 
                             "coordinates": [ 41.984933, -87.691858],
                             "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ 41.98130, -87.69163],
+                            "name": "Start Here!",
+                            "subtitle": "Catalpa & Campbell",
+                            "time": "9:00 am"
                         },
                         { 
                             "coordinates": [ 41.977655, -87.691642],
@@ -57,6 +66,12 @@
                         { 
                             "coordinates": [ 41.973443, -87.664691],
                             "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ 41.98190, -87.66485],
+                            "name": "Catalpa & Glenwood",
+                            "time": "9:20 am",
+                            "markerClass": "label-right"
                         },
                         { 
                             "coordinates": [ 41.991043, -87.665124],
@@ -82,7 +97,8 @@
                             "coordinates": [ 42.006664, -87.666151],
                             "name": "Glenwood Market",
                             "subtitle": "1448 W Morse Ave",
-                            "time": "9:55 - 11:00",
+                            "time": "9:55 - 11:00 am",
+                            "markerClass": "label-right",
                             "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/noun-farmer-market-1176658.png?v=1691259322695"
                             
                         },
