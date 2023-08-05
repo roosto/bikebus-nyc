@@ -80,7 +80,11 @@
                         },
                         { 
                             "coordinates": [ 42.006664, -87.666151],
-                            "waypointOnly": true
+                            "name": "Glenwood Market",
+                            "subtitle": "1448 W Morse Ave",
+                            "time": "9:55 - 11:00",
+                            "icon": "https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/noun-farmer-market-1176658.svg?v=1691258583178"
+                            
                         },
                         { 
                             "coordinates": [ 42.006633, -87.667781],
