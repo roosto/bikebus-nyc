@@ -1,4 +1,95 @@
 {
+  "taste-of-the-grid-north": {
+    "title": "Taste of the Grid Ride Tracker",
+    "runInfo": "Join us this Sunday as we explore what riding a bike in Chicago could be like on The Grid. We'll be riding (~10mph) this loop twice, so feel free to hang out at the Glenwood Sunday Market from 9:55-11AM, we'll be back to pick you up.",
+    "trackerBounds": {
+            "bottomLeft": [41.883148, -87.647396], 
+            "topRight": [41.943228, -87.631674]
+    },
+    "color": "#FBE40F",
+    "mapHeight": "538px",
+    "stops" : [
+                        { 
+                            "coordinates": [ -87.668017, 42.010284],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.682179, 42.010045],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.682415, 42.010092],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.688102, 42.009869],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.68808, 42.008689],
+                            "waypointOnly": true
+                        },                    
+                        { 
+                            "coordinates": [ -87.692565, 42.008626],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.692355, 42.001598],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.691858, 41.984933],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.691642, 41.977655],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.676472, 41.977894],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.676279, 41.973284],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.664691, 41.973443],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.665124, 41.991043],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.665292, 41.997815],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.665528, 41.998149],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.665678, 42.005341],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.666086, 42.006154],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.666151, 42.006664],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.667781, 42.006633],
+                            "waypointOnly": true
+                        },
+                        { 
+                            "coordinates": [ -87.667974, 42.010092],"waypointOnly": true
+                        }                
+                        ]
+  },
   "north-halsted-city-hall": {
     "title": "North Halsted Bike Bus Tracker",
     "runInfo": "The North Halsted Bike Bus runs every Wednesday morning. Meet at 7:30 am at Elevate Coffee. Roll out at 7:45 am.",
