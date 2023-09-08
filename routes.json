@@ -2,7 +2,7 @@
   
   "tour-de-grid": {
     "title": "Tour de Grid Ride Tracker",
-    "runInfo": "",
+    "runInfo": "Join us on Sat., Sept 9th for a 9-mile ride from Wicker Park through West Town, Garfield Park, and Humboldt Park. Hop on a Bike Bus from Lincoln Square, Bridgeport, Hyde Park, or Austin to get there!",
     "trackerBounds": {
             "bottomLeft": [41.88190, -87.72434], 
             "topRight": [41.91015, -87.67186]
@@ -13,7 +13,10 @@
     "stops" : [
                     {
 	"coordinates": [ 41.907179, -87.677274],
-	"waypointOnly": true
+                            "name": "Start",
+                            "subtitle": "Damen and Schiller",
+                            "time": "10 - 10:15 am",
+                            "markerClass": "label-left push-up-8x"
 },
                     {
 	"coordinates": [ 41.907147, -87.677273],
