@@ -531,7 +531,12 @@
 },
                     {
 	"coordinates": [ 41.883043, -87.68391],
-	"waypointOnly": true
+  "name": "Starr Park",
+  "subtitle": "Oakley and Washington",
+  "time": "10:25",
+	"waypointOnly": false,
+  "markerClass": "label-left push-down-4x"
+
 },
                     {
 	"coordinates": [ 41.883041, -87.684016],
