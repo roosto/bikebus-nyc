@@ -15,7 +15,7 @@
 	"coordinates": [ 41.907179, -87.677274],
                             "name": "Start",
                             "subtitle": "Damen and Schiller",
-                            "time": "10 - 10:15 am",
+                            "time": "~10 - 10:15 am",
                             "markerClass": "label-left push-up-8x"
 },
                     {
@@ -533,7 +533,7 @@
 	"coordinates": [ 41.883043, -87.68391],
   "name": "Starr Park",
   "subtitle": "Oakley and Washington",
-  "time": "10:25",
+  "time": "~10:25 am",
 	"waypointOnly": false,
   "markerClass": "label-left push-down-4x"
 
@@ -824,7 +824,10 @@
 },
                     {
 	"coordinates": [ 41.884193, -87.716493],
-	"waypointOnly": true
+	"waypointOnly": false,
+  "name": "Central Park Dr. and Schraeder Dr. ",
+  "time": "~10:40am",
+  "markerClass": "label-right push-up-2x"
 },
                     {
 	"coordinates": [ 41.884219, -87.716521],
@@ -1424,7 +1427,10 @@
 },
                     {
 	"coordinates": [ 41.899044, -87.723753],
-	"waypointOnly": true
+	"waypointOnly": false,
+  "name": "Augusta and Springfield",
+  "time": "~10:50 am",
+  "markerClass": "label-right"
 },
                     {
 	"coordinates": [ 41.899131, -87.723754],
@@ -2235,7 +2241,7 @@
                         { 
                             "coordinates": [ 42.008626, -87.692565],
                             "name": "Lunt & Campbell",
-                            "time": "10:20 am",
+                            "time": "~10:20 am",
                             "markerClass": "label-left"
  
                         },
