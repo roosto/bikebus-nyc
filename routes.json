@@ -8,7 +8,7 @@
             "topRight": [41.91015, -87.67186]
     },
     "minZoomLevel": 13,
-    "color": "#EA3759",
+    "color": "#FFFF66",
     "mapHeight": "438px",
     "stops" : [
                     {
@@ -1826,7 +1826,10 @@
 },
                     {
 	"coordinates": [ 41.909175, -87.7017],
-	"waypointOnly": true
+	"waypointOnly": false,
+  "name": "Humboldt Park",
+  "time": "~11:00 am",
+  "markerClass": "label-left push-up-2x"
 },
 {
 	"coordinates": [ 41.909175, -87.7017],
