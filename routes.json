@@ -3214,15 +3214,15 @@
 	"waypointOnly": true
 }]
   },
-  "jamapalooza-austin": {
-    "title": "Jamapalooza Ride Tracker",
+  "jamapalooza-wicker-park": {
+    "title": "Jamapalooza Wicker Park Ride Tracker",
     "runInfo": "",
     "trackerBounds": {
-            "bottomLeft": [41.883396, -87.629883], 
-            "topRight": [41.883396, -87.629883]
+            "bottomLeft": [41.88120, -87.68351], 
+            "topRight": [41.91733, -87.62689]
     },
     "minZoomLevel": 13,
-    "color": "#FFFF66",
+    "color": "#D6538C",
     "mapHeight": "438px",
     "stops" : [
       {
@@ -4261,30 +4261,2137 @@
     ]
   },
   
-  "jamapalooza-west-town": {
-    "title": "Jamapalooza Ride Tracker",
+  "jamapalooza-austin": {
+    "title": "Jamapalooza Austin Ride Tracker",
     "runInfo": "",
     "trackerBounds": {
-            "bottomLeft": [41.883396, -87.629883], 
-            "topRight": [41.883396, -87.629883]
+            "bottomLeft": [41.88411, -87.75022], 
+            "topRight": [41.90607, -87.62778]
     },
-    "minZoomLevel": 13,
-    "color": "#FFFF66",
+    "minZoomLevel": 10,
+    "color": "#D6538C",
     "mapHeight": "438px",
-    "stops" : []
+    "stops" : [
+      {
+	"coordinates": [ 41.904144, -87.751025],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.904119, -87.751025],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.90412, -87.750916],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.904045, -87.750913],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.903668, -87.750901],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.903297, -87.750891],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.903212, -87.750889],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.903137, -87.750888],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.902757, -87.750878],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.902389, -87.75087],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.902306, -87.750868],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.902229, -87.750865],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.901916, -87.750856],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.90164, -87.750849],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.901207, -87.750838],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.900553, -87.750819],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.900469, -87.750817],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.900395, -87.750815],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.900011, -87.750807],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899633, -87.750799],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899548, -87.750798],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899477, -87.750796],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899093, -87.750788],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898718, -87.75078],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898643, -87.750778],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898645, -87.750687],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898667, -87.748451],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898668, -87.748341],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89867, -87.748237],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898687, -87.746499],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898691, -87.746006],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898692, -87.7459],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898694, -87.74578],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898696, -87.745665],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898699, -87.74545],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89873, -87.743599],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898733, -87.74346],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898742, -87.742903],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898749, -87.742485],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898753, -87.742295],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898755, -87.742141],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898769, -87.741322],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898771, -87.741198],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898793, -87.739872],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898795, -87.739792],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898797, -87.739674],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898815, -87.738611],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898817, -87.738508],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898818, -87.7384],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898838, -87.737256],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898857, -87.736148],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898858, -87.73604],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89886, -87.735941],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898898, -87.733687],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.8989, -87.733586],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898902, -87.733473],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89894, -87.731225],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898942, -87.731113],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898944, -87.731011],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898952, -87.730513],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898961, -87.729993],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898963, -87.729881],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898965, -87.72978],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898973, -87.729274],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898982, -87.728761],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898984, -87.728652],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898986, -87.728548],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898995, -87.728036],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899003, -87.72753],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899005, -87.727418],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899007, -87.727317],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899015, -87.726807],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899024, -87.726303],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899026, -87.726198],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899027, -87.726076],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899028, -87.72595],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898957, -87.725949],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898958, -87.72583],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898958, -87.72583],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898957, -87.725949],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899028, -87.72595],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899031, -87.725565],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899034, -87.725078],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899035, -87.72497],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899036, -87.724864],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89904, -87.724358],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899043, -87.72386],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899044, -87.723753],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899045, -87.723646],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899047, -87.723415],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899047, -87.723415],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899049, -87.723139],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899053, -87.722643],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899053, -87.722532],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899054, -87.72243],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899058, -87.721914],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899061, -87.721567],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899061, -87.721567],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899062, -87.72142],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899062, -87.721325],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899064, -87.721208],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899069, -87.720703],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899074, -87.7202],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899075, -87.720092],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899076, -87.719994],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899081, -87.719476],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899086, -87.718979],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899087, -87.718875],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899088, -87.718777],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899089, -87.718707],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899089, -87.718707],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899094, -87.71826],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899099, -87.717765],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.8991, -87.717661],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899101, -87.717555],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899106, -87.717033],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899111, -87.716547],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899112, -87.716429],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899113, -87.716332],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899117, -87.715822],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899121, -87.715323],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899122, -87.715219],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899123, -87.715114],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899127, -87.714601],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899131, -87.714105],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899132, -87.713993],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899133, -87.713899],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899137, -87.713387],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899142, -87.71288],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899142, -87.712774],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899143, -87.712678],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899144, -87.712618],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899147, -87.712163],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899149, -87.712032],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899152, -87.711667],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899152, -87.711552],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899153, -87.711452],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899157, -87.710948],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899169, -87.709599],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899172, -87.709127],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899173, -87.709041],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899176, -87.708784],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899176, -87.708701],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899178, -87.708475],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899181, -87.708152],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899187, -87.707513],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899188, -87.707328],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899192, -87.706806],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899192, -87.706677],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899194, -87.706573],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899198, -87.706155],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899219, -87.703872],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899232, -87.703012],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899239, -87.702461],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899244, -87.701956],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899247, -87.701727],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899248, -87.701599],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899252, -87.701085],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899255, -87.700581],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899255, -87.700472],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899256, -87.700371],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899259, -87.699876],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899267, -87.69937],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899269, -87.699269],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89927, -87.699164],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899275, -87.698658],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899276, -87.698146],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899277, -87.698045],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899277, -87.69794],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899278, -87.697673],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899278, -87.697439],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899279, -87.697294],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899281, -87.69692],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899282, -87.696795],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899283, -87.696677],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899289, -87.696167],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89929, -87.695946],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89929, -87.695674],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89929, -87.695565],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899291, -87.695451],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899297, -87.694436],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899297, -87.694322],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899298, -87.694229],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899326, -87.691968],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899327, -87.691854],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899328, -87.691765],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899352, -87.689507],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899353, -87.689394],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899354, -87.689301],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899372, -87.687542],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899377, -87.68711],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899379, -87.686926],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899382, -87.686764],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899387, -87.686409],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899402, -87.685545],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899408, -87.685171],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899411, -87.685021],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899418, -87.684603],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89942, -87.684486],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899422, -87.684394],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899429, -87.683972],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899431, -87.683836],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899452, -87.68259],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899458, -87.682284],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899458, -87.682284],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89946, -87.682158],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899461, -87.682046],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899463, -87.681946],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89947, -87.681521],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899494, -87.680124],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899501, -87.679716],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899503, -87.679594],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899505, -87.679498],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899445, -87.679498],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89946, -87.678519],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899523, -87.678447],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899533, -87.677846],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899535, -87.677695],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899543, -87.677262],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899544, -87.677163],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899546, -87.677055],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899548, -87.676946],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899552, -87.67672],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899555, -87.676539],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899558, -87.676336],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899563, -87.676042],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899565, -87.675943],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899567, -87.675832],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899576, -87.675325],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899584, -87.674825],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899586, -87.674717],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.899516, -87.674715],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.898151, -87.674674],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.897849, -87.674664],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.897767, -87.674661],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.897689, -87.674659],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.896856, -87.67463],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.896793, -87.674629],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.896523, -87.674625],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.896411, -87.674623],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.896057, -87.674612],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.895952, -87.674609],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.895857, -87.674606],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.895481, -87.674595],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.895118, -87.674583],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.895049, -87.674581],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89496, -87.674578],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.894583, -87.674567],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89422, -87.674556],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.894132, -87.674553],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.894058, -87.674551],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.893667, -87.674539],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.8933, -87.674527],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.893226, -87.674525],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89314, -87.674523],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89277, -87.674516],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.892393, -87.6745],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.892321, -87.674497],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89224, -87.674494],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.891937, -87.674485],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89192, -87.674485],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.891653, -87.674476],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.891588, -87.674474],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.891528, -87.674472],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.891242, -87.674464],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890951, -87.674455],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890869, -87.674452],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890788, -87.67445],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890476, -87.674441],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890263, -87.674437],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890218, -87.674436],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889864, -87.67443],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889864, -87.67443],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889854, -87.67443],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889766, -87.674428],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889767, -87.674328],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889781, -87.673444],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889784, -87.673223],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889788, -87.672948],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889796, -87.672474],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889801, -87.672093],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889803, -87.672002],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889805, -87.671884],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889815, -87.671185],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88982, -87.670863],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889822, -87.670769],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889823, -87.67067],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889839, -87.669645],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88984, -87.669553],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889842, -87.669457],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889875, -87.66804],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889892, -87.667287],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889895, -87.667177],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889896, -87.667056],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889897, -87.666942],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889898, -87.666845],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889901, -87.666565],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889906, -87.666056],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889911, -87.665587],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889913, -87.665479],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889914, -87.665381],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889915, -87.665256],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889918, -87.664939],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889922, -87.664574],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889936, -87.66324],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889941, -87.662753],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889945, -87.662333],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889946, -87.66224],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889948, -87.66213],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889954, -87.661596],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889959, -87.660982],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88996, -87.660876],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889962, -87.660773],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889988, -87.660773],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889988, -87.660773],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889962, -87.660773],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889968, -87.660149],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889969, -87.660056],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88997, -87.659904],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889971, -87.659835],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889972, -87.659743],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889978, -87.65908],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889978, -87.658969],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889983, -87.658463],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889988, -87.657884],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889991, -87.657473],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889992, -87.657361],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889993, -87.65726],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889997, -87.656779],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890001, -87.656341],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890005, -87.65587],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890006, -87.655763],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890006, -87.655667],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890011, -87.655181],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890011, -87.655152],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890014, -87.654709],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890015, -87.654595],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890016, -87.654497],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89002, -87.654011],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890024, -87.653538],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890025, -87.653426],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890026, -87.653335],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89003, -87.652863],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890034, -87.652372],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890035, -87.652264],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890036, -87.652164],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89004, -87.651691],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890044, -87.651209],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890045, -87.651096],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890046, -87.651],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890048, -87.650788],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890048, -87.650788],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890051, -87.650523],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890063, -87.650043],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890065, -87.649945],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890068, -87.649789],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890077, -87.649057],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89008, -87.648872],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890082, -87.64876],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889993, -87.648758],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889862, -87.648756],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889699, -87.648753],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889699, -87.648753],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889318, -87.648747],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889271, -87.648746],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889104, -87.648744],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889083, -87.648744],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889017, -87.648743],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888984, -87.648629],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888979, -87.648612],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888991, -87.647443],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889016, -87.647318],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889017, -87.647257],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889017, -87.647257],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889039, -87.645908],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889039, -87.645874],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889039, -87.645795],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889041, -87.645668],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889041, -87.645647],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889049, -87.644881],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889052, -87.644557],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889054, -87.644337],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889055, -87.644208],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889066, -87.643014],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889067, -87.642918],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889068, -87.642798],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889074, -87.642221],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889078, -87.641769],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889054, -87.641668],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889039, -87.64163],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889023, -87.641591],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889017, -87.641575],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888972, -87.641507],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888961, -87.641495],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888886, -87.641418],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888815, -87.641414],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888758, -87.641386],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888716, -87.641385],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888307, -87.641378],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888157, -87.641376],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.8881, -87.641375],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888027, -87.641373],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88799, -87.641373],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.887954, -87.641372],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.887627, -87.641367],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.887293, -87.641361],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886919, -87.641355],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886808, -87.641353],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886646, -87.641277],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885824, -87.641251],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885745, -87.641249],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.8857, -87.641248],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885631, -87.641247],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885189, -87.641235],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884553, -87.641216],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884533, -87.641215],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884516, -87.641215],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884442, -87.641213],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884363, -87.641211],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88333, -87.641177],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883217, -87.641175],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883178, -87.641172],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883131, -87.64117],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883102, -87.641121],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883102, -87.641094],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883111, -87.639941],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883111, -87.639931],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883112, -87.639884],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883185, -87.639745],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883186, -87.639603],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883191, -87.63918],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883194, -87.638959],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883197, -87.638652],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883197, -87.638581],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883197, -87.638441],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883211, -87.637759],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883213, -87.637594],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883214, -87.637535],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883215, -87.637408],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883216, -87.637162],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883217, -87.637054],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883223, -87.636818],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.6367],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883156, -87.636681],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883156, -87.636395],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883155, -87.63623],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883155, -87.635802],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883156, -87.635485],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883157, -87.635376],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883157, -87.635255],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883157, -87.635215],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.634708],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88316, -87.634161],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88316, -87.634],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88316, -87.63388],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88316, -87.633736],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88316, -87.633723],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883159, -87.633641],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883157, -87.633457],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.633363],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.633034],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.632573],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.632414],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.632266],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883162, -87.631697],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883164, -87.631043],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883162, -87.630932],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883161, -87.630781],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88313, -87.63078],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883127, -87.630381],
+	"waypointOnly": true
+}
+    ]
   },
   
-  "jamapalooza-wicker-park": {
-    "title": "Jamapalooza Ride Tracker",
+  "jamapalooza-west-town": {
+    "title": "Jamapalooza West Town Ride Tracker",
     "runInfo": "",
     "trackerBounds": {
-            "bottomLeft": [41.883396, -87.629883], 
+            "bottomLeft": [41.88131, -87.67860], 
             "topRight": [41.883396, -87.629883]
     },
     "minZoomLevel": 13,
-    "color": "#FFFF66",
+    "color": "#D6538C",
     "mapHeight": "438px",
-    "stops" : []
+    "stops" : [
+      {
+	"coordinates": [ 41.883665, -87.674941],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88369, -87.674938],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883747, -87.674913],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883793, -87.674869],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883834, -87.674828],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883888, -87.674759],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88393, -87.674692],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883971, -87.674602],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884, -87.674501],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884027, -87.67438],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884062, -87.674381],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88414, -87.674384],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884141, -87.674271],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884143, -87.674167],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88418, -87.671938],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884181, -87.671825],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884271, -87.671828],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884495, -87.671834],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884665, -87.67184],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885077, -87.671852],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885152, -87.671854],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88526, -87.671858],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885629, -87.671869],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885983, -87.67188],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886049, -87.671882],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886133, -87.671884],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886432, -87.671893],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88646, -87.671894],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886778, -87.671904],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886852, -87.671906],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886932, -87.671908],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.887304, -87.67192],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.887688, -87.671931],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88775, -87.671933],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.887826, -87.671936],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888402, -87.671953],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888765, -87.67196],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888803, -87.671961],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889356, -87.671984],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889735, -87.671999],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889803, -87.672002],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889804, -87.671961],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889804, -87.671961],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889805, -87.671884],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889815, -87.671185],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88982, -87.670863],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889822, -87.670769],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889823, -87.67067],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889839, -87.669645],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88984, -87.669553],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889842, -87.669457],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889875, -87.66804],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889892, -87.667287],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889895, -87.667177],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889896, -87.667056],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889897, -87.666942],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889898, -87.666845],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889901, -87.666565],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889906, -87.666056],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889911, -87.665587],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889913, -87.665479],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889914, -87.665381],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889915, -87.665256],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889918, -87.664939],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889922, -87.664574],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889936, -87.66324],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889941, -87.662753],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889945, -87.662333],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889946, -87.66224],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889948, -87.66213],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889954, -87.661596],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889959, -87.660982],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88996, -87.660876],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889962, -87.660773],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889968, -87.660149],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889969, -87.660056],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88997, -87.659904],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889971, -87.659835],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889972, -87.659743],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889978, -87.65908],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889978, -87.658969],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889983, -87.658463],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889988, -87.657884],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889991, -87.657473],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889992, -87.657361],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889993, -87.65726],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889997, -87.656779],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890001, -87.656341],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890005, -87.65587],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890006, -87.655763],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890006, -87.655667],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890011, -87.655181],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890011, -87.655152],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890014, -87.654709],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890015, -87.654595],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890016, -87.654497],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89002, -87.654011],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890024, -87.653538],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890034, -87.653538],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890034, -87.653538],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890024, -87.653538],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890025, -87.653426],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890026, -87.653335],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89003, -87.652863],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890034, -87.652372],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890035, -87.652264],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890036, -87.652164],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89004, -87.651691],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890044, -87.651209],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890045, -87.651096],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890046, -87.651],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890051, -87.650523],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890063, -87.650043],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890065, -87.649945],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890068, -87.649789],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890077, -87.649057],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.89008, -87.648872],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.890082, -87.64876],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889993, -87.648758],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889862, -87.648756],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889669, -87.648753],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889669, -87.648753],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889318, -87.648747],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889271, -87.648746],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889104, -87.648744],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889083, -87.648744],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889017, -87.648743],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888984, -87.648629],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888979, -87.648612],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888984, -87.648129],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888984, -87.648129],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888991, -87.647443],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889016, -87.647318],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889039, -87.645908],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889039, -87.645874],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889039, -87.645795],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889041, -87.645668],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889041, -87.645647],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889049, -87.644881],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889052, -87.644557],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889054, -87.644337],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889055, -87.644208],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889066, -87.643014],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889067, -87.642918],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889068, -87.642798],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889074, -87.642221],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889078, -87.641769],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889054, -87.641668],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889039, -87.64163],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889023, -87.641591],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.889017, -87.641575],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888972, -87.641507],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888961, -87.641495],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888886, -87.641418],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888815, -87.641414],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888758, -87.641386],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888716, -87.641385],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888307, -87.641378],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888157, -87.641376],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.8881, -87.641375],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.888027, -87.641373],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88799, -87.641373],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.887954, -87.641372],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.887627, -87.641367],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.887293, -87.641361],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886919, -87.641355],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886808, -87.641353],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.886646, -87.641277],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885824, -87.641251],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885745, -87.641249],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.8857, -87.641248],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885631, -87.641247],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.885189, -87.641235],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884553, -87.641216],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884533, -87.641215],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884516, -87.641215],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884442, -87.641213],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.884363, -87.641211],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88333, -87.641177],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883217, -87.641175],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883178, -87.641172],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883131, -87.64117],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883102, -87.641121],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883102, -87.641094],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883111, -87.639941],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883111, -87.639931],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883112, -87.639884],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883185, -87.639745],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883186, -87.639603],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883191, -87.63918],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883194, -87.638959],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883197, -87.638652],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883197, -87.638581],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883197, -87.638441],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883211, -87.637759],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883213, -87.637594],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883214, -87.637535],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883215, -87.637408],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883216, -87.637162],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883217, -87.637054],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883223, -87.636818],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.6367],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883156, -87.636681],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883156, -87.636395],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883155, -87.63623],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883155, -87.635802],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883156, -87.635485],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883157, -87.635376],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883157, -87.635255],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883157, -87.635215],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.634708],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88316, -87.634161],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88316, -87.634],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88316, -87.63388],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88316, -87.633736],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.88316, -87.633723],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883159, -87.633641],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883157, -87.633457],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.633363],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.633034],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.632573],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.632414],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883158, -87.632266],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883162, -87.631697],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883164, -87.631043],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883184, -87.631043],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883247, -87.631044],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883314, -87.631045],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883315, -87.631013],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883316, -87.630938],
+	"waypointOnly": true
+},{
+	"coordinates": [ 41.883317, -87.630858],
+	"waypointOnly": true
+}
+    ]
   },
   
   "jamapalooza-lakevfiew": {
