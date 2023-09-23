@@ -1,4 +1,93 @@
 {
+  "jamapalooza-hyde-park": {
+    "title": "Jamapalooza Ride Tracker",
+    "runInfo": "",
+    "trackerBounds": {
+            "bottomLeft": [41.883396, -87.629883], 
+            "topRight": [41.883396, -87.629883]
+    },
+    "minZoomLevel": 13,
+    "color": "#FFFF66",
+    "mapHeight": "438px",
+    "stops" : []
+  },
+  
+  "jamapalooza-bridgeport": {
+    "title": "Jamapalooza Ride Tracker",
+    "runInfo": "",
+    "trackerBounds": {
+            "bottomLeft": [41.883396, -87.629883], 
+            "topRight": [41.883396, -87.629883]
+    },
+    "minZoomLevel": 13,
+    "color": "#FFFF66",
+    "mapHeight": "438px",
+    "stops" : []
+  },
+  
+  "jamapalooza-pilsen": {
+    "title": "Jamapalooza Ride Tracker",
+    "runInfo": "",
+    "trackerBounds": {
+            "bottomLeft": [41.883396, -87.629883], 
+            "topRight": [41.883396, -87.629883]
+    },
+    "minZoomLevel": 13,
+    "color": "#FFFF66",
+    "mapHeight": "438px",
+    "stops" : []
+  },
+  "jamapalooza-austin": {
+    "title": "Jamapalooza Ride Tracker",
+    "runInfo": "",
+    "trackerBounds": {
+            "bottomLeft": [41.883396, -87.629883], 
+            "topRight": [41.883396, -87.629883]
+    },
+    "minZoomLevel": 13,
+    "color": "#FFFF66",
+    "mapHeight": "438px",
+    "stops" : []
+  },
+  
+  "jamapalooza-west-town": {
+    "title": "Jamapalooza Ride Tracker",
+    "runInfo": "",
+    "trackerBounds": {
+            "bottomLeft": [41.883396, -87.629883], 
+            "topRight": [41.883396, -87.629883]
+    },
+    "minZoomLevel": 13,
+    "color": "#FFFF66",
+    "mapHeight": "438px",
+    "stops" : []
+  },
+  
+  "jamapalooza-wicker-park": {
+    "title": "Jamapalooza Ride Tracker",
+    "runInfo": "",
+    "trackerBounds": {
+            "bottomLeft": [41.883396, -87.629883], 
+            "topRight": [41.883396, -87.629883]
+    },
+    "minZoomLevel": 13,
+    "color": "#FFFF66",
+    "mapHeight": "438px",
+    "stops" : []
+  },
+  
+  "jamapalooza-lakeview": {
+    "title": "Jamapalooza Ride Tracker",
+    "runInfo": "",
+    "trackerBounds": {
+            "bottomLeft": [41.883396, -87.629883], 
+            "topRight": [41.883396, -87.629883]
+    },
+    "minZoomLevel": 13,
+    "color": "#FFFF66",
+    "mapHeight": "438px",
+    "stops" : []
+  },
   
   "tour-de-grid": {
     "title": "Tour de Grid Ride Tracker",
