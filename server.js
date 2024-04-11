@@ -11,8 +11,8 @@ const fastify = require("fastify")({
   logger: false,
 });
 
-const storage = require('node-persist');
-const cache = require('nano-cache');
+const storage = require("node-persist");
+const cache = require("nano-cache");
 
 // Setup our static files
 fastify.register(require("@fastify/static"), {
@@ -21,9 +21,9 @@ fastify.register(require("@fastify/static"), {
 });
 
 // View is a templating manager for fastify
-const handlebars = require('handlebars');
+const handlebars = require("handlebars");
 
-handlebars.registerHelper('toJSON', function(object){
+handlebars.registerHelper("toJSON", function (object) {
   return new handlebars.SafeString(JSON.stringify(object));
 });
 
@@ -31,7 +31,7 @@ fastify.register(require("@fastify/view"), {
   engine: {
     handlebars: handlebars,
   },
-}); 
+});
 
 let busIsRunning = true;
 
@@ -44,32 +44,25 @@ const routes = require("./routes.json");
  * Returns src/pages/index.hbs with data built into it
  */
 
-fastify.get("/:route", async function (request, reply) {  
-  const { route } = request.params;
-  
-  if(route == "") {
-    return reply.view("/src/pages/index.hbs");
+fastify.get("/:route", async function (request, reply) {
+  let { route } = request.params;
+
+  if (route == "") {
+    route = "brownsville";
   }
-  
+
   let bus;
-  
-  
-  if(!routes.hasOwnProperty(route))
-  {
-    return reply
-      .code(404)
-      .type('text/plain')
-      .send('Route not found.');
-  }
-  else
-  {
+
+  if (!routes.hasOwnProperty(route)) {
+    return reply.code(404).type("text/plain").send("Route not found.");
+  } else {
     bus = routes[route];
   }
-      
+
   await storage.init();
 
   // params is an object we'll pass to our handlebars template
-  let params = { 
+  let params = {
     ctu: bus.ctu || false,
     route: route,
     title: bus.title,
@@ -80,93 +73,81 @@ fastify.get("/:route", async function (request, reply) {
     busMinZoomLevel: bus.minZoomLevel,
     mapHeight: bus.mapHeight,
     color: bus.color,
-    globalMarkerClass: bus.globalMarkerClass, 
-    stops: bus.stops,   
+    globalMarkerClass: bus.globalMarkerClass,
+    stops: bus.stops,
   };
 
   // The Handlebars code will be able to access the parameter values and build them into the page
   return reply.view("/src/pages/tracker.hbs", params);
 });
 
-fastify.get("/beacon-instructions", async function (request, reply) {  
-  const params = { }
+fastify.get("/beacon-instructions", async function (request, reply) {
+  const params = {};
 
   // The Handlebars code will be able to access the parameter values and build them into the page
   return reply.view("/src/pages/tracker-instructions.hbs", params);
 });
 
-fastify.get("/beacon/:route/"+process.env.beacon_hash, function (request, reply) {
-  
-  const { route } = request.params;
-  if(!routes.hasOwnProperty(route))
-  {
-    return reply
-      .code(404)
-      .type('text/plain')
-      .send('Route not found.');
-  }
-  
-  const params = {
-    beacon_hash: process.env.beacon_hash,
-    route: route
-  };
-  return reply.view("/src/pages/beacon.hbs", params);
-});
+fastify.get(
+  "/beacon/:route/" + process.env.beacon_hash,
+  function (request, reply) {
+    const { route } = request.params;
+    if (!routes.hasOwnProperty(route)) {
+      return reply.code(404).type("text/plain").send("Route not found.");
+    }
 
-fastify.post("/bus/:route/location/"+process.env.beacon_hash, async function (request, reply) {
-  
-  const { route } = request.params;
-  if(!routes.hasOwnProperty(route))
-  {
-    return reply
-      .code(404)
-      .type('text/plain')
-      .send('Route not found.');
+    const params = {
+      beacon_hash: process.env.beacon_hash,
+      route: route,
+    };
+    return reply.view("/src/pages/beacon.hbs", params);
   }
-  
-  await storage.init();
-  await storage.setItem(route+'.latitude', request.body.latitude);
-  await storage.setItem(route+'.longitude', request.body.longitude);
-  cache.del(route+'.latitude');
-  cache.del(route+'.longitude');
-  return request.body;
-});
+);
+
+fastify.post(
+  "/bus/:route/location/" + process.env.beacon_hash,
+  async function (request, reply) {
+    const { route } = request.params;
+    if (!routes.hasOwnProperty(route)) {
+      return reply.code(404).type("text/plain").send("Route not found.");
+    }
+
+    await storage.init();
+    await storage.setItem(route + ".latitude", request.body.latitude);
+    await storage.setItem(route + ".longitude", request.body.longitude);
+    cache.del(route + ".latitude");
+    cache.del(route + ".longitude");
+    return request.body;
+  }
+);
 
 fastify.get("/bus/:route/location", async function (request, reply) {
-  
   const { route } = request.params;
-  if(!routes.hasOwnProperty(route))
-  {
-    return reply
-      .code(404)
-      .type('text/plain')
-      .send('Route not found.');
+  if (!routes.hasOwnProperty(route)) {
+    return reply.code(404).type("text/plain").send("Route not found.");
   }
-  
+
   let latitude;
   let longitude;
-  
-  if(busIsRunning)
-  {
-     await storage.init();
-     latitude = cache.get(route+'.latitude');
-     if(latitude === null)
-     {
-     latitude = await storage.getItem(route+'.latitude');
-       cache.set(route+'.latitude', latitude);
-     }
-    
-     longitude = cache.get(route+'.longitude');
-     if(longitude === null)
-     {
-     longitude = await storage.getItem(route+'.longitude');
-       cache.set(route+'.longitude', longitude);
-     }
+
+  if (busIsRunning) {
+    await storage.init();
+    latitude = cache.get(route + ".latitude");
+    if (latitude === null) {
+      latitude = await storage.getItem(route + ".latitude");
+      cache.set(route + ".latitude", latitude);
+    }
+
+    longitude = cache.get(route + ".longitude");
+    if (longitude === null) {
+      longitude = await storage.getItem(route + ".longitude");
+      cache.set(route + ".longitude", longitude);
+    }
   }
-   
-  let response = { 
+
+  let response = {
     latitude: latitude || 0,
-    longitude: longitude || 0
+    longitude: longitude || 0,
   };
   return response;
 });
@@ -183,4 +164,3 @@ fastify.listen(
     fastify.log.info(`server listening on ${address}`);
   }
 );
-
