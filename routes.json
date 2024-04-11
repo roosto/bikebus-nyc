@@ -13,6 +13,7 @@
      {
        "name": "Brownsville Public Library, PS 298, & IS 363",
        "time": "7:20",
+       "markerClass": "label-left",
        "coordinates": [40.671512, -73.908607]
      },
      {
