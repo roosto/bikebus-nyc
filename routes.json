@@ -1,10 +1,11 @@
 {
-  "brownsville": {
+   "brownsville": {
     "title": "Brownsville Bike Bus Tracker",
     "runInfo": "Track the bike bus live on the map above beginning at ???am every ???day morning.",
-    "trackerBounds": {
-      "bottomLeft": [40.685828, -73.91115],
-      "topRight": [40.667982, -73.991364]
+    "trackerBounds" : 
+    {
+      "bottomLeft": [40.658512, -73.914667], 
+      "topRight": [40.672899, -73.906678] 
     },
     "mapHeight": "250px",
     "color": "#CC3333",
@@ -13,66 +14,64 @@
         "name": "Brownsville Public Library, PS 298, & IS 363",
         "subtitle": "61 Watkins St",
         "time": "?:?? - ?:??",
-        "coordinates": [40.671513, -73.908607]
+        "coordinates": [40.671512, -73.908607]
       },
       {
-        "coordinates": [40.671352, -73.908561],
-        "waypointOnly": true
+        "waypointOnly": true,
+        "name": "in front of library",
+        "coordinates": [40.671333, -73.908567]
       },
       {
-        "coordinates": [40.671466, -73.907398],
-        "waypointOnly": true
+        "waypointOnly": true,
+        "name": "Glenmore Ave @ Mother Gaston Blvd",
+        "coordinates": [40.671512, -73.907343]
       },
       {
-        "coordinates": [40.670187, -73.907074],
-        "waypointOnly": true
-      },
-      {
-        "name": "Mother Gaston Blvd & Pitkin Ave",
-        "subtitle": "366 Mother Gaston Blvd",
+        "name": "Mother Gaston Blvd @ Pitkin Ave",
         "time": "?:?? - ?:??",
-        "coordinates": [40.670076, -73.907085]
+        "coordinates": [40.667705, -73.906366]
       },
-
       {
-        "name": "Mother Gaston Blvd & Blake Ave",
-        "subtitle": "512 Mother Gaston Blvd",
+        "name": "Mother Gaston Blvd @ Blake Ave",
         "time": "?:?? - ?:??",
-        "coordinates": [40.666344, -73.90617]
+        "coordinates": [40.666191, -73.905971]
       },
       {
-        "coordinates": [40.666208, -73.906096],
-        "waypointOnly": true
+        "waypointOnly": true,
+        "name": "Blake Ave @ Bristol St",
+        "coordinates": [40.665361, -73.911569]
       },
       {
-        "coordinates": [40.665329, -73.91156],
-        "waypointOnly": true
-      },
-      {
-        "name": "Brownsville Neighborhood Action Center",
+        "name": "Brownsville Neighborhood Health Action Center",
         "subtitle": "259 Bristol St",
         "time": "?:?? - ?:??",
-        "coordinates": [40.6647, -73.911099]
+        "coordinates": [40.664669, -73.911392]
       },
       {
-        "coordinates": [40.663787, -73.91222],
-        "waypointOnly": true
+        "waypointOnly": true,
+        "name": "Bristol St @ Dumont Ave",
+        "coordinates": [40.663824, -73.911178]
       },
       {
-        "coordinates": [40.660769, -73.910434],
-        "waypointOnly": true
+        "waypointOnly": true,
+        "name": "Dumont Ave @ Thomas S Boyland S",
+        "coordinates": [40.663687, -73.912135]
       },
       {
-        "name": "Riverdale Ave & Thomas S Boyland St",
-        "subtitle": "811 Thomas Boyland St",
+        "name": "Thomas S Boyland St @ Riverdale Ave",
         "time": "?:?? - ?:??",
-        "coordinates": [40.660807, -73.911296]
+        "coordinates": [40.660611, -73.911350]
+      },
+      {
+        "waypointOnly": true,
+        "name": "in front of Riverdale Ave Middle School",
+        "coordinates": [40.660263, -73.913655]
       },
       {
         "name": "Riverdale Ave Middle School",
         "subtitle": "76 Riverdale Ave",
         "time": "?:?? - ?:??",
-        "coordinates": [40.66023, -73.91368]
+        "coordinates": [40.660081, -73.913605]
       }
     ]
   }
