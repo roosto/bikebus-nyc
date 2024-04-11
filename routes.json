@@ -12,8 +12,7 @@
     "stops": [
       {
         "name": "Brownsville Public Library, PS 298, & IS 363",
-        "subtitle": "61 Watkins St",
-        "time": "?:?? - ?:??",
+        "time": "7:20",
         "coordinates": [40.671512, -73.908607]
       },
       {
@@ -27,13 +26,13 @@
         "coordinates": [40.671512, -73.907343]
       },
       {
+        "waypointOnly": true,
         "name": "Mother Gaston Blvd @ Pitkin Ave",
-        "time": "?:?? - ?:??",
         "coordinates": [40.667705, -73.906366]
       },
       {
         "name": "Mother Gaston Blvd @ Blake Ave",
-        "time": "?:?? - ?:??",
+        "time": "7:25",
         "coordinates": [40.666191, -73.905971]
       },
       {
@@ -43,8 +42,7 @@
       },
       {
         "name": "Brownsville Neighborhood Health Action Center",
-        "subtitle": "259 Bristol St",
-        "time": "?:?? - ?:??",
+        "time": "7:35",
         "coordinates": [40.664669, -73.911392]
       },
       {
@@ -59,7 +57,7 @@
       },
       {
         "name": "Thomas S Boyland St @ Riverdale Ave",
-        "time": "?:?? - ?:??",
+        "time": "7:45",
         "coordinates": [40.660611, -73.911350]
       },
       {
@@ -69,8 +67,7 @@
       },
       {
         "name": "Riverdale Ave Middle School",
-        "subtitle": "76 Riverdale Ave",
-        "time": "?:?? - ?:??",
+        "time": "7:50",
         "coordinates": [40.660081, -73.913605]
       }
     ]
