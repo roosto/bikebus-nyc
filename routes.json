@@ -75,6 +75,7 @@
      {
        "name": "Riverdale Ave Middle School",
        "time": "7:50",
+       "markerClass": "push-down-4x",
        "coordinates": [40.660081, -73.913605]
      }
    ]
