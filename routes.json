@@ -11,9 +11,9 @@
    "color": "#CC3333",
    "stops": [
      {
-       "name": "Brownsville Public Library, PS 298, & IS 363",
+       "name": "Brownsville Public Library",
        "time": "7:20",
-       "markerClass": "label-left",
+       "markerClass": "label-left push-down",
        "coordinates": [40.671512, -73.908607]
      },
      {
@@ -34,6 +34,7 @@
      {
        "name": "Mother Gaston Blvd @ Blake Ave",
        "time": "7:25",
+       "markerClass": "label-left push-up-4x push-up-2x rotate-35",
        "coordinates": [40.666191, -73.905971]
      },
      {
