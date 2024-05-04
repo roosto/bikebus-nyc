@@ -11,7 +11,7 @@
    "color": "#CC3333",
    "stops": [
      {
-       "name": "Brownsville Public Library",
+       "name": "PS 298/BCMS",
        "time": "7:20",
        "markerClass": "label-left push-down",
        "coordinates": [40.671512, -73.908607]
@@ -69,11 +69,11 @@
      },
      {
        "waypointOnly": true,
-       "name": "in front of Riverdale Ave Middle School",
+       "name": "in front of Riverdale Ave Community School",
        "coordinates": [40.660263, -73.913655]
      },
      {
-       "name": "Riverdale Ave Middle School",
+       "name": "Riverdale Ave Community School",
        "time": "7:50",
        "markerClass": "push-down-4x",
        "coordinates": [40.660081, -73.913605]
