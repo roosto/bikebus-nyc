@@ -13,6 +13,7 @@
      {
        "name": "PS 298/BCMS",
        "time": "7:55",
+       "markerClass": "label-left push-down",
        "coordinates": [40.671512, -73.908607]
      },
      {
@@ -33,11 +34,14 @@
      {
        "name": "Mother Gaston Blvd @ Blake Ave",
        "time": "7:50",
+       "markerClass": "label-right push-up-4x",
        "coordinates": [40.666191, -73.905971]
      },
+     
      {
       "name": "Blake Ave @ Rockaway Ave",
       "time": "7:45",
+      "markerClass": "label-left push-up-4x rotate-35",
       "coordinates": [40.665640, -73.909707]
      },
      {
@@ -72,94 +76,12 @@
      },
      {
        "waypointOnly": true,
-       "name": "in front of Riverdale Ave Middle School",
-       "coordinates": [40.660263, -73.913655]
-     },
-     {
-       "name": "Riverdale Ave Community School",
-       "time": "7:30",
-       "coordinates": [40.660081, -73.913605]
-     }
-   ]
- }
-}
-{
-  "brownsville": {
-   "title": "Brownsville BikeBus",
-   "runInfo": "Track the bike bus live on the map above beginning at 7:20am every Thursday morning.",
-   "trackerBounds" : 
-   {
-     "bottomLeft": [40.658512, -73.914667], 
-     "topRight": [40.672899, -73.906678] 
-   },
-   "mapHeight": "450px",
-   "color": "#CC3333",
-   "stops": [
-     {
-       "name": "PS 298/BCMS",
-       "time": "7:20",
-       "markerClass": "label-left push-down",
-       "coordinates": [40.671512, -73.908607]
-     },
-     {
-       "waypointOnly": true,
-       "name": "in front of library",
-       "coordinates": [40.671333, -73.908567]
-     },
-     {
-       "waypointOnly": true,
-       "name": "Glenmore Ave @ Mother Gaston Blvd",
-       "coordinates": [40.671512, -73.907343]
-     },
-     {
-       "waypointOnly": true,
-       "name": "Mother Gaston Blvd @ Pitkin Ave",
-       "coordinates": [40.667705, -73.906366]
-     },
-     {
-       "name": "Mother Gaston Blvd @ Blake Ave",
-       "time": "7:25",
-       "markerClass": "label-left push-up-4x rotate-35",
-       "coordinates": [40.666191, -73.905971]
-     },
-     {
-       "waypointOnly": true,
-       "name": "Blake Ave @ Bristol St",
-       "coordinates": [40.665361, -73.911569]
-     },
-     {
-       "name": "Brownsville Neighborhood Health Action Center",
-       "time": "7:35",
-       "coordinates": [40.664669, -73.911392]
-     },
-     {
-       "waypointOnly": true,
-       "name": "Bristol St @ Dumont Ave",
-       "coordinates": [40.663824, -73.911178]
-     },
-     {
-       "waypointOnly": true,
-       "name": "Dumont Ave @ Thomas S Boyland S",
-       "coordinates": [40.663687, -73.912135]
-     },
-     {
-      "name": "Thomas S Boyland S @ Lavonia Ave",
-      "time": "7:45",
-      "coordinates": [40.662138, -73.911739]
-     },
-     {
-      "waypointOnly": true,
-       "name": "Thomas S Boyland St @ Riverdale Ave",
-       "coordinates": [40.660611, -73.911350]
-     },
-     {
-       "waypointOnly": true,
        "name": "in front of Riverdale Ave Community School",
        "coordinates": [40.660263, -73.913655]
      },
      {
        "name": "Riverdale Ave Community School",
-       "time": "7:50",
+       "time": "7:30",
        "markerClass": "push-down-4x",
        "coordinates": [40.660081, -73.913605]
      }
