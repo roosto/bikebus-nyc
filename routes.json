@@ -1,5 +1,5 @@
 {
-  "brownsville": {
+  "jackson-heights": {
     "title": "Jackson Heights Bike Bus: Wednesdays along 34th Ave starting at 7:20am & 2:20pm",
     "runInfo": "A circuit westbound on 34th Ave starting at 82nd St, turning eastward after 70th St and again headed West after Junction Blvd",
     "trackerBounds": {
@@ -37,7 +37,7 @@
       {
         "name": "81st St/I.S. 145",
         "time": "7:40am/3:00pm",
-        "coordinates": [40.751634, -73.88572]
+        "coordinates": [40.753564, -73.886083]
       },
       {
         "name": "82nd St/I.S. 212Q",
@@ -63,6 +63,11 @@
         "name": "94th St/PS 149",
         "time": "7:50am/3:10pm",
         "coordinates": [40.75499, -73.874021]
+      },
+      {
+        "waypointOnly": true,
+        "name": "34th Ave @ 82nd St; done # end of loop",
+        "coordinates": [40.753824, -73.884918]
       }
     ]
   }

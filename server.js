@@ -48,7 +48,7 @@ fastify.get("/:route", async function (request, reply) {
   let { route } = request.params;
 
   if (route == "") {
-    route = "brownsville";
+    route = "jackson-heights";
   }
 
   let bus;
