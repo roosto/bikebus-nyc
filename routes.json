@@ -26,7 +26,6 @@
             "coordinates": [40.797112, -73.949102]
         },
         {
-            "waypointOnly": true,
             "name": "Duke Ellington Cir turn 1",
             "coordinates": [40.797080, -73.949683]
         },
@@ -334,6 +333,225 @@
             "waypointOnly": true,
             "name": "West Dr @ E97th St Transverse",
             "coordinates": [40.791642, -73.962564]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.791303, -73.962830]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.791117, -73.963082]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.791003, -73.963290]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.790856, -73.963641]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.790489, -73.964079]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.790280, -73.964177]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.790072, -73.964210]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.789012, -73.964410]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.788849, -73.964639]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.788756, -73.964862]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.788467, -73.965755]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.788370, -73.965976]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.788193, -73.966284]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.787953, -73.966613]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.787664, -73.966927]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.787360, -73.967184]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.787045, -73.967387]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.786766, -73.967499]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.786440, -73.967542]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.786202, -73.967521]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.785947, -73.967448]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.785192, -73.967135]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.785017, -73.967088]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784825, -73.967096]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784633, -73.967141]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784448, -73.967226]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784279, -73.967347]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783792, -73.967777]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783372, -73.968295]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783239, -73.968521]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783058, -73.968874]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.782896, -73.969102]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.782681, -73.969300]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.782626, -73.969385]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783392, -73.969140]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783601, -73.969121]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783802, -73.969125]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783997, -73.969161]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784157, -73.969219]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784311, -73.969318]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784442, -73.969450]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784540, -73.969631]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784710, -73.970055]
+        },
+        {
+            "name": "Manhattan Country School",
+            "coordinates": [40.786582, -73.974510]
         }
     ]
  }
