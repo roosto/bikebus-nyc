@@ -1,7 +1,7 @@
 {
-  "jackson-heights": {
-    "title": "Jackson Heights Bike Bus: Wednesdays along 34th Ave starting at 7:20am & 2:20pm",
-    "runInfo": "A circuit westbound on 34th Ave starting at 82nd St, turning eastward after 70th St and again headed West after Junction Blvd",
+  "manhattan-country-school": {
+    "title": "MCS Bike Bus: 1st Wednesdays at 7:45AM from SW Corner of Marcus Garvery Park",
+    "runInfo": "Manhattan Country School Bike Bus rolls out from Mount Morris Park West & 120th Street in Central Harlem, going through Central Park to Manhattan Country School located on West 85th Street in the Upper West Side. Participants can hop on the bike bus anywhere on our route.",
     "trackerBounds": {
       "bottomLeft": [40.751406, -73.897264],
       "topRight": [40.755921, -73.872557]
