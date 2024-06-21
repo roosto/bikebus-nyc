@@ -4,8 +4,8 @@
    "runInfo": "We leave from McCarren Park Track at 7:30AM, and arrive at the school for a delicious breakfast from Campbell & Co.  Come ride with us!",
    "trackerBounds" : 
    {
-     "bottomLeft": [40.718624, -73.956177], 
-     "topRight": [40.726309, -73.941841] 
+     "bottomLeft": [40.786305, -73.975146], 
+     "topRight": [40.804354, -73.944087]
    },
    "mapHeight": "450px",
    "color": "#CC3333",
@@ -26,23 +26,6 @@
             "coordinates": [40.797112, -73.949102]
         },
         {
-            "name": "Duke Ellington Cir turn 1",
-            "coordinates": [40.797080, -73.949683]
-        },
-        {
-            "name": "Duke Ellington Cir turn 2",
-            "coordinates": [40.797088, -73.949636]
-        },
-        {
-            "name": "Duke Ellington Cir turn 3",
-            "coordinates": [40.797121, -73.949488]
-        },
-        {
-            "name": "Duke Ellington Cir turn 4",
-            "coordinates": [40.797080, -73.949683]
-        },
-        {
-            "waypointOnly": true,
             "name": "110th St @ Duke Ellington Cir",
             "coordinates": [40.797141, -73.949244]
         },
