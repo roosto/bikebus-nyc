@@ -30,19 +30,16 @@
             "coordinates": [40.797080, -73.949683]
         },
         {
-            "waypointOnly": true,
             "name": "Duke Ellington Cir turn 2",
             "coordinates": [40.797088, -73.949636]
         },
         {
-            "waypointOnly": true,
             "name": "Duke Ellington Cir turn 3",
             "coordinates": [40.797121, -73.949488]
         },
         {
-            "waypointOnly": true,
             "name": "Duke Ellington Cir turn 4",
-            "coordinates": [40.797145, -73.949370]
+            "coordinates": [40.797080, -73.949683]
         },
         {
             "waypointOnly": true,
