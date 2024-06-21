@@ -7,7 +7,7 @@
      "bottomLeft": [40.786305, -73.975146], 
      "topRight": [40.804354, -73.944087]
    },
-   "mapHeight": "450px",
+   "mapHeight": "900px",
    "color": "#CC3333",
    "stops": [
         {
@@ -22,12 +22,42 @@
         },
         {
             "waypointOnly": true,
-            "name": "Right onto Duke Ellington Cir",
-            "coordinates": [40.797112, -73.949102]
+            "name": "5th Ave @ Duke Ellington Cir",
+            "coordinates": [40.797113, -73.949096]
         },
         {
+            "waypointOnly": true,
+            "name": "Right turn onto Duke Ellington Cir",
+            "coordinates": [40.797135, -73.949202]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Duke Ellingont Curve 1",
+            "coordinates": [40.797150, -73.949304]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Duke Ellingont Curve 2",
+            "coordinates": [40.797143, -73.949425]
+        },        {
+            "waypointOnly": true,
+            "name": "Duke Ellingont Curve 3",
+            "coordinates": [40.797110, -73.949565]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Duke Ellingont Curve 4",
+            "coordinates": [40.797105, -73.949562]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Duke Ellingont Curve 5",
+            "coordinates": [40.797079, -73.949670]
+        },
+        {
+            "waypointOnly": true,
             "name": "110th St @ Duke Ellington Cir",
-            "coordinates": [40.797141, -73.949244]
+            "coordinates": [40.797117, -73.949775]
         },
         {
             "waypointOnly": true,
