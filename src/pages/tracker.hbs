@@ -35,6 +35,7 @@
             text-align: center;
           }
           div#map {
+              /* TODO figure out how this should work with multiple routes */
               height: {{bus.mapHeight}};
               width: 90%;
               margin-left: auto;
@@ -175,31 +176,33 @@
 
         </h2>
         <!-- stop markers -->
-        {{#each bus.stops}}
-          {{#unless this.waypointOnly}}
-          <div id="stop-marker-{{@index}}" class="marker-container {{../bus.globalMarkerClass}} {{this.markerClass}}">
-             <div class="marker-box">
-               <div><b>{{this.time}}</b></div>
+        {{#each routes}}
+          {{#each this.stops}}
+            {{#unless this.waypointOnly}}
+            <div id="stop-marker-{{@index}}" class="marker-container {{../this.globalMarkerClass}} {{this.markerClass}}">
+               <div class="marker-box">
+                 <div><b>{{this.time}}</b></div>
 
-             </div>
-             <div class="marker-box marker-box-center">
-               {{#if this.icon}}
-               <img src="{{this.icon}}" />
-               {{else}}
-               <img src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus_stop_circle.svg?v=1664245520908" />
-               {{/if}}
-             </div>
-             <div class="marker-box">
-               <div>
-                 <b>{{this.name}}</b>
-                 {{#if this.subtitle}}
-                 <br />
-                 <span>{{this.subtitle}}</span>
+               </div>
+               <div class="marker-box marker-box-center">
+                 {{#if this.icon}}
+                 <img src="{{this.icon}}" />
+                 {{else}}
+                 <img src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus_stop_circle.svg?v=1664245520908" />
                  {{/if}}
                </div>
-             </div>
-          </div>
-          {{/unless}}
+               <div class="marker-box">
+                 <div>
+                   <b>{{this.name}}</b>
+                   {{#if this.subtitle}}
+                   <br />
+                   <span>{{this.subtitle}}</span>
+                   {{/if}}
+                 </div>
+               </div>
+            </div>
+            {{/unless}}
+          {{/each}}
         {{/each}}
         <!-- update_map.js -->
         <script>
@@ -238,11 +241,13 @@
         <!-- map.js -->
         <script>
             const routeBounds = [
+                // TODO figure out how this should work with multiple routes
                 [{{bus.trackerBounds.bottomLeft}}], //bottom left
                 [{{bus.trackerBounds.topRight}}] //top right
             ];
 
             var map = L.map('map', {
+                  // TODO figure out how this should work with multiple routes
                   {{#if bus.minZoomLevel}}
                    minZoom: {{bus.minZoomLevel}}
                   {{else}}
@@ -267,20 +272,23 @@
             }
 
             /* Stops */
-            const stops = {{toJSON bus.stops}}
+            const routes = {{toJSON routes}}
+            Object.values(routes).forEach(bus => {
+              const stops = bus.stops
 
-            stops.forEach((stop, index) => {
-              if(!stop.waypointOnly) {
-                const element = document.getElementById('stop-marker-'+index);
-                addStopMarker(map, stop.coordinates[0], stop.coordinates[1], element);
-              }
+              stops.forEach((stop, index) => {
+                if(!stop.waypointOnly) {
+                  const element = document.getElementById('stop-marker-'+index);
+                  addStopMarker(map, stop.coordinates[0], stop.coordinates[1], element);
+                }
+              })
+
+              let routePolylinePoints = stops.map(stop => stop.coordinates);
+              L.polyline(routePolylinePoints, {
+                color: bus.color,
+                weight: 10,
+              }).addTo(map);
             })
-
-            let routePolylinePoints = stops.map(stop => stop.coordinates);
-            L.polyline(routePolylinePoints, {
-              color: '{{bus.color}}',
-              weight: 10,
-            }).addTo(map);
 
             function addStopMarker(map, latitude, longitude, element)
             {
