@@ -278,6 +278,7 @@
 
               stops.forEach((stop, index) => {
                 if(!stop.waypointOnly) {
+                  // TODO this needs to be generalized to work with multiple routes, so that the last route doesn't overwrite the previous ones
                   const element = document.getElementById('stop-marker-'+index);
                   addStopMarker(map, stop.coordinates[0], stop.coordinates[1], element);
                 }
