@@ -13,12 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
         <meta property="og:updated_time" content="1686368955">
-    <meta property="og:title" content="{{title}}">
+    <meta property="og:title" content="{{bus.title}}">
 <!--     <meta property="og:description" content="Saturday, April 22nd | Chicago, Bike Grid Now X CTU Climate Justice Committee"> -->
 <!--     <meta property="og:image" itemprop="image" content="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/earth-day.jpg?v=1682050103590"> -->
     <meta property="og:type" content="website">
     
-    <title>{{title}} Bike Bus Tracker</title> 
+    <title>{{bus.title}} Bike Bus Tracker</title> 
     
     <style>
           body {
@@ -35,7 +35,7 @@
             text-align: center;
           }
           div#map {
-              height: {{mapHeight}};
+              height: {{bus.mapHeight}};
               width: 90%;
               margin-left: auto;
               margin-right: auto;
@@ -162,22 +162,22 @@
           {{/each}}
         </ul>
         <h1>
-          {{#if busHeaderImageSrc}}
-          <img alt="{{busHeaderImageAlt}}" src="{{busHeaderImageSrc}}" />
+          {{#if bus.headerImageSrc}}
+          <img alt="{{bus.headerImageAlt}}" src="{{bus.headerImageSrc}}" />
           {{else}}
-            {{title}}   
+            {{bus.title}}   
           {{/if}}
         </h1>
         <div id="map"></div>
         <h2 id="info">
-          {{busRunInfo}} 
+          {{bus.runInfo}} 
            Brought to you by <a href="https://bikegridnow.org">Chicago, Bike Grid Now!</a>
           
         </h2>        
         <!-- stop markers -->
-        {{#each stops}}
+        {{#each bus.stops}}
           {{#unless this.waypointOnly}}
-          <div id="stop-marker-{{@index}}" class="marker-container {{../globalMarkerClass}} {{this.markerClass}}">
+          <div id="stop-marker-{{@index}}" class="marker-container {{../bus.globalMarkerClass}} {{this.markerClass}}">
              <div class="marker-box">
                <div><b>{{this.time}}</b></div>
                
@@ -238,13 +238,13 @@
         <!-- map.js -->
         <script>
             const routeBounds = [
-                [{{busTrackerBounds.bottomLeft}}], //bottom left
-                [{{busTrackerBounds.topRight}}] //top right
+                [{{bus.trackerBounds.bottomLeft}}], //bottom left
+                [{{bus.trackerBounds.topRight}}] //top right
             ];
 
             var map = L.map('map', {
-                  {{#if busMinZoomLevel}}
-                   minZoom: {{busMinZoomLevel}}
+                  {{#if bus.minZoomLevel}}
+                   minZoom: {{bus.minZoomLevel}}
                   {{else}}
                    minZoom: 13
                   {{/if}}
@@ -267,7 +267,7 @@
             }
             
             /* Stops */
-            const stops = {{toJSON stops}}
+            const stops = {{toJSON bus.stops}}
                         
             stops.forEach((stop, index) => {
               if(!stop.waypointOnly) {
@@ -278,7 +278,7 @@
             
             let routePolylinePoints = stops.map(stop => stop.coordinates);
             L.polyline(routePolylinePoints, {
-              color: '{{color}}',
+              color: '{{bus.color}}',
               weight: 10,
             }).addTo(map);
             

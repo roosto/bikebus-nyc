@@ -64,18 +64,8 @@ fastify.get("/:route", async function (request, reply) {
   // params is an object we'll pass to our handlebars template
   let params = {
     routes,
-    ctu: bus.ctu || false,
+    bus,
     route: route,
-    title: bus.title,
-    busRunInfo: bus.runInfo,
-    busHeaderImageSrc: bus.headerImageSrc,
-    busHeaderImageAlt: bus.headerImageAlt,
-    busTrackerBounds: bus.trackerBounds,
-    busMinZoomLevel: bus.minZoomLevel,
-    mapHeight: bus.mapHeight,
-    color: bus.color,
-    globalMarkerClass: bus.globalMarkerClass,
-    stops: bus.stops,
   };
 
   // The Handlebars code will be able to access the parameter values and build them into the page
