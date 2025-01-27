@@ -1,4 +1,37 @@
 {
+  "manhattan-country-school-too": {
+   "title": "MCS Bike Bus: 1st Wednesdays Harlem to UWS",
+   "runInfo": "The MCS Bike Bus leaves every first Wednesday of the month at 7:45AM sharp from Mount Morris Park West at 120th Street in Central Harlem, going through Central Park to Manhattan Country School located on West 85th Street in the Upper West Side. Participants can hop on the bike bus anywhere on our route.",
+   "trackerBounds" : 
+   {
+     "bottomLeft": [40.786305, -73.975146], 
+     "topRight": [40.804354, -73.944087]
+   },
+   "mapHeight": "900px",
+   "color": "#CC3333",
+   "stops": [
+        {
+            "name": "Mt Morris Park W @ 120th St",
+            "time": "7:45",
+            "coordinates": [40.803902, -73.946153]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Right turn onto 5th Ave",
+            "coordinates": [40.803243, -73.944614]
+        },
+        {
+            "waypointOnly": true,
+            "name": "5th Ave @ Duke Ellington Cir",
+            "coordinates": [40.797113, -73.949096]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Right turn onto Duke Ellington Cir",
+            "coordinates": [40.797135, -73.949202]
+        }
+     ]
+  },
   "manhattan-country-school": {
    "title": "MCS Bike Bus: 1st Wednesdays Harlem to UWS",
    "runInfo": "The MCS Bike Bus leaves every first Wednesday of the month at 7:45AM sharp from Mount Morris Park West at 120th Street in Central Harlem, going through Central Park to Manhattan Country School located on West 85th Street in the Upper West Side. Participants can hop on the bike bus anywhere on our route.",
