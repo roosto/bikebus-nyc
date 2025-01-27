@@ -3,8 +3,6 @@
 This repo was exported from this glitch project, which is not an active bike bus:
 https://harmonious-three-industry.glitch.me/
 
-Joseph is trying to deploy it to Heroku.
-
 ## Process & Plan ##
 
 Per Daniel, via email, our options for creating this new Brownsville Bike Bus tracker are:
