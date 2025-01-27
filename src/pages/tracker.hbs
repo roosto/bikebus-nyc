@@ -155,6 +155,12 @@
   </head>
   <body>
         <!-- This is the start of content for our page -->
+        <!-- link to each route -->
+        <ul>
+          {{#each routes}}
+            <li><a href="/{{@key}}">{{this.title}}</a></li>
+          {{/each}}
+        </ul>
         <h1>
           {{#if busHeaderImageSrc}}
           <img alt="{{busHeaderImageAlt}}" src="{{busHeaderImageSrc}}" />
