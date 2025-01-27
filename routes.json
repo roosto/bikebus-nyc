@@ -31,7 +31,7 @@
             "coordinates": [40.797135, -73.949202]
         },
         {
-            "waypointOnly": true,
+            "waypointOnly": false,
             "name": "End at Grand Army Plaza",
             "coordinates": [40.764295, -73.973032]
         }

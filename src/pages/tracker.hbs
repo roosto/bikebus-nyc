@@ -179,7 +179,7 @@
         {{#each routes}}
           {{#each this.stops}}
             {{#unless this.waypointOnly}}
-            <div id="stop-marker-{{@index}}" class="marker-container {{../this.globalMarkerClass}} {{this.markerClass}}">
+            <div id="stop-marker-{{@../key}}-{{@index}}" class="marker-container {{../this.globalMarkerClass}} {{this.markerClass}}">
                <div class="marker-box">
                  <div><b>{{this.time}}</b></div>
 
@@ -273,13 +273,13 @@
 
             /* Stops */
             const routes = {{toJSON routes}}
-            Object.values(routes).forEach(bus => {
+            for (const [routeKey, bus] of Object.entries(routes)) {
               const stops = bus.stops
 
               stops.forEach((stop, index) => {
                 if(!stop.waypointOnly) {
-                  // TODO this needs to be generalized to work with multiple routes, so that the last route doesn't overwrite the previous ones
-                  const element = document.getElementById('stop-marker-'+index);
+                  const id = 'stop-marker-' + routeKey + '-' + index;
+                  const element = document.getElementById(id);
                   addStopMarker(map, stop.coordinates[0], stop.coordinates[1], element);
                 }
               })
@@ -289,7 +289,7 @@
                 color: bus.color,
                 weight: 10,
               }).addTo(map);
-            })
+            }
 
             function addStopMarker(map, latitude, longitude, element)
             {
