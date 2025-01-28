@@ -47,6 +47,9 @@ const routes = require("./routes.json");
 fastify.get("/:route", async function (request, reply) {
   let { route } = request.params;
 
+  let { routeKeys } = request.query;
+  console.log({ routeKeys });
+
   if (route == "") {
     route = "manhattan-country-school";
   }
