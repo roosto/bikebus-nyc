@@ -35,7 +35,7 @@
             text-align: center;
           }
           div#map {
-              /* TODO figure out how this should work with multiple routes */
+              /* If we have multiple routes to render, we assume they all have the same height, see https://github.com/roosto/bikebus-nyc/pull/5/#discussion_r1932950561 */
               height: {{bus.mapHeight}};
               width: 90%;
               margin-left: auto;
@@ -241,13 +241,13 @@
         <!-- map.js -->
         <script>
             const routeBounds = [
-                // TODO figure out how this should work with multiple routes
+                /* If we have multiple routes to render, we assume they all have the same bounds, see https://github.com/roosto/bikebus-nyc/pull/5/#discussion_r1932950561 */
                 [{{bus.trackerBounds.bottomLeft}}], //bottom left
                 [{{bus.trackerBounds.topRight}}] //top right
             ];
 
             var map = L.map('map', {
-                  // TODO figure out how this should work with multiple routes
+                  /* If we have multiple routes to render, we assume they all have the same zoom level, see https://github.com/roosto/bikebus-nyc/pull/5/#discussion_r1932950561 */
                   {{#if bus.minZoomLevel}}
                    minZoom: {{bus.minZoomLevel}}
                   {{else}}
