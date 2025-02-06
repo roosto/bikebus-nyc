@@ -13,12 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta property="og:updated_time" content="1686368955">
-    <meta property="og:title" content="{{bus.title}}">
+    <meta property="og:title" content="{{route.title}}">
 <!--     <meta property="og:description" content="Saturday, April 22nd | Chicago, Bike Grid Now X CTU Climate Justice Committee"> -->
 <!--     <meta property="og:image" itemprop="image" content="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/earth-day.jpg?v=1682050103590"> -->
     <meta property="og:type" content="website">
 
-    <title>{{bus.title}} Bike Bus Tracker</title>
+    <title>{{route.title}} Bike Bus Tracker</title>
 
     <style>
           body {
@@ -36,7 +36,7 @@
           }
           div#map {
               /* If we have multiple routes to render, we assume they all have the same height, see https://github.com/roosto/bikebus-nyc/pull/5/#discussion_r1932950561 */
-              height: {{bus.mapHeight}};
+              height: {{route.mapHeight}};
               width: 90%;
               margin-left: auto;
               margin-right: auto;
@@ -163,15 +163,15 @@
           {{/each}}
         </ul>
         <h1>
-          {{#if bus.headerImageSrc}}
-          <img alt="{{bus.headerImageAlt}}" src="{{bus.headerImageSrc}}" />
+          {{#if route.headerImageSrc}}
+          <img alt="{{route.headerImageAlt}}" src="{{route.headerImageSrc}}" />
           {{else}}
-            {{bus.title}}
+            {{route.title}}
           {{/if}}
         </h1>
         <div id="map"></div>
         <h2 id="info">
-          {{bus.runInfo}}
+          {{route.runInfo}}
            Brought to you by <a href="https://bikegridnow.org">Chicago, Bike Grid Now!</a>
 
         </h2>
@@ -224,7 +224,7 @@
 
             function getBusLocation()
             {
-              fetch('/bus/{{routeKey}}/location', {
+              fetch('/route/{{routeKey}}/location', {
                 method: 'GET', // or 'PUT'
               })
                 .then((response) => response.json())
@@ -242,14 +242,14 @@
         <script>
             const routeBounds = [
                 /* If we have multiple routes to render, we assume they all have the same bounds, see https://github.com/roosto/bikebus-nyc/pull/5/#discussion_r1932950561 */
-                [{{bus.trackerBounds.bottomLeft}}], //bottom left
-                [{{bus.trackerBounds.topRight}}] //top right
+                [{{route.trackerBounds.bottomLeft}}], //bottom left
+                [{{route.trackerBounds.topRight}}] //top right
             ];
 
             var map = L.map('map', {
                   /* If we have multiple routes to render, we assume they all have the same zoom level, see https://github.com/roosto/bikebus-nyc/pull/5/#discussion_r1932950561 */
-                  {{#if bus.minZoomLevel}}
-                   minZoom: {{bus.minZoomLevel}}
+                  {{#if route.minZoomLevel}}
+                   minZoom: {{route.minZoomLevel}}
                   {{else}}
                    minZoom: 13
                   {{/if}}
@@ -273,8 +273,8 @@
 
             /* Stops */
             const routes = {{toJSON routes}}
-            for (const [routeKey, bus] of Object.entries(routes)) {
-              const stops = bus.stops
+            for (const [routeKey, route] of Object.entries(routes)) {
+              const stops = route.stops
 
               stops.forEach((stop, index) => {
                 if(!stop.waypointOnly) {
@@ -286,7 +286,7 @@
 
               let routePolylinePoints = stops.map(stop => stop.coordinates);
               L.polyline(routePolylinePoints, {
-                color: bus.color,
+                color: route.color,
                 weight: 10,
               }).addTo(map);
             }

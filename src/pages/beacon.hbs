@@ -160,7 +160,7 @@
             const beacon_hash = "{{beacon_hash}}";
             function updateBusLocation(lat, long)
             {
-              fetch('/bus/{{routeKey}}/location/'+beacon_hash, {
+              fetch('/route/{{routeKey}}/location/'+beacon_hash, {
                 method: 'POST', // or 'PUT'
                 headers: {
                   'Content-Type': 'application/json',
