@@ -224,7 +224,7 @@
 
             function getBusLocation()
             {
-              fetch('/bus/{{route}}/location', {
+              fetch('/bus/{{routeKey}}/location', {
                 method: 'GET', // or 'PUT'
               })
                 .then((response) => response.json())

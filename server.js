@@ -44,22 +44,22 @@ const routes = require("./routes.json");
  * Returns src/pages/index.hbs with data built into it
  */
 
-fastify.get("/:route", async function (request, reply) {
-  let { route } = request.params;
+fastify.get("/:routeKey", async function (request, reply) {
+  let { routeKey } = request.params;
 
   let { routeKeys } = request.query;
   console.log({ routeKeys });
 
-  if (route == "") {
-    route = "manhattan-country-school";
+  if (routeKey == "") {
+    routeKey = "manhattan-country-school";
   }
 
   let bus;
 
-  if (!routes.hasOwnProperty(route)) {
+  if (!routes.hasOwnProperty(routeKey)) {
     return reply.code(404).type("text/plain").send("Route not found.");
   } else {
-    bus = routes[route];
+    bus = routes[routeKey];
   }
 
   await storage.init();
@@ -68,7 +68,7 @@ fastify.get("/:route", async function (request, reply) {
   let params = {
     routes,
     bus,
-    route: route,
+    routeKey: routeKey,
   };
 
   // The Handlebars code will be able to access the parameter values and build them into the page
@@ -83,41 +83,41 @@ fastify.get("/beacon-instructions", async function (request, reply) {
 });
 
 fastify.get(
-  "/beacon/:route/" + process.env.beacon_hash,
+  "/beacon/:routeKey/" + process.env.beacon_hash,
   function (request, reply) {
-    const { route } = request.params;
-    if (!routes.hasOwnProperty(route)) {
+    const { routeKey } = request.params;
+    if (!routes.hasOwnProperty(routeKey)) {
       return reply.code(404).type("text/plain").send("Route not found.");
     }
 
     const params = {
       beacon_hash: process.env.beacon_hash,
-      route: route,
+      routeKey: routeKey,
     };
     return reply.view("/src/pages/beacon.hbs", params);
   }
 );
 
 fastify.post(
-  "/bus/:route/location/" + process.env.beacon_hash,
+  "/bus/:routeKey/location/" + process.env.beacon_hash,
   async function (request, reply) {
-    const { route } = request.params;
-    if (!routes.hasOwnProperty(route)) {
+    const { routeKey } = request.params;
+    if (!routes.hasOwnProperty(routeKey)) {
       return reply.code(404).type("text/plain").send("Route not found.");
     }
 
     await storage.init();
-    await storage.setItem(route + ".latitude", request.body.latitude);
-    await storage.setItem(route + ".longitude", request.body.longitude);
-    cache.del(route + ".latitude");
-    cache.del(route + ".longitude");
+    await storage.setItem(routeKey + ".latitude", request.body.latitude);
+    await storage.setItem(routeKey + ".longitude", request.body.longitude);
+    cache.del(routeKey + ".latitude");
+    cache.del(routeKey + ".longitude");
     return request.body;
   }
 );
 
-fastify.get("/bus/:route/location", async function (request, reply) {
-  const { route } = request.params;
-  if (!routes.hasOwnProperty(route)) {
+fastify.get("/bus/:routeKey/location", async function (request, reply) {
+  const { routeKey } = request.params;
+  if (!routes.hasOwnProperty(routeKey)) {
     return reply.code(404).type("text/plain").send("Route not found.");
   }
 
@@ -126,16 +126,16 @@ fastify.get("/bus/:route/location", async function (request, reply) {
 
   if (busIsRunning) {
     await storage.init();
-    latitude = cache.get(route + ".latitude");
+    latitude = cache.get(routeKey + ".latitude");
     if (latitude === null) {
-      latitude = await storage.getItem(route + ".latitude");
-      cache.set(route + ".latitude", latitude);
+      latitude = await storage.getItem(routeKey + ".latitude");
+      cache.set(routeKey + ".latitude", latitude);
     }
 
-    longitude = cache.get(route + ".longitude");
+    longitude = cache.get(routeKey + ".longitude");
     if (longitude === null) {
-      longitude = await storage.getItem(route + ".longitude");
-      cache.set(route + ".longitude", longitude);
+      longitude = await storage.getItem(routeKey + ".longitude");
+      cache.set(routeKey + ".longitude", longitude);
     }
   }
 
