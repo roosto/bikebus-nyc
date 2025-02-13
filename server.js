@@ -44,19 +44,22 @@ const routes = require("./routes.json");
  * Returns src/pages/index.hbs with data built into it
  */
 
-fastify.get("/:route", async function (request, reply) {
-  let { route } = request.params;
+fastify.get("/:routeKey", async function (request, reply) {
+  let { routeKey } = request.params;
 
-  if (route == "") {
-    route = "manhattan-country-school";
+  let { routeKeys } = request.query;
+  console.log({ routeKeys });
+
+  if (routeKey == "") {
+    routeKey = "manhattan-country-school";
   }
 
-  let bus;
+  let route;
 
-  if (!routes.hasOwnProperty(route)) {
+  if (!routes.hasOwnProperty(routeKey)) {
     return reply.code(404).type("text/plain").send("Route not found.");
   } else {
-    bus = routes[route];
+    route = routes[routeKey];
   }
 
   await storage.init();
@@ -64,18 +67,8 @@ fastify.get("/:route", async function (request, reply) {
   // params is an object we'll pass to our handlebars template
   let params = {
     routes,
-    ctu: bus.ctu || false,
-    route: route,
-    title: bus.title,
-    busRunInfo: bus.runInfo,
-    busHeaderImageSrc: bus.headerImageSrc,
-    busHeaderImageAlt: bus.headerImageAlt,
-    busTrackerBounds: bus.trackerBounds,
-    busMinZoomLevel: bus.minZoomLevel,
-    mapHeight: bus.mapHeight,
-    color: bus.color,
-    globalMarkerClass: bus.globalMarkerClass,
-    stops: bus.stops,
+    route,
+    routeKey: routeKey,
   };
 
   // The Handlebars code will be able to access the parameter values and build them into the page
@@ -90,41 +83,41 @@ fastify.get("/beacon-instructions", async function (request, reply) {
 });
 
 fastify.get(
-  "/beacon/:route/" + process.env.beacon_hash,
+  "/beacon/:routeKey/" + process.env.beacon_hash,
   function (request, reply) {
-    const { route } = request.params;
-    if (!routes.hasOwnProperty(route)) {
+    const { routeKey } = request.params;
+    if (!routes.hasOwnProperty(routeKey)) {
       return reply.code(404).type("text/plain").send("Route not found.");
     }
 
     const params = {
       beacon_hash: process.env.beacon_hash,
-      route: route,
+      routeKey: routeKey,
     };
     return reply.view("/src/pages/beacon.hbs", params);
   }
 );
 
 fastify.post(
-  "/bus/:route/location/" + process.env.beacon_hash,
+  "/route/:routeKey/location/" + process.env.beacon_hash,
   async function (request, reply) {
-    const { route } = request.params;
-    if (!routes.hasOwnProperty(route)) {
+    const { routeKey } = request.params;
+    if (!routes.hasOwnProperty(routeKey)) {
       return reply.code(404).type("text/plain").send("Route not found.");
     }
 
     await storage.init();
-    await storage.setItem(route + ".latitude", request.body.latitude);
-    await storage.setItem(route + ".longitude", request.body.longitude);
-    cache.del(route + ".latitude");
-    cache.del(route + ".longitude");
+    await storage.setItem(routeKey + ".latitude", request.body.latitude);
+    await storage.setItem(routeKey + ".longitude", request.body.longitude);
+    cache.del(routeKey + ".latitude");
+    cache.del(routeKey + ".longitude");
     return request.body;
   }
 );
 
-fastify.get("/bus/:route/location", async function (request, reply) {
-  const { route } = request.params;
-  if (!routes.hasOwnProperty(route)) {
+fastify.get("/route/:routeKey/location", async function (request, reply) {
+  const { routeKey } = request.params;
+  if (!routes.hasOwnProperty(routeKey)) {
     return reply.code(404).type("text/plain").send("Route not found.");
   }
 
@@ -133,16 +126,16 @@ fastify.get("/bus/:route/location", async function (request, reply) {
 
   if (busIsRunning) {
     await storage.init();
-    latitude = cache.get(route + ".latitude");
+    latitude = cache.get(routeKey + ".latitude");
     if (latitude === null) {
-      latitude = await storage.getItem(route + ".latitude");
-      cache.set(route + ".latitude", latitude);
+      latitude = await storage.getItem(routeKey + ".latitude");
+      cache.set(routeKey + ".latitude", latitude);
     }
 
-    longitude = cache.get(route + ".longitude");
+    longitude = cache.get(routeKey + ".longitude");
     if (longitude === null) {
-      longitude = await storage.getItem(route + ".longitude");
-      cache.set(route + ".longitude", longitude);
+      longitude = await storage.getItem(routeKey + ".longitude");
+      cache.set(routeKey + ".longitude", longitude);
     }
   }
 

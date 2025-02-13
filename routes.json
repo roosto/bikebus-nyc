@@ -8,7 +8,7 @@
      "topRight": [40.804354, -73.944087]
    },
    "mapHeight": "900px",
-   "color": "#CC3333",
+   "color": "#33CC33",
    "stops": [
         {
             "name": "Mt Morris Park W @ 120th St",
@@ -29,6 +29,11 @@
             "waypointOnly": true,
             "name": "Right turn onto Duke Ellington Cir",
             "coordinates": [40.797135, -73.949202]
+        },
+        {
+            "waypointOnly": false,
+            "name": "End at Grand Army Plaza",
+            "coordinates": [40.764295, -73.973032]
         }
      ]
   },

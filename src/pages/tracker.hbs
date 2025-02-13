@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
-    <!-- 
-      This is the main Handlebars template for the site 
+
+    <!--
+      This is the main Handlebars template for the site
       - When the user visits the homepage or submits a color the app calls the endpoints in server.js
       - The server script passes data in here and the Handlebars code builds it into the HTML page
     -->
-    
+
     <meta charset="utf-8" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
         <meta property="og:updated_time" content="1686368955">
-    <meta property="og:title" content="{{title}}">
+    <meta property="og:title" content="{{route.title}}">
 <!--     <meta property="og:description" content="Saturday, April 22nd | Chicago, Bike Grid Now X CTU Climate Justice Committee"> -->
 <!--     <meta property="og:image" itemprop="image" content="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/earth-day.jpg?v=1682050103590"> -->
     <meta property="og:type" content="website">
-    
-    <title>{{title}} Bike Bus Tracker</title> 
-    
+
+    <title>{{route.title}} Bike Bus Tracker</title>
+
     <style>
           body {
               background-color:white;
               font-family: sans-serif, helvetica, arial;
           }
-      
+
           h1 {
             text-align: center;
           }
-          
+
           h2#info {
             font-size:.8em;
             text-align: center;
           }
           div#map {
-              height: {{mapHeight}};
+              /* If we have multiple routes to render, we assume they all have the same height, see https://github.com/roosto/bikebus-nyc/pull/5/#discussion_r1932950561 */
+              height: {{route.mapHeight}};
               width: 90%;
               margin-left: auto;
               margin-right: auto;
               background-color:white;
           }
-        
-          
+
+
           .marker-container {
             display: flex;
             width: 300px;
             line-height: 1.0;
           }
-                    
-          
+
+
           /* Markers */
-          
+
           .marker-box {
             flex: 1;
             display: flex;
             justify-content: center;
             font-size: 1em;
           }
-          
+
           .marker-box-center {
               flex-grow: 0;
           }
-          
+
           div.marker-box-center > img {
             width: 20px !important;
           }
-          .marker-box:first-child > div {             
-            margin-left: auto; 
+          .marker-box:first-child > div {
+            margin-left: auto;
             margin-right: 1em;
           }
-          
-          .marker-box:last-child  > div { 
-            margin-right: auto;  
+
+          .marker-box:last-child  > div {
+            margin-right: auto;
             margin-left: 1em;
           }
-          
+
           /* non-essential */
           .marker-box {
             align-items: center;
@@ -83,65 +84,65 @@
             /* background-color: lightgreen; */
             height: 40px;
           }
-      
+
           /* Marker Modifiers */
           .marker-container.rotate-35 {
             transform: rotate(35deg);
           }
-                    
+
           .marker-container.rotate-65 {
             transform: rotate(65deg);
           }
           .marker-container.push-up-2x .marker-box:not(.marker-box-center) {
             margin-top: -10px;
           }
-      
+
           .marker-container.push-up-8x .marker-box:not(.marker-box-center) {
             margin-top: -40px;
           }
-      
+
           .marker-container.push-down .marker-box:not(.marker-box-center) {
             padding-top: 5px;
           }
-          
+
           .marker-container.push-down-4x .marker-box:not(.marker-box-center) {
             padding-top: 20px;
           }
-          
+
           .marker-container.label-left {
             /* background-color: blue; */
           }
-          
+
             .marker-container.label-left .marker-box:last-child {
               /* background-color: rgba(255, 0, 0, 0.264); */
               position:relative;
               left: -160px;
               top: 1.5em;
               text-align:right;
-            }    
-            
+            }
+
             .marker-container.label-left .marker-box:last-child > div {
               margin-right: 1em;
               margin-left: auto;
             }
-            
-        
+
+
           .marker-container.label-right .marker-box:first-child {
             /* background-color: rgba(255, 0, 0, 0.264); */
             position:relative;
             left: 160px;
             top: -1.6em;
-          }    
-          
+          }
+
             .marker-container.label-right .marker-box:first-child > div {
               margin-right: auto;
               margin-left: 1em;
-            }       
-      
+            }
+
           .leaflet-bar a {
             opacity: .25;
           }
-          
+
       </style>
   <!-- can add CSS styling here to affect route labels -->
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
@@ -151,7 +152,7 @@
      <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
         integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
         crossorigin=""></script>
-    
+
   </head>
   <body>
         <!-- This is the start of content for our page -->
@@ -162,49 +163,51 @@
           {{/each}}
         </ul>
         <h1>
-          {{#if busHeaderImageSrc}}
-          <img alt="{{busHeaderImageAlt}}" src="{{busHeaderImageSrc}}" />
+          {{#if route.headerImageSrc}}
+          <img alt="{{route.headerImageAlt}}" src="{{route.headerImageSrc}}" />
           {{else}}
-            {{title}}   
+            {{route.title}}
           {{/if}}
         </h1>
         <div id="map"></div>
         <h2 id="info">
-          {{busRunInfo}} 
+          {{route.runInfo}}
            Brought to you by <a href="https://bikegridnow.org">Chicago, Bike Grid Now!</a>
-          
-        </h2>        
+
+        </h2>
         <!-- stop markers -->
-        {{#each stops}}
-          {{#unless this.waypointOnly}}
-          <div id="stop-marker-{{@index}}" class="marker-container {{../globalMarkerClass}} {{this.markerClass}}">
-             <div class="marker-box">
-               <div><b>{{this.time}}</b></div>
-               
-             </div>
-             <div class="marker-box marker-box-center">
-               {{#if this.icon}}
-               <img src="{{this.icon}}" />
-               {{else}}
-               <img src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus_stop_circle.svg?v=1664245520908" />
-               {{/if}}
-             </div>
-             <div class="marker-box">
-               <div>
-                 <b>{{this.name}}</b> 
-                 {{#if this.subtitle}}
-                 <br />
-                 <span>{{this.subtitle}}</span>
+        {{#each routes}}
+          {{#each this.stops}}
+            {{#unless this.waypointOnly}}
+            <div id="stop-marker-{{@../key}}-{{@index}}" class="marker-container {{../this.globalMarkerClass}} {{this.markerClass}}">
+               <div class="marker-box">
+                 <div><b>{{this.time}}</b></div>
+
+               </div>
+               <div class="marker-box marker-box-center">
+                 {{#if this.icon}}
+                 <img src="{{this.icon}}" />
+                 {{else}}
+                 <img src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/bus_stop_circle.svg?v=1664245520908" />
                  {{/if}}
                </div>
-             </div>
-          </div>
-          {{/unless}}
+               <div class="marker-box">
+                 <div>
+                   <b>{{this.name}}</b>
+                   {{#if this.subtitle}}
+                   <br />
+                   <span>{{this.subtitle}}</span>
+                   {{/if}}
+                 </div>
+               </div>
+            </div>
+            {{/unless}}
+          {{/each}}
         {{/each}}
         <!-- update_map.js -->
         <script>
             trackBusLocation()
-            
+
             function trackBusLocation()
             {
               getBusLocation();
@@ -212,16 +215,16 @@
                 trackBusLocation();
               }, 10000);
             }
-          
+
             function updateMap(lat, long)
             {
                 addBusPositionMarker(lat, long);
             }
-        
-          
+
+
             function getBusLocation()
             {
-              fetch('/bus/{{route}}/location', {
+              fetch('/route/{{routeKey}}/location', {
                 method: 'GET', // or 'PUT'
               })
                 .then((response) => response.json())
@@ -233,70 +236,76 @@
                   console.error('Error:', error)
                 })
             }
-            
+
         </script>
         <!-- map.js -->
         <script>
             const routeBounds = [
-                [{{busTrackerBounds.bottomLeft}}], //bottom left
-                [{{busTrackerBounds.topRight}}] //top right
+                /* If we have multiple routes to render, we assume they all have the same bounds, see https://github.com/roosto/bikebus-nyc/pull/5/#discussion_r1932950561 */
+                [{{route.trackerBounds.bottomLeft}}], //bottom left
+                [{{route.trackerBounds.topRight}}] //top right
             ];
 
             var map = L.map('map', {
-                  {{#if busMinZoomLevel}}
-                   minZoom: {{busMinZoomLevel}}
+                  /* If we have multiple routes to render, we assume they all have the same zoom level, see https://github.com/roosto/bikebus-nyc/pull/5/#discussion_r1932950561 */
+                  {{#if route.minZoomLevel}}
+                   minZoom: {{route.minZoomLevel}}
                   {{else}}
                    minZoom: 13
                   {{/if}}
             }).fitBounds(routeBounds);
-            
+
             L.tileLayer(
             'https://api.mapbox.com/styles/v1/streicherd/clkyafeqb00ki01pifykf5jp8/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RyZWljaGVyZCIsImEiOiJjbDkxZ2JuaDQxMXRpM25vNmRjdzNlZXVzIn0.BkniqpkfdbK_szBJGdr0KQ', {
                 tileSize: 512,
                 zoomOffset: -1,
                 attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);          
+            }).addTo(map);
 
             var busPositionMarker;
             function addBusPositionMarker(latitude, longitude) {
               if (busPositionMarker) {
                   map.removeLayer(busPositionMarker)
               }
-            
+
               busPositionMarker = L.marker([latitude, longitude]).addTo(map)
             }
-            
+
             /* Stops */
-            const stops = {{toJSON stops}}
-                        
-            stops.forEach((stop, index) => {
-              if(!stop.waypointOnly) {
-                const element = document.getElementById('stop-marker-'+index);
-                addStopMarker(map, stop.coordinates[0], stop.coordinates[1], element);
-              }
-            })
-            
-            let routePolylinePoints = stops.map(stop => stop.coordinates);
-            L.polyline(routePolylinePoints, {
-              color: '{{color}}',
-              weight: 10,
-            }).addTo(map);
-            
+            const routes = {{toJSON routes}}
+            for (const [routeKey, route] of Object.entries(routes)) {
+              const stops = route.stops
+
+              stops.forEach((stop, index) => {
+                if(!stop.waypointOnly) {
+                  const id = 'stop-marker-' + routeKey + '-' + index;
+                  const element = document.getElementById(id);
+                  addStopMarker(map, stop.coordinates[0], stop.coordinates[1], element);
+                }
+              })
+
+              let routePolylinePoints = stops.map(stop => stop.coordinates);
+              L.polyline(routePolylinePoints, {
+                color: route.color,
+                weight: 10,
+              }).addTo(map);
+            }
+
             function addStopMarker(map, latitude, longitude, element)
-            {              
-                
+            {
+
                 let testIcon = L.divIcon({
                   className: '', //just need to override the default class
                   html: element,
                   iconAnchor: [150, 20]
-                })  
-                
-                let stopMarker = L.marker([latitude, longitude], { icon: testIcon }); 
-                
-                stopMarker.addTo(map);                                                
+                })
+
+                let stopMarker = L.marker([latitude, longitude], { icon: testIcon });
+
+                stopMarker.addTo(map);
             }
-            
-            
+
+
             function drawRouteBetweenPoints(a, b)
             {
               console.log([a, b]);
