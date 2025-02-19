@@ -1,12 +1,12 @@
 /**
  * This is the main Node.js server script for your project
- * Check out the two endpoints this back-end API provides in fastify.get and fastify.post below
+ * Check out the two endpoints this back-end API provides in server.get and server.post below
  */
 
 const path = require("path");
 
 // Require the fastify framework and instantiate it
-const fastify = require("fastify")({
+const server = require("fastify")({
   // Set this to true for detailed logging:
   logger: false,
 });
@@ -15,7 +15,7 @@ const storage = require("node-persist");
 const cache = require("nano-cache");
 
 // Setup our static files
-fastify.register(require("@fastify/static"), {
+server.register(require("@fastify/static"), {
   root: path.join(__dirname, "public"),
   prefix: "/", // optional: default '/'
 });
@@ -27,7 +27,7 @@ handlebars.registerHelper("toJSON", function (object) {
   return new handlebars.SafeString(JSON.stringify(object));
 });
 
-fastify.register(require("@fastify/view"), {
+server.register(require("@fastify/view"), {
   engine: {
     handlebars: handlebars,
   },
@@ -44,7 +44,7 @@ const routes = require("./routes.json");
  * Returns src/pages/index.hbs with data built into it
  */
 
-fastify.get("/:routeKey", async function (request, reply) {
+server.get("/:routeKey", async function (request, reply) {
   let { routeKey } = request.params;
 
   let { routeKeys } = request.query;
@@ -75,14 +75,14 @@ fastify.get("/:routeKey", async function (request, reply) {
   return reply.view("/src/pages/tracker.hbs", params);
 });
 
-fastify.get("/beacon-instructions", async function (request, reply) {
+server.get("/beacon-instructions", async function (request, reply) {
   const params = {};
 
   // The Handlebars code will be able to access the parameter values and build them into the page
   return reply.view("/src/pages/tracker-instructions.hbs", params);
 });
 
-fastify.get(
+server.get(
   "/beacon/:routeKey/" + process.env.beacon_hash,
   function (request, reply) {
     const { routeKey } = request.params;
@@ -98,7 +98,7 @@ fastify.get(
   }
 );
 
-fastify.post(
+server.post(
   "/route/:routeKey/location/" + process.env.beacon_hash,
   async function (request, reply) {
     const { routeKey } = request.params;
@@ -115,7 +115,7 @@ fastify.post(
   }
 );
 
-fastify.get("/route/:routeKey/location", async function (request, reply) {
+server.get("/route/:routeKey/location", async function (request, reply) {
   const { routeKey } = request.params;
   if (!routes.hasOwnProperty(routeKey)) {
     return reply.code(404).type("text/plain").send("Route not found.");
@@ -146,15 +146,4 @@ fastify.get("/route/:routeKey/location", async function (request, reply) {
   return response;
 });
 
-// Run the server and report out to the logs
-fastify.listen(
-  { port: process.env.PORT, host: "0.0.0.0" },
-  function (err, address) {
-    if (err) {
-      fastify.log.error(err);
-      process.exit(1);
-    }
-    console.log(`Your app is listening on ${address}`);
-    fastify.log.info(`server listening on ${address}`);
-  }
-);
+module.exports = server

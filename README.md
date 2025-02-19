@@ -14,7 +14,7 @@ You'll get best use out of this project if you're familiar with basic JavaScript
 
 ← `public/style.css`: The styling rules for the pages in your site.
 
-← `server.js`: The **Node.js** server script for your new site. The JavaScript defines the endpoints in the site back-end, one to return the homepage and one to update with the submitted color. Each one sends data to a Handlebars template which builds these parameter values into the web page the visitor sees.
+← `main.js`: The **Node.js** server script for your new site. The JavaScript defines the endpoints in the site back-end, one to return the homepage and one to update with the submitted color. Each one sends data to a Handlebars template which builds these parameter values into the web page the visitor sees.
 
 ← `package.json`: The NPM packages for your project's dependencies.
 
