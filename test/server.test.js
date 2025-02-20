@@ -5,20 +5,20 @@ const server = require('../server.js')
 
 const scenarios = [
   {
-    "uri": "/",
-    "statusCode": 200,
-    "body": /<[hH]1>\s*MCS Bike Bus/
+    uri: "/",
+    statusCode: 200,
+    body: /<[hH]1>\s*MCS Bike Bus/,
   },
   {
-    "uri": "/manhattan-country-school",
-    "statusCode": 200,
-    "body": /<[hH]1>\s*MCS Bike Bus/
+    uri: "/manhattan-country-school",
+    statusCode: 200,
+    body: /<[hH]1>\s*MCS Bike Bus/,
   },
   {
-    "uri": "/manhattan-country-school/",
-    "statusCode": 200,
-    "body": /<[hH]1>\s*MCS Bike Bus/
-  }
+    uri: "/manhattan-country-school/",
+    statusCode: 200,
+    body: /<[hH]1>\s*MCS Bike Bus/,
+  },
 ]
 
 scenarios.forEach(scenario => {
