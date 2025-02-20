@@ -1,4 +1,5 @@
-const assert = require('chai').assert;
+const chai = require('chai');
+const assert = chai.assert;
 
 describe('Arithmetic operations', () => {
   it('should return the sum of two numbers', () => {
