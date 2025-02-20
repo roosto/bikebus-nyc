@@ -6,18 +6,24 @@ const server = require('../server.js')
 const scenarios = [
   {
     uri: "/",
-    statusCode: 200,
-    body: /<[hH]1>\s*MCS Bike Bus/,
+    expected: {
+      statusCode: 200,
+      body: /<[hH]1>\s*MCS Bike Bus/,
+    },
   },
   {
     uri: "/manhattan-country-school",
-    statusCode: 200,
-    body: /<[hH]1>\s*MCS Bike Bus/,
+    expected: {
+      statusCode: 200,
+      body: /<[hH]1>\s*MCS Bike Bus/,
+    },
   },
   {
     uri: "/manhattan-country-school/",
-    statusCode: 200,
-    body: /<[hH]1>\s*MCS Bike Bus/,
+    expected: {
+      statusCode: 200,
+      body: /<[hH]1>\s*MCS Bike Bus/,
+    },
   },
 ]
 
@@ -27,7 +33,11 @@ scenarios.forEach(scenario => {
       method: 'GET',
       url: scenario.uri
     })
-    t.equal(response.statusCode, scenario.statusCode, 'returns a status code of 200')
-    t.match(response.body, scenario.body, 'defaults to Manhantan Country School')
+    t.equal(response.statusCode, scenario.expected.statusCode, 'returns a status code of 200')
+    t.match(response.body, scenario.expected.body, 'defaults to Manhantan Country School')
+    // TODO: there maybe a way to more elegantly match, using the below code, but since the
+    //       `matchOnly()` seems to by default try to examine the 'raw' Response object, I
+    //       can't get it to work in the way I might expect
+    /* t.matchOnly(response, scenario.expected) */
   })
 })
