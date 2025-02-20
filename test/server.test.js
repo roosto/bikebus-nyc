@@ -9,4 +9,5 @@ test('requests the "/" route', async t => {
     url: '/'
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
+  t.match(response.body, /<[hH]1>\s*MCS Bike Bus/, 'defaults to Manhantan Country School')
 })
