@@ -6,3 +6,6 @@ node_modules
 
 # Node TAP files, which are all temporary
 .tap
+
+# macOS cruft
+.DS_Store
