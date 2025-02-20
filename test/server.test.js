@@ -29,8 +29,7 @@ const scenarios = [
 
 scenarios.forEach(scenario => {
   test('requests the `' + scenario.uri + '` route', {
-    // TODO: enable this test case, once we're properly able to handle URLs w/ trailing slashes
-    skip: scenario.uri.match(/^\/.+\/$/)
+    skip: scenario.uri.match(/^\/.+\/$/) ? 'URIs with a trailing slash are not handled correctly by server.js (except `/`)' : false
   },  async t => {
     const response = await server.inject({
       method: 'GET',
