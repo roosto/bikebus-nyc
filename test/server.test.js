@@ -1,27 +1,12 @@
-const chai = require('chai');
-const assert = chai.assert;
-const chaiHttp = require('chai-http');
-const server = require('../server');
+'use strict'
 
-// chai.use(chaiHttp);
+const { test } = require('tap')
+const server = require('../server.js')
 
-const expect = chai.expect;
-
-describe('Loading the home page', () => {
-  it('Should load successfully, and display Manhattan Country School Map', (done) => {
-    server.inject({
-      method: 'GET',
-      url: '/'
-    }, (err, response) => {
-      expect(res).to.have.status(200);
-      console.log({err, response});
-    });
-    // chai.request(server)
-    //   .get('/')
-    //   .end((err, res) => {
-        
-    //     // expect(res.body.result).to.equal(5);
-    //     done();
-    //   });
-  });
-});
+test('requests the "/" route', async t => {
+  const response = await server.inject({
+    method: 'GET',
+    url: '/'
+  })
+  t.equal(response.statusCode, 200, 'returns a status code of 200')
+})
