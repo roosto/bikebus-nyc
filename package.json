@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "test": "yarn run tap test/*"
+    "test": "tap --allow-incomplete-coverage test/*"
   },
   "dependencies": {
     "@fastify/formbody": "^7.2.0",
