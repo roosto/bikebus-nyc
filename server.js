@@ -47,7 +47,7 @@ const routes = require("./routes.json");
 server.get("/:routeKey", async function (request, reply) {
   let { routeKey } = request.params;
 
-  let { routeKeys } = request.query;
+  let routeKeys = [].concat(request.query.routeKey || []);
   console.log({ routeKeys });
 
   if (routeKey == "") {
