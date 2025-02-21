@@ -4,6 +4,7 @@
  */
 
 const path = require("path");
+const filterObj = require('filter-obj')
 
 // Require the fastify framework and instantiate it
 const server = require("fastify")({
@@ -66,7 +67,7 @@ server.get("/:routeKey", async function (request, reply) {
 
   // params is an object we'll pass to our handlebars template
   let params = {
-    routes,
+    routes: filterObj.includeKeys(routes, routeKeys),
     route,
     routeKey: routeKey,
   };
