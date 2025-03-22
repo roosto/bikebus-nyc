@@ -29,9 +29,6 @@
     "express"
   ],
   "devDependencies": {
-    "chai": "^5.2.0",
-    "chai-http": "^5.1.1",
-    "mocha": "^11.1.0",
     "tap": "^21.1.0"
   }
 }
