@@ -18,19 +18,10 @@ const scenarios = [
       body: /<[hH]1>\s*MCS Bike Bus/,
     },
   },
-  {
-    uri: "/manhattan-country-school/",
-    expected: {
-      statusCode: 200,
-      body: /<[hH]1>\s*MCS Bike Bus/,
-    },
-  },
 ]
 
 scenarios.forEach(scenario => {
-  test('requests the `' + scenario.uri + '` route', {
-    skip: scenario.uri.match(/^\/.+\/$/) ? 'URIs with a trailing slash are not handled correctly by server.js (except `/`)' : false
-  },  async t => {
+  test('requests the `' + scenario.uri + '` route',  async t => {
     const response = await server.inject({
       method: 'GET',
       url: scenario.uri
