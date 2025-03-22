@@ -3,3 +3,9 @@
 .node-gyp
 node_modules
 .node-persist
+
+# Node TAP files, which are all temporary
+.tap
+
+# macOS cruft
+.DS_Store

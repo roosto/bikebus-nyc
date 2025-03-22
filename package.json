@@ -4,16 +4,17 @@
   "description": "A simple Node app built on fastify, instantly up and running. Built to be remixed on Glitch.com.",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node main.js",
+    "test": "tap --allow-incomplete-coverage test/*"
   },
   "dependencies": {
-    "fastify": "^4.6.0",
-    "handlebars": "^4.7.7",
     "@fastify/formbody": "^7.2.0",
     "@fastify/static": "^6.5.0",
     "@fastify/view": "^7.1.0",
-    "node-persist": "^3.1.0",
-    "nano-cache": "^1.1.2"
+    "fastify": "^4.6.0",
+    "handlebars": "^4.7.7",
+    "nano-cache": "^1.1.2",
+    "node-persist": "^3.1.0"
   },
   "engines": {
     "node": "23.x"
@@ -26,5 +27,8 @@
     "node",
     "glitch",
     "express"
-  ]
+  ],
+  "devDependencies": {
+    "tap": "^21.1.0"
+  }
 }
