@@ -36,6 +36,6 @@ scenarios.forEach(scenario => {
       url: scenario.uri
     })
     t.equal(response.statusCode, scenario.expected.statusCode, 'returns a status code of 200')
-    t.match(response.body, scenario.expected.body, 'defaults to Manhantan Country School')
+    t.match(response.body, scenario.expected.body, 'defaults to Manhattan Country School')
   })
 })
