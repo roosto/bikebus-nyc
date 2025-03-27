@@ -46,16 +46,16 @@ const routes = require("./routes.json");
  */
 
 server.get("/:routeKey", async function (request, reply) {
-  let { routeKey } = request.params;
+  let routeKeys = [].concat(request.query.routeKey || request.params.routeKey || "manhattan-country-school");
 
-  let routeKeys = [].concat(request.query.routeKey || ["manhattan-country-school"]);
+  let routeKey = routeKeys[0]
 
   let route;
 
-  if (!routes.hasOwnProperty(routeKeys[0])) {
+  if (!routes.hasOwnProperty(routeKey)) {
     return reply.code(404).type("text/plain").send("Route not found.");
   } else {
-    route = routes[routeKeys[0]];
+    route = routes[routeKey];
   }
 
   await storage.init();
