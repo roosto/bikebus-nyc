@@ -64,6 +64,7 @@ server.get("/:routeKey", async function (request, reply) {
   let params = {
     routes: filterObj.includeKeys(routes, routeKeys),
     route,
+    routeKeys: routeKeys,
     routeKey: routeKey,
   };
 
