@@ -206,31 +206,33 @@
         {{/each}}
         <!-- update_map.js -->
         <script>
-            trackBusLocation()
+          {{#each routeKeys}}
+            trackBusLocation('{{this}}')
+          {{/each}}
 
-            function trackBusLocation()
+            function trackBusLocation(routeKey)
             {
-              getBusLocation();
+              getBusLocation(routeKey);
               setTimeout(function() {
-                trackBusLocation();
+                trackBusLocation(routeKey);
               }, 10000);
             }
 
-            function updateMap(lat, long)
+            function updateMap(lat, long, routeKey)
             {
-                addBusPositionMarker(lat, long);
+                addBusPositionMarker(lat, long, routeKey);
             }
 
 
-            function getBusLocation()
+            function getBusLocation(routeKey)
             {
-              fetch('/route/{{routeKey}}/location', {
+              fetch(`/route/${routeKey}/location`, {
                 method: 'GET', // or 'PUT'
               })
                 .then((response) => response.json())
                 .then((data) => {
                   console.log('Success:', data)
-                  updateMap(data.latitude, data.longitude)
+                  updateMap(data.latitude, data.longitude, routeKey)
                 })
                 .catch((error) => {
                   console.error('Error:', error)
@@ -262,13 +264,15 @@
                 attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
 
-            var busPositionMarker;
-            function addBusPositionMarker(latitude, longitude) {
+            const busPositionMarkers = {};
+            function addBusPositionMarker(latitude, longitude, routeKey) {
+              const busPositionMarker = busPositionMarkers[routeKey];
+
               if (busPositionMarker) {
                   map.removeLayer(busPositionMarker)
               }
 
-              busPositionMarker = L.marker([latitude, longitude]).addTo(map)
+              busPositionMarkers[routeKey] = L.marker([latitude, longitude]).addTo(map)
             }
 
             /* Stops */
