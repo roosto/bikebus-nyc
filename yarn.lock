@@ -1071,6 +1071,11 @@ fill-range@^7.1.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+filter-obj@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/filter-obj/-/filter-obj-6.1.0.tgz#58725ceed8f0de54b432d74b6a3eb149453d7ed0"
+  integrity sha512-xdMtCAODmPloU9qtmPcdBV9Kd27NtMse+4ayThxqIHUES5Z2S6bGpap5PpdmNM56ub7y3i1eyr+vJJIIgWGKmA==
+
 find-my-way@^8.0.0:
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/find-my-way/-/find-my-way-8.2.2.tgz#f3e78bc6ead2da4fdaa201335da3228600ed0285"
