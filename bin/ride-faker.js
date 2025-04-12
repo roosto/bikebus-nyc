@@ -35,11 +35,6 @@ async function sleep(ms) {
 }
 
 async function move_to_stop(stop) {
-    console.log(stop.name)
-}
-
-const https = require('http'); // Use 'http' for non-secure connections
-input_js.stops.forEach(stop => {
     const options = {
         hostname: 'localhost',
         port: 61015,
@@ -69,5 +64,17 @@ input_js.stops.forEach(stop => {
       
       req.write(data);
       req.end();
-      console.log("Moved to: " + stop.name)
-});
+}
+
+const https = require('http'); // Use 'http' for non-secure connections
+const doTheThing = async () => {
+    for (const stop of input_js.stops) {
+        await move_to_stop(stop)
+        console.log("Moved to: " + stop.name)
+        await sleep(10000)
+    }
+
+    console.log("Done");
+};
+
+doTheThing()
