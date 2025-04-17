@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const geolib = require('geolib');
+
 const input_js = {
     "stops": [
         {
@@ -30,28 +32,21 @@ const input_js = {
      ]
 }
 
-function latlongs_to_arr(obj) {
-  return [obj.longitude, obj.latitude]
-}
-
-function subDivide(start, end, maxDistance = 1500) {
+function subDivide(start, end, segmentLengths = 150) {
   let distance = geolib.getDistance(start, end);
   // base case of being close enough
-  if (distance <= maxDistance) {
+  if (distance < segmentLengths * 1.5) {
     return [start,end]
   }
-
-  let midpoint = geolib.getCenter(start,end)
-  // 2nd base case of needing only one sub-division
-  if (geolib.getDistance(start,midpoint) <= maxDistance) {
-    return [start,midpoint,end]
+  
+  let bearing = geolib.getRhumbLineBearing(start, end)
+  let waypointCount = Math.floor(distance / segmentLengths)
+  let midpoints = [geolib.computeDestinationPoint(start, segmentLengths, bearing)]
+  for(i = 1; i < waypointCount; i++) {
+    midpoints[i] = geolib.computeDestinationPoint(midpoints[i-1], segmentLengths, bearing)
   }
 
-  // recurcsion case of needing more subdivisions
-  left_midpoints = subDivide(start,midpoint).slice(1,-1)
-  right_midpoints = subDivide(midpoint,endpoint).slice(1,-1)
-
-  return [start].push(left_midpoints).push(right_midpoints).push(end)
+  return midpoints
 }
 
 async function chunkifyRoute(route, maxDistanceInMeters = 100) {
@@ -108,5 +103,7 @@ const doTheThing = async () => {
 
     console.log("Done");
 };
+
+chunkifyRoute(input_js)
 
 doTheThing()
