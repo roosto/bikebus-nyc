@@ -71,7 +71,7 @@ const doTheThing = async () => {
     for (const stop of input_js.stops) {
         await move_to_stop(stop)
         console.log("Moved to: " + stop.name)
-        await sleep(10000)
+        await sleep(15000)
     }
 
     console.log("Done");
