@@ -30,6 +30,38 @@ const input_js = {
      ]
 }
 
+function latlongs_to_arr(obj) {
+  return [obj.longitude, obj.latitude]
+}
+
+function subDivide(start, end, maxDistance = 1500) {
+  let distance = geolib.getDistance(start, end);
+  // base case of being close enough
+  if (distance <= maxDistance) {
+    return [start,end]
+  }
+
+  let midpoint = geolib.getCenter(start,end)
+  // 2nd base case of needing only one sub-division
+  if (geolib.getDistance(start,midpoint) <= maxDistance) {
+    return [start,midpoint,end]
+  }
+
+  // recurcsion case of needing more subdivisions
+  left_midpoints = subDivide(start,midpoint).slice(1,-1)
+  right_midpoints = subDivide(midpoint,endpoint).slice(1,-1)
+
+  return [start].push(left_midpoints).push(right_midpoints).push(end)
+}
+
+async function chunkifyRoute(route, maxDistanceInMeters = 100) {
+  var routeWithChunks = { 'stops': [] }
+  input_js.stops.forEach((value, index) => {
+    console.log("At index: %d", index)
+    console.log("next index exists? %s", index + 2 > input_js.stops.length ? 'no' : 'yes' )
+  });
+}
+
 async function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
