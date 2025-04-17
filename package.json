@@ -30,6 +30,7 @@
     "express"
   ],
   "devDependencies": {
-    "tap": "^21.1.0"
+    "tap": "^21.1.0",
+    "geolib": "^3.3.4"
   }
 }
