@@ -32,21 +32,37 @@ const input_js = {
      ]
 }
 
-function subDivide(start, end, segmentLengths = 150) {
+function geolibCoordsToGeojson(coord) {
+  return [coord.latitude, coord.longitude]
+}
+
+function geojsonToGeolibCoordsTo(coord) {
+  return { latitude: coord[0], longitude: coord[1] }
+}
+
+function calculateWaypoints(start, end, segmentLengths = 150) {
   let distance = geolib.getDistance(start, end);
   // base case of being close enough
   if (distance < segmentLengths * 1.5) {
     return [start,end]
   }
   
-  let bearing = geolib.getRhumbLineBearing(start, end)
+  // convert to "native" GeoLibCoordinates objects
+  // The [documentation for computeDestinationPoint](https://github.com/manuelbieh/geolib?tab=readme-ov-file#computedestinationpointpoint-distance-bearing-radius--earthradius)
+  // says that it will return the same input it is given, but in my
+  // experience it does not return GeoJSON, if given GeoJSON. So I've added the conversion steps
+  // to be on the safe side
+  const start_converted = geojsonToGeolibCoordsTo(start)
+  const end_converted = geojsonToGeolibCoordsTo(end)
+
+  let bearing = geolib.getRhumbLineBearing(start_converted, end_converted)
   let waypointCount = Math.floor(distance / segmentLengths)
-  let midpoints = [geolib.computeDestinationPoint(start, segmentLengths, bearing)]
+  let midpoints = [geolib.computeDestinationPoint(start_converted, segmentLengths, bearing)]
   for(i = 1; i < waypointCount; i++) {
     midpoints[i] = geolib.computeDestinationPoint(midpoints[i-1], segmentLengths, bearing)
   }
 
-  return midpoints
+  return midpoints.map((coord) => geolibCoordsToGeojson(coord))
 }
 
 async function chunkifyRoute(route, maxDistanceInMeters = 100) {
