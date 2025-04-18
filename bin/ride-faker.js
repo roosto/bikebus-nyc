@@ -103,15 +103,20 @@ async function move_to_stop(stop) {
 
 const https = require('http'); // Use 'http' for non-secure connections
 const doTheThing = async () => {
+    let stopsWithWaypoints = [input_js.stops[0]]
+    for (i = 1; i++; i < input_js.stops.length) {
+        console.log("adding these waypoints: " + calculateWaypoints(input_js.stops[i], input_js.stops[i - 1]))
+        stopsWithWaypoints.push(calculateWaypoints(input_js.stops[i], input_js.stops[i - 1]))
+        stopsWithWaypoints.push(input_js.stops[i])
+    }
+
     for (const stop of input_js.stops) {
         await move_to_stop(stop)
-        console.log("Moved to: " + stop.name)
+        console.log("Moved to: " + stop['name'] ? stop.name : '<waypoint>')
         await sleep(15000)
     }
 
-    console.log("Done");
+      console.log("Done");
 };
-
-chunkifyRoute(input_js)
 
 doTheThing()
