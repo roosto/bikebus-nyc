@@ -103,14 +103,14 @@ async function move_to_stop(stop) {
 }
 
 const doTheThing = async () => {
-    let stopsWithWaypoints = [input_js.stops[0].coordinates]
+    let stopsWithInfilledWaypoints = [input_js.stops[0].coordinates]
     for (let i = 1; i < input_js.stops.length; i++) {
         console.log("adding these waypoints: " + calculateWaypoints(input_js.stops[i].coordinates, input_js.stops[i - 1].coordinates))
-        stopsWithWaypoints.push(calculateWaypoints(input_js.stops[i].coordinates, input_js.stops[i - 1].coordinates))
-        stopsWithWaypoints.push(input_js.stops[i].coordinates)
+        stopsWithInfilledWaypoints.push(calculateWaypoints(input_js.stops[i].coordinates, input_js.stops[i - 1].coordinates))
+        stopsWithInfilledWaypoints.push(input_js.stops[i].coordinates)
     }
 
-    for (const stop of input_js.stops) {
+    for (const coords of stopsWithInfilledWaypoints) {
         await move_to_stop(stop)
         console.log("Moved to: " + stop['name'] ? stop.name : '<waypoint>')
         await sleep(15000)
