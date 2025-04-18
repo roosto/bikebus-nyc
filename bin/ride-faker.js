@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-const geolib = require('geolib');
+import { request } from 'http'; // Use 'http' for non-secure connections
+import { getDistance, getRhumbLineBearing, computeDestinationPoint } from 'geolib';
 
 const input_js = {
     "stops": [
@@ -41,8 +42,8 @@ function geojsonToGeolibCoordsTo(coord) {
 }
 
 function calculateWaypoints(start, end, segmentLengths = 150) {
-  let distance = geolib.getDistance(start, end);
-  // base case of being close enough
+  let distance = getDistance(start, end);
+  // easy case of being close enough
   if (distance < segmentLengths * 1.5) {
     return []
   }
@@ -55,11 +56,11 @@ function calculateWaypoints(start, end, segmentLengths = 150) {
   const start_converted = geojsonToGeolibCoordsTo(start)
   const end_converted = geojsonToGeolibCoordsTo(end)
 
-  let bearing = geolib.getRhumbLineBearing(start_converted, end_converted)
-  let waypointCount = Math.floor(distance / segmentLengths)
-  let midpoints = [geolib.computeDestinationPoint(start_converted, segmentLengths, bearing)]
-  for(i = 1; i < waypointCount; i++) {
-    midpoints[i] = geolib.computeDestinationPoint(midpoints[i-1], segmentLengths, bearing)
+  const bearing = getRhumbLineBearing(start_converted, end_converted)
+  const waypointCount = Math.floor(distance / segmentLengths)
+  let midpoints = [computeDestinationPoint(start_converted, segmentLengths, bearing)]
+  for(let i = 1; i < waypointCount; i++) {
+    midpoints[i] = computeDestinationPoint(midpoints[i-1], segmentLengths, bearing)
   }
 
   return midpoints.map((coord) => geolibCoordsToGeojson(coord))
@@ -101,10 +102,9 @@ async function move_to_stop(stop) {
       req.end();
 }
 
-const https = require('http'); // Use 'http' for non-secure connections
 const doTheThing = async () => {
     let stopsWithWaypoints = [input_js.stops[0]]
-    for (i = 1; i++; i < input_js.stops.length) {
+    for (let i = 1; i++; i < input_js.stops.length) {
         console.log("adding these waypoints: " + calculateWaypoints(input_js.stops[i], input_js.stops[i - 1]))
         stopsWithWaypoints.push(calculateWaypoints(input_js.stops[i], input_js.stops[i - 1]))
         stopsWithWaypoints.push(input_js.stops[i])
