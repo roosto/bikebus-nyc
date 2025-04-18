@@ -65,14 +65,6 @@ function calculateWaypoints(start, end, segmentLengths = 150) {
   return midpoints.map((coord) => geolibCoordsToGeojson(coord))
 }
 
-async function chunkifyRoute(route, maxDistanceInMeters = 100) {
-  var routeWithChunks = { 'stops': [] }
-  input_js.stops.forEach((value, index) => {
-    console.log("At index: %d", index)
-    console.log("next index exists? %s", index + 2 > input_js.stops.length ? 'no' : 'yes' )
-  });
-}
-
 async function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
