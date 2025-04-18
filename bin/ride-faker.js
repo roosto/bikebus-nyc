@@ -103,16 +103,18 @@ async function move_to_stop(stop) {
 }
 
 const doTheThing = async () => {
-    let stopsWithInfilledWaypoints = [input_js.stops[0].coordinates]
+    let stopsWithInfilledWaypoints = [input_js.stops[0]]
     for (let i = 1; i < input_js.stops.length; i++) {
-        console.log("adding these waypoints: " + calculateWaypoints(input_js.stops[i].coordinates, input_js.stops[i - 1].coordinates))
-        stopsWithInfilledWaypoints.push(calculateWaypoints(input_js.stops[i].coordinates, input_js.stops[i - 1].coordinates))
-        stopsWithInfilledWaypoints.push(input_js.stops[i].coordinates)
+       // TODO: this map syntax is borked
+        let infilledWaypoints = calculateWaypoints(input_js.stops[i - 1].coordinates, input_js.stops[i].coordinates).map((val) => ({ name: 'calculated Waypoint', coordinates: val }) )
+        console.log("adding these waypoints: " + infilledWaypoints)
+        infilledWaypoints.push(input_js.stops[i])
+        stopsWithInfilledWaypoints = stopsWithInfilledWaypoints.concat(infilledWaypoints)
     }
 
-    for (const coords of stopsWithInfilledWaypoints) {
+    for (const stop of stopsWithInfilledWaypoints) {
         await move_to_stop(stop)
-        console.log("Moved to: " + stop['name'] ? stop.name : '<waypoint>')
+        console.log("Moved to: " + stop.name)
         await sleep(15000)
     }
 
