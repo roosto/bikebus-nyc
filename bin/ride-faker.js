@@ -105,7 +105,6 @@ async function move_to_stop(stop) {
 const doTheThing = async () => {
     let stopsWithInfilledWaypoints = [input_js.stops[0]]
     for (let i = 1; i < input_js.stops.length; i++) {
-       // TODO: this map syntax is borked
         let infilledWaypoints = calculateWaypoints(input_js.stops[i - 1].coordinates, input_js.stops[i].coordinates).map((val) => ({ name: 'calculated Waypoint', coordinates: val }) )
         console.log("adding these waypoints: " + infilledWaypoints)
         infilledWaypoints.push(input_js.stops[i])
