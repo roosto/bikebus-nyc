@@ -37,7 +37,7 @@ function geolibCoordsToGeojson(coord) {
   return [coord.latitude, coord.longitude]
 }
 
-function geojsonToGeolibCoordsTo(coord) {
+function geojsonToGeolibCoords(coord) {
   return { latitude: coord[0], longitude: coord[1] }
 }
 
@@ -53,8 +53,8 @@ function calculateWaypoints(start, end, segmentLengths = 150) {
   // says that it will return the same input it is given, but in my
   // experience it does not return GeoJSON, if given GeoJSON. So I've added the conversion steps
   // to be on the safe side
-  const start_converted = geojsonToGeolibCoordsTo(start)
-  const end_converted = geojsonToGeolibCoordsTo(end)
+  const start_converted = geojsonToGeolibCoords(start)
+  const end_converted = geojsonToGeolibCoords(end)
 
   const bearing = geolib.getRhumbLineBearing(start_converted, end_converted)
   const waypointCount = Math.floor(distance / segmentLengths)
