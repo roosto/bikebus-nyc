@@ -81,11 +81,7 @@ async function move_to_stop(stop) {
         },
       };
       
-      const data = JSON.stringify({
-        latitude: stop.coordinates[0],
-        longitude: stop.coordinates[1],
-      });
-      
+      const data = JSON.stringify(geojsonToGeolibCoords(stop.coordinates));
       const req = https.request(options, (res) => {
         console.log(`statusCode: ${res.statusCode}`);
       
