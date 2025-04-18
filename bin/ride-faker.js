@@ -44,7 +44,7 @@ function calculateWaypoints(start, end, segmentLengths = 150) {
   let distance = geolib.getDistance(start, end);
   // base case of being close enough
   if (distance < segmentLengths * 1.5) {
-    return [start,end]
+    return []
   }
   
   // convert to "native" GeoLibCoordinates objects
