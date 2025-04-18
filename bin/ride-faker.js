@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { request } from 'http'; // Use 'http' for non-secure connections
-import { getDistance, getRhumbLineBearing, computeDestinationPoint } from 'geolib';
+const https = require('http') // Use 'http' for non-secure connections
+const geolib = require('geolib')
 
 const input_js = {
     "stops": [
@@ -42,7 +42,7 @@ function geojsonToGeolibCoordsTo(coord) {
 }
 
 function calculateWaypoints(start, end, segmentLengths = 150) {
-  let distance = getDistance(start, end);
+  let distance = geolib.getDistance(start, end);
   // easy case of being close enough
   if (distance < segmentLengths * 1.5) {
     return []
@@ -56,11 +56,11 @@ function calculateWaypoints(start, end, segmentLengths = 150) {
   const start_converted = geojsonToGeolibCoordsTo(start)
   const end_converted = geojsonToGeolibCoordsTo(end)
 
-  const bearing = getRhumbLineBearing(start_converted, end_converted)
+  const bearing = geolib.getRhumbLineBearing(start_converted, end_converted)
   const waypointCount = Math.floor(distance / segmentLengths)
-  let midpoints = [computeDestinationPoint(start_converted, segmentLengths, bearing)]
+  let midpoints = [geolib.computeDestinationPoint(start_converted, segmentLengths, bearing)]
   for(let i = 1; i < waypointCount; i++) {
-    midpoints[i] = computeDestinationPoint(midpoints[i-1], segmentLengths, bearing)
+    midpoints[i] = geolib.computeDestinationPoint(midpoints[i-1], segmentLengths, bearing)
   }
 
   return midpoints.map((coord) => geolibCoordsToGeojson(coord))
@@ -103,11 +103,11 @@ async function move_to_stop(stop) {
 }
 
 const doTheThing = async () => {
-    let stopsWithWaypoints = [input_js.stops[0]]
-    for (let i = 1; i++; i < input_js.stops.length) {
-        console.log("adding these waypoints: " + calculateWaypoints(input_js.stops[i], input_js.stops[i - 1]))
-        stopsWithWaypoints.push(calculateWaypoints(input_js.stops[i], input_js.stops[i - 1]))
-        stopsWithWaypoints.push(input_js.stops[i])
+    let stopsWithWaypoints = [input_js.stops[0].coordinates]
+    for (let i = 1; i < input_js.stops.length; i++) {
+        console.log("adding these waypoints: " + calculateWaypoints(input_js.stops[i].coordinates, input_js.stops[i - 1].coordinates))
+        stopsWithWaypoints.push(calculateWaypoints(input_js.stops[i].coordinates, input_js.stops[i - 1].coordinates))
+        stopsWithWaypoints.push(input_js.stops[i].coordinates)
     }
 
     for (const stop of input_js.stops) {
@@ -119,4 +119,5 @@ const doTheThing = async () => {
       console.log("Done");
 };
 
+console.log('about to do the thing')
 doTheThing()
