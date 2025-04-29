@@ -41,10 +41,10 @@ function geojsonToGeolibCoords(coord) {
   return { latitude: coord[0], longitude: coord[1] }
 }
 
-function calculateWaypoints(start, end, segmentLengths = 150) {
+function calculateWaypoints(start, end, segmentLength = 150) {
   let distance = geolib.getDistance(start, end);
   // easy case of being close enough
-  if (distance < segmentLengths * 1.5) {
+  if (distance < segmentLength * 1.5) {
     return []
   }
   
@@ -57,10 +57,10 @@ function calculateWaypoints(start, end, segmentLengths = 150) {
   const end_converted = geojsonToGeolibCoords(end)
 
   const bearing = geolib.getRhumbLineBearing(start_converted, end_converted)
-  const waypointCount = Math.floor(distance / segmentLengths)
-  let midpoints = [geolib.computeDestinationPoint(start_converted, segmentLengths, bearing)]
+  const waypointCount = Math.floor(distance / segmentLength)
+  let midpoints = [geolib.computeDestinationPoint(start_converted, segmentLength, bearing)]
   for(let i = 1; i < waypointCount; i++) {
-    midpoints[i] = geolib.computeDestinationPoint(midpoints[i-1], segmentLengths, bearing)
+    midpoints[i] = geolib.computeDestinationPoint(midpoints[i-1], segmentLength, bearing)
   }
 
   return midpoints.map((coord) => geolibCoordsToGeojson(coord))
