@@ -25,6 +25,16 @@ test('requests the `/manhattan-country-school-too` route', async t => {
   t.match(response.body, /\{"manhattan-country-school-too":\{"title":"\(TEST\) MCS Bike Bus: 1st Wednesdays Harlem to UWS"/, "Route JSON is embedded in page body")
 })
 
+test('requests the combination of both routes at: `/?routeKey=manhattan-country-school&routeKey=manhattan-country-school-too`', async t => {
+  const response = await server.inject({
+    method: 'GET',
+    url: '/?routeKey=manhattan-country-school&routeKey=manhattan-country-school-too'
+  })
+  t.equal(response.statusCode, 200, 'returns a status code of 200')
+  t.match(response.body, /const\s+routes\s*=\s*\{"manhattan-country-school"/, "1st Route JSON is embedded in page body")
+  t.match(response.body, /\s*,\s*"manhattan-country-school-too"\s*:\s*\{\s*"title"\s*:\s*"\(TEST\) MCS Bike Bus/, "2nd Route JSON is embedded in page body")
+})
+
 test('requests the `/I-AM-NOT_HERE` route', async t => {
   const response = await server.inject({
     method: 'GET',
