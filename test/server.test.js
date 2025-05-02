@@ -34,6 +34,16 @@ test('requests the `/I-AM-NOT_HERE` route', async t => {
   t.match(response.body,  /Route not found/, "page contains 'Route not found'")
 })
 
+test('requests the beacon instruction page at `/beacon-instructions`', async t => {
+  const response = await server.inject({
+    method: 'GET',
+    url: '/beacon-instructions'
+  })
+  t.equal(response.statusCode, 200, 'returns a status code of 200')
+  t.match(response.body,  /<title>Bike Bus Beacon Instructions<\/title>/, "page <title> is 'Bike Bus Beacon Instructions'")
+})
+
+
 test('requests the beacon page, w/o using a hash, at: `/beacon/manhattan-country-school/`', async t => {
   const response = await server.inject({
     method: 'GET',
