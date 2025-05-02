@@ -49,3 +49,22 @@ test(`requests the beacon page, with a hash, at: \`/beacon/manhattan-country-sch
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
 })
+
+test(`POST and GET location for \`manhattan-country-school\` route`, async t => {
+  const location = { latitude: 40.803917, longitude: -73.946054 }
+  const post_response = await server.inject({
+    method: 'POST',
+    url: `/route/manhattan-country-school/location/${process.env.beacon_hash}`,
+    body: location
+
+  })
+  t.equal(post_response.statusCode, 200, 'POST eturns a status code of 200')
+  t.equal(post_response.body, JSON.stringify(location), "POST returns a body equal to POST'ed coordinates")
+
+  const get_response = await server.inject({
+    method: 'GET',
+    url: '/route/manhattan-country-school/location'
+  })
+  t.equal(get_response.statusCode, 200, 'GET returns a status code of 200')
+  t.equal(post_response.body, JSON.stringify(location), "GET returns a body equal to POST'ed coordinates")
+})
