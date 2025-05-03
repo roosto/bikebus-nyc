@@ -1,0 +1,568 @@
+{
+  "manhattan-country-school": {
+   "title": "MCS Bike Bus: 1st Wednesdays Harlem to UWS",
+   "runInfo": "The MCS Bike Bus leaves every first Wednesday of the month at 7:45AM sharp from Mount Morris Park West at 120th Street in Central Harlem, going through Central Park to Manhattan Country School located on West 85th Street in the Upper West Side. Participants can hop on the bike bus anywhere on our route.",
+   "trackerBounds" : 
+   {
+     "bottomLeft": [40.786305, -73.975146], 
+     "topRight": [40.804354, -73.944087]
+   },
+   "mapHeight": "900px",
+   "color": "#CC3333",
+   "stops": [
+        {
+            "name": "Mt Morris Park W @ 120th St",
+            "time": "7:45",
+            "coordinates": [40.803902, -73.946153]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Right turn onto 5th Ave",
+            "coordinates": [40.803243, -73.944614]
+        },
+        {
+            "waypointOnly": true,
+            "name": "5th Ave @ Duke Ellington Cir",
+            "coordinates": [40.797113, -73.949096]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Right turn onto Duke Ellington Cir",
+            "coordinates": [40.797135, -73.949202]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Duke Ellingont Curve 1",
+            "coordinates": [40.797150, -73.949304]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Duke Ellingont Curve 2",
+            "coordinates": [40.797143, -73.949425]
+        },        {
+            "waypointOnly": true,
+            "name": "Duke Ellingont Curve 3",
+            "coordinates": [40.797110, -73.949565]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Duke Ellingont Curve 4",
+            "coordinates": [40.797105, -73.949562]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Duke Ellingont Curve 5",
+            "coordinates": [40.797079, -73.949670]
+        },
+        {
+            "waypointOnly": true,
+            "name": "110th St @ Duke Ellington Cir",
+            "coordinates": [40.797117, -73.949775]
+        },
+        {
+            "waypointOnly": true,
+            "name": "110th St @ Malcom X Blvd",
+            "coordinates": [40.798250, -73.952463]
+        },
+        {
+            "waypointOnly": true,
+            "name": "110th St @ West DR",
+            "coordinates": [40.799477, -73.955389]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Entrance Curve 1",
+            "coordinates": [40.799359, -73.955475]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Entrance Curve 2",
+            "coordinates": [40.799303, -73.955535]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Entrance Curve 3",
+            "coordinates": [40.799267, -73.955602]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Entrance Curve 4",
+            "coordinates": [40.799248, -73.955746]
+        },
+        {
+            "waypointOnly": true,
+            "name": "West Dr @ Entrance",
+            "coordinates": [40.799252, -73.955874]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799252, -73.955874]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799380, -73.956514]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799416, -73.956990]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799463, -73.957273]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799556, -73.957606]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799561, -73.957809]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799524, -73.957955]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799461, -73.958104]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799359, -73.958241]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799264, -73.958346]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799184, -73.958402]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.799037, -73.958482]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.798896, -73.958523]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.798771, -73.958534]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.798646, -73.958503]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.798543, -73.958446]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.798429, -73.958331]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.798347, -73.958215]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.798291, -73.958074]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.798139, -73.957446]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.798060, -73.957283]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.797945, -73.957142]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.797809, -73.957057]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.797658, -73.957010]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.797531, -73.957011]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.797390, -73.957037]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.797278, -73.957026]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.797095, -73.956969]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.796990, -73.956914]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.796804, -73.956808]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.796598, -73.956775]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.796464, -73.956779]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.796337, -73.956810]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.796205, -73.956883]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.796060, -73.956991]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.795937, -73.957106]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.795745, -73.957347]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.795590, -73.957603]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.795477, -73.957883]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.795310, -73.958500]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.795194, -73.958765]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.795056, -73.958952]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.794915, -73.959074]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.794778, -73.959148]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.794533, -73.959253]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.794384, -73.959348]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.794264, -73.959482]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.794160, -73.959655]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.794091, -73.959829]
+        },
+        {
+            "waypointOnly": true,
+            "name": "West Dr @ E97th St Transverse",
+            "coordinates": [40.791642, -73.962564]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.791303, -73.962830]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.791117, -73.963082]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.791003, -73.963290]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.790856, -73.963641]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.790489, -73.964079]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.790280, -73.964177]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.790072, -73.964210]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.789012, -73.964410]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.788849, -73.964639]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.788756, -73.964862]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.788467, -73.965755]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.788370, -73.965976]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.788193, -73.966284]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.787953, -73.966613]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.787664, -73.966927]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.787360, -73.967184]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.787045, -73.967387]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.786766, -73.967499]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.786440, -73.967542]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.786202, -73.967521]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.785947, -73.967448]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.785192, -73.967135]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.785017, -73.967088]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784825, -73.967096]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784633, -73.967141]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784448, -73.967226]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784279, -73.967347]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783792, -73.967777]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783372, -73.968295]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783239, -73.968521]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783058, -73.968874]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.782896, -73.969102]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.782681, -73.969300]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.782626, -73.969385]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783392, -73.969140]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783601, -73.969121]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783802, -73.969125]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.783997, -73.969161]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784157, -73.969219]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784311, -73.969318]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784442, -73.969450]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784540, -73.969631]
+        },
+        {
+            "waypointOnly": true,
+            "name": "",
+            "coordinates": [40.784710, -73.970055]
+        },
+        {
+            "name": "Manhattan Country School",
+            "coordinates": [40.786582, -73.974510]
+        }
+    ]
+ }
+}
