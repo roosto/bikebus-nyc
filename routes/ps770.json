@@ -1,0 +1,93 @@
+{
+  "manhattan-country-school": {
+   "title": "PS 770 Bus: Fridays, From Ocean Ave @ Lincoln Rd via Maple",
+   "runInfo": "A new-ish Bike Bus that travels East from Prospect Park to PS 770",
+   "trackerBounds" : 
+   {
+     "bottomLeft": [40.659990, -73.964402], 
+     "topRight": [40.666620, -73.924182]
+   },
+   "mapHeight": "900px",
+   "color": "#CC3333",
+   "stops": [
+        {
+            "name": "Ocean Ave @ Lincoln Rd",
+            "time": "7:45",
+            "subtitle": "", 
+            "coordinates": [40.660497, -73.962954]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Lincoln Rd @ Flatbush Ave",
+            "coordinates": [40.660914, -73.960908]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Flatbush, btwn Lincoln & Maple",
+            "coordinates": [40.660541, -73.960659]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Flatbush @ Maple",
+            "coordinates": [40.660216, -73.960623]
+        },
+        {
+            "name": "Bedford Ave",
+            "time": "7:55",
+            "coordinates": [40.660454, -73.956873]
+        },
+        {
+            "name": "Brooklyn Ave",
+            "time": "8:00",
+            "coordinates": [40.661155, -73.945501]
+        },
+        {
+            "name": "Albany Ave",
+            "time": "8:05",
+            "coordinates": [40.661503, -73.939888]
+        },
+        ,
+        {
+            "waypointOnly": true,
+            "name": "Maple @ Troy West side",
+            "coordinates": [40.661668, -73.937410]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Maple @ Troy East side",
+            "coordinates": [40.661706, -73.937124]
+        }
+        {
+            "name": "Utica Ave",
+            "time": "8:10",
+            "coordinates": [40.662051, -73.931497]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Utica @ Remsen",
+            "coordinates": [40.662658, -73.931557]
+        },
+        {
+            "waypointOnly": true,
+            "name": "Utica @ E New York Ave",
+            "time": "7:55",
+            "coordinates": [40.663243, -73.931608]
+        },
+        {
+            "waypointOnly": true,
+            "name": "E New York Ave @ E 91st",
+            "coordinates": [40.663617, -73.930698]
+        },
+        {
+            "waypointOnly": true,
+            "name": "E New York Ave @ 93rd",
+            "coordinates": [40.664323, -73.929024]
+        },
+        {
+            "name": "PS 770",
+            "time": "8:15",
+            "coordinates": [40.663997, -73.928726]
+        }
+    ]
+ }
+}
