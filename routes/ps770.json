@@ -46,7 +46,6 @@
             "time": "8:05",
             "coordinates": [40.661503, -73.939888]
         },
-        ,
         {
             "waypointOnly": true,
             "name": "Maple @ Troy West side",
@@ -56,7 +55,7 @@
             "waypointOnly": true,
             "name": "Maple @ Troy East side",
             "coordinates": [40.661706, -73.937124]
-        }
+        },
         {
             "name": "Utica Ave",
             "time": "8:10",
