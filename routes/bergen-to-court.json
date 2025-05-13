@@ -78,12 +78,34 @@
          },
          {
             "coordinates" : [
-               40.681495,
-               -73.977019
+               40.680749,
+               -73.974518
             ],
+            "name" : "6th Ave",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+               40.680876,
+               -73.975161
+            ],
+            "name" : "Flatbush",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+               40.680875,
+               -73.975423
+            ],
+            "name" : "After bend east of Flatbush",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+               40.681444, -73.976901
+            ],
+            "name" : "5th Ave",
             "markerClass" : "rotate-65",
-            "name" : "Fifth Av",
-            "subtitle" : "",
             "time" : "7:55"
          },
          {
@@ -91,10 +113,8 @@
                40.68254,
                -73.97974
             ],
-            "markerClass" : "rotate-65",
             "name" : "4th Ave",
-            "subtitle" : "",
-            "time" : "7:55"
+            "markerClass" : "rotate-65 label-left push-up-8x"
          },
          {
             "coordinates" : [
