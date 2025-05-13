@@ -10,8 +10,7 @@
     "trackerTileSrcPattern": "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png",
     "mapWidth": "550px",
     "mapHeight": "250px",
-    "backupLink": "",
-    "fallback": false,
+    "color": "#CC3333",
     "stops" : [
       {
         "name": "4th Ave",
@@ -22,7 +21,7 @@
       {
         "name": "PS 133",
         "subtitle": "",
-        "time": "7:55",
+        "time": "8:00",
         "coordinates": [40.680536, -73.980970]
       },
       {
@@ -33,7 +32,7 @@
       {
         "name": "PS 372",
         "subtitle": "4th Ave @ Carroll St",
-        "time": "8:00",
+        "time": "8:05",
         "coordinates": [40.676167, -73.983895]
       }
     ]

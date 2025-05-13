@@ -1,19 +1,20 @@
 {
   "ps770": {
-   "title": "PS 770 Bus: Fridays, From Ocean Ave @ Lincoln Rd via Maple",
+   "title": "PS 770 Bike Bus: Fridays, From Ocean Ave @ Lincoln Rd via Maple",
    "runInfo": "A new-ish Bike Bus that travels East from Prospect Park to PS 770",
    "trackerBounds" : 
    {
      "bottomLeft": [40.659990, -73.964402], 
      "topRight": [40.666620, -73.924182]
    },
-   "mapHeight": "900px",
+   "mapHeight": "300px",
    "color": "#CC3333",
    "stops": [
         {
             "name": "Ocean Ave @ Lincoln Rd",
             "time": "7:45",
-            "subtitle": "", 
+            "subtitle": "",
+            "markerClass": "label-left rotate-65",
             "coordinates": [40.660497, -73.962954]
         },
         {
@@ -34,16 +35,19 @@
         {
             "name": "Bedford Ave",
             "time": "7:55",
+            "markerClass": "label-left rotate-65",
             "coordinates": [40.660454, -73.956873]
         },
         {
             "name": "Brooklyn Ave",
             "time": "8:00",
+            "markerClass": "label-left rotate-65",
             "coordinates": [40.661155, -73.945501]
         },
         {
             "name": "Albany Ave",
             "time": "8:05",
+            "markerClass": "label-left rotate-65",
             "coordinates": [40.661503, -73.939888]
         },
         {
@@ -59,6 +63,7 @@
         {
             "name": "Utica Ave",
             "time": "8:10",
+            "markerClass": "label-left rotate-65",
             "coordinates": [40.662051, -73.931497]
         },
         {
@@ -85,6 +90,7 @@
         {
             "name": "PS 770",
             "time": "8:15",
+            "markerClass": "label-left rotate-65",
             "coordinates": [40.663997, -73.928726]
         }
     ]
