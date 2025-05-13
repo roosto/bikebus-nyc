@@ -4,6 +4,7 @@
       "mapHeight" : "250px",
       "mapWidth" : "550px",
       "runInfo" : "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
+      "publish" : false,
       "stops" : [
          {
             "coordinates" : [

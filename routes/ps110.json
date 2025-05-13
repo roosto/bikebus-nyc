@@ -3,6 +3,7 @@
       "color" : "#CC3333",
       "mapHeight" : "450px",
       "runInfo" : "We leave from McCarren Park Track at 7:30AM, and arrive at the school for a delicious breakfast from Campbell & Co.  Come ride with us!",
+      "publish" : true,
       "stops" : [
          {
             "coordinates" : [

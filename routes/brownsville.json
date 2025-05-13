@@ -3,6 +3,7 @@
       "color" : "#CC3333",
       "mapHeight" : "450px",
       "runInfo" : "Track our bike bus live every Friday Morning at 7:30am! #EASTBKBIKECLUB",
+      "publish" : false,
       "stops" : [
          {
             "coordinates" : [

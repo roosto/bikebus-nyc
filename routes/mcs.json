@@ -3,6 +3,7 @@
       "color" : "#CC3333",
       "mapHeight" : "900px",
       "runInfo" : "The MCS Bike Bus leaves every first Wednesday of the month at 7:45AM sharp from Mount Morris Park West at 120th Street in Central Harlem, going through Central Park to Manhattan Country School located on West 85th Street in the Upper West Side. Participants can hop on the bike bus anywhere on our route.",
+      "publish" : false,
       "stops" : [
          {
             "coordinates" : [

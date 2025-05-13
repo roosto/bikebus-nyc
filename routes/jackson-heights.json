@@ -3,6 +3,7 @@
       "color" : "#CC3333",
       "mapHeight" : "450px",
       "runInfo" : "A circuit westbound on 34th Ave starting at 82nd St, turning eastward after 70th St and again headed West after Junction Blvd",
+      "publish" : false,
       "stops" : [
          {
             "coordinates" : [

@@ -45,6 +45,11 @@ const routes = require("./routes.json");
  * Returns src/pages/index.hbs with data built into it
  */
 
+server.get("/", async function (request, reply) {
+  // The Handlebars code will be able to access the routes values and build them into the page
+  return reply.view("/src/pages/index.hbs", {routes: routes});
+});
+
 server.get("/:routeKey", async function (request, reply) {
   let routeKeys = [].concat(request.query.routeKey || request.params.routeKey || "manhattan-country-school");
 
