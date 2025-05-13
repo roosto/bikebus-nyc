@@ -156,12 +156,6 @@
   </head>
   <body>
         <!-- This is the start of content for our page -->
-        <!-- link to each route -->
-        <ul>
-          {{#each routes}}
-            <li><a href="/{{@key}}">{{this.title}}</a></li>
-          {{/each}}
-        </ul>
         <h1>
           {{#if route.headerImageSrc}}
           <img alt="{{route.headerImageAlt}}" src="{{route.headerImageSrc}}" />
@@ -172,8 +166,7 @@
         <div id="map"></div>
         <h2 id="info">
           {{route.runInfo}}
-           Brought to you by <a href="https://bikegridnow.org">Chicago, Bike Grid Now!</a>
-
+           Brought to you by <a href="https://bikebus.nyc/">bikebus.nyc</a>
         </h2>
         <!-- stop markers -->
         {{#each routes}}

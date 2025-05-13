@@ -52,16 +52,15 @@ server.get("/", async function (request, reply) {
 });
 
 server.get("/:routeKey", async function (request, reply) {
-  let routeKeys = [].concat(request.query.routeKey || request.params.routeKey || "manhattan-country-school");
-
-  let routeKey = routeKeys[0]
-
-  let route;
-
+  const routeKey = request.params.routeKey
   if (!routes.hasOwnProperty(routeKey)) {
-    return reply.code(404).type("text/plain").send("Route not found.");
-  } else {
-    route = routes[routeKey];
+    return reply.code(404).type("text/plain").send(`Route not found: '${routeKey}'`);
+  }
+
+  let routeKeys = [routeKey]
+  let route = routes[routeKey]
+  if (route.hasOwnProperty('combinedRouteKeys')) {
+    routeKeys = route.combinedRouteKeys
   }
 
   await storage.init();
