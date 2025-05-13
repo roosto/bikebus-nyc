@@ -40,6 +40,36 @@ let busIsRunning = true;
 const routes = require("./routes.json");
 const published_routes = Object.fromEntries(Object.entries(routes).filter(([key, val]) => val.publish))
 
+// validate `combinedRouteKeys` properties
+let combinedRoutesErrors = []
+Object.entries(routes).forEach(entry => {
+  const [key, route] = entry;
+  if (!route.hasOwnProperty('combinedRouteKeys')) {
+    return
+  }
+
+  if (!Array.isArray(route.combinedRouteKeys)) {
+    combinedRoutesErrors.push(`In route '${key}': combinedRouteKeys is not an Array: '${route.combinedRouteKeys}'`)
+    return
+  }
+
+  const combinedRoutesCount = route.combinedRouteKeys.length
+  if (combinedRoutesCount < 2) {
+    combinedRoutesErrors.push(`In route '${key}': combinedRouteKeys has ${combinedRoutesCount} element(s), but needs 2 or more`)
+    return
+  }
+
+  route.combinedRouteKeys.forEach(routeKey => {
+    if (!routes.hasOwnProperty(routeKey)) {
+      combinedRoutesErrors.push(`In route '${key}.combinedRouteKeys': '${routeKey}' does not exist as a key in routes`)
+    }
+  })
+})
+
+if(combinedRoutesErrors.length > 0) {
+  throw new Error(combinedRoutesErrors.join("\n"))
+}
+
 /**
  * Our home page route
  *
