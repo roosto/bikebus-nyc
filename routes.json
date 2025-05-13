@@ -1,61 +1,5 @@
 {
-  "bergen-to-ps372": {
-    "color": "#CC3333",
-    "mapHeight": "250px",
-    "mapWidth": "550px",
-    "runInfo": "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
-    "publish": false,
-    "stops": [
-      {
-        "coordinates": [
-          40.68254,
-          -73.97974
-        ],
-        "name": "4th Ave",
-        "subtitle": "",
-        "time": "7:55"
-      },
-      {
-        "coordinates": [
-          40.680536,
-          -73.98097
-        ],
-        "name": "PS 133",
-        "subtitle": "",
-        "time": "8:00"
-      },
-      {
-        "coordinates": [
-          40.67742,
-          -73.983035
-        ],
-        "name": "4th Ave @ Union St",
-        "waypointOnly": true
-      },
-      {
-        "coordinates": [
-          40.676167,
-          -73.983895
-        ],
-        "name": "PS 372",
-        "subtitle": "4th Ave @ Carroll St",
-        "time": "8:05"
-      }
-    ],
-    "title": "Bergen Bike Bus Tracker",
-    "trackerBounds": {
-      "bottomLeft": [
-        40.685828,
-        -73.91115
-      ],
-      "topRight": [
-        40.667982,
-        -73.991364
-      ]
-    },
-    "trackerTileSrcPattern": "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png"
-  },
-  "bergen": {
+  "bergen-to-court": {
     "color": "#EFB143",
     "mapHeight": "250px",
     "mapWidth": "550px",
@@ -185,6 +129,84 @@
       ]
     },
     "trackerTileSrcPattern": "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png"
+  },
+  "bergen-to-ps372": {
+    "color": "#CC3333",
+    "mapHeight": "250px",
+    "mapWidth": "550px",
+    "runInfo": "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
+    "publish": false,
+    "stops": [
+      {
+        "coordinates": [
+          40.68254,
+          -73.97974
+        ],
+        "name": "4th Ave",
+        "subtitle": "",
+        "time": "7:55"
+      },
+      {
+        "coordinates": [
+          40.680536,
+          -73.98097
+        ],
+        "name": "PS 133",
+        "subtitle": "",
+        "time": "8:00"
+      },
+      {
+        "coordinates": [
+          40.67742,
+          -73.983035
+        ],
+        "name": "4th Ave @ Union St",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [
+          40.676167,
+          -73.983895
+        ],
+        "name": "PS 372",
+        "subtitle": "4th Ave @ Carroll St",
+        "time": "8:05"
+      }
+    ],
+    "title": "Bergen Bike Bus Tracker",
+    "trackerBounds": {
+      "bottomLeft": [
+        40.685828,
+        -73.91115
+      ],
+      "topRight": [
+        40.667982,
+        -73.991364
+      ]
+    },
+    "trackerTileSrcPattern": "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png"
+  },
+  "bergen": {
+    "color": "#EFB143",
+    "mapHeight": "250px",
+    "mapWidth": "550px",
+    "publish": true,
+    "runInfo": "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
+    "title": "Bergen Bike Bus",
+    "trackerBounds": {
+      "bottomLeft": [
+        40.685828,
+        -73.91115
+      ],
+      "topRight": [
+        40.667982,
+        -73.991364
+      ]
+    },
+    "combinedRouteKeys": [
+      "bergen-to-court",
+      "bergen-to-ps372"
+    ]
   },
   "brownsville": {
     "color": "#CC3333",

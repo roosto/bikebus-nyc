@@ -1,0 +1,21 @@
+{
+   "bergen" : {
+      "color" : "#EFB143",
+      "mapHeight" : "250px",
+      "mapWidth" : "550px",
+      "publish" : true,
+      "runInfo" : "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
+      "title" : "Bergen Bike Bus",
+      "trackerBounds" : {
+         "bottomLeft" : [
+            40.685828,
+            -73.91115
+         ],
+         "topRight" : [
+            40.667982,
+            -73.991364
+         ]
+      },
+      "combinedRouteKeys" : ["bergen-to-court", "bergen-to-ps372"]
+   }
+}
