@@ -25,9 +25,7 @@
     <h1>bikebus.nyc Trackers</h1>
         <ul>
           {{#each routes}}
-            {{#if this.publish}}
               <li><a href="{{@key}}">{{this.title}}</a></li>
-            {{/if}}
           {{/each}}
         </ul>
 

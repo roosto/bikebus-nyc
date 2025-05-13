@@ -38,6 +38,7 @@ let busIsRunning = true;
 
 //eventually the cms or bus_info.json
 const routes = require("./routes.json");
+const published_routes = Object.fromEntries(Object.entries(routes).filter(([key, val]) => val.publish))
 
 /**
  * Our home page route
@@ -47,7 +48,7 @@ const routes = require("./routes.json");
 
 server.get("/", async function (request, reply) {
   // The Handlebars code will be able to access the routes values and build them into the page
-  return reply.view("/src/pages/index.hbs", {routes: routes});
+  return reply.view("/src/pages/index.hbs", {routes: published_routes})
 });
 
 server.get("/:routeKey", async function (request, reply) {
