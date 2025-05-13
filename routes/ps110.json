@@ -1,144 +1,227 @@
 {
-  "ps110": {
-   "title": "The PS110 Bike to School is a monthly ride to celebrate the joys of biking",
-   "runInfo": "We leave from McCarren Park Track at 7:30AM, and arrive at the school for a delicious breakfast from Campbell & Co.  Come ride with us!",
-   "trackerBounds" : 
-   {
-     "bottomLeft": [40.718624, -73.956177], 
-     "topRight": [40.726309, -73.941841] 
-   },
-   "mapHeight": "450px",
-   "color": "#CC3333",
-   "stops": [
-        {
-            "name": "McCarren Park Track",
-            "time": "7:30",
-            "coordinates": [40.720882, -73.951497]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Track Curve 1",
-            "coordinates": [40.720872, -73.951259]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Track Curve 2",
-            "coordinates": [40.720832, -73.951033]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Track Curve 3",
-            "coordinates": [40.720775, -73.950869]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Track Curve 4",
-            "coordinates": [40.720657, -73.950662]
-        },
-        {
-            "waypointOnly": true,
-            "name": "West Side of Lorimer St (turn off of track)",
-            "coordinates": [40.720618, -73.950629]
-        },
-        {
-            "waypointOnly": true,
-            "name": "East Side of Lorimer St",
-            "coordinates": [40.720668, -73.950213]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Playground Curve 1",
-            "coordinates": [40.721246, -73.950308]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Playground Curve 2",
-            "coordinates": [40.721343, -73.950333]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Playground Curve 3",
-            "coordinates": [40.721485, -73.950318]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Playground Curve 4",
-            "coordinates": [40.721596, -73.950258]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Playground Curve 5 (top of circle)",
-            "coordinates": [40.721711, -73.950036]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Playground Curve 6",
-            "coordinates": [40.721731, -73.949936]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Playground Curve 7",
-            "coordinates": [40.721721, -73.949765]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Playground Curve 8",
-            "coordinates": [40.721675, -73.949644]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Playground Curve 9",
-            "coordinates": [40.721641, -73.949579]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Playground Curve 7 (turn towards Manhattan Ave)",
-            "coordinates": [40.721522, -73.949418]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Right onto Manhattan Ave",
-            "coordinates": [40.721618, -73.949257]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Left onto Engert Ave",
-            "coordinates": [40.721299, -73.948856]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Left onto Russell St",
-            "coordinates": [40.721299, -73.948856]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Russel St & Driggs Ave",
-            "coordinates": [40.721783, -73.943864]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Msgr. McGolrick Park SW corner",
-            "coordinates": [40.723114, -73.944093]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Msgr. McGolrick Park Middle",
-            "coordinates": [40.724482, -73.943401]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Msgr. McGolrick Park NE corner",
-            "coordinates": [40.725717, -73.942711]
-        },
-        {
-            "waypointOnly": true,
-            "name": "Right turn onto Monitor St",
-            "coordinates": [40.725714, -73.942634]
-        },
-        {
-            "name": "PS 110: The Monitor School",
-            "coordinates": [40.723615, -73.942286]
-        }
-   ]
- }
+   "ps110" : {
+      "color" : "#CC3333",
+      "mapHeight" : "450px",
+      "runInfo" : "We leave from McCarren Park Track at 7:30AM, and arrive at the school for a delicious breakfast from Campbell & Co.  Come ride with us!",
+      "stops" : [
+         {
+            "coordinates" : [
+               40.720882,
+               -73.951497
+            ],
+            "name" : "McCarren Park Track",
+            "time" : "7:30"
+         },
+         {
+            "coordinates" : [
+               40.720872,
+               -73.951259
+            ],
+            "name" : "Track Curve 1",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.720832,
+               -73.951033
+            ],
+            "name" : "Track Curve 2",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.720775,
+               -73.950869
+            ],
+            "name" : "Track Curve 3",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.720657,
+               -73.950662
+            ],
+            "name" : "Track Curve 4",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.720618,
+               -73.950629
+            ],
+            "name" : "West Side of Lorimer St (turn off of track)",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.720668,
+               -73.950213
+            ],
+            "name" : "East Side of Lorimer St",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721246,
+               -73.950308
+            ],
+            "name" : "Playground Curve 1",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721343,
+               -73.950333
+            ],
+            "name" : "Playground Curve 2",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721485,
+               -73.950318
+            ],
+            "name" : "Playground Curve 3",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721596,
+               -73.950258
+            ],
+            "name" : "Playground Curve 4",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721711,
+               -73.950036
+            ],
+            "name" : "Playground Curve 5 (top of circle)",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721731,
+               -73.949936
+            ],
+            "name" : "Playground Curve 6",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721721,
+               -73.949765
+            ],
+            "name" : "Playground Curve 7",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721675,
+               -73.949644
+            ],
+            "name" : "Playground Curve 8",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721641,
+               -73.949579
+            ],
+            "name" : "Playground Curve 9",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721522,
+               -73.949418
+            ],
+            "name" : "Playground Curve 7 (turn towards Manhattan Ave)",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721618,
+               -73.949257
+            ],
+            "name" : "Right onto Manhattan Ave",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721299,
+               -73.948856
+            ],
+            "name" : "Left onto Engert Ave",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721299,
+               -73.948856
+            ],
+            "name" : "Left onto Russell St",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.721783,
+               -73.943864
+            ],
+            "name" : "Russel St & Driggs Ave",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.723114,
+               -73.944093
+            ],
+            "name" : "Msgr. McGolrick Park SW corner",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.724482,
+               -73.943401
+            ],
+            "name" : "Msgr. McGolrick Park Middle",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.725717,
+               -73.942711
+            ],
+            "name" : "Msgr. McGolrick Park NE corner",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.725714,
+               -73.942634
+            ],
+            "name" : "Right turn onto Monitor St",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.723615,
+               -73.942286
+            ],
+            "name" : "PS 110: The Monitor School"
+         }
+      ],
+      "title" : "The PS110 Bike to School is a monthly ride to celebrate the joys of biking",
+      "trackerBounds" : {
+         "bottomLeft" : [
+            40.718624,
+            -73.956177
+         ],
+         "topRight" : [
+            40.726309,
+            -73.941841
+         ]
+      }
+   }
 }

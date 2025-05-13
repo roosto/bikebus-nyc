@@ -1,74 +1,116 @@
 {
-  "jackson-heights": {
-    "title": "Jackson Heights Bike Bus: Wednesdays along 34th Ave starting at 7:20am & 2:20pm",
-    "runInfo": "A circuit westbound on 34th Ave starting at 82nd St, turning eastward after 70th St and again headed West after Junction Blvd",
-    "trackerBounds": {
-      "bottomLeft": [40.751406, -73.897264],
-      "topRight": [40.755921, -73.872557]
-    },
-    "mapHeight": "450px",
-    "color": "#CC3333",
-    "stops": [
-      {
-        "name": "82nd St START",
-        "time": "7:20am/2:20pm",
-        "coordinates": [40.753824, -73.884918]
-      },
-      {
-        "name": "70th St/PS 398Q",
-        "time": "7:30am/2:30pm",
-        "coordinates": [40.752611, -73.896351]
-      },
-      {
-        "waypointOnly": true,
-        "name": "34th Ave @ 69th St; Westbound turnaround",
-        "coordinates": [40.752533, -73.897078]
-      },
-      {
-        "waypointOnly": true,
-        "name": "34th Ave @ 69th St; Eastbound turnaround",
-        "coordinates": [40.7524, -73.897054]
-      },
-      {
-        "name": "74th St/I.S. 230",
-        "time": "7:35am/2:50pm",
-        "coordinates": [40.752861, -73.892617]
-      },
-      {
-        "name": "81st St/I.S. 145",
-        "time": "7:40am/3:00pm",
-        "coordinates": [40.753564, -73.886083]
-      },
-      {
-        "name": "82nd St/I.S. 212Q",
-        "time": "7:40am/3:00pm",
-        "coordinates": [40.753647, -73.885161]
-      },
-      {
-        "name": "94th St/I.S. 280",
-        "time": "7:45am/3:05pm",
-        "coordinates": [40.75482, -73.873991]
-      },
-      {
-        "waypointOnly": true,
-        "name": "34th Ave @ Junction; Eastbound turnaround",
-        "coordinates": [40.754984, -73.872778]
-      },
-      {
-        "waypointOnly": true,
-        "name": "34th Ave @ Junction; Westbound turnaround",
-        "coordinates": [40.755089, -73.872834]
-      },
-      {
-        "name": "94th St/PS 149",
-        "time": "7:50am/3:10pm",
-        "coordinates": [40.75499, -73.874021]
-      },
-      {
-        "waypointOnly": true,
-        "name": "34th Ave @ 82nd St; done # end of loop",
-        "coordinates": [40.753824, -73.884918]
+   "jackson-heights" : {
+      "color" : "#CC3333",
+      "mapHeight" : "450px",
+      "runInfo" : "A circuit westbound on 34th Ave starting at 82nd St, turning eastward after 70th St and again headed West after Junction Blvd",
+      "stops" : [
+         {
+            "coordinates" : [
+               40.753824,
+               -73.884918
+            ],
+            "name" : "82nd St START",
+            "time" : "7:20am/2:20pm"
+         },
+         {
+            "coordinates" : [
+               40.752611,
+               -73.896351
+            ],
+            "name" : "70th St/PS 398Q",
+            "time" : "7:30am/2:30pm"
+         },
+         {
+            "coordinates" : [
+               40.752533,
+               -73.897078
+            ],
+            "name" : "34th Ave @ 69th St; Westbound turnaround",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.7524,
+               -73.897054
+            ],
+            "name" : "34th Ave @ 69th St; Eastbound turnaround",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.752861,
+               -73.892617
+            ],
+            "name" : "74th St/I.S. 230",
+            "time" : "7:35am/2:50pm"
+         },
+         {
+            "coordinates" : [
+               40.753564,
+               -73.886083
+            ],
+            "name" : "81st St/I.S. 145",
+            "time" : "7:40am/3:00pm"
+         },
+         {
+            "coordinates" : [
+               40.753647,
+               -73.885161
+            ],
+            "name" : "82nd St/I.S. 212Q",
+            "time" : "7:40am/3:00pm"
+         },
+         {
+            "coordinates" : [
+               40.75482,
+               -73.873991
+            ],
+            "name" : "94th St/I.S. 280",
+            "time" : "7:45am/3:05pm"
+         },
+         {
+            "coordinates" : [
+               40.754984,
+               -73.872778
+            ],
+            "name" : "34th Ave @ Junction; Eastbound turnaround",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.755089,
+               -73.872834
+            ],
+            "name" : "34th Ave @ Junction; Westbound turnaround",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.75499,
+               -73.874021
+            ],
+            "name" : "94th St/PS 149",
+            "time" : "7:50am/3:10pm"
+         },
+         {
+            "coordinates" : [
+               40.753824,
+               -73.884918
+            ],
+            "name" : "34th Ave @ 82nd St; done # end of loop",
+            "waypointOnly" : true
+         }
+      ],
+      "title" : "Jackson Heights Bike Bus: Wednesdays along 34th Ave starting at 7:20am & 2:20pm",
+      "trackerBounds" : {
+         "bottomLeft" : [
+            40.751406,
+            -73.897264
+         ],
+         "topRight" : [
+            40.755921,
+            -73.872557
+         ]
       }
-    ]
-  }
+   }
 }
