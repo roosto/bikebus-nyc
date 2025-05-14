@@ -87,7 +87,7 @@ test(`POST and GET location for \`manhattan-country-school\` route`, async t => 
     body: location
 
   })
-  t.equal(post_response.statusCode, 200, 'POST eturns a status code of 200')
+  t.equal(post_response.statusCode, 200, 'POST returns a status code of 200')
   t.equal(post_response.body, JSON.stringify(location), "POST returns a body equal to POST'ed coordinates")
 
   const get_response = await server.inject({
