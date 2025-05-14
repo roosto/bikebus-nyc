@@ -4,6 +4,31 @@ const https = require('http') // Use 'http' for non-secure connections
 const geolib = require('geolib')
 const { parseArgs } = require('node:util');
 
+function getUsageText() {
+  return "Usage: ride-faker.js [--help] --routekey routeKeyStr routeFile\n"
+}
+
+function getHelpText() {
+  let helpText = ''
+  helpText += getUsageText()
+  helpText += "\n"
+  helpText += "A development utility to post coordinates to a route's beacon page, which\n"
+  helpText += "will simulate a bike bus moving along the route.\n"
+  helpText += "\n" 
+  helpText += " Options:\n"
+  helpText += "    --help      show this text and exit\n"
+  helpText += "    --routeKey  Required. The routeKey to be used when POSTing locations\n"
+  helpText += "                to the API\n"
+  helpText += "\n"
+  helpText += " routeFile:\n"
+  helpText += "    path to a route file, though the file need not neccessarily be a route\n"
+  helpText += "    route file. The only thing that the JSON file needs to have is an array\n"
+  helpText += "    with a key named `stop` underneath a key that matches the values supplied\n"
+  helpText += "    to --routeKey\n"
+
+  return helpText
+}
+
 const allowPositionals = true
 const options = {
     routekey: {
@@ -17,10 +42,11 @@ const options = {
 }
 
 const {values, positionals} = parseArgs({allowPositionals: true, options: options});
-// const args = result.args
-// const file = result.positionals[0]
-console.log({ args: values, files: positionals })
-console.log({ cliArgs: cliArgs, result: parseArgs({args: cliArgs, allowPositionals: true, options: options}) })
+
+if (values.help) {
+  console.log(getHelpText())
+  process.exit(0)
+}
 
 process.exit(0)
 
