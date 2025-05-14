@@ -37,7 +37,7 @@ server.register(require("@fastify/view"), {
 let busIsRunning = true;
 
 //eventually the cms or bus_info.json
-const routes = require("./routes.json");
+const routes = require("./bin/combine_routes.js");
 const published_routes = Object.fromEntries(Object.entries(routes).filter(([key, val]) => val.publish))
 
 // validate `combinedRouteKeys` properties
