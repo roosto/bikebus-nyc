@@ -5,12 +5,12 @@ const geolib = require('geolib')
 const { parseArgs } = require('node:util');
 
 function getUsageText() {
-  return "Usage: ride-faker.js [--help] --routekey routeKeyStr routeFile\n"
+  return "Usage: ride-faker.js [--help] --routekey routeKeyStr routeFile"
 }
 
 function getHelpText() {
   let helpText = ''
-  helpText += getUsageText()
+  helpText += getUsageText() + "\n"
   helpText += "\n"
   helpText += "A development utility to post coordinates to a route's beacon page, which\n"
   helpText += "will simulate a bike bus moving along the route.\n"
@@ -27,6 +27,12 @@ function getHelpText() {
   helpText += "    to --routeKey\n"
 
   return helpText
+}
+
+function exitWithUsage(errorString) {
+  console.error(`Error: ${errorString}`)
+  console.error(getUsageText())
+  process.exit(1)
 }
 
 const allowPositionals = true
@@ -46,6 +52,14 @@ const {values, positionals} = parseArgs({allowPositionals: true, options: option
 if (values.help) {
   console.log(getHelpText())
   process.exit(0)
+}
+
+if (!values.routekey) {
+  exitWithUsage('routeKey is required')
+}
+
+if (positionals.length != 1) {
+  exitWithUsage('you must supply exactly 1 JSON file')
 }
 
 process.exit(0)
