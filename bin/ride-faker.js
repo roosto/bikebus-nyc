@@ -2,6 +2,27 @@
 
 const https = require('http') // Use 'http' for non-secure connections
 const geolib = require('geolib')
+const { parseArgs } = require('node:util');
+
+const allowPositionals = true
+const options = {
+    routekey: {
+      type: 'string',
+      short: 'k',
+    },
+    help: {
+      type: 'boolean',
+      short: 'h',
+    },
+}
+
+const {values, positionals} = parseArgs({allowPositionals: true, options: options});
+// const args = result.args
+// const file = result.positionals[0]
+console.log({ args: values, files: positionals })
+console.log({ cliArgs: cliArgs, result: parseArgs({args: cliArgs, allowPositionals: true, options: options}) })
+
+process.exit(0)
 
 const input_js = {
   "stops": [
