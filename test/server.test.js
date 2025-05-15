@@ -54,28 +54,28 @@ test('requests the beacon page, w/a bogus routeKey, at: `/beacon/I-AM-NOT-HERE/`
   t.match(response.body, /not found/i)
 })
 
-test('requests the beacon page, w/o using a hash, at: `/beacon/manhattan-country-school/`', async t => {
+test('requests the beacon page, w/o using a hash, at: `/beacon/mcs/`', async t => {
   const response = await server.inject({
     method: 'GET',
-    url: '/beacon/manhattan-country-school/'
+    url: '/beacon/mcs/'
   })
   t.equal(response.statusCode, 404, 'returns a status code of 404')
   t.match(response.body, /not found/i)
 })
 
-test(`requests the beacon page, with a hash, at: \`/beacon/manhattan-country-school/${process.env.beacon_hash}\` route`, async t => {
+test(`requests the beacon page, with a hash, at: \`/beacon/mcs/${process.env.beacon_hash}\` route`, async t => {
   const response = await server.inject({
     method: 'GET',
-    url: `/beacon/manhattan-country-school/${process.env.beacon_hash}`
+    url: `/beacon/mcs/${process.env.beacon_hash}`
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
 })
 
-test(`POST and GET location for \`manhattan-country-school\` route`, async t => {
+test(`POST and GET location for \`mcs\` route`, async t => {
   const location = { latitude: 40.803917, longitude: -73.946054 }
   const post_response = await server.inject({
     method: 'POST',
-    url: `/route/manhattan-country-school/location/${process.env.beacon_hash}`,
+    url: `/route/mcs/location/${process.env.beacon_hash}`,
     body: location
 
   })
@@ -84,7 +84,7 @@ test(`POST and GET location for \`manhattan-country-school\` route`, async t => 
 
   const get_response = await server.inject({
     method: 'GET',
-    url: '/route/manhattan-country-school/location'
+    url: '/route/mcs/location'
   })
   t.equal(get_response.statusCode, 200, 'GET returns a status code of 200')
   t.equal(post_response.body, JSON.stringify(location), "GET returns a body equal to POST'ed coordinates")
