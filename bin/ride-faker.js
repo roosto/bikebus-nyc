@@ -18,14 +18,14 @@ function getHelpText() {
   helpText += "\n" 
   helpText += " Options:\n"
   helpText += "    --help      show this text and exit\n"
-  helpText += "    --routeKey  Required. The routeKey to be used when POSTing locations\n"
+  helpText += "    --routekey  Required. The routeKey to be used when POSTing locations\n"
   helpText += "                to the API\n"
   helpText += "\n"
   helpText += " routeFile:\n"
   helpText += "    path to a route file, though the file need not neccessarily be a route\n"
   helpText += "    route file. The only thing that the JSON file needs to have is an array\n"
   helpText += "    with a key named `stop` underneath a key that matches the values supplied\n"
-  helpText += "    to --routeKey\n"
+  helpText += "    to --routekey\n"
 
   return helpText
 }
@@ -66,7 +66,11 @@ if (positionals.length != 1) {
 const jsonFilePath = positionals[0]
 const jsonFromFile = fs.readFileSync(jsonFilePath, 'utf8')
 const parsedJSON = JSON.parse(jsonFromFile)
-const routeKey = Object.keys(parsedJSON)[0]
+const routeKey = Object.keys(parsedJSON).find((key) => key == values.routekey)
+if (!routeKey) {
+  exitWithUsage(`the specified routeKey, '${values.routekey}', was not found in the supplied JSON, '${jsonFilePath}'`)
+}
+const beaconHash = process.env['beacon_hash']
 const stopsArray = parsedJSON[routeKey].stops
 
 function geolibCoordsToGeojson(coord) {
@@ -110,7 +114,7 @@ async function move_to_stop(stop) {
   const options = {
     hostname: 'localhost',
     port: 61015,
-    path: '/route/' + 'manhattan-country-school-too' + '/location/' + 'D3ADB33F',
+    path: `/route/${routeKey}/location/${beaconHash}`,
     method: 'POST',
     headers: {
       'Content-Type': 'application/json', // Set appropriate content type
