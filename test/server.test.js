@@ -5,14 +5,14 @@ process.env.beacon_hash ||= 'HASH_FROM_TESTING'
 const { test } = require('tap')
 const server = require('../server.js')
 
-test('requests the `/manhattan-country-school` route', async t => {
+test('requests the `/mcs` route', async t => {
   const response = await server.inject({
     method: 'GET',
-    url: '/manhattan-country-school'
+    url: '/mcs'
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
   t.match(response.body,  /<[hH]1>\s*MCS Bike Bus/, "<h1> tag contents match 'MCS Bike Bus")
-  t.match(response.body, /\{"manhattan-country-school":\{"title":"MCS Bike Bus: 1st Wednesdays Harlem to UWS"/, "Route JSON is embedded in page body")
+  t.match(response.body, /routes\s*=\s*\{\s*"mcs"\s*:\s*\{/, "Route JSON for `mcs` is embedded in page body")
 })
 
 test('requests the `/manhattan-country-school-too` route', async t => {
