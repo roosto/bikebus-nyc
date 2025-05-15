@@ -2,6 +2,7 @@
 
 const https = require('http') // Use 'http' for non-secure connections
 const geolib = require('geolib')
+const fs = require('node:fs');
 const { parseArgs } = require('node:util');
 
 function getUsageText() {
@@ -62,37 +63,11 @@ if (positionals.length != 1) {
   exitWithUsage('you must supply exactly 1 JSON file')
 }
 
-process.exit(0)
-
-const input_js = {
-  "stops": [
-    {
-      "name": "Mt Morris Park W @ 120th St",
-      "time": "7:45",
-      "coordinates": [40.803902, -73.946153]
-    },
-    {
-      "waypointOnly": true,
-      "name": "Right turn onto 5th Ave",
-      "coordinates": [40.803243, -73.944614]
-    },
-    {
-      "waypointOnly": true,
-      "name": "5th Ave @ Duke Ellington Cir",
-      "coordinates": [40.797113, -73.949096]
-    },
-    {
-      "waypointOnly": true,
-      "name": "Right turn onto Duke Ellington Cir",
-      "coordinates": [40.797135, -73.949202]
-    },
-    {
-      "waypointOnly": false,
-      "name": "End at Grand Army Plaza",
-      "coordinates": [40.764295, -73.973032]
-    }
-  ]
-}
+const jsonFilePath = positionals[0]
+const jsonFromFile = fs.readFileSync(jsonFilePath, 'utf8')
+const parsedJSON = JSON.parse(jsonFromFile)
+const routeKey = Object.keys(parsedJSON)[0]
+const stopsArray = parsedJSON[routeKey].stops
 
 function geolibCoordsToGeojson(coord) {
   return [coord.latitude, coord.longitude]
@@ -160,11 +135,11 @@ async function move_to_stop(stop) {
 }
 
 const doTheThing = async () => {
-  let stopsWithInfilledWaypoints = [input_js.stops[0]]
-  for (let i = 1; i < input_js.stops.length; i++) {
-    let infilledWaypoints = calculateWaypoints(input_js.stops[i - 1].coordinates, input_js.stops[i].coordinates).map((val) => ({ name: 'calculated Waypoint', coordinates: val }) )
+  let stopsWithInfilledWaypoints = [stopsArray[0]]
+  for (let i = 1; i < stopsArray.length; i++) {
+    let infilledWaypoints = calculateWaypoints(stopsArray[i - 1].coordinates, stopsArray[i].coordinates).map((val) => ({ name: 'calculated Waypoint', coordinates: val }) )
     console.log("adding these waypoints: " + infilledWaypoints)
-    infilledWaypoints.push(input_js.stops[i])
+    infilledWaypoints.push(stopsArray[i])
     stopsWithInfilledWaypoints = stopsWithInfilledWaypoints.concat(infilledWaypoints)
   }
 
