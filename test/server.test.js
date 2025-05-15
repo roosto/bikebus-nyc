@@ -15,24 +15,16 @@ test('requests the `/mcs` route', async t => {
   t.match(response.body, /routes\s*=\s*\{\s*"mcs"\s*:\s*\{/, "Route JSON for `mcs` is embedded in page body")
 })
 
-test('requests the `/manhattan-country-school-too` route', async t => {
+test('requests the `/bergen` "meta" route', async t => {
   const response = await server.inject({
     method: 'GET',
-    url: '/manhattan-country-school-too'
+    url: '/bergen'
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
-  t.match(response.body,  /<[hH]1>\s*\(TEST\) MCS Bike Bus/, "<h1> tag contenst match '(Test) MCS Bike Bus'")
-  t.match(response.body, /\{"manhattan-country-school-too":\{"title":"\(TEST\) MCS Bike Bus: 1st Wednesdays Harlem to UWS"/, "Route JSON is embedded in page body")
-})
-
-test('requests the combination of both routes at: `/?routeKey=manhattan-country-school&routeKey=manhattan-country-school-too`', async t => {
-  const response = await server.inject({
-    method: 'GET',
-    url: '/?routeKey=manhattan-country-school&routeKey=manhattan-country-school-too'
-  })
-  t.equal(response.statusCode, 200, 'returns a status code of 200')
-  t.match(response.body, /const\s+routes\s*=\s*\{"manhattan-country-school"/, "1st Route JSON is embedded in page body")
-  t.match(response.body, /\s*,\s*"manhattan-country-school-too"\s*:\s*\{\s*"title"\s*:\s*"\(TEST\) MCS Bike Bus/, "2nd Route JSON is embedded in page body")
+  t.match(response.body, /<[hH]1>\s*Bergen Bike Bus/, "<h1> tag contents match 'Bergen Bike Bus'")
+  t.match(response.body, /routes\s*=\s*\{\s*"bergen-to-court"\s*:\s*\{/, "Route JSON is embedded in page body")
+  t.match(response.body, /trackBusLocation\('bergen-to-court'\)/, 'Sets up GET calls for `bergen-to-court` location endpoint')
+  t.match(response.body, /trackBusLocation\('bergen-to-ps372'\)/, 'Sets up GET calls for `bergen-to-ps378` location endpoint')
 })
 
 test('requests the `/I-AM-NOT_HERE` route', async t => {
