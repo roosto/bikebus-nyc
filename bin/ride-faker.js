@@ -6,7 +6,7 @@ const fs = require('node:fs');
 const { parseArgs } = require('node:util');
 
 function getUsageText() {
-  return "Usage: ride-faker.js [--help] --routekey routeKeyStr routeFile"
+  return "Usage: ride-faker.js [--help] --beacon-hash beacon_hash --routekey routeKeyStr routeFile"
 }
 
 function getHelpText() {
@@ -17,9 +17,12 @@ function getHelpText() {
   helpText += "will simulate a bike bus moving along the route.\n"
   helpText += "\n" 
   helpText += " Options:\n"
-  helpText += "    --help      show this text and exit\n"
-  helpText += "    --routekey  Required. The routeKey to be used when POSTing locations\n"
-  helpText += "                to the API\n"
+  helpText += "    --beacon-hash|-b  Required. The `beacon_hash` value to use when POSTing,\n"
+  helpText += "                      if not supplied, will use the Envoronment variable\n"
+  helpText += "                      named `beacon_hash`, if it exists and is set\n"
+  helpText += "    --help|-h         show this text and exit\n"
+  helpText += "    --routekey|-k     Required. The routeKey to be used when POSTing\n"
+  helpText += "                      locations to the API\n"
   helpText += "\n"
   helpText += " routeFile:\n"
   helpText += "    path to a route file, though the file need not neccessarily be a route\n"
@@ -42,6 +45,11 @@ const options = {
       type: 'string',
       short: 'k',
     },
+    'beacon-hash': {
+      type: 'string',
+      short: 'b',
+      default: process.env['beacon_hash']
+    },
     help: {
       type: 'boolean',
       short: 'h',
@@ -59,6 +67,10 @@ if (!values.routekey) {
   exitWithUsage('routeKey is required')
 }
 
+if (!values['beacon-hash']) {
+  exitWithUsage('`--beacon-hash` not supplied or found in the Environment as `beacon_hash`')
+}
+
 if (positionals.length != 1) {
   exitWithUsage('you must supply exactly 1 JSON file')
 }
@@ -70,7 +82,7 @@ const routeKey = Object.keys(parsedJSON).find((key) => key == values.routekey)
 if (!routeKey) {
   exitWithUsage(`the specified routeKey, '${values.routekey}', was not found in the supplied JSON, '${jsonFilePath}'`)
 }
-const beaconHash = process.env['beacon_hash']
+const beaconHash = values['beacon-hash']
 const stopsArray = parsedJSON[routeKey].stops
 
 function geolibCoordsToGeojson(coord) {
