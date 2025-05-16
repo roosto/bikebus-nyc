@@ -5,8 +5,9 @@ const geolib = require('geolib')
 const fs = require('node:fs');
 const { parseArgs } = require('node:util');
 
+const tickIntervalMilisecondsDefault = 15000
 function getUsageText() {
-  return "Usage: ride-faker.js [--help] --beacon-hash beacon_hash --routekey routeKeyStr routeFile"
+  return "Usage: ride-faker.js [--help] --beacon-hash beacon_hash --routekey routeKeyStr [--tick-interval miliseconds] routeFile"
 }
 
 function getHelpText() {
@@ -17,12 +18,14 @@ function getHelpText() {
   helpText += "will simulate a bike bus moving along the route.\n"
   helpText += "\n" 
   helpText += " Options:\n"
-  helpText += "    --beacon-hash|-b  Required. The `beacon_hash` value to use when POSTing,\n"
-  helpText += "                      if not supplied, will use the Envoronment variable\n"
-  helpText += "                      named `beacon_hash`, if it exists and is set\n"
-  helpText += "    --help|-h         show this text and exit\n"
-  helpText += "    --routekey|-k     Required. The routeKey to be used when POSTing\n"
-  helpText += "                      locations to the API\n"
+  helpText += "    --beacon-hash|-b    Required. The `beacon_hash` value to use when\n"
+  helpText += "                        POSTing. If not supplied, will use the Environment\n"
+  helpText += "                        variable `beacon_hash`, if it exists and is set\n"
+  helpText += "    --help|-h           show this text and exit\n"
+  helpText += "    --routekey|-k       Required. The routeKey to be used when POSTing\n"
+  helpText += "                        locations to the API\n"
+  helpText += "    --tick-interval|-t  Time, in miliseconds, to wait between POSTing the\n"
+  helpText += `                        next coordinates along the route. Default: ${tickIntervalMilisecondsDefault}\n`
   helpText += "\n"
   helpText += " routeFile:\n"
   helpText += "    path to a route file, though the file need not neccessarily be a route\n"
@@ -50,6 +53,11 @@ const options = {
       short: 'b',
       default: process.env['beacon_hash']
     },
+    'tick-interval': {
+      type: 'string',
+      short: 't',
+      default: `${tickIntervalMilisecondsDefault}`
+    },
     help: {
       type: 'boolean',
       short: 'h',
@@ -75,6 +83,11 @@ if (positionals.length != 1) {
   exitWithUsage('you must supply exactly 1 JSON file')
 }
 
+// TODO: should be using parseInt in a try/catch and then validating result as a positive/non-zero
+if (!values['tick-interval'].trim().match(/^[1-9]\d*$/)) {
+  exitWithUsage(`--tick-interval must be a non-zero positive integer; got: '${values['tick-interval']}'`)
+}
+
 const jsonFilePath = positionals[0]
 const jsonFromFile = fs.readFileSync(jsonFilePath, 'utf8')
 const parsedJSON = JSON.parse(jsonFromFile)
@@ -83,6 +96,7 @@ if (!routeKey) {
   exitWithUsage(`the specified routeKey, '${values.routekey}', was not found in the supplied JSON, '${jsonFilePath}'`)
 }
 const beaconHash = values['beacon-hash']
+const tickIntervalMiliseconds = values['tick-interval'].trim()
 const stopsArray = parsedJSON[routeKey].stops
 
 function geolibCoordsToGeojson(coord) {
@@ -162,7 +176,7 @@ const doTheThing = async () => {
   for (const stop of stopsWithInfilledWaypoints) {
     await move_to_stop(stop)
     console.log("Moved to: " + stop.name)
-    await sleep(15000)
+    await sleep(tickIntervalMiliseconds)
   }
 
   console.log("Done");
