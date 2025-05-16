@@ -83,11 +83,12 @@ if (positionals.length != 1) {
   exitWithUsage('you must supply exactly 1 JSON file')
 }
 
-// TODO: should be using parseInt in a try/catch and then validating result as a positive/non-zero
-if (!values['tick-interval'].trim().match(/^[1-9]\d*$/)) {
+let tickIntervalAsInt = parseInt(values['tick-interval'])
+if (tickIntervalAsInt === NaN || tickIntervalAsInt < 1) {
   exitWithUsage(`--tick-interval must be a non-zero positive integer; got: '${values['tick-interval']}'`)
 }
 
+const tickIntervalMiliseconds = tickIntervalAsInt
 const jsonFilePath = positionals[0]
 const jsonFromFile = fs.readFileSync(jsonFilePath, 'utf8')
 const parsedJSON = JSON.parse(jsonFromFile)
@@ -96,7 +97,6 @@ if (!routeKey) {
   exitWithUsage(`the specified routeKey, '${values.routekey}', was not found in the supplied JSON, '${jsonFilePath}'`)
 }
 const beaconHash = values['beacon-hash']
-const tickIntervalMiliseconds = values['tick-interval'].trim()
 const stopsArray = parsedJSON[routeKey].stops
 
 function geolibCoordsToGeojson(coord) {
