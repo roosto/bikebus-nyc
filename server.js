@@ -37,7 +37,38 @@ server.register(require("@fastify/view"), {
 let busIsRunning = true;
 
 //eventually the cms or bus_info.json
-const routes = require("./routes.json");
+const routes = require("./routes.js");
+const published_routes = Object.fromEntries(Object.entries(routes).filter(([key, val]) => val.publish))
+
+// validate `combinedRouteKeys` properties
+let combinedRoutesErrors = []
+Object.entries(routes).forEach(entry => {
+  const [key, route] = entry;
+  if (!route.hasOwnProperty('combinedRouteKeys')) {
+    return
+  }
+
+  if (!Array.isArray(route.combinedRouteKeys)) {
+    combinedRoutesErrors.push(`In route '${key}': combinedRouteKeys is not an Array: '${route.combinedRouteKeys}'`)
+    return
+  }
+
+  const combinedRoutesCount = route.combinedRouteKeys.length
+  if (combinedRoutesCount < 2) {
+    combinedRoutesErrors.push(`In route '${key}': combinedRouteKeys has ${combinedRoutesCount} element(s), but needs 2 or more`)
+    return
+  }
+
+  route.combinedRouteKeys.forEach(routeKey => {
+    if (!routes.hasOwnProperty(routeKey)) {
+      combinedRoutesErrors.push(`In route '${key}.combinedRouteKeys': '${routeKey}' does not exist as a key in routes`)
+    }
+  })
+})
+
+if(combinedRoutesErrors.length > 0) {
+  throw new Error(combinedRoutesErrors.join("\n"))
+}
 
 /**
  * Our home page route
@@ -45,17 +76,21 @@ const routes = require("./routes.json");
  * Returns src/pages/index.hbs with data built into it
  */
 
+server.get("/", async function (request, reply) {
+  // The Handlebars code will be able to access the routes values and build them into the page
+  return reply.view("/src/pages/index.hbs", {routes: published_routes})
+});
+
 server.get("/:routeKey", async function (request, reply) {
-  let routeKeys = [].concat(request.query.routeKey || request.params.routeKey || "manhattan-country-school");
-
-  let routeKey = routeKeys[0]
-
-  let route;
-
+  const routeKey = request.params.routeKey
   if (!routes.hasOwnProperty(routeKey)) {
-    return reply.code(404).type("text/plain").send("Route not found.");
-  } else {
-    route = routes[routeKey];
+    return reply.code(404).type("text/plain").send(`Route not found: '${routeKey}'`);
+  }
+
+  let routeKeys = [routeKey]
+  let route = routes[routeKey]
+  if (route.hasOwnProperty('combinedRouteKeys')) {
+    routeKeys = route.combinedRouteKeys
   }
 
   await storage.init();

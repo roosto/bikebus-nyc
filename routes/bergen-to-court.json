@@ -1,0 +1,153 @@
+{
+   "bergen-to-court" : {
+      "color" : "#EFB143",
+      "mapHeight" : "250px",
+      "mapWidth" : "550px",
+      "runInfo" : "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
+      "publish" : false,
+      "stops" : [
+         {
+            "coordinates" : [
+               40.673982,
+               -73.91115
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Rockaway Av",
+            "subtitle" : "",
+            "time" : "7:05 - 7:20"
+         },
+         {
+            "coordinates" : [
+               40.674435,
+               -73.91946
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Howard Av",
+            "subtitle" : "",
+            "time" : "7:25"
+         },
+         {
+            "coordinates" : [
+               40.674895,
+               -73.927767
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Rochester Av",
+            "subtitle" : "",
+            "time" : "7:30"
+         },
+         {
+            "coordinates" : [
+               40.675787,
+               -73.94439
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Brooklyn Ave",
+            "subtitle" : "",
+            "time" : "7:35"
+         },
+         {
+            "coordinates" : [
+               40.677523,
+               -73.959131
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Classon Av",
+            "subtitle" : "",
+            "time" : "7:40"
+         },
+         {
+            "coordinates" : [
+               40.678175,
+               -73.962225
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Grand Av",
+            "subtitle" : "",
+            "time" : "7:45"
+         },
+         {
+            "coordinates" : [
+               40.67943,
+               -73.968222
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Vanderbilt Av",
+            "subtitle" : "",
+            "time" : "7:50"
+         },
+         {
+            "coordinates" : [
+               40.680749,
+               -73.974518
+            ],
+            "name" : "6th Ave",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+               40.680876,
+               -73.975161
+            ],
+            "name" : "Flatbush",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+               40.680875,
+               -73.975423
+            ],
+            "name" : "After bend east of Flatbush",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+               40.681444, -73.976901
+            ],
+            "name" : "5th Ave",
+            "markerClass" : "rotate-65",
+            "time" : "7:55"
+         },
+         {
+            "coordinates" : [
+               40.68254,
+               -73.97974
+            ],
+            "name" : "4th Ave",
+            "markerClass" : "rotate-65 label-left push-up-8x"
+         },
+         {
+            "coordinates" : [
+               40.685023,
+               -73.986139
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Bergen @ Bond",
+            "subtitle" : "",
+            "time" : "7:55"
+         },
+         {
+            "coordinates" : [
+               40.687828,
+               -73.993264
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Court St",
+            "subtitle" : "",
+            "time" : "8:05"
+         }
+      ],
+      "title" : "Bergen Bike Bus Tracker",
+      "trackerBounds" : {
+         "bottomLeft" : [
+            40.685828,
+            -73.91115
+         ],
+         "topRight" : [
+            40.667982,
+            -73.991364
+         ]
+      },
+      "trackerTileSrcPattern" : "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png"
+   }
+}

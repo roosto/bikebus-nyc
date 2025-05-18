@@ -1,0 +1,149 @@
+{
+   "ps770" : {
+      "color" : "#CC3333",
+      "mapHeight" : "300px",
+      "runInfo" : "A new-ish Bike Bus that travels East from Prospect Park to PS 770",
+      "publish" : true,
+      "stops" : [
+         {
+            "coordinates" : [
+               40.660497,
+               -73.962954
+            ],
+            "markerClass" : "label-left rotate-65",
+            "name" : "Ocean Ave @ Lincoln Rd",
+            "subtitle" : "",
+            "time" : "7:45"
+         },
+         {
+            "coordinates" : [
+               40.660914,
+               -73.960908
+            ],
+            "name" : "Lincoln Rd @ Flatbush Ave",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.660541,
+               -73.960659
+            ],
+            "name" : "Flatbush, btwn Lincoln & Maple",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.660216,
+               -73.960623
+            ],
+            "name" : "Flatbush @ Maple",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.660454,
+               -73.956873
+            ],
+            "markerClass" : "label-left rotate-65",
+            "name" : "Bedford Ave",
+            "time" : "7:55"
+         },
+         {
+            "coordinates" : [
+               40.661155,
+               -73.945501
+            ],
+            "markerClass" : "label-left rotate-65",
+            "name" : "Brooklyn Ave",
+            "time" : "8:00"
+         },
+         {
+            "coordinates" : [
+               40.661503,
+               -73.939888
+            ],
+            "markerClass" : "label-left rotate-65",
+            "name" : "Albany Ave",
+            "time" : "8:05"
+         },
+         {
+            "coordinates" : [
+               40.661668,
+               -73.93741
+            ],
+            "name" : "Maple @ Troy West side",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.661706,
+               -73.937124
+            ],
+            "name" : "Maple @ Troy East side",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.662051,
+               -73.931497
+            ],
+            "markerClass" : "label-left rotate-65",
+            "name" : "Utica Ave",
+            "time" : "8:10"
+         },
+         {
+            "coordinates" : [
+               40.662658,
+               -73.931557
+            ],
+            "name" : "Utica @ Remsen",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.663243,
+               -73.931608
+            ],
+            "name" : "Utica @ E New York Ave",
+            "time" : "7:55",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.663617,
+               -73.930698
+            ],
+            "name" : "E New York Ave @ E 91st",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.664323,
+               -73.929024
+            ],
+            "name" : "E New York Ave @ 93rd",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.663997,
+               -73.928726
+            ],
+            "markerClass" : "label-left rotate-65",
+            "name" : "PS 770",
+            "time" : "8:15"
+         }
+      ],
+      "title" : "PS 770 Bike Bus: Fridays, From Ocean Ave @ Lincoln Rd via Maple",
+      "trackerBounds" : {
+         "bottomLeft" : [
+            40.65999,
+            -73.964402
+         ],
+         "topRight" : [
+            40.66662,
+            -73.924182
+         ]
+      }
+   }
+}
