@@ -162,6 +162,7 @@ async function move_to_stop(stop) {
       headers: {
         'Content-Type': 'application/json', // Set appropriate content type
       },
+      timeout: 5000,
     })
     console.log(`statusCode: ${response.status}`)
   } catch (error) {
