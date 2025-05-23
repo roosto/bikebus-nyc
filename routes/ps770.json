@@ -3,7 +3,7 @@
       "color" : "#CC3333",
       "mapHeight" : "300px",
       "runInfo" : "A new-ish Bike Bus that travels East from Prospect Park to PS 770",
-      "publish" : true,
+      "publish" : false,
       "stops" : [
          {
             "coordinates" : [
