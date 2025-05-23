@@ -13,35 +13,33 @@ function getUsageText() {
 }
 
 function getHelpText() {
-  let helpText = ''
-  helpText += getUsageText() + "\n"
-  helpText += "\n"
-  helpText += "A development utility to post coordinates to a route's beacon page, which\n"
-  helpText += "will simulate a bike bus moving along the route.\n"
-  helpText += "\n" 
-  helpText += " Options:\n"
-  helpText += "    --beacon-hash|-b    Required. The `beacon_hash` value to use when\n"
-  helpText += "                        POSTing. If not supplied, will use the Environment\n"
-  helpText += "                        variable `beacon_hash`, if it exists and is set\n"
-  helpText += "    --help|-h           show this text and exit\n"
-  helpText += "    --routekey|-k       Required. The routeKey to be used when POSTing\n"
-  helpText += "                        locations to the API\n"
-  helpText += "    --tick-interval|-t  Time, in miliseconds, to wait between POSTing the\n"
-  helpText += `                        next coordinates along the route. Default: ${tickIntervalMilisecondsDefault}\n`
-  helpText += "    --remote-host|-s    Address of the web server where we will POST to.\n"
-  helpText += `                        Default: ${remoteHostDefault}\n`
-  helpText += `    --remote-port|-p    TCP port on the remote host. Default: ${remotePortDefault}\n`
-  helpText += "                        If the ENV var 'PORT' is set, and '--remote-port'\n"
-  helpText += "                        is not specified as part of the cli invocation, the\n"
-  helpText += `                        value from the ENV var will be used instead of ${remotePortDefault}\n`
-  helpText += "\n"
-  helpText += " routeFile:\n"
-  helpText += "    path to a route file, though the file need not neccessarily be a route\n"
-  helpText += "    route file. The only thing that the JSON file needs to have is an array\n"
-  helpText += "    with a key named `stop` underneath a key that matches the values supplied\n"
-  helpText += "    to --routekey\n"
+  return getUsageText() + `
 
-  return helpText
+A development utility to post coordinates to a route's beacon page, which
+will simulate a bike bus moving along the route.
+
+ Options:
+    --beacon-hash|-b    Required. The \`beacon_hash\` value to use when
+                        POSTing. If not supplied, will use the Environment
+                        variable \`beacon_hash\`, if it exists and is set
+    --help|-h           show this text and exit
+    --routekey|-k       Required. The routeKey to be used when POSTing
+                        locations to the API
+    --tick-interval|-t  Time, in miliseconds, to wait between POSTing the
+                        next coordinates along the route. Default: ${tickIntervalMilisecondsDefault}
+    --remote-host|-s    Address of the web server where we will POST to.
+                        Default: ${remoteHostDefault}
+    --remote-port|-p    TCP port on the remote host. Default: ${remotePortDefault}
+                        If the ENV var 'PORT' is set, and '--remote-port'
+                        is not specified as part of the cli invocation, the
+                        value from the ENV var will be used instead of ${remotePortDefault}
+
+ routeFile:
+    path to a route file, though the file need not neccessarily be a route
+    route file. The only thing that the JSON file needs to have is an array
+    with a key named \`stop\` underneath a key that matches the values supplied
+    to --routekey
+`
 }
 
 function exitWithUsage(errorString) {
