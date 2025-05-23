@@ -106,7 +106,7 @@
             ],
             "name" : "5th Ave",
             "markerClass" : "rotate-65",
-            "time" : "7:55"
+            "waypointOnly": true
          },
          {
             "coordinates" : [
@@ -114,17 +114,17 @@
                -73.97974
             ],
             "name" : "4th Ave",
-            "markerClass" : "rotate-65 label-left push-up-8x"
+            "markerClass" : "rotate-65",
+            "time": "7:55"
          },
          {
             "coordinates" : [
                40.685023,
                -73.986139
             ],
-            "markerClass" : "rotate-65",
-            "name" : "Bergen @ Bond",
-            "subtitle" : "",
-            "time" : "7:55"
+            "markerClass" : "rotate-65 label-left push-up-6x",
+            "name" : "Bond St",
+            "subtitle" : ""
          },
          {
             "coordinates" : [
