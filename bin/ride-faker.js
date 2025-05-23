@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const https = require('http') // Use 'http' for non-secure connections
+const axios = require('axios') // Use 'http' for non-secure connections
 const geolib = require('geolib')
 const fs = require('node:fs');
 const { parseArgs } = require('node:util');
@@ -156,31 +156,18 @@ async function sleep(ms) {
 }
 
 async function move_to_stop(stop) {
-  const options = {
-    hostname: remoteHost,
-    port: remotePort,
-    path: `/route/${routeKey}/location/${beaconHash}`,
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json', // Set appropriate content type
-    },
-  };
-    
   const data = JSON.stringify(geojsonToGeolibCoords(stop.coordinates));
-  const req = https.request(options, (res) => {
-    console.log(`statusCode: ${res.statusCode}`);
-  
-    res.on('data', (d) => {
-      process.stdout.write(d);
-    });
-  });
-  
-  req.on('error', (error) => {
+  try {
+    const response = await axios.post(`http://${remoteHost}:${remotePort}/route/${routeKey}/location/${beaconHash}`, data, {
+      headers: {
+        'Content-Type': 'application/json', // Set appropriate content type
+      },
+    })
+    console.log(`statusCode: ${response.status}`)
+  } catch (error) {
     console.error(error);
-  });
-  
-  req.write(data);
-  req.end();
+    throw error;
+  }
 }
 
 const doTheThing = async () => {
