@@ -1,0 +1,137 @@
+{
+   "brownsville" : {
+      "color" : "#CC3333",
+      "mapHeight" : "450px",
+      "runInfo" : "Track our bike bus live every Friday Morning at 7:30am! #EASTBKBIKECLUB",
+      "publish" : false,
+      "stops" : [
+         {
+            "coordinates" : [
+               40.671512,
+               -73.908607
+            ],
+            "markerClass" : "label-left push-down",
+            "name" : "PS 298/BCMS",
+            "time" : "7:55"
+         },
+         {
+            "coordinates" : [
+               40.671333,
+               -73.908567
+            ],
+            "name" : "in front of library",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.671512,
+               -73.907343
+            ],
+            "name" : "Glenmore Ave @ Mother Gaston Blvd",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.667705,
+               -73.906366
+            ],
+            "name" : "Mother Gaston Blvd @ Pitkin Ave",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.666191,
+               -73.905971
+            ],
+            "markerClass" : "label-right push-up-4x",
+            "name" : "Mother Gaston Blvd @ Blake Ave",
+            "time" : "7:50"
+         },
+         {
+            "coordinates" : [
+               40.66564,
+               -73.909707
+            ],
+            "markerClass" : "label-left push-up-4x rotate-35",
+            "name" : "Blake Ave @ Rockaway Ave",
+            "time" : "7:45"
+         },
+         {
+            "coordinates" : [
+               40.665361,
+               -73.911569
+            ],
+            "name" : "Blake Ave @ Bristol St",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.664669,
+               -73.911392
+            ],
+            "name" : "Brownsville Neighborhood Health Action Center",
+            "time" : "7:40"
+         },
+         {
+            "coordinates" : [
+               40.663824,
+               -73.911178
+            ],
+            "name" : "Bristol St @ Dumont Ave",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.663687,
+               -73.912135
+            ],
+            "name" : "Dumont Ave @ Thomas S Boyland S",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.662138,
+               -73.911739
+            ],
+            "name" : "Thomas S Boyland S @ Lavonia Ave",
+            "time" : "7:35"
+         },
+         {
+            "coordinates" : [
+               40.660611,
+               -73.91135
+            ],
+            "name" : "Thomas S Boyland St @ Riverdale Ave",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.660263,
+               -73.913655
+            ],
+            "name" : "in front of Riverdale Ave Community School",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+               40.660081,
+               -73.913605
+            ],
+            "markerClass" : "push-down-4x",
+            "name" : "Riverdale Ave Community School",
+            "time" : "7:30"
+         }
+      ],
+      "title" : "Brownsville BikeBus: Connecting our schools, communities and public spaces through biking",
+      "trackerBounds" : {
+         "bottomLeft" : [
+            40.658512,
+            -73.914667
+         ],
+         "topRight" : [
+            40.672899,
+            -73.906678
+         ]
+      }
+   }
+}

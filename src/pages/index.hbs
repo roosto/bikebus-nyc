@@ -16,80 +16,22 @@
     <meta property="og:description" content="Track all three routes live on this page on every Wednesday beginning at 7:30am.">
     <meta property="og:type" content="website">
     
-    <title>Bike Bus Tracker</title>
-
-    <style>
-      body { background-color:white; font-family: sans-serif, helvetica, arial;
-      text-align: center; } h2 { margin-left: auto; margin-right: auto;
-      width:400px; max-width:100%; } a.bus-link-txt { display:inline-block;
-      color: black; } a.north-halsted { background-color: yellow; }
-      a.south-halsted { background-color: pink; } a.milwaukee {
-      background-color: lightblue; }  a.earth1 {
-      background-color: lightgreen; max-width:300px;} a.earth2 {
-      background-color: lightblue; max-width:300px;} img.preview { width: 50%; float:left; }
-      img.bus-link-img { width:100%; } @media (max-width: 500px) { img.preview {
-      /* margin-left: auto; margin-right:auto; */ width: 100% !important; } } /*
-      div.preview-container { width: 100%; margin-left:auto; margin-right: auto;
-      } */
-    </style>
+    <title>bikebus.nyc Trackers</title>
   </head>
   <body>
  
     <!-- This is the start of content for our page -->
 
-    <h1>Wednesday Bike Bus Tracker</h1>
-    <!-- <a class="bus-link-txt south-halsted" href="https://bikegridnow.org/events/s-halsted-bike-bus-run-3"> -->
-    <a class="bus-link-txt north-halsted" href="/north-halsted">
-      <!-- <a class="bus-link-txt north-halsted" href="https://bikegridnow.org/events/n-halsted-bike-bus-run-8"> -->
-
-      <h2>
-        Track the North Halsted Bike Bus<br />
-        <!-- North Halsted Bike Bus Info &rarr;<br /> -->
-        <!--       <img class="bus-link-img" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-halsted.png?v=1662526286000" /> -->
-      </h2>
-    </a>
-
-    <a class="bus-link-txt milwaukee" href="/milwaukee">
-      <!-- <a class="bus-link-txt milwaukee" href="https://bikegridnow.org/events/milwaukee-bike-bus-run-6"> -->
-
-      <h2>
-        Track the Milwaukee Bike Bus<br />
-        <!-- Milwaukee Bike Bus Info &rarr;<br /> -->
-
-        <!--       <img class="bus-link-img" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526286000" /> -->
-
-      </h2>
-    </a>
-
-    <a class="bus-link-txt south-halsted" href="south-halsted">
-      <!-- <a class="bus-link-txt south-halsted" href="https://bikegridnow.org/events/s-halsted-bike-bus-run-3"> -->
-      <h2>
-        Track the South Halsted Bike Bus<br />
-        <!-- South Halsted Bike Bus Info &rarr;<br /> -->
-
-        <!--       <img class="bus-link-img" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/header-mke.png?v=1662526286000" /> -->
-
-      </h2>
-    </a>
+    <h1>bikebus.nyc Trackers</h1>
+        <ul>
+          {{#each routes}}
+              <li><a href="{{@key}}">{{this.title}}</a></li>
+          {{/each}}
+        </ul>
 
     <h3>
       Brought to you by
-      <a href="https://bikegridnow.org">CHICAGO, BIKE GRID NOW!</a>
+      <a href="https://bikebus.nyc/">bikebus.nyc</a>
     </h3>
-    <p>
-      Track
-      <b>all three</b>
-      routes live on this page on
-      <b>every Wednesday</b>
-      beginning at 7:30am.
-    </p>
-      <!--     <ul>
-      <li><a href="https://bikegridnow.org/events/oC4yLGLQclItnyakpUJa">RSVP and route details for the Halsted Bike Bus</a></li>
-      <li><a href="https://bikegridnow.org/events/N8l4SpGUwws1JMRw8kPD">RSVP and route details for the Milwaukee Bike Bus</a></li>
-    </ul>
-    <div class="preview-container">
-      <img class="preview" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/BIKE-BUS-FLYER_09.07_v2.png?v=1662474216634" />
-      <img class="preview" src="https://cdn.glitch.global/6ba8c1b0-9df4-482f-9009-77d10d780dbb/BIKE-BUS-FLYER_MILWAUKEE_09.07_b.png?v=1662474208581" />      
-    </div> -->
   </body>
 </html>

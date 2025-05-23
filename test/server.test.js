@@ -5,34 +5,39 @@ process.env.beacon_hash ||= 'HASH_FROM_TESTING'
 const { test } = require('tap')
 const server = require('../server.js')
 
-test('requests the `/manhattan-country-school` route', async t => {
+test('requests the home page at `/`', async t => {
   const response = await server.inject({
     method: 'GET',
-    url: '/manhattan-country-school'
+    url: '/'
+  })
+  t.equal(response.statusCode, 200, 'returns a status code of 200')
+  t.match(response.body, /<h1>bikebus.nyc Trackers<\/h1>/, "<h1> tag says 'bikebus.nyc Trackers'")
+  t.match(response.body, /<a href="bergen">Bergen Bike Bus/, "Link to Bergen Bike exists")
+  t.match(response.body, /<a href="ps110">The PS110/, "Link to PS 110 Bike Bus exists")
+  t.match(response.body, /<a href="ps770">PS 770 Bike Bus/, "Link to PS 770 Bike Bus exists")
+  t.notMatch(response.body, /<a href="bergen-to-court">/, "`bergen-to-court` route is not published on home page")
+})
+
+test('requests the `/mcs` route', async t => {
+  const response = await server.inject({
+    method: 'GET',
+    url: '/mcs'
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
   t.match(response.body,  /<[hH]1>\s*MCS Bike Bus/, "<h1> tag contents match 'MCS Bike Bus")
-  t.match(response.body, /\{"manhattan-country-school":\{"title":"MCS Bike Bus: 1st Wednesdays Harlem to UWS"/, "Route JSON is embedded in page body")
+  t.match(response.body, /routes\s*=\s*\{\s*"mcs"\s*:\s*\{/, "Route JSON for `mcs` is embedded in page body")
 })
 
-test('requests the `/manhattan-country-school-too` route', async t => {
+test('requests the `/bergen` "meta" route', async t => {
   const response = await server.inject({
     method: 'GET',
-    url: '/manhattan-country-school-too'
+    url: '/bergen'
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
-  t.match(response.body,  /<[hH]1>\s*\(TEST\) MCS Bike Bus/, "<h1> tag contenst match '(Test) MCS Bike Bus'")
-  t.match(response.body, /\{"manhattan-country-school-too":\{"title":"\(TEST\) MCS Bike Bus: 1st Wednesdays Harlem to UWS"/, "Route JSON is embedded in page body")
-})
-
-test('requests the combination of both routes at: `/?routeKey=manhattan-country-school&routeKey=manhattan-country-school-too`', async t => {
-  const response = await server.inject({
-    method: 'GET',
-    url: '/?routeKey=manhattan-country-school&routeKey=manhattan-country-school-too'
-  })
-  t.equal(response.statusCode, 200, 'returns a status code of 200')
-  t.match(response.body, /const\s+routes\s*=\s*\{"manhattan-country-school"/, "1st Route JSON is embedded in page body")
-  t.match(response.body, /\s*,\s*"manhattan-country-school-too"\s*:\s*\{\s*"title"\s*:\s*"\(TEST\) MCS Bike Bus/, "2nd Route JSON is embedded in page body")
+  t.match(response.body, /<[hH]1>\s*Bergen Bike Bus/, "<h1> tag contents match 'Bergen Bike Bus'")
+  t.match(response.body, /routes\s*=\s*\{\s*"bergen-to-court"\s*:\s*\{/, "Route JSON is embedded in page body")
+  t.match(response.body, /trackBusLocation\('bergen-to-court'\)/, 'Sets up GET calls for `bergen-to-court` location endpoint')
+  t.match(response.body, /trackBusLocation\('bergen-to-ps372'\)/, 'Sets up GET calls for `bergen-to-ps378` location endpoint')
 })
 
 test('requests the `/I-AM-NOT_HERE` route', async t => {
@@ -62,28 +67,28 @@ test('requests the beacon page, w/a bogus routeKey, at: `/beacon/I-AM-NOT-HERE/`
   t.match(response.body, /not found/i)
 })
 
-test('requests the beacon page, w/o using a hash, at: `/beacon/manhattan-country-school/`', async t => {
+test('requests the beacon page, w/o using a hash, at: `/beacon/mcs/`', async t => {
   const response = await server.inject({
     method: 'GET',
-    url: '/beacon/manhattan-country-school/'
+    url: '/beacon/mcs/'
   })
   t.equal(response.statusCode, 404, 'returns a status code of 404')
   t.match(response.body, /not found/i)
 })
 
-test(`requests the beacon page, with a hash, at: \`/beacon/manhattan-country-school/${process.env.beacon_hash}\` route`, async t => {
+test(`requests the beacon page, with a hash, at: \`/beacon/mcs/${process.env.beacon_hash}\` route`, async t => {
   const response = await server.inject({
     method: 'GET',
-    url: `/beacon/manhattan-country-school/${process.env.beacon_hash}`
+    url: `/beacon/mcs/${process.env.beacon_hash}`
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
 })
 
-test(`POST and GET location for \`manhattan-country-school\` route`, async t => {
+test(`POST and GET location for \`mcs\` route`, async t => {
   const location = { latitude: 40.803917, longitude: -73.946054 }
   const post_response = await server.inject({
     method: 'POST',
-    url: `/route/manhattan-country-school/location/${process.env.beacon_hash}`,
+    url: `/route/mcs/location/${process.env.beacon_hash}`,
     body: location
 
   })
@@ -92,7 +97,7 @@ test(`POST and GET location for \`manhattan-country-school\` route`, async t => 
 
   const get_response = await server.inject({
     method: 'GET',
-    url: '/route/manhattan-country-school/location'
+    url: '/route/mcs/location'
   })
   t.equal(get_response.statusCode, 200, 'GET returns a status code of 200')
   t.equal(post_response.body, JSON.stringify(location), "GET returns a body equal to POST'ed coordinates")
