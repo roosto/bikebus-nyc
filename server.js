@@ -77,6 +77,7 @@ if(combinedRoutesErrors.length > 0) {
  */
 
 server.get("/", async function (request, reply) {
+  throw new Error()
   // The Handlebars code will be able to access the routes values and build them into the page
   return reply.view("/src/pages/index.hbs", {routes: published_routes})
 });
