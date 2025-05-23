@@ -5,6 +5,8 @@ const geolib = require('geolib')
 const fs = require('node:fs');
 const { parseArgs } = require('node:util');
 
+const remoteHostDefault = 'localhost'
+const remotePortDefault = 80
 const tickIntervalMilisecondsDefault = 15000
 function getUsageText() {
   return "Usage: ride-faker.js [--help] --beacon-hash beacon_hash --routekey routeKeyStr [--tick-interval miliseconds] routeFile"
@@ -26,6 +28,12 @@ function getHelpText() {
   helpText += "                        locations to the API\n"
   helpText += "    --tick-interval|-t  Time, in miliseconds, to wait between POSTing the\n"
   helpText += `                        next coordinates along the route. Default: ${tickIntervalMilisecondsDefault}\n`
+  helpText += "    --remote-host|-s    Address of the web server where we will POST to.\n"
+  helpText += `                        Default: ${remoteHostDefault}\n`
+  helpText += `    --remote-port|-p    TCP port on the remote host. Default: ${remotePortDefault}\n`
+  helpText += "                        If the ENV var 'PORT' is set, and '--remote-port'\n"
+  helpText += "                        is not specified as part of the cli invocation, the\n"
+  helpText += `                        value from the ENV var will be used instead of ${remotePortDefault}\n`
   helpText += "\n"
   helpText += " routeFile:\n"
   helpText += "    path to a route file, though the file need not neccessarily be a route\n"
@@ -58,6 +66,16 @@ const options = {
       short: 't',
       default: `${tickIntervalMilisecondsDefault}`
     },
+    'remote-host': {
+      type: 'string',
+      short: 's',
+      default: remoteHostDefault
+    },
+    'remote-port': {
+      type: 'string',
+      short: 'p',
+      default: ''
+    },
     help: {
       type: 'boolean',
       short: 'h',
@@ -87,6 +105,9 @@ let tickIntervalAsInt = parseInt(values['tick-interval'])
 if (tickIntervalAsInt === NaN || tickIntervalAsInt < 1) {
   exitWithUsage(`--tick-interval must be a non-zero positive integer; got: '${values['tick-interval']}'`)
 }
+
+const remoteHost = values['remote-host']
+const remotePort = values['remote-port'] || process.env.PORT || remotePortDefault
 
 const tickIntervalMiliseconds = tickIntervalAsInt
 const jsonFilePath = positionals[0]
@@ -138,8 +159,8 @@ async function sleep(ms) {
 
 async function move_to_stop(stop) {
   const options = {
-    hostname: 'localhost',
-    port: 61015,
+    hostname: remoteHost,
+    port: remotePort,
     path: `/route/${routeKey}/location/${beaconHash}`,
     method: 'POST',
     headers: {
