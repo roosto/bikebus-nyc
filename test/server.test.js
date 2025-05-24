@@ -13,8 +13,7 @@ test('requests the home page at `/`', async t => {
   t.equal(response.statusCode, 200, 'returns a status code of 200')
   t.match(response.body, /<h1>bikebus.nyc Trackers<\/h1>/, "<h1> tag says 'bikebus.nyc Trackers'")
   t.match(response.body, /<a href="bergen">Bergen Bike Bus/, "Link to Bergen Bike exists")
-  t.match(response.body, /<a href="ps110">The PS110/, "Link to PS 110 Bike Bus exists")
-  t.match(response.body, /<a href="ps770">PS 770 Bike Bus/, "Link to PS 770 Bike Bus exists")
+  t.notMatch(response.body, /<a href="ps770">PS 770 Bike Bus/, "`ps770` route is not published on home page")
   t.notMatch(response.body, /<a href="bergen-to-court">/, "`bergen-to-court` route is not published on home page")
 })
 

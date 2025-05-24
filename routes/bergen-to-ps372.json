@@ -1,6 +1,6 @@
 {
    "bergen-to-ps372" : {
-      "color" : "#CC3333",
+      "color" : "#EFB143",
       "mapHeight" : "250px",
       "mapWidth" : "550px",
       "runInfo" : "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
@@ -20,8 +20,7 @@
                -73.98097
             ],
             "name" : "PS 133",
-            "subtitle" : "",
-            "time" : "8:00"
+            "waypointOnly": true
          },
          {
             "coordinates" : [
@@ -36,8 +35,15 @@
                40.676167,
                -73.983895
             ],
+            "name" : "4th Ave @ Carroll",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+40.676618, -73.985118
+            ],
             "name" : "PS 372",
-            "subtitle" : "4th Ave @ Carroll St",
+            "markerClass" : "rotate-65",
             "time" : "8:05"
          }
       ],
