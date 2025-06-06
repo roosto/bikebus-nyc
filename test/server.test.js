@@ -83,6 +83,19 @@ test(`requests the beacon page, with a hash, at: \`/beacon/mcs/${process.env.bea
   t.equal(response.statusCode, 200, 'returns a status code of 200')
 })
 
+test(`requests the beacon page for a "meta" route at: \`/beacon/bergen/${process.env.beacon_hash}\` route`, async t => {
+  const response = await server.inject({
+    method: 'GET',
+    url: `/beacon/bergen/${process.env.beacon_hash}`
+  })
+  t.equal(response.statusCode, 200, 'returns a status code of 200')
+  t.match(response.body, /<h1[^>]*>Choose your Bike Bus Branch<\/h1>/)
+  let regex_pattern = new RegExp('<a href="[^"]+/bergen-to-ps372/' + process.env.beacon_hash)
+  t.match(response.body, regex_pattern)
+  regex_pattern = new RegExp('<a href="[^"]+/bergen-to-court/' + process.env.beacon_hash)
+  t.match(response.body, regex_pattern)
+})
+
 test(`POST and GET location for \`mcs\` route`, async t => {
   const location = { latitude: 40.803917, longitude: -73.946054 }
   const post_response = await server.inject({
