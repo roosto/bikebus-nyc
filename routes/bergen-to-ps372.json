@@ -5,6 +5,7 @@
       "mapWidth" : "550px",
       "runInfo" : "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
       "publish" : false,
+      "title" : "Bergen Bike Bus: PS 372 Branch",
       "stops" : [
          {
             "coordinates" : [
@@ -47,7 +48,6 @@
             "time" : "8:05"
          }
       ],
-      "title" : "Bergen Bike Bus Tracker",
       "trackerBounds" : {
          "bottomLeft" : [
             40.685828,
