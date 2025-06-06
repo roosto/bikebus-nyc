@@ -11,7 +11,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   
-    <title>Bike Bus Beacon</title> 
+    <title>Bike Bus Beacon for {{routeKey}}</title> 
     
     <style>
       div#conductor-header {
@@ -60,9 +60,7 @@
   <body>
         <!-- This is the start of content for our page --> 
       <div id="conductor-header">
-        <h1 class="title">
-          Bike Bus Beacon <br />
-        </h1>
+        <h1 class="title">Bike Bus Beacon for: <tt>{{routeKey}}</tt></h1>
           <div class="tracking-error" id="location-error-message-container">
           <h2>
             Not tracking.
@@ -95,7 +93,12 @@
         </div>
     
         <div id="conductor-header-spaceholder"></div>
-        <iframe id="tracker" src="/{{routeKey}}"> </iframe>
+        <h3>The below is a preview of the tracking page for the
+          {{#if hasParentMetaRoute}}
+          parent
+          {{/if}}
+          route: <tt>{{iframeRouteKey}}</tt></h3>
+        <iframe id="tracker" src="/{{iframeRouteKey}}"> </iframe>
         
       
         <!-- beacon.js -->

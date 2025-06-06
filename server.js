@@ -134,9 +134,12 @@ server.get(
       return reply.view("/src/pages/beacon-choice.hbs", params);
     }
 
+    const iframeRouteKey = routes[routeKey].hasOwnProperty('parentMetaRoute') ? routes[routeKey].parentMetaRoute : routeKey
     const params = {
       beacon_hash: process.env.beacon_hash,
       routeKey: routeKey,
+      iframeRouteKey: iframeRouteKey,
+      hasParentMetaRoute: routeKey != iframeRouteKey,
     };
     return reply.view("/src/pages/beacon.hbs", params);
   }
