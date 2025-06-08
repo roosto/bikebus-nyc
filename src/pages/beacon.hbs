@@ -216,5 +216,16 @@
             }
             clock();
         </script>
+        <script src="https://unpkg.com/nosleep.js@0.12.0/dist/NoSleep.min.js" integrity="sha384-lp0XiAMtqqqjyVLBYjAcDQzxc2XyGj3sGESoiWbccHdpXjNUPUjWrq5GMqaGHGp9" crossorigin="anonymous"></script>
+        <script>
+          var noSleep = new NoSleep();
+          // Enable wake lock.
+          // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
+          document.addEventListener('click', function enableNoSleep() {
+            document.removeEventListener('click', enableNoSleep, false);
+            noSleep.enable();
+            console.log("wake lock enabled")
+          }, false);
+        </script>
   </body>
 </html>
