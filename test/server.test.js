@@ -39,6 +39,18 @@ test('requests the `/bergen` "meta" route', async t => {
   t.match(response.body, /trackBusLocation\('bergen-to-ps372'\)/, 'Sets up GET calls for `bergen-to-ps378` location endpoint')
 })
 
+test('requests the `/bergen/` "meta" route with a trailing slash', async t => {
+  const response = await server.inject({
+    method: 'GET',
+    url: '/bergen/'
+  })
+  t.equal(response.statusCode, 200, 'returns a status code of 200')
+  t.match(response.body, /<[hH]1>\s*Bergen Bike Bus/, "<h1> tag contents match 'Bergen Bike Bus'")
+  t.match(response.body, /routes\s*=\s*\{\s*"bergen-to-court"\s*:\s*\{/, "Route JSON is embedded in page body")
+  t.match(response.body, /trackBusLocation\('bergen-to-court'\)/, 'Sets up GET calls for `bergen-to-court` location endpoint')
+  t.match(response.body, /trackBusLocation\('bergen-to-ps372'\)/, 'Sets up GET calls for `bergen-to-ps378` location endpoint')
+})
+
 test('requests the `/I-AM-NOT_HERE` route', async t => {
   const response = await server.inject({
     method: 'GET',
