@@ -30,7 +30,7 @@ test('requests the `/mcs` route', async t => {
 test('requests the `/mcs/` route with a trailing slash', async t => {
   const response = await server.inject({
     method: 'GET',
-    url: '/mcs'
+    url: '/mcs/'
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
   t.match(response.body,  /<[hH]1>\s*MCS Bike Bus/, "<h1> tag contents match 'MCS Bike Bus")
