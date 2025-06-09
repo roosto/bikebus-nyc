@@ -3,6 +3,10 @@
  * Check out the two endpoints this back-end API provides in server.get and server.post below
  */
 
+require('heroku-self-ping').default("https://tracker.bikebus.nyc/", {
+  verbose: true
+});
+
 const path = require("path");
 const filterObj = require('filter-obj')
 
