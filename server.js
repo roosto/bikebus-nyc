@@ -119,6 +119,15 @@ server.get("/beacon-instructions", async function (request, reply) {
   return reply.view("/src/pages/tracker-instructions.hbs", params);
 });
 
+// this handles the case where the beacon page on the glitch app redirects to us
+// we send the redirection straight to the `bergen-to-court` route, b/c it's confusing otherwise
+server.get(
+  "/bergen/beacon/bergen/:beacon_hash", async function (request, reply) {
+    const { beacon_hash } = request.params;
+    return reply.redirect('/beacon/bergen-to-court/' + encodeURI(beacon_hash), 301);
+  }
+);
+
 server.get(
   "/beacon/:routeKey/" + process.env.beacon_hash,
   function (request, reply) {
