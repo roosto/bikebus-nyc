@@ -3,6 +3,10 @@
  * Check out the two endpoints this back-end API provides in server.get and server.post below
  */
 
+require('heroku-self-ping').default("https://tracker.bikebus.nyc/", {
+  verbose: true
+});
+
 const path = require("path");
 const filterObj = require('filter-obj')
 
@@ -132,9 +136,24 @@ server.get(
       return reply.code(404).type("text/plain").send("Route not found.");
     }
 
+    // no such thing as a beacon page for a "meta route"
+    // send user to a page where they can the go to the correct route
+    if (routes[routeKey].hasOwnProperty('combinedRouteKeys')) {
+      const routeKeys = routes[routeKey].combinedRouteKeys
+      const params = {
+        beacon_hash: process.env.beacon_hash,
+        routeKeys: routeKeys,
+        routes: filterObj.includeKeys(routes, routeKeys)
+      }
+      return reply.view("/src/pages/beacon-choice.hbs", params);
+    }
+
+    const iframeRouteKey = routes[routeKey].hasOwnProperty('parentMetaRoute') ? routes[routeKey].parentMetaRoute : routeKey
     const params = {
       beacon_hash: process.env.beacon_hash,
       routeKey: routeKey,
+      iframeRouteKey: iframeRouteKey,
+      hasParentMetaRoute: routeKey != iframeRouteKey,
     };
     return reply.view("/src/pages/beacon.hbs", params);
   }

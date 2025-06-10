@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- 
+      This is the main Handlebars template for the site 
+      - When the user visits the homepage or submits a color the app calls the endpoints in main.js
+      - The server script passes data in here and the Handlebars code builds it into the HTML page
+    -->
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+    <title>Bike Bus Beacon</title> 
+    
+    <style>
+      div#conductor-header {
+        background-color:white;
+        width:100%;
+        position:fixed;
+        height: 175px;
+        top: 0;
+      }
+      div#conductor-header-spaceholder {
+        height:195px;
+        padding-top: 0;
+      }
+      iframe#tracker {
+        height: 900px;
+        width: 100%;
+      }
+      
+      h1 span.clock {
+          font-size:2em;  
+      }
+      
+      span#clock-seconds {
+        color: grey;
+      }
+      
+      div.tracking-error {
+        display: none;
+      }
+      
+      div.tracking-error.has-error {
+        display: block;
+        background-color: white;
+        width:100%;
+        height: 900px;
+        position: absolute;
+      }
+      
+        div.tracking-error.has-error h2{
+          font-size: 2em;
+          color: red;
+      }
+      
+    </style>
+  </head>
+  <body>
+        <!-- This is the start of content for our page --> 
+      <div id="conductor-header">
+        <h1 class="title">Choose your Bike Bus Branch</h1>
+          <div class="tracking-error has-error" id="location-error-message-container">
+          <h2>
+            Not tracking.
+          </h2>
+          <p>
+            This Bike Bus has multiple branches. For which branch are you broadcasting location? 
+          </p>
+
+          <ol>
+          {{#each routes}}
+            <li><a href="../{{@key}}/{{../beacon_hash}}"><tt>{{@key}}:</tt> {{this.title}}</a></li>
+          {{/each}}
+          </ol> 
+          <p>
+            Still not working? Find <a href="/beacon-instructions">more troubleshooting ideas here</a>.
+          </p>
+        </div>
+  </body>
+</html>
