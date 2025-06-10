@@ -3,8 +3,10 @@
       "color" : "#EFB143",
       "mapHeight" : "250px",
       "mapWidth" : "550px",
-      "runInfo" : "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
+      "runInfo" : "Track the bike bus live on the map above beginning at 7:15am every Wednesday morning.",
       "publish" : false,
+      "title" : "Bergen Bike Bus: Court St Branch",
+      "parentMetaRoute": "bergen",
       "stops" : [
          {
             "coordinates" : [
@@ -12,31 +14,55 @@
                -73.91115
             ],
             "markerClass" : "rotate-65",
-            "name" : "Rockaway Av",
+            "name" : "Rockaway Ave @ Bergen",
             "subtitle" : "",
-            "time" : "7:05 - 7:20"
+            "time" : "7:15-7:20"
          },
          {
             "coordinates" : [
-               40.674435,
-               -73.91946
+               40.674448,
+               -73.919458
             ],
             "markerClass" : "rotate-65",
-            "name" : "Howard Av",
-            "subtitle" : "",
+            "name" : "Howard Ave",
+            "time" : "",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.676007, -73.919316
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Howard Ave @ Pacific",
             "time" : "7:25"
          },
          {
             "coordinates" : [
-               40.674895,
-               -73.927767
+40.676329, -73.925284
             ],
             "markerClass" : "rotate-65",
-            "name" : "Rochester Av",
+            "name" : "Kingsborough Houses",
+            "time" : ""
+         },
+         {
+            "coordinates" : [
+40.674783, -73.925458
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Kingsborough Houses @ Bergen",
+            "time" : "",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.675050, -73.930545
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Utica Ave @ Bergen",
             "subtitle" : "",
             "time" : "7:30"
          },
-         {
+                  {
             "coordinates" : [
                40.675787,
                -73.94439
@@ -48,13 +74,33 @@
          },
          {
             "coordinates" : [
+40.676250, -73.952636
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Rogers Ave",
+            "subtitle" : "",
+            "time" : "",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.676271, -73.953047
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Bedford Ave",
+            "subtitle" : "",
+            "time" : "7:40"
+         },
+         {
+            "coordinates" : [
                40.677523,
                -73.959131
             ],
             "markerClass" : "rotate-65",
             "name" : "Classon Av",
             "subtitle" : "",
-            "time" : "7:40"
+            "time" : "",
+            "waypointOnly": true
          },
          {
             "coordinates" : [
@@ -122,8 +168,9 @@
                40.685023,
                -73.986139
             ],
-            "markerClass" : "rotate-65 label-left push-up-6x",
-            "name" : "Bond St",
+            "markerClass" : "rotate-65",
+            "name": "",
+            "time" : "Bond St",
             "subtitle" : ""
          },
          {
@@ -137,7 +184,6 @@
             "time" : "8:05"
          }
       ],
-      "title" : "Bergen Bike Bus Tracker",
       "trackerBounds" : {
          "bottomLeft" : [
             40.685828,

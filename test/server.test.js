@@ -27,6 +27,16 @@ test('requests the `/mcs` route', async t => {
   t.match(response.body, /routes\s*=\s*\{\s*"mcs"\s*:\s*\{/, "Route JSON for `mcs` is embedded in page body")
 })
 
+test('requests the `/mcs/` route with a trailing slash', async t => {
+  const response = await server.inject({
+    method: 'GET',
+    url: '/mcs/'
+  })
+  t.equal(response.statusCode, 200, 'returns a status code of 200')
+  t.match(response.body,  /<[hH]1>\s*MCS Bike Bus/, "<h1> tag contents match 'MCS Bike Bus")
+  t.match(response.body, /routes\s*=\s*\{\s*"mcs"\s*:\s*\{/, "Route JSON for `mcs` is embedded in page body")
+})
+
 test('requests the `/bergen` "meta" route', async t => {
   const response = await server.inject({
     method: 'GET',
@@ -81,6 +91,33 @@ test(`requests the beacon page, with a hash, at: \`/beacon/mcs/${process.env.bea
     url: `/beacon/mcs/${process.env.beacon_hash}`
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
+  t.match(response.body, /Bike +Bus +Beacon +for: +<tt>mcs/)
+  t.match(response.body, /tracking +page +for +the\s+route: +<tt>mcs/)
+  t.match(response.body, /<iframe[^>]+src="\/mcs"/)
+})
+
+test(`requests the beacon page for a "meta" route at: \`/beacon/bergen/${process.env.beacon_hash}\` route`, async t => {
+  const response = await server.inject({
+    method: 'GET',
+    url: `/beacon/bergen/${process.env.beacon_hash}`
+  })
+  t.equal(response.statusCode, 200, 'returns a status code of 200')
+  t.match(response.body, /<h1[^>]*>Choose your Bike Bus Branch<\/h1>/)
+  let regex_pattern = new RegExp('<a href="[^"]+/bergen-to-ps372/' + process.env.beacon_hash)
+  t.match(response.body, regex_pattern)
+  regex_pattern = new RegExp('<a href="[^"]+/bergen-to-court/' + process.env.beacon_hash)
+  t.match(response.body, regex_pattern)
+})
+
+test(`requests the beacon page for branch of a "meta" route, with a hash, at: \`/beacon/bergen-to-ps372/${process.env.beacon_hash}\` route`, async t => {
+  const response = await server.inject({
+    method: 'GET',
+    url: `/beacon/bergen-to-ps372/${process.env.beacon_hash}`
+  })
+  t.equal(response.statusCode, 200, 'returns a status code of 200')
+  t.match(response.body, /Bike +Bus +Beacon +for: +<tt>bergen-to-ps372/)
+  t.match(response.body, /tracking +page +for +the\s+parent\s+route: +<tt>bergen/)
+  t.match(response.body, /<iframe[^>]+src="\/bergen"/)
 })
 
 test(`POST and GET location for \`mcs\` route`, async t => {
