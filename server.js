@@ -14,6 +14,7 @@ const filterObj = require('filter-obj')
 const server = require("fastify")({
   // Set this to true for detailed logging:
   logger: false,
+  ignoreTrailingSlash: true,
 });
 
 const storage = require("node-persist");
