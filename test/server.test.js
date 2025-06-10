@@ -76,6 +76,15 @@ test('requests the beacon page, w/a bogus routeKey, at: `/beacon/I-AM-NOT-HERE/`
   t.match(response.body, /not found/i)
 })
 
+test('requests the bergen beacon page with the prefix `/bergen` at:`/bergen/beacon/bergen/{token}`', async t => {
+  const response = await server.inject({
+    method: 'GET',
+    url: '/bergen/beacon/bergen/fsdakjhfdsjh'
+  })
+  t.equal(response.statusCode, 301, 'returns a status code of 301')
+  t.match(response.headers.location, /\/beacon\/bergen-to-court\/fsdakjhfdsjh$/)
+})
+
 test('requests the beacon page, w/o using a hash, at: `/beacon/mcs/`', async t => {
   const response = await server.inject({
     method: 'GET',
