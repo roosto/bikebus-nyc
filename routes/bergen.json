@@ -4,7 +4,7 @@
       "mapHeight" : "250px",
       "mapWidth" : "550px",
       "publish" : true,
-      "runInfo" : "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
+      "runInfo" : "Track the bike bus live on the map above beginning at 7:15am every Wednesday morning.",
       "title" : "Bergen Bike Bus",
       "trackerBounds" : {
          "bottomLeft" : [
