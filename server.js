@@ -17,7 +17,8 @@ const server = require("fastify")({
   ignoreTrailingSlash: true,
 });
 
-const cache = require("nano-cache");
+const NanoCache = require('nano-cache');
+const cache = new NanoCache({ ttl: 100 });
 
 // Setup our static files
 server.register(require("@fastify/static"), {
