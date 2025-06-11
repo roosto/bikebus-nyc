@@ -2,6 +2,7 @@
 
 process.env.beacon_hash ||= 'HASH_FROM_TESTING'
 
+const { setTimeout } = require('node:timers/promises');
 const { test } = require('tap')
 const server = require('../server.js')
 
@@ -146,4 +147,13 @@ test(`POST and GET location for \`mcs\` route`, async t => {
   })
   t.equal(get_response.statusCode, 200, 'GET returns a status code of 200')
   t.equal(get_response.body, JSON.stringify(location), "GET returns a body equal to POST'ed coordinates")
+
+  await setTimeout(100);
+
+  const get_response_later = await server.inject({
+    method: 'GET',
+    url: '/route/mcs/location'
+  })
+  t.equal(get_response_later.statusCode, 200, 'GET returns a status code of 200')
+  t.equal(get_response_later.body, JSON.stringify({ latitude: 0, longitude: 0 }), "GET returns a body equal to POST'ed coordinates")
 })
