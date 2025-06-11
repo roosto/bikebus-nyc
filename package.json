@@ -33,6 +33,7 @@
     "express"
   ],
   "devDependencies": {
+    "@sinonjs/fake-timers": "^14.0.0",
     "geolib": "^3.3.4",
     "tap": "^21.1.0"
   }
