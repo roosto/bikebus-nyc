@@ -184,8 +184,6 @@ server.get("/route/:routeKey/location", async function (request, reply) {
     longitude = cache.get(routeKey + ".longitude");
   }
 
-  console.log({latitude, longitude})
-
   let response = {
     latitude: latitude || 0,
     longitude: longitude || 0,
