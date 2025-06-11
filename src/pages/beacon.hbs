@@ -85,6 +85,11 @@
           <span class="clock" id="clock-hours-minutes"></span><span class="clock" id="clock-seconds"></span>
         </h2>
         
+        <input type="button" id="toggle" value="Keep phone awake and screen on" />
+
+        <br/>
+        <br/>
+
         <label>
           <input type="checkbox" id="publish-location-checkbox" checked/> Publish location
         </label>
@@ -218,6 +223,25 @@
               setTimeout(clock, 1000)
             }
             clock();
+        </script>
+
+        <script src="https://unpkg.com/nosleep.js@0.12.0/dist/NoSleep.min.js" integrity="sha384-lp0XiAMtqqqjyVLBYjAcDQzxc2XyGj3sGESoiWbccHdpXjNUPUjWrq5GMqaGHGp9" crossorigin="anonymous"></script>
+        <script>
+          var noSleep = new NoSleep();
+
+          var wakeLockEnabled = false;
+          var toggleEl = document.querySelector("#toggle");
+          toggleEl.addEventListener('click', function() {
+            if (!wakeLockEnabled) {
+              noSleep.enable(); // keep the screen on!
+              wakeLockEnabled = true;
+              toggleEl.value = "Allow screen to turn off and phone to sleep";
+            } else {
+              noSleep.disable(); // let the screen turn off.
+              wakeLockEnabled = false;
+              toggleEl.value = "Keep phone awake and screen on";
+            }
+          }, false);
         </script>
   </body>
 </html>
