@@ -3,6 +3,15 @@
 process.env.beacon_hash ||= 'HASH_FROM_TESTING'
 
 const { test } = require('tap')
+
+// manipulate time like nano-cache's test do, see here
+// https://github.com/akhoury/nano-cache/blob/8f7f9fe1c2883ac092cf768e1df4e3d62e597648/test/test.js#L5-L9
+const NanoCache = require('nano-cache')
+let fakeNow = null;
+NanoCache.prototype.now = function () {
+    return fakeNow || (new Date()).getTime();
+};
+
 const server = require('../server.js')
 
 test('requests the home page at `/`', async t => {
@@ -130,6 +139,8 @@ test(`requests the beacon page for branch of a "meta" route, with a hash, at: \`
 })
 
 test(`POST and GET location for \`mcs\` route`, async t => {
+  fakeNow = 1;
+
   const location = { latitude: 40.803917, longitude: -73.946054 }
   const post_response = await server.inject({
     method: 'POST',
@@ -145,5 +156,16 @@ test(`POST and GET location for \`mcs\` route`, async t => {
     url: '/route/mcs/location'
   })
   t.equal(get_response.statusCode, 200, 'GET returns a status code of 200')
-  t.equal(post_response.body, JSON.stringify(location), "GET returns a body equal to POST'ed coordinates")
+  t.equal(get_response.body, JSON.stringify(location), "GET returns a body equal to POST'ed coordinates")
+
+  fakeNow = 30 * 60 * 1000 + 1; // pretend 30 minutes passed
+
+  const get_response_later = await server.inject({
+    method: 'GET',
+    url: '/route/mcs/location'
+  })
+  t.equal(get_response_later.statusCode, 200, 'GET returns a status code of 200')
+  t.equal(get_response_later.body, JSON.stringify({ latitude: 0, longitude: 0 }), "GET returns a body with zeroed coordinates since they expired")
+
+  fakeNow = null;
 })
