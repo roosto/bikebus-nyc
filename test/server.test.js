@@ -145,5 +145,5 @@ test(`POST and GET location for \`mcs\` route`, async t => {
     url: '/route/mcs/location'
   })
   t.equal(get_response.statusCode, 200, 'GET returns a status code of 200')
-  t.equal(post_response.body, JSON.stringify(location), "GET returns a body equal to POST'ed coordinates")
+  t.equal(get_response.body, JSON.stringify(location), "GET returns a body equal to POST'ed coordinates")
 })
