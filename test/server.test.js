@@ -5,8 +5,8 @@ process.env.beacon_hash ||= 'HASH_FROM_TESTING'
 const { test } = require('tap')
 
 // manipulate time like nano-cache's test do, see here
-const NanoCache = require('nano-cache')
 // https://github.com/akhoury/nano-cache/blob/8f7f9fe1c2883ac092cf768e1df4e3d62e597648/test/test.js#L5-L9
+const NanoCache = require('nano-cache')
 let fakeNow = null;
 NanoCache.prototype.now = function () {
     return fakeNow || (new Date()).getTime();
