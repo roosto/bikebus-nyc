@@ -18,7 +18,7 @@ const server = require("fastify")({
 });
 
 const NanoCache = require('nano-cache');
-const cache = new NanoCache({ ttl: 100 });
+const cache = new NanoCache({ ttl: 30 * 60 * 1000 }); // 30 minutes in milliseconds
 
 // Setup our static files
 server.register(require("@fastify/static"), {
