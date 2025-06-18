@@ -42,6 +42,13 @@
               background-color:white;
           }
 
+          p.important {
+            font-weight: bold;
+            color: crimson;
+            font-size: large;
+            text-align: center;
+          }
+
 
           .marker-container {
             display: flex;
@@ -164,6 +171,9 @@
             {{route.title}}
           {{/if}}
         </h1>
+          {{#if route.detour}}
+          <p class="important">{{route.detourInfo}}</p>
+          {{/if}}
         <div id="map"></div>
         <h2 id="info">
           {{route.runInfo}}<br />
