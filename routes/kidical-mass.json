@@ -1,0 +1,112 @@
+{
+   "kidical-mass" : {
+      "color" : "#CC3333",
+      "mapHeight" : "1200px",
+      "mapWidth" : "1200px",
+      "runInfo" : "Track the bike bus live on the map above beginning at 7:00am every Wednesday morning.",
+      "publish" : false,
+      "stops" : [
+         {
+            "coordinates" :
+            [40.672905, -73.969868],
+            "markerClass" : "label-left"
+         },
+         {
+            "coordinates" : [
+  40.673073, -73.968730
+            ],
+            "name" : "First Stop on Eastern Parkwasy",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.672976, -73.967446
+            ],
+            "name" : "@ Underhill",
+            "waypointOnly" : true
+         },
+         {
+            "coordinates" : [
+40.672676, -73.966021
+            ],
+            "name" : "@ Washington",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.671792, -73.962744            ],
+            "name" : "@ Classon",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.670806, -73.957921
+            ],
+            "name" : "@ Franklin",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.670244, -73.955233            ],
+            "name" : "@ Bedford",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.670147, -73.953263            ],
+            "name" : "@ Rogers",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.669843, -73.947730            ],
+            "name" : "@ New York Ave",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.669548, -73.942209            ]
+         },
+         {
+            "coordinates" : [
+40.672955, -73.941859            ],
+            "name" : "Kingston @ Park Pl",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.674768, -73.941691            ],
+            "name" : " ",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.674606, -73.938921            ],
+            "name" : "St. Marks @ Albany Ave",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.674489, -73.936300            ],
+            "name" : "St. Marks @ Troy Ave (Albany Houses side)",
+            "waypointOnly": true
+         },
+         {
+            "coordinates" : [
+40.674317, -73.934851            ]
+         }
+      ],
+      "title" : "Bergen Bike Bus Tracker",
+      "trackerBounds" : {
+         "bottomLeft" : [
+            40.685828,
+            -73.91115
+         ],
+         "topRight" : [
+            40.667982,
+            -73.991364
+         ]
+      },
+      "trackerTileSrcPattern" : "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png"
+   }
+}
