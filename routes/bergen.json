@@ -4,9 +4,7 @@
       "mapHeight" : "250px",
       "mapWidth" : "550px",
       "publish" : true,
-      "runInfo" : "Detour for June 18: left to go South on Franklin, then right to go West on Prospect Pl/Warren St with turns on 4th Ave, Bond, & Smith.",
-      "detour": true,
-      "detourInfo": "Note: Route is changed for June 18! West on Prospect Pl/Warren St after Franklin Ave",
+      "runInfo" : "Track the bike bus live on the map above beginning at 7:15am every Wednesday morning.",
       "title" : "Bergen Bike Bus",
       "trackerBounds" : {
          "bottomLeft" : [

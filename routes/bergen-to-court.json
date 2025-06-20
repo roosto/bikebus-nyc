@@ -89,95 +89,100 @@
             "markerClass" : "rotate-65",
             "name" : "Bedford Ave",
             "subtitle" : "",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-         40.676810, -73.955762            ],
-            "markerClass" : "rotate-65",
-            "name" : "Franklin Ave",
             "time" : "7:40"
          },
          {
             "coordinates" : [
-               40.675061, -73.956382
-      ],
+               40.677523,
+               -73.959131
+            ],
             "markerClass" : "rotate-65",
-            "name" : "Prospect Pl"
-                  },
-                           {
-            "coordinates" : [
-               40.676543, -73.963525
-      ],
-            "markerClass" : "rotate-65",
-            "name" : "Prospect @ Washington",
-            "time": "7:45"
-                  },
-                  {
-            "coordinates" : [
-               40.677671, -73.968853
-      ],
-            "markerClass" : "rotate-65",
-            "name" : "Prospect @ Vanderbilt",
-            "time": "7:50"
-                  },
-                           {
-            "coordinates" : [
-               40.678605, -73.973262
-      ],
-            "markerClass" : "rotate-65",
-            "name" : "before Flatbush",
+            "name" : "Classon Av",
+            "subtitle" : "",
+            "time" : "",
             "waypointOnly": true
-                  },
-                           {
+         },
+         {
             "coordinates" : [
-               40.678776, -73.973885
-      ],
+               40.678175,
+               -73.962225
+            ],
             "markerClass" : "rotate-65",
-            "name" : "after Flatbush",
+            "name" : "Grand Av",
+            "subtitle" : "",
+            "time" : "7:45"
+         },
+         {
+            "coordinates" : [
+               40.67943,
+               -73.968222
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Vanderbilt Av",
+            "subtitle" : "",
+            "time" : "7:50"
+         },
+         {
+            "coordinates" : [
+               40.680749,
+               -73.974518
+            ],
+            "name" : "6th Ave",
             "waypointOnly": true
-                  },
-               {
+         },
+         {
             "coordinates" : [
-               40.680284, -73.977729
-      ],
-            "markerClass" : "rotate-65",
-            "name" : "before 5th Ave",
+               40.680876,
+               -73.975161
+            ],
+            "name" : "Flatbush",
             "waypointOnly": true
-                  },
-                           {
+         },
+         {
             "coordinates" : [
-               40.680269, -73.977980
-      ],
-            "markerClass" : "rotate-65",
-            "name" : "Prospect @ 5th Ave",
-            "time" : "7:55"
-                  },
-                           {
-            "coordinates" : [
-               40.681270, -73.980595
-
-      ],
-            "markerClass" : "rotate-65",
-            "name" : "Warren @ 4th Ave",
+               40.680875,
+               -73.975423
+            ],
+            "name" : "After bend east of Flatbush",
             "waypointOnly": true
-                  },
-                           {
+         },
+         {
             "coordinates" : [
-               40.683755, -73.987011
-      ],
+               40.681444, -73.976901
+            ],
+            "name" : "5th Ave",
             "markerClass" : "rotate-65",
-            "name" : "Warren @ Bond St",
-            "time" : "8:00"
-                  },
-                                             {
+            "waypointOnly": true
+         },
+         {
             "coordinates" : [
-               40.685456, -73.991331
-      ],
+               40.68254,
+               -73.97974
+            ],
+            "name" : "4th Ave",
             "markerClass" : "rotate-65",
-            "name" : "Warren @ Smith St",
+            "time": "7:55"
+         },
+         {
+            "coordinates" : [
+               40.685023,
+               -73.986139
+            ],
+            "markerClass" : "rotate-65",
+            "name": "",
+            "time" : "Bond St",
+            "subtitle" : ""
+         },
+         {
+            "coordinates" : [
+               40.687828,
+               -73.993264
+            ],
+            "markerClass" : "rotate-65",
+            "name" : "Court St",
+            "subtitle" : "",
             "time" : "8:05"
-                  }
+         }
       ],
       "trackerBounds" : {
          "bottomLeft" : [
