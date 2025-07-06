@@ -27,6 +27,11 @@
       },
 
       {
+        "coordinates": [40.699723, -73.957163],
+        "name": "Bedford Ave @ Wallabout St",
+        "waypointOnly": false
+      },
+      {
         "coordinates": [40.700573, -73.957327],
         "name": "Bedford bwt Lynch & Heyward",
         "waypointOnly": true
