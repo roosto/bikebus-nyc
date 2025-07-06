@@ -1,0 +1,135 @@
+{
+  "kidicalmass-july-26": {
+    "color": "#CC3333",
+    "mapHeight": "650px",
+    "runInfo": "We will meet at John Hancock Playgrond @ 10:45AM, and arrive at Odd Fellows Ice Cream at Domino Park at 11:45AM. Come ride with us!",
+    "publish": true,
+    "stops": [
+      {
+        "coordinates": [40.682769, -73.95457],
+        "name": "John Hancock Playground"
+      },
+      {
+        "coordinates": [40.682856, -73.953804],
+        "name": "Jefferson @ Bergen",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.689449, -73.955115],
+        "name": "Bedford @ Lafayette",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.698987, -73.957025],
+        "name": "Bedford @ Flushing",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.700573, -73.957327],
+        "name": "Bedford bwt Lynch & Heyward",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.700701, -73.957365],
+        "name": "Bedford @ Lynch; before",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.700842, -73.957442],
+        "name": "Bedford @ Lynch middle",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.700936, -73.957539],
+        "name": "Bedford @ Lynch after",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.707062, -73.964398],
+        "name": "Bedford @ Morton",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.707316, -73.96447],
+        "name": "Bedford bwt Morton & Division",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.707551, -73.964425],
+        "name": "Bedford @ Division",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.708013, -73.964333],
+        "name": "Bedford @ N 10th",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.708202, -73.965947],
+        "name": "N 10th @ Berry",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.710492, -73.965512],
+        "name": "Berry @ Broadway",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.711018, -73.965399],
+        "name": "Berry @ S 6th",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.713839, -73.963622],
+        "name": "Berry @ S 2nd",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.71404, -73.9642],
+        "name": "2nd bwt Berry & Wythe",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.714745, -73.966777],
+        "name": "Berry @ Kent",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.716208, -73.966116],
+        "name": "Kent @ Grand",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.716369, -73.966612],
+        "name": "Grand @ River",
+        "waypointOnly": true
+      },
+
+      {
+        "coordinates": [40.716109, -73.966868],
+        "name": "Odd Fellows Ice Cream"
+      }
+    ],
+    "title": "KiDICAL MASS July 26th",
+    "trackerBounds": {
+      "bottomLeft": [40.680937, -73.97256],
+      "topRight": [40.71755, -73.947202]
+    }
+  }
+}
