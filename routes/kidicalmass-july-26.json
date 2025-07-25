@@ -7,7 +7,7 @@
     "stops": [
       {
         "coordinates": [40.682769, -73.95457],
-        "name": ""
+        "name": "John Hancock Playground: Start"
       },
       {
         "coordinates": [40.682856, -73.953804],
@@ -28,7 +28,7 @@
 
       {
         "coordinates": [40.699723, -73.957163],
-        "name": "",
+        "name": "Bedford @ Wallabout: Water Break",
         "markerClass": "label-left",
         "waypointOnly": false
       },
