@@ -1,7 +1,7 @@
 {
   "kidicalmass-july-26": {
     "color": "#CC3333",
-    "mapHeight": "2100px",
+    "mapHeight": "650px",
     "runInfo": "We will meet at John Hancock Playgrond @ 10:45AM, and arrive at Odd Fellows Ice Cream at Domino Park at 11:45AM. Come ride with us!",
     "publish": true,
     "stops": [
@@ -120,13 +120,14 @@
 
       {
         "coordinates": [40.716109, -73.966868],
-        "name": "Oddfellows 🍦"
+        "name": "Oddfellows 🍦",
+        "markerClass": "label-left"
       }
     ],
     "title": "KiDICAL MASS July 26th",
     "trackerBounds": {
-      "bottomLeft": [40.680937, -73.97256],
-      "topRight": [40.71755, -73.947202]
+      "bottomLeft": [40.682096, -73.97252],
+      "topRight": [40.715953, -73.949195]
     }
   }
 }
