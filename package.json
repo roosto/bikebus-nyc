@@ -12,7 +12,7 @@
     "@fastify/static": "^6.5.0",
     "@fastify/view": "^7.1.0",
     "axios": "^1.9.0",
-    "fastify": "^4.6.0",
+    "fastify": "^4.29.1",
     "filter-obj": "^6.1.0",
     "glob": "^11.0.2",
     "handlebars": "^4.7.7",
