@@ -17,8 +17,8 @@ const server = require("fastify")({
   ignoreTrailingSlash: true,
 });
 
-const storage = require("node-persist");
-const cache = require("nano-cache");
+const NanoCache = require('nano-cache');
+const cache = new NanoCache({ ttl: 30 * 60 * 1000 }); // 30 minutes in milliseconds
 
 // Setup our static files
 server.register(require("@fastify/static"), {
@@ -98,8 +98,6 @@ server.get("/:routeKey", async function (request, reply) {
     routeKeys = route.combinedRouteKeys
   }
 
-  await storage.init();
-
   // params is an object we'll pass to our handlebars template
   let params = {
     routes: filterObj.includeKeys(routes, routeKeys),
@@ -167,11 +165,8 @@ server.post(
       return reply.code(404).type("text/plain").send("Route not found.");
     }
 
-    await storage.init();
-    await storage.setItem(routeKey + ".latitude", request.body.latitude);
-    await storage.setItem(routeKey + ".longitude", request.body.longitude);
-    cache.del(routeKey + ".latitude");
-    cache.del(routeKey + ".longitude");
+    cache.set(routeKey + ".latitude", request.body.latitude);
+    cache.set(routeKey + ".longitude", request.body.longitude);
     return request.body;
   }
 );
@@ -186,18 +181,8 @@ server.get("/route/:routeKey/location", async function (request, reply) {
   let longitude;
 
   if (busIsRunning) {
-    await storage.init();
     latitude = cache.get(routeKey + ".latitude");
-    if (latitude === null) {
-      latitude = await storage.getItem(routeKey + ".latitude");
-      cache.set(routeKey + ".latitude", latitude);
-    }
-
     longitude = cache.get(routeKey + ".longitude");
-    if (longitude === null) {
-      longitude = await storage.getItem(routeKey + ".longitude");
-      cache.set(routeKey + ".longitude", longitude);
-    }
   }
 
   let response = {
