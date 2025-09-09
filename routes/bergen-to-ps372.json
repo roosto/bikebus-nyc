@@ -10,7 +10,8 @@
       "stops" : [
          {
             "coordinates" : [
-40.681224, -73.980461
+               40.68254,
+               -73.97974
             ],
             "name" : "4th Ave",
             "waypointOnly": true
