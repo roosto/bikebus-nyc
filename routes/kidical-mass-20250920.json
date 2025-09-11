@@ -1,0 +1,70 @@
+{
+  "kidical-mass-20250920": {
+    "color": "#CC3333",
+    "mapHeight": "450px",
+    "runInfo": "Track our bike bus live every Friday Morning at 7:30am! #EASTBKBIKECLUB",
+    "publish": false,
+    "stops": [
+       40.696990, -73.979250 Com Barry Park
+       40.698193, -73.979233 Flushing Ave between Navy St & N. Elliot Pl
+       40.697618, -73.965494 Flushing curve, between Ryerson St & Grand Ave
+       40.698044, -73.962865 Flushing @ Williamsburg St W
+       40.699679, -73.962369 Williamsburg St W, before slipstream
+       40.700539, -73.962574 Kent Ave, after slipstream
+       40.704297, -73.967302 Kent Ave @ Clymer St
+       40.706832, -73.968404 Kent Ave @ Division St
+       
+       **snip it snip**
+       
+       40.718091, -73.959603 
+       40.719771, -73.962317
+       40.722531, -73.962304
+       
+      {
+        "coordinates": [40.707267, -73.965935],
+        "name": "Division @ Berry",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.707646, -73.966065],
+        "name": "Berry North of S 11th",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.708202, -73.965947],
+        "name": "S 10th @ Berry",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.710492, -73.965512],
+        "name": "Berry @ Broadway",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.711018, -73.965399],
+        "name": "Berry @ S 6th",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.713839, -73.963622],
+        "name": "Berry @ S 2nd",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.715117, -73.962787],
+        "name": "Berry @ Grand",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.715591, -73.962318],
+        "name": "Berry @ N 1st",
+        "waypointOnly": true
+      }
+    ],
+    "title": "Brownsville BikeBus: Connecting our schools, communities and public spaces through biking",
+    "trackerBounds": {
+      "bottomLeft": [40.658512, -73.914667],
+      "topRight": [40.672899, -73.906678]
+    }
+  }
+}
