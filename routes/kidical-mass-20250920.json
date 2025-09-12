@@ -1,25 +1,50 @@
 {
   "kidical-mass-20250920": {
     "color": "#CC3333",
-    "mapHeight": "450px",
-    "runInfo": "Track our bike bus live every Friday Morning at 7:30am! #EASTBKBIKECLUB",
-    "publish": false,
+    "mapHeight": "950px",
+    "runInfo": "Route for KiDICAL Mass: 4",
+    "publish": true,
     "stops": [
-       40.696990, -73.979250 Com Barry Park
-       40.698193, -73.979233 Flushing Ave between Navy St & N. Elliot Pl
-       40.697618, -73.965494 Flushing curve, between Ryerson St & Grand Ave
-       40.698044, -73.962865 Flushing @ Williamsburg St W
-       40.699679, -73.962369 Williamsburg St W, before slipstream
-       40.700539, -73.962574 Kent Ave, after slipstream
-       40.704297, -73.967302 Kent Ave @ Clymer St
-       40.706832, -73.968404 Kent Ave @ Division St
-       
-       **snip it snip**
-       
-       40.718091, -73.959603 
-       40.719771, -73.962317
-       40.722531, -73.962304
-       
+      {
+        "coordinates": [40.69699, -73.97925],
+        "name": "Com Barry Park",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.698193, -73.979233],
+        "name": "Flushing Ave between Navy St & N. Elliot Pl",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.697618, -73.965494],
+        "name": "Flushing curve, between Ryerson St & Grand Ave",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.698044, -73.962865],
+        "name": "Flushing @ Williamsburg St W",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.699679, -73.962369],
+        "name": "Williamsburg St W, before slipstream",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.700539, -73.962574],
+        "name": "Kent Ave, after slipstream",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.704297, -73.967302],
+        "name": "Kent Ave @ Clymer St",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.706832, -73.968404],
+        "name": "Kent Ave @ Division St",
+        "waypointOnly": true
+      },
       {
         "coordinates": [40.707267, -73.965935],
         "name": "Division @ Berry",
@@ -59,12 +84,37 @@
         "coordinates": [40.715591, -73.962318],
         "name": "Berry @ N 1st",
         "waypointOnly": true
+      },
+      {
+        "coordinates": [40.718091, -73.959603],
+        "name": "Berry @ N 6th",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.719771, -73.962317],
+        "name": "N 6th @ Flushing",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.721414, -73.960473],
+        "name": "Flushing @ Bushwick Inlet Pakr (N 9th)",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.722531, -73.962304],
+        "name": "Bushwick Inlet Park",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.721414, -73.960473],
+        "name": "Flushing @ Bushwick Inlet Pakr (N 9th)",
+        "waypointOnly": true
       }
     ],
-    "title": "Brownsville BikeBus: Connecting our schools, communities and public spaces through biking",
+    "title": "KIDiCAL Mass: 4",
     "trackerBounds": {
-      "bottomLeft": [40.658512, -73.914667],
-      "topRight": [40.672899, -73.906678]
+      "bottomLeft": [40.686195, -73.98293],
+      "topRight": [40.753485, -73.93203]
     }
   }
 }
