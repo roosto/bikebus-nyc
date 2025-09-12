@@ -61,6 +61,16 @@
         "waypointOnly": true
       },
       {
+        "coordinates": [40.708678, -73.965851],
+        "name": "Berry @ Epiphany Playground",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.708632, -73.965482],
+        "name": "Epiphany Playground",
+        "waypointOnly": true
+      },
+      {
         "coordinates": [40.710492, -73.965512],
         "name": "Berry @ Broadway",
         "waypointOnly": true
