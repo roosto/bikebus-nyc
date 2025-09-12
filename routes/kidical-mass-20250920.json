@@ -7,7 +7,7 @@
     "stops": [
       {
         "coordinates": [40.69699, -73.97925],
-        "name": "Com Barry Park",
+        "name": "📍Start: Commodor Barry Park",
         "waypointOnly": true
       },
       {
@@ -92,12 +92,12 @@
       },
       {
         "coordinates": [40.719771, -73.962317],
-        "name": "N 6th @ Flushing",
+        "name": "N 6th @ Kent",
         "waypointOnly": true
       },
       {
         "coordinates": [40.721414, -73.960473],
-        "name": "Flushing @ Bushwick Inlet Pakr (N 9th)",
+        "name": "Kent @ Bushwick Inlet Pakr (N 9th)",
         "waypointOnly": true
       },
       {
