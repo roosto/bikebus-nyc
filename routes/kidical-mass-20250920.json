@@ -109,7 +109,22 @@
         "coordinates": [40.721414, -73.960473],
         "name": "Flushing @ Bushwick Inlet Pakr (N 9th)",
         "waypointOnly": true
-      }
+      },
+      40.723983, -73.957788 Before turn onto Franklin @ N 14th
+      40.726309, -73.957367 Franklin @ Quay St
+      40.726197, -73.958645 Quay @ West St
+      40.734704, -73.960040 West @ Eagle St
+      40.735371, -73.952867 Eagle @ McGuiness Blvd
+      40.735059, -73.952601 Pulaski Bridge (foot of)
+      40.735437, -73.952674 Pulaski @ Eagle St
+      40.737637, -73.953034 Pulaski @ Box St
+      40.737919, -73.953047 Pulaski @ Ash St
+      40.738243, -73.952991 Pulaski curve after Ash
+      40.742773, -73.951491 Pulaksi end in Queens
+      40.743015, -73.951775 Jackson Ave @ 49th Ave
+      40.741946, -73.953785 Jackson @ 51st Ave
+      40.743093, -73.959771 51st Ave @ Center Blvd
+      40.743185, -73.960339 Hunter's Point South Park
     ],
     "title": "KIDiCAL Mass: 4",
     "trackerBounds": {
