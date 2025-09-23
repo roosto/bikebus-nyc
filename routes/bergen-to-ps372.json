@@ -1,64 +1,67 @@
 {
-   "bergen-to-ps372" : {
-      "color" : "#EFB143",
-      "mapHeight" : "250px",
-      "mapWidth" : "550px",
-      "runInfo" : "Track the bike bus live on the map above beginning at 7:15am every Wednesday morning.",
-      "publish" : false,
-      "title" : "Bergen Bike Bus: PS 372 Branch",
-      "parentMetaRoute": "bergen",
-      "stops" : [
-         {
-            "coordinates" : [
-               40.68254,
-               -73.97974
-            ],
-            "name" : "4th Ave",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-               40.680536,
-               -73.98097
-            ],
-            "name" : "PS 133",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-               40.67742,
-               -73.983035
-            ],
-            "name" : "4th Ave @ Union St",
-            "waypointOnly" : true
-         },
-         {
-            "coordinates" : [
-               40.676167,
-               -73.983895
-            ],
-            "name" : "4th Ave @ Carroll",
-            "waypointOnly" : true
-         },
-         {
-            "coordinates" : [
-40.676618, -73.985118
-            ],
-            "name" : "PS 372",
-            "markerClass" : "rotate-65",
-            "time" : "8:05"
-         }
-      ],
-      "trackerBounds" : {
-         "bottomLeft" : [
-            40.685828,
-            -73.91115
-         ],
-         "topRight" : [
-            40.667982,
-            -73.991364
-         ]
+  "bergen-to-ps372": {
+    "color": "#EFB143",
+    "mapHeight": "250px",
+    "mapWidth": "550px",
+    "runInfo": "Track the bike bus live on the map above beginning at 7:15am every Wednesday morning.",
+    "publish": false,
+    "title": "Bergen Bike Bus: PS 372 Branch",
+    "parentMetaRoute": "bergen",
+    "stops": [
+      {
+        "coordinates": [40.68254, -73.97974],
+        "name": "4th Ave",
+        "waypointOnly": true
       },
-      "trackerTileSrcPattern" : "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png"
-   }
+      {
+        "coordinates": [40.680536, -73.98097],
+        "name": "PS 133",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.67742, -73.983035],
+        "name": "Union St",
+        "markerClass": "rotate-65",
+        "time": "8:40",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.676167, -73.983895],
+        "name": "4th Ave @ Carroll",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.673958, -73.985703],
+        "name": "3rd St",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.670972, -73.988218],
+        "name": "8th St",
+        "markerClass": "rotate-65",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.673227, -73.992922],
+        "name": "8th St @ 2nd Ave",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.672615, -73.993389],
+        "name": "2nd Ave @ 9th st",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.672321, -73.992745],
+        "name": "Principles!",
+        "markerClass": "rotate-65",
+        "waypointOnly": false
+      }
+    ],
+    "trackerBounds": {
+      "bottomLeft": [40.685828, -73.91115],
+      "topRight": [40.667982, -73.991364]
+    },
+    "trackerTileSrcPattern": "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png"
+  }
 }
