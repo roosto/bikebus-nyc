@@ -20,13 +20,15 @@
       },
       {
         "coordinates": [40.67742, -73.983035],
-        "name": "4th Ave @ Union St",
-        "waypointOnly": true
+        "name": "Union St",
+        "markerClass": "rotate-65",
+        "time": "8:45",
+        "waypointOnly": false
       },
       {
         "coordinates": [40.676167, -73.983895],
         "name": "4th Ave @ Carroll",
-        "waypointOnly": false
+        "waypointOnly": true
       },
       {
         "coordinates": [40.673958, -73.985703],
@@ -36,7 +38,8 @@
       {
         "coordinates": [40.670972, -73.988218],
         "name": "8th St",
-        "waypointOnly": true
+        "markerClass": "rotate-65",
+        "waypointOnly": false
       },
       {
         "coordinates": [40.673227, -73.992922],
@@ -50,7 +53,8 @@
       },
       {
         "coordinates": [40.672321, -73.992745],
-        "name": "Princi!",
+        "name": "Principles!",
+        "markerClass": "rotate-65",
         "waypointOnly": false
       }
     ],
