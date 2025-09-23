@@ -1,199 +1,129 @@
 {
-   "bergen-to-court" : {
-      "color" : "#EFB143",
-      "mapHeight" : "250px",
-      "mapWidth" : "550px",
-      "runInfo" : "Track the bike bus live on the map above beginning at 7:15am every Wednesday morning.",
-      "publish" : false,
-      "title" : "Bergen Bike Bus: Court St Branch",
-      "parentMetaRoute": "bergen",
-      "stops" : [
-         {
-            "coordinates" : [
-               40.673982,
-               -73.91115
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Rockaway Ave @ Bergen",
-            "subtitle" : "",
-            "time" : "7:15-7:20"
-         },
-         {
-            "coordinates" : [
-               40.674448,
-               -73.919458
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Howard Ave",
-            "time" : "",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-40.676007, -73.919316
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Howard Ave @ Pacific",
-            "time" : "7:25"
-         },
-         {
-            "coordinates" : [
-40.676329, -73.925284
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Kingsborough Houses",
-            "time" : ""
-         },
-         {
-            "coordinates" : [
-40.674783, -73.925458
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Kingsborough Houses @ Bergen",
-            "time" : "",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-40.675050, -73.930545
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Utica Ave @ Bergen",
-            "subtitle" : "",
-            "time" : "7:30"
-         },
-                  {
-            "coordinates" : [
-               40.675787,
-               -73.94439
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Brooklyn Ave",
-            "subtitle" : "",
-            "time" : "7:35"
-         },
-         {
-            "coordinates" : [
-40.676250, -73.952636
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Rogers Ave",
-            "subtitle" : "",
-            "time" : "",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-40.676271, -73.953047
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Bedford Ave",
-            "subtitle" : "",
-            "time" : "7:40"
-         },
-         {
-            "coordinates" : [
-               40.677523,
-               -73.959131
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Classon Av",
-            "subtitle" : "",
-            "time" : "",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-               40.678175,
-               -73.962225
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Grand Av",
-            "subtitle" : "",
-            "time" : "7:45"
-         },
-         {
-            "coordinates" : [
-               40.67943,
-               -73.968222
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Vanderbilt Av",
-            "subtitle" : "",
-            "time" : "7:50"
-         },
-         {
-            "coordinates" : [
-               40.680749,
-               -73.974518
-            ],
-            "name" : "6th Ave",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-               40.680876,
-               -73.975161
-            ],
-            "name" : "Flatbush",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-               40.680875,
-               -73.975423
-            ],
-            "name" : "After bend east of Flatbush",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-               40.681444, -73.976901
-            ],
-            "name" : "5th Ave",
-            "markerClass" : "rotate-65",
-            "waypointOnly": true
-         },
-         {
-            "coordinates" : [
-               40.68254,
-               -73.97974
-            ],
-            "name" : "4th Ave",
-            "markerClass" : "rotate-65",
-            "time": "7:55"
-         },
-         {
-            "coordinates" : [
-               40.685023,
-               -73.986139
-            ],
-            "markerClass" : "rotate-65",
-            "name": "",
-            "time" : "Bond St",
-            "subtitle" : ""
-         },
-         {
-            "coordinates" : [
-               40.687828,
-               -73.993264
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Court St",
-            "subtitle" : "",
-            "time" : "8:05"
-         }
-      ],
-      "trackerBounds" : {
-         "bottomLeft" : [
-            40.685828,
-            -73.91115
-         ],
-         "topRight" : [
-            40.667982,
-            -73.991364
-         ]
+  "bergen-to-court": {
+    "color": "#EFB143",
+    "mapHeight": "250px",
+    "mapWidth": "550px",
+    "runInfo": "Track the bike bus live on the map above beginning at 7:15am every Wednesday morning.",
+    "publish": false,
+    "title": "Bergen Bike Bus: Court St Branch",
+    "parentMetaRoute": "bergen",
+    "stops": [
+      {
+        "coordinates": [40.673982, -73.91115],
+        "markerClass": "rotate-65",
+        "name": "Rockaway Ave @ Bergen",
+        "subtitle": "",
+        "time": "7:15-7:20"
       },
-      "trackerTileSrcPattern" : "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png"
-   }
+      {
+        "coordinates": [40.674448, -73.919458],
+        "markerClass": "rotate-65",
+        "name": "Howard Ave",
+        "time": "",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.676007, -73.919316],
+        "markerClass": "rotate-65",
+        "name": "Howard Ave @ Pacific",
+        "time": "7:25"
+      },
+      {
+        "coordinates": [40.676329, -73.925284],
+        "markerClass": "rotate-65",
+        "name": "Kingsborough Houses",
+        "time": ""
+      },
+      {
+        "coordinates": [40.674783, -73.925458],
+        "markerClass": "rotate-65",
+        "name": "Kingsborough Houses @ Bergen",
+        "time": "",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.67505, -73.930545],
+        "markerClass": "rotate-65",
+        "name": "Utica Ave @ Bergen",
+        "subtitle": "",
+        "time": "7:30"
+      },
+      {
+        "coordinates": [40.675787, -73.94439],
+        "markerClass": "rotate-65",
+        "name": "Brooklyn Ave",
+        "subtitle": "",
+        "time": "7:35"
+      },
+      {
+        "coordinates": [40.67625, -73.952636],
+        "markerClass": "rotate-65",
+        "name": "Rogers Ave",
+        "subtitle": "",
+        "time": "",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.676271, -73.953047],
+        "markerClass": "rotate-65",
+        "name": "Bedford Ave",
+        "subtitle": "",
+        "time": "7:40"
+      },
+      {
+        "coordinates": [40.677523, -73.959131],
+        "markerClass": "rotate-65",
+        "name": "Classon Av",
+        "subtitle": "",
+        "time": "",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.678175, -73.962225],
+        "markerClass": "rotate-65",
+        "name": "Grand Av",
+        "subtitle": "",
+        "time": "7:45"
+      },
+      {
+        "coordinates": [40.67943, -73.968222],
+        "markerClass": "rotate-65",
+        "name": "Vanderbilt Av",
+        "subtitle": "",
+        "time": "7:50"
+      },
+      {
+        "coordinates": [40.680749, -73.974518],
+        "name": "6th Ave",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.680876, -73.975161],
+        "name": "Flatbush",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.680875, -73.975423],
+        "name": "After bend east of Flatbush",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.681444, -73.976901],
+        "name": "5th Ave",
+        "markerClass": "rotate-65",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.68254, -73.97974],
+        "name": "4th Ave",
+        "markerClass": "rotate-65",
+        "time": "7:55"
+      }
+    ],
+    "trackerBounds": {
+      "bottomLeft": [40.685828, -73.91115],
+      "topRight": [40.667982, -73.991364]
+    },
+    "trackerTileSrcPattern": "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png"
+  }
 }
