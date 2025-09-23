@@ -13,7 +13,7 @@
         "markerClass": "rotate-65",
         "name": "Rockaway Ave @ Bergen",
         "subtitle": "",
-        "time": "7:15-7:20"
+        "time": "8:00"
       },
       {
         "coordinates": [40.674448, -73.919458],
@@ -26,7 +26,7 @@
         "coordinates": [40.676007, -73.919316],
         "markerClass": "rotate-65",
         "name": "Howard Ave @ Pacific",
-        "time": "7:25"
+        "time": ""
       },
       {
         "coordinates": [40.676329, -73.925284],
@@ -46,14 +46,14 @@
         "markerClass": "rotate-65",
         "name": "Utica Ave @ Bergen",
         "subtitle": "",
-        "time": "7:30"
+        "time": ""
       },
       {
         "coordinates": [40.675787, -73.94439],
         "markerClass": "rotate-65",
         "name": "Brooklyn Ave",
         "subtitle": "",
-        "time": "7:35"
+        "time": ""
       },
       {
         "coordinates": [40.67625, -73.952636],
@@ -83,14 +83,14 @@
         "markerClass": "rotate-65",
         "name": "Grand Av",
         "subtitle": "",
-        "time": "7:45"
+        "time": "8:30"
       },
       {
         "coordinates": [40.67943, -73.968222],
         "markerClass": "rotate-65",
         "name": "Vanderbilt Av",
         "subtitle": "",
-        "time": "7:50"
+        "time": ""
       },
       {
         "coordinates": [40.680749, -73.974518],
@@ -117,7 +117,7 @@
         "coordinates": [40.68254, -73.97974],
         "name": "4th Ave",
         "markerClass": "rotate-65",
-        "time": "7:55"
+        "time": "8:40"
       }
     ],
     "trackerBounds": {
