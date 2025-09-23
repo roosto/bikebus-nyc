@@ -53,7 +53,7 @@
         "markerClass": "rotate-65",
         "name": "Brooklyn Ave",
         "subtitle": "",
-        "time": ""
+        "time": "8:15"
       },
       {
         "coordinates": [40.67625, -73.952636],
@@ -68,7 +68,7 @@
         "markerClass": "rotate-65",
         "name": "Bedford Ave",
         "subtitle": "",
-        "time": "7:40"
+        "time": ""
       },
       {
         "coordinates": [40.677523, -73.959131],
@@ -83,7 +83,8 @@
         "markerClass": "rotate-65",
         "name": "Grand Av",
         "subtitle": "",
-        "time": "8:30"
+        "time": "8:25",
+        "waypointOnly": false
       },
       {
         "coordinates": [40.67943, -73.968222],
@@ -117,7 +118,8 @@
         "coordinates": [40.68254, -73.97974],
         "name": "4th Ave",
         "markerClass": "rotate-65",
-        "time": "8:40"
+        "time": "8:35",
+        "waypointOnly": false
       }
     ],
     "trackerBounds": {
