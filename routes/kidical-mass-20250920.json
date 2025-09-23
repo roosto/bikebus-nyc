@@ -7,8 +7,9 @@
     "stops": [
       {
         "coordinates": [40.69699, -73.97925],
-        "name": "📍Start: Commodor Barry Park",
-        "waypointOnly": true
+        "name-noshow": "📍Start: Commodor Barry Park",
+        "waypointOnly": false,
+        "markerClass": "push-down-4x"
       },
       {
         "coordinates": [40.698193, -73.979233],
@@ -62,13 +63,8 @@
       },
       {
         "coordinates": [40.708678, -73.965851],
-        "name": "Berry @ Epiphany Playground",
-        "waypointOnly": true
-      },
-      {
-        "coordinates": [40.708632, -73.965482],
-        "name": "Epiphany Playground",
-        "waypointOnly": true
+        "name-noshow": "💧 Water break: Epiphany Playground",
+        "waypointOnly": false
       },
       {
         "coordinates": [40.710492, -73.965512],
@@ -112,8 +108,9 @@
       },
       {
         "coordinates": [40.722531, -73.962304],
-        "name": "Bushwick Inlet Park",
-        "waypointOnly": true
+        "name-noshow": "🏁 Part 1 Finish: Bushwick Inlet Park",
+        "waypointOnly": false,
+        "markerClass": "label-left"
       },
       {
         "coordinates": [40.721414, -73.960473],
@@ -192,8 +189,9 @@
       },
       {
         "coordinates": [40.743185, -73.960339],
-        "name": "Hunter's Point South Park",
-        "waypointOnly": true
+        "name-noshow": "🏁 Finish Part 2: Hunter's Point South Park",
+        "waypointOnly": false,
+        "markerClass": "push-up-8x"
       }
     ],
     "title": "KIDiCAL Mass: 4",
