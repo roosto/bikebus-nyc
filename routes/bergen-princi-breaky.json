@@ -1,0 +1,185 @@
+{
+  "bergen-princi-breaky": {
+    "color": "#EFB143",
+    "mapHeight": "250px",
+    "mapWidth": "550px",
+    "publish": false,
+    "runInfo": "Bergen Bike Brunch on Sept 24: Ride to Principles GI Coffee House",
+    "detour": true,
+    "detourInfo": "Note: Route and time change this week: start at 8am, no route to Court, PS 372 route continues to 8th St & then west to 2nd Ave & Principles GI Coffee House!",
+    "title": "Bergen Bike Brunch @ Principles",
+    "trackerBounds": {
+      "bottomLeft": [40.685828, -73.91115],
+      "topRight": [40.667982, -73.991364]
+    },
+    "stops": [
+      {
+        "coordinates": [40.673982, -73.91115],
+        "markerClass": "rotate-65",
+        "name": "Rockaway Ave @ Bergen",
+        "subtitle": "",
+        "time": "8:00"
+      },
+      {
+        "coordinates": [40.674448, -73.919458],
+        "markerClass": "rotate-65",
+        "name": "Howard Ave",
+        "time": "",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.676007, -73.919316],
+        "markerClass": "rotate-65",
+        "name": "Howard Ave @ Pacific",
+        "time": ""
+      },
+      {
+        "coordinates": [40.676329, -73.925284],
+        "markerClass": "rotate-65",
+        "name": "Kingsborough Houses",
+        "time": ""
+      },
+      {
+        "coordinates": [40.674783, -73.925458],
+        "markerClass": "rotate-65",
+        "name": "Kingsborough Houses @ Bergen",
+        "time": "",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.67505, -73.930545],
+        "markerClass": "rotate-65",
+        "name": "Utica Ave @ Bergen",
+        "subtitle": "",
+        "time": ""
+      },
+      {
+        "coordinates": [40.675787, -73.94439],
+        "markerClass": "rotate-65",
+        "name": "Brooklyn Ave",
+        "subtitle": "",
+        "time": "8:15"
+      },
+      {
+        "coordinates": [40.67625, -73.952636],
+        "markerClass": "rotate-65",
+        "name": "Rogers Ave",
+        "subtitle": "",
+        "time": "",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.676271, -73.953047],
+        "markerClass": "rotate-65",
+        "name": "Bedford Ave",
+        "subtitle": "",
+        "time": ""
+      },
+      {
+        "coordinates": [40.677523, -73.959131],
+        "markerClass": "rotate-65",
+        "name": "Classon Av",
+        "subtitle": "",
+        "time": "",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.678175, -73.962225],
+        "markerClass": "rotate-65",
+        "name": "Grand Av",
+        "subtitle": "",
+        "time": "8:25",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.67943, -73.968222],
+        "markerClass": "rotate-65",
+        "name": "Vanderbilt Av",
+        "subtitle": "",
+        "time": ""
+      },
+      {
+        "coordinates": [40.680749, -73.974518],
+        "name": "6th Ave",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.680876, -73.975161],
+        "name": "Flatbush",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.680875, -73.975423],
+        "name": "After bend east of Flatbush",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.681444, -73.976901],
+        "name": "5th Ave",
+        "markerClass": "rotate-65",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.68254, -73.97974],
+        "name": "4th Ave",
+        "markerClass": "rotate-65",
+        "time": "8:35",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.68254, -73.97974],
+        "name": "4th Ave",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.680536, -73.98097],
+        "name": "PS 133",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.67742, -73.983035],
+        "name": "Union St",
+        "markerClass": "rotate-65",
+        "time": "8:40",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.676167, -73.983895],
+        "name": "4th Ave @ Carroll",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.673958, -73.985703],
+        "name": "3rd St",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.670972, -73.988218],
+        "name": "8th St",
+        "markerClass": "rotate-65",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.673227, -73.992922],
+        "name": "8th St @ 2nd Ave",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.672615, -73.993389],
+        "name": "2nd Ave @ 9th st",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.672321, -73.992745],
+        "name": "Principles!",
+        "markerClass": "rotate-65",
+        "waypointOnly": false
+      }
+    ],
+    "trackerBounds": {
+      "bottomLeft": [40.685828, -73.91115],
+      "topRight": [40.667982, -73.991364]
+    },
+    "trackerTileSrcPattern": "https://cdn.glitch.global/063a0a5f-eb87-40ce-a77a-c3851de5a1b6/bergen.10.05.22.{z}.{x}.{y}.png"
+  }
+}
