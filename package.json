@@ -14,7 +14,7 @@
     "axios": "^1.12.0",
     "fastify": "^4.29.1",
     "filter-obj": "^6.1.0",
-    "glob": "^11.0.2",
+    "glob": "^11.1.0",
     "handlebars": "^4.7.7",
     "heroku-self-ping": "^2.0.1",
     "nano-cache": "^1.1.2",
