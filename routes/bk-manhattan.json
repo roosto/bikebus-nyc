@@ -1,0 +1,38 @@
+{
+  "ps770": {
+    "color": "#CC3333",
+    "mapHeight": "850px",
+    "mapWidth" : "300px",
+    "runInfo": "Adult Bike Bus for commuting from Brooklyn to Manhattan",
+    "publish": true,
+    "stops": [
+      {
+        "coordinates": [40.672366, -73.992715],
+        "markerClass": "",
+        "name": "Principles GI Coffee House",
+        "subtitle": "Meet @ 8:00; wheels down @ 8:15",
+        "time": "8:00"
+      },
+      {
+        "coordinates": [40.673725, -73.995684],
+        "name": "9th St, bwt Canal & 2nd Ave",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.674182, -73.996637],
+        "name": "9th St, below Smith & 9th Station",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.674742, -73.997777],
+        "name": "9th St @ Smith St",
+        "waypointOnly": false
+      }
+    ],
+    "title": "BK ⇢ Work Island",
+    "trackerBounds": {
+      "bottomLeft": [40.668784, -74.022700],
+      "topRight": [40.790019, -73.943710]
+    }
+  }
+}
