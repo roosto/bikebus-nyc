@@ -8,12 +8,13 @@ output_file="$2"
 function to_element {
     local coords="$1"
     local desc="$2"
+    local waypoint_only="$3"
 
     cat <<JSON
   {
     "coordinates": [${coords}],
     "name": "$desc",
-    "waypointOnly": true
+    "waypointOnly": $waypoint_only
   },
 JSON
 
@@ -30,6 +31,15 @@ i=1
 for coords in "${coords_list[@]}"
 do
     read -p "desc for $i: " -r desc
-    to_element "$coords" "$desc" >> "$output_file"
+    read -r -p "'$desc': \`wayPointOnly\`? [Y/n]: " waypoint_only
+
+    if [[ -n $waypoint_only && $waypoint_only =~ ^[nN] ]]
+    then
+        waypoint_only=false
+    else
+        waypoint_only=true
+    fi
+
+    to_element "$coords" "$desc" "$waypoint_only" >> "$output_file"
     i=$(( i + 1 ))
 done
