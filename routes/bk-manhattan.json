@@ -82,8 +82,71 @@
       {
         "coordinates": [40.713043, -74.004196],
         "name": "Center @ Chambers",
-        "waypointOnly": false
-      }
+        "waypointOnly": true
+      },
+
+  {
+    "coordinates": [40.713807, -74.003320],
+    "name": "Foley Sq",
+    "waypointOnly": false
+  },
+  {
+    "coordinates": [40.715167, -74.002139],
+    "name": "Center @ Worth",
+    "waypointOnly": true
+  },
+  {
+    "coordinates": [40.718021, -73.999963],
+    "name": "Center @ Canal",
+    "waypointOnly": true
+  },
+  {
+    "coordinates": [40.720841, -73.997641],
+    "name": "Center @ Broome",
+    "waypointOnly": false
+  },
+  {
+    "coordinates": [40.722317, -73.997129],
+    "name": "Lafayette @ Spring",
+    "waypointOnly": false
+  },
+  {
+    "coordinates": [40.723693, -73.996472],
+    "name": "Lafayette @ Prince",
+    "waypointOnly": false
+  },
+  {
+    "coordinates": [40.725933, -73.994637],
+    "name": "Lafayette @ Bleeker",
+    "waypointOnly": false
+  },
+  {
+    "coordinates": [40.729862, -73.991420],
+    "name": "Lafayette @ Astor Pl",
+    "waypointOnly": false
+  },
+  {
+    "coordinates": [40.730591, -73.990559],
+    "name": "Astor Place",
+    "waypointOnly": false
+  },
+  {
+    "coordinates": [40.733524, -73.989869],
+    "name": "Lafayette @ Wanamaker",
+    "waypointOnly": false
+  },
+  {
+    "coordinates": [40.735327, -73.989905],
+    "name": "4th Ave @ 15th St",
+    "waypointOnly": false
+  },
+  {
+    "coordinates": [40.736566, -73.989026],
+    "name": "4th Ave @ 17th St",
+    "waypointOnly": false
+  }
+
+
 
     ],
     "title": "BK ⇢ Work Island",
