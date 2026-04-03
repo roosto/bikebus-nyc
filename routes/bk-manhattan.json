@@ -27,7 +27,64 @@
         "coordinates": [40.674742, -73.997777],
         "name": "9th St @ Smith St",
         "waypointOnly": false
+      },
+      {
+        "coordinates": [40.676044, -73.997148],
+        "name": "Smith St @ Nelson",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.677051, -74.000710],
+        "name": "Nelson @ Clinton",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.690253, -73.994366],
+        "name": "Clinton @ Atlantic",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.696137, -73.991561],
+        "name": "Clinton before Cadman Plaza W",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.696425, -73.991412],
+        "name": "Clinton @ Cadman Plaza W",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.696429, -73.991090],
+        "name": "Cadman Plaza W @ Tillary",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.696357, -73.988740],
+        "name": "Tillary @ Adams",
+        "waypointOnly": false
+      },
+
+      {
+        "coordinates": [40.699214, -73.988503],
+        "name": "BK Bridge on-ramp before 1st curve",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.700826, -73.990090],
+        "name": "BK Bridge on-ramp after 1st curve",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.711986, -74.004119],
+        "name": "BK Bridge before off-ramp",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.713043, -74.004196],
+        "name": "Center @ Chambers",
+        "waypointOnly": false
       }
+
     ],
     "title": "BK ⇢ Work Island",
     "trackerBounds": {
