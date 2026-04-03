@@ -31,13 +31,13 @@ i=1
 for coords in "${coords_list[@]}"
 do
     read -p "desc for $i: " -r desc
-    read -r -p "'$desc': \`wayPointOnly\`? [Y/n]: " waypoint_only
+    read -r -p "'$desc': \`wayPointOnly\`? [y/N]: " waypoint_only
 
-    if [[ -n $waypoint_only && $waypoint_only =~ ^[nN] ]]
+    if [[ -n $waypoint_only && $waypoint_only =~ ^[yY] ]]
     then
-        waypoint_only=false
-    else
         waypoint_only=true
+    else
+        waypoint_only=false
     fi
 
     to_element "$coords" "$desc" "$waypoint_only" >> "$output_file"
