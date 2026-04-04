@@ -18,13 +18,33 @@ jobs:
       matrix:
         node-version: [25.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+          package-manager:
+            - npm@10.7.0
+            - yarn@4.1.1
+          pre-actions-setup-node:
+            - ':'
+            - corepack enable
+          actions-setup-node-cache:
+            - ''
+            - npm
+            - yarn
+          exclude:
+            - package-manager: npm@10.7.0
+              actions-setup-node-cache: yarn
+            - package-manager: yarn@4.1.1
+              actions-setup-node-cache: npm
     steps:
-    - uses: actions/checkout@v6
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v6
-      with:
-        node-version: ${{ matrix.node-version }}
-        corepack: enable
-    - run: yarn install --frozen-lockfile
-    - run: yarn test
+      - uses: actions/checkout@v6
+      - run: sed --in-place --regexp-extended 's/("packageManager":\s*")[^"]+/\1${{ matrix.package-manager }}/' package.json
+      - run: ${{ matrix.pre-actions-setup-node }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '25.x'
+          cache: ${{ matrix.actions-setup-node-cache }}
+      - run: corepack enable
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
