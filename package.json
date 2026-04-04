@@ -18,7 +18,9 @@
     "handlebars": "^4.7.7",
     "heroku-self-ping": "^2.0.1",
     "nano-cache": "^1.1.2",
-    "node-persist": "^3.1.0"
+    "node-persist": "^3.1.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "engines": {
     "node": "25.x"
@@ -35,6 +37,6 @@
   "devDependencies": {
     "@types/node": "25.x",
     "geolib": "^3.3.4",
-    "tap": "^21.1.0"
+    "tap": "^21.x"
   }
 }
