@@ -13,6 +13,7 @@
     "@fastify/swagger": "^9.7.0",
     "@fastify/view": "^11.x",
     "axios": "^1.12.0",
+    "corepack": "^0.34.6",
     "fastify": "^5.x",
     "filter-obj": "^6.1.0",
     "glob": "^11.1.0",
@@ -20,8 +21,8 @@
     "heroku-self-ping": "^2.0.1",
     "nano-cache": "^1.1.2",
     "node-persist": "^3.1.0",
-    "react": "18.3.x",
-    "react-dom": "18.3.x"
+    "react": "v19.x",
+    "react-dom": "^19.2.4"
   },
   "engines": {
     "node": "25.x"
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@types/node": "25.x",
     "geolib": "^3.3.4",
-    "tap": "^21.x"
-  }
+    "tap": "^21.6.2"
+  },
+  "packageManager": "yarn@4.13.0"
 }
