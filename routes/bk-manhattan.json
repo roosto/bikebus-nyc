@@ -1,15 +1,21 @@
 {
   "bk-manhattan": {
     "color": "#CC3333",
-    "mapHeight": "850px",
+    "mapHeight": "700px",
     "mapWidth" : "300px",
     "runInfo": "Adult Bike Bus for commuting from Brooklyn to Manhattan",
     "publish": true,
+    "title": "BK ⇢ Work Island",
+    "trackerBounds": {
+      "bottomLeft": [40.667294, -74.001482],
+      "topRight": [40.805810, -73.930672]
+    },
+    "minZoomLevel": 10,
     "stops": [
       {
         "coordinates": [40.672366, -73.992715],
         "markerClass": "",
-        "name": "BLARG",
+        "name": "Princi, 139 9th St",
         "subtitle": "Meet @ 8am; wheels down @ ~8:20",
         "time": "8:00"
       },
@@ -156,7 +162,7 @@
         {
         "coordinates": [40.737116, -73.990283],
         "name": "17th & Broadway",
-        "waypointOnly": false
+        "waypointOnly": true
       },
       {
         "coordinates": [40.739878, -73.989590],
@@ -209,11 +215,6 @@
         "name": "3rd Ave @ 125th",
         "waypointOnly": false
       }
-    ],
-    "title": "BK ⇢ Work Island",
-    "trackerBounds": {
-      "bottomLeft": [40.668784, -74.022700],
-      "topRight": [40.790019, -73.943710]
-    }
+    ]
   }
 }
