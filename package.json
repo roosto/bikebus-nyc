@@ -9,8 +9,9 @@
   },
   "dependencies": {
     "@fastify/formbody": "^7.2.0",
-    "@fastify/static": "^6.5.0",
-    "@fastify/view": "^7.1.0",
+    "@fastify/static": "^9.x",
+    "@fastify/swagger": "^9.7.0",
+    "@fastify/view": "^11.x",
     "axios": "^1.12.0",
     "fastify": "^5.x",
     "filter-obj": "^6.1.0",
@@ -19,8 +20,8 @@
     "heroku-self-ping": "^2.0.1",
     "nano-cache": "^1.1.2",
     "node-persist": "^3.1.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react": "18.3.x",
+    "react-dom": "18.3.x"
   },
   "engines": {
     "node": "25.x"
