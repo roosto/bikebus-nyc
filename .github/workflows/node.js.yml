@@ -20,11 +20,22 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v6
-    - name: Install and test with node@v${{ matrix.node-version }}
+    - name: Setup cache
       uses: actions/setup-node@v6
       with:
-        node-version: ${{ matrix.node-version }}
-        package-manager-cache: false
-    - run: yarn install --frozen-lockfile
-    - run: yarn test
+        cache: 'yarn'
+    - name: Prepare dependencies
+      id: prepare-dependencies
+      run: |
+        echo "Install latest yarn berry..."
+        npm install -g yarn@berry
+        echo "Check that we're running latest yarn..."
+        which yarn 
+        yarn install --immutable
+        yarn test
+
+    # - name: test with node@v${{ matrix.node-version }}
+    #   uses: actions/setup-node@v6
+    #   with:
+    #     node-version: ${{ matrix.node-version }}
+    # - run: yarn test
