@@ -19,6 +19,7 @@
     "glob": "v11.x",
     "handlebars": "^4.7.7",
     "heroku-self-ping": "^2.0.1",
+    "ink": "^6.8.0",
     "nano-cache": "^1.1.2",
     "node-persist": "^3.1.0",
     "react": "v19.x",
