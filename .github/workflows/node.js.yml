@@ -28,6 +28,6 @@ jobs:
     - name: Prepare dependencies
       run: |
         echo "installing node packages with yarn"
-        npm install --package-lock-only
-        echo "Running tests with npm"
-        npm test
+        yarn install --frozen-lockfile
+        echo "Running tests with yarn"
+        yarn test
