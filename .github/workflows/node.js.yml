@@ -29,7 +29,5 @@ jobs:
       run: |
         echo "installing node packages with yarn"
         npm install --package-lock-only
-    - name: test
-      run: |
         echo "Running tests with npm"
         npm test
