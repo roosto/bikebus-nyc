@@ -38,6 +38,5 @@
     "@types/node": "25.x",
     "geolib": "^3.3.4",
     "tap": "^21.6.2"
-  },
-  "packageManager": "yarn@4.13.0"
+  }
 }

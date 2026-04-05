@@ -24,18 +24,12 @@ jobs:
     - name: Install & Test
       uses: actions/setup-node@v6
       with:
-        cache: 'yarn'
         node-version: ${{ matrix.node-version }}
     - name: Prepare dependencies
       run: |
-        echo "Install latest yarn ..."
-        npm install -g yarn@latest
-        echo "Check that we're running latest yarn..."
-        which yarn
-        yarn --version
         echo "installing node packages with yarn"
-        yarn install --immutable
+        npm install --package-lock-only
     - name: test
       run: |
-        echo "Running tests with yarn"
-        yarn test
+        echo "Running tests with npm"
+        npm test
