@@ -20,19 +20,18 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Setup cache
+    - name: Install & Test
       uses: actions/setup-node@v6
       with:
-        package-manager-cache: false
+        cache: 'yarn'
         node-version: ${{ matrix.node-version }}
-    - name: Prepare dependencies
-      id: prepare-dependencies
-      run: |
+    - run: |
         echo "Install latest yarn ..."
-        npm install -g yarn@latest
+        npm install -g yarn@berry
         echo "Check that we're running latest yarn..."
-        which yarn 
+        which yarn
+        yarn --version
+        echo "installing node packages with yarn"
         yarn install --immutable
-    - name: Run Tests
-      id: run-tests
-      run: yarn test
+        echo "running tests"
+        yarn test
