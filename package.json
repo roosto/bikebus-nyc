@@ -37,6 +37,7 @@
   ],
   "devDependencies": {
     "@types/node": "25.x",
+    "glob": "v11.x",
     "geolib": "^3.3.4",
     "tap": "^21.6.2"
   }
