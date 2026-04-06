@@ -11,8 +11,7 @@ const path = require("path");
 const filterObj = require('filter-obj')
 
 // Require the fastify framework and instantiate it
-// Require the fastify framework and instantiate it
-const server = require("fastify")({routerOptions: 
+const server = require("fastify")({routerOptions:
     {
       // Set this to true for detailed logging:
       logger: false,
