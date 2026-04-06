@@ -21,7 +21,7 @@
     "node-persist": "^3.1.0"
   },
   "engines": {
-    "node": "25.x"
+    "node": "25.9.x"
   },
   "license": "MIT",
   "keywords": [
