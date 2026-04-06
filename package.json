@@ -19,7 +19,6 @@
     "heroku-self-ping": "^2.0.1",
     "nano-cache": "^1.1.2",
     "node-persist": "^3.1.0",
-    "react": "v19.x",
     "react-dom": "^19.2.4",
     "superagent": "v10.x"
   },
