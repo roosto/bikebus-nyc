@@ -14,17 +14,15 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [23.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+    - uses: actions/checkout@v6
+    - name: Setup Node
+      uses: actions/setup-node@v6
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn install --frozen-lockfile
-    - run: yarn test
+        node-version-file: package.json
+    - name: Install & Test
+      run: |
+        echo "installing node packages with yarn"
+        yarn install --frozen-lockfile
+        echo "Running tests with yarn"
+        yarn test

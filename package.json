@@ -1,6 +1,6 @@
 {
-  "name": "glitch-hello-node",
-  "version": "0.1.0",
+  "name": "bikebus-nyc-tracker",
+  "version": "0.1.1",
   "description": "A simple Node app built on fastify, instantly up and running. Built to be remixed on Glitch.com.",
   "main": "main.js",
   "scripts": {
@@ -9,22 +9,19 @@
   },
   "dependencies": {
     "@fastify/formbody": "^7.2.0",
-    "@fastify/static": "^6.5.0",
-    "@fastify/view": "^7.1.0",
+    "@fastify/static": "^9.1.0",
+    "@fastify/view": "^11.1.1",
     "axios": "^1.12.0",
-    "fastify": "^4.29.1",
+    "fastify": "^5.8.4",
     "filter-obj": "^6.1.0",
-    "glob": "^11.1.0",
+    "glob": "^13.0.6",
     "handlebars": "^4.7.7",
     "heroku-self-ping": "^2.0.1",
     "nano-cache": "^1.1.2",
     "node-persist": "^3.1.0"
   },
   "engines": {
-    "node": "23.x"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/glitch-hello-node"
+    "node": "~25.9"
   },
   "license": "MIT",
   "keywords": [
@@ -34,6 +31,6 @@
   ],
   "devDependencies": {
     "geolib": "^3.3.4",
-    "tap": "^21.1.0"
+    "tap": "^21.6.2"
   }
 }
