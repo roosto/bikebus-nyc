@@ -9,19 +9,19 @@
   },
   "dependencies": {
     "@fastify/formbody": "^7.2.0",
-    "@fastify/static": "^9.x",
-    "@fastify/view": "^11.x",
+    "@fastify/static": "^9.1.0",
+    "@fastify/view": "^11.1.1",
     "axios": "^1.12.0",
-    "fastify": "^5.x",
+    "fastify": "^5.8.4",
     "filter-obj": "^6.1.0",
-    "glob": "v11.x",
+    "glob": "^13.0.6",
     "handlebars": "^4.7.7",
     "heroku-self-ping": "^2.0.1",
     "nano-cache": "^1.1.2",
     "node-persist": "^3.1.0"
   },
   "engines": {
-    "node": "25.9.x"
+    "node": "~25.9"
   },
   "license": "MIT",
   "keywords": [
