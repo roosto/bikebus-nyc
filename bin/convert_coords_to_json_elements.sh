@@ -5,6 +5,17 @@ set -e -o pipefail
 if [[ "$*" =~ \b(-h|--help)\b ]]
 then
     echo "Usage: $0 <input_file> <output_file>"
+    cat <<USAGE
+
+The input file should contain comma-separated lat/long coords, 1 per line, like:
+40.7128, -74.0060
+40.7138, -74.0070
+
+These coords JSON elements that can be used as stops in routes/{my_route}.json
+As each coord is read, there will be interactive prompts for the coords'
+description and if \`wayPointOnly\` should be true or false.
+USAGE
+
     exit 0
 fi
 
