@@ -14,6 +14,9 @@ The input file should contain comma-separated lat/long coords, 1 per line, like:
 These coords JSON elements that can be used as stops in routes/{my_route}.json
 As each coord is read, there will be interactive prompts for the coords'
 description and if \`wayPointOnly\` should be true or false.
+
+Because of the interactive prompts, this script must be given the an output file
+and input file b/c STDIN & STDOUT are used for the interactive prompts
 USAGE
 
     exit 0
@@ -88,6 +91,6 @@ do
         waypoint_only=false
     fi
 
-    to_element "$coords" "$desc" "$waypoint_only"
+    to_element "$coords" "$desc" "$waypoint_only" >> "$output_file"
     i=$(( i + 1 ))
 done
