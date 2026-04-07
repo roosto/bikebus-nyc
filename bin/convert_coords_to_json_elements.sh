@@ -3,7 +3,6 @@
 set -e -o pipefail
 
 filename="$1"
-output_file="$2"
 
 function to_element {
     local coords="$1"
@@ -40,6 +39,6 @@ do
         waypoint_only=false
     fi
 
-    to_element "$coords" "$desc" "$waypoint_only" >> "$output_file"
+    to_element "$coords" "$desc" "$waypoint_only"
     i=$(( i + 1 ))
 done
