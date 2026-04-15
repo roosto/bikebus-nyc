@@ -5,7 +5,7 @@ const glob = require('glob');
 
 let combinedRoutes = {}
 const files = glob.sync('routes/*.json');
-for (const path of files) {
+for (const path of files.sort()) {
     try {
         const jsonFromFile = fs.readFileSync(path, 'utf8')
         const parsedJSON = JSON.parse(jsonFromFile)
