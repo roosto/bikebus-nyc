@@ -1,17 +1,17 @@
 {
   "bk-manhattan": {
     "color": "#CC3333",
-    "mapHeight": "700px",
+    "mapHeight": "550px",
     "mapWidth" : "300px",
-    "runInfo": "GRownUp BikeBus (GRUBB): Princi to Work Island every Thursday",
+    "runInfo": "GRownUp BikeBus (GRUBB): Princi ⇢ Work Island every Thursday",
     "publish": true,
-    "title": "BK ⇢ Work Island GRUBB",
+    "title": "BK ⇢ Work Island",
     "description": "Do you commute from BK to Work Island?<br />\n Do you commute there on a 🚲?<br />\n Do you like riding in group so as not to be hit and killed by a 🚖?<br />\n Do you like social interactions & fostering community amongst cyclists?<br />\nIf you answered 🙂‍↕️ to any of those Qs, you should join us for the GRUBB!<br />Princi → Work Island GRownUp BikeBus: every Thursday @ 8am w/8:20 rollout.<br />\n Join at Princi or anywhere along the route! Can‘t wait to see you on the GRUBB …",
     "trackerBounds": {
       "bottomLeft": [40.667294, -74.001482],
       "topRight": [40.805810, -73.930672]
     },
-    "minZoomLevel": 10,
+    "minZoomLevel": 9,
     "stops": [
       {
         "coordinates": [40.672366, -73.992715],
