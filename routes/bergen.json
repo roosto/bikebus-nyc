@@ -4,7 +4,8 @@
       "mapHeight" : "250px",
       "mapWidth" : "550px",
       "publish" : true,
-      "runInfo" : "Track the bike bus live on the map above beginning at 7:15am every Wednesday morning.",
+      "runInfo" : "West along Bergen St. from East New York to Downtown BK & Gowanus (via 4th Ave) every Wednesday",
+      "description" : "Track the bike bus live on the map above beginning at 7:15am every Wednesday morning.",
       "title" : "Bergen Bike Bus",
       "trackerBounds" : {
          "bottomLeft" : [

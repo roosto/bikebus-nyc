@@ -1,0 +1,221 @@
+{
+  "work-island": {
+    "color": "#CC3333",
+    "mapHeight": "550px",
+    "mapWidth" : "300px",
+    "runInfo": "GRownUp BikeBus (GRUBB): Princi ⇢ Work Island every Thursday",
+    "publish": true,
+    "title": "BK ⇢ Work Island",
+    "description": "Do you commute from BK to Work Island?<br />\n Do you commute there on a 🚲?<br />\n Do you like riding in group so as not to be hit and killed by a 🚖?<br />\n Do you like social interactions & fostering community amongst cyclists?<br />\nIf you answered 🙂‍↕️ to any of those Qs, you should join us for the GRUBB!<br />Princi → Work Island GRownUp BikeBus: every Thursday @ 8am w/8:20 rollout.<br />\n Join at Princi or anywhere along the route! Can‘t wait to see you on the GRUBB …",
+    "trackerBounds": {
+      "bottomLeft": [40.667294, -74.001482],
+      "topRight": [40.805810, -73.930672]
+    },
+    "minZoomLevel": 9,
+    "stops": [
+      {
+        "coordinates": [40.672366, -73.992715],
+        "markerClass": "",
+        "name": "Princi, 139 9th St",
+        "subtitle": "Meet @ 8am; wheels down @ ~8:20",
+        "time": "8:00"
+      },
+      {
+        "coordinates": [40.673725, -73.995684],
+        "name": "9th St, bwt Gowanus Canal & 2nd Ave",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.674182, -73.996637],
+        "name": "9th St, below Smith & 9th Station",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.674742, -73.997777],
+        "name": "9th St @ Smith St",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.676044, -73.997148],
+        "name": "Smith St @ Nelson",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.677051, -74.000710],
+        "name": "Nelson @ Clinton",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.682966, -73.997869],
+        "name": "Clinton @ Union",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.690253, -73.994366],
+        "name": "Clinton @ Atlantic",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.696137, -73.991561],
+        "name": "Clinton before Cadman Plaza W",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.696425, -73.991412],
+        "name": "Clinton @ Cadman Plaza W",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.696429, -73.991090],
+        "name": "Cadman Plaza W @ Tillary",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.696357, -73.988740],
+        "name": "Tillary @ Adams",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.699214, -73.988503],
+        "name": "BK Bridge on-ramp before 1st curve",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.700826, -73.990090],
+        "name": "BK Bridge on-ramp after 1st curve",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.711986, -74.004119],
+        "name": "BK Bridge before off-ramp",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.713043, -74.004196],
+        "name": "Center @ Chambers",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.713807, -74.003320],
+        "name": "Foley Square",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.715167, -74.002139],
+        "name": "Center @ Worth",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.718021, -73.999963],
+        "name": "Center @ Canal",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.720841, -73.997641],
+        "name": "Center @ Broome",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.721466, -73.997393],
+        "name": "Lafayette @ Kenmare",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.722317, -73.997129],
+        "name": "Lafayette @ Spring",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.723693, -73.996472],
+        "name": "Lafayette @ Prince",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.725933, -73.994637],
+        "name": "Lafayette @ Bleeker",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.729862, -73.991420],
+        "name": "Lafayette @ Astor Pl",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.730591, -73.990559],
+        "name": "Astor Place",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.733524, -73.989869],
+        "name": "Lafayette @ Wanamaker",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.735327, -73.989905],
+        "name": "4th Ave @ 15th St",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.736566, -73.989026],
+        "name": "4th Ave @ 17th St",
+        "waypointOnly": true
+      },
+        {
+        "coordinates": [40.737116, -73.990283],
+        "name": "17th & Broadway",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.739878, -73.989590],
+        "name": "Broadway @ 21st",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.741629, -73.993740],
+        "name": "21st @ 6th Ave",
+        "markerClass": "label-left push-up-4x",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.744813, -73.991403],
+        "name": "6th Ave @ 26th",
+        "waypointOnly": true
+      },
+        {
+        "coordinates": [40.740742, -73.981759],
+        "name": "26th @ 3rd Ave",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.745741, -73.978120],
+        "name": "3rd Ave @ 34th",
+        "waypointOnly": true
+      },
+        {
+        "coordinates": [40.750782, -73.974452],
+        "name": "3rd Ave @ 42nd",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.761561, -73.966552],
+        "name": "3rd Ave @ 59th",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.778823, -73.953986],
+        "name": "3rd Ave @ 86th",
+        "waypointOnly": false
+      },
+      {
+        "coordinates": [40.785204, -73.949333],
+        "name": "3rd Ave @ 96th",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.803711, -73.935830],
+        "name": "3rd Ave @ 125th",
+        "waypointOnly": false
+      }
+    ]
+  }
+}

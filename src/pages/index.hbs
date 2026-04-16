@@ -22,11 +22,12 @@
     <!-- This is the start of content for our page -->
 
     <h1>bikebus.nyc Trackers</h1>
-        <ul>
+        <dl>
           {{#each routes}}
-              <li><a href="{{@key}}">{{this.title}}</a></li>
+              <dt><a href="{{@key}}">{{this.title}}</a></dt>
+              <dd>{{this.runInfo}}</dd>
           {{/each}}
-        </ul>
+        </dl>
 
     <h3>
       Brought to you by
