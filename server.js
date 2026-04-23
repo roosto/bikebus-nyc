@@ -46,6 +46,7 @@ let busIsRunning = true;
 
 //eventually the cms or bus_info.json
 const routes = require("./routes.js");
+const { hostname } = require('os');
 const published_routes = Object.fromEntries(Object.entries(routes).filter(([key, val]) => val.publish))
 
 // validate `combinedRouteKeys` properties
@@ -103,6 +104,7 @@ server.get("/:routeKey", async function (request, reply) {
 
   // params is an object we'll pass to our handlebars template
   let params = {
+    hostname: request.headers.host,
     routes: filterObj.includeKeys(routes, routeKeys),
     route,
     routeKeys: routeKeys,
