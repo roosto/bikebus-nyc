@@ -36,6 +36,12 @@ handlebars.registerHelper("toJSON", function (object) {
   return new handlebars.SafeString(JSON.stringify(object));
 });
 
+handlebars.registerHelper('breaklines', function(text) {
+    text = handlebars.Utils.escapeExpression(text);
+    text = text.replace(/\n/gm, '<br>');
+    return new handlebars.SafeString(text);
+});
+
 server.register(require("@fastify/view"), {
   engine: {
     handlebars: handlebars,

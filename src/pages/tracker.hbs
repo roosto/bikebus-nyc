@@ -12,31 +12,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Meta Tags -->
-    <title>Bergen Bike Bus Tracker</title>
-    <meta name="description" content="Track the Bergen Bike Bus live on the map above beginning at 7:15am every Wednesday morning.">
+    <title>{{route.title}}: Tracker &amp; Map</title>
+    <meta name="description" content="Track the {{route.title}} live on the map above beginning at {{route.startTimeStr}} every {{route.runDayStr}} morning.">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="{{route.title}}: Track us LIVE Wednesdays on bikebus.nyc">
+    <meta property="og:title" content="{{route.title}}: Track us LIVE {{route.runDayStr}}s on bikebus.nyc">
     <meta property="og:description" content="{{route.runInfo}} {{route.description}}">
     <meta property="og:image" itemprop="image" content="https://{{hostname}}/images/{{routeKey}}.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://{{hostname}}/{{routeKey}}" />
 
-
-{{!-- <meta property="og:url" content="https://{{hostname}}/{{routeKey}}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bergen Bike Bus Tracker">
-<meta property="og:description" content="Track the Bergen Bike Bus live on the map above beginning at 7:15am every Wednesday morning.">
-<meta property="og:image" content="https://{{hostname}}/images/{{routeKey}}.png"> --}}
-
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://{{hostname}}/{{routeKey}}">
-    <meta name="twitter:title" content="{{route.title}}: Track us LIVE Wednesdays on bikebus.nyc">
+    <meta name="twitter:title" content="{{route.title}}: Track us LIVE {{route.runDayStr}}s on bikebus.nyc">
     <meta name="twitter:description" content="{{route.runInfo}} {{route.description}}">
     <meta name="twitter:image" content="https://{{hostname}}/images/{{routeKey}}.png">
-
-    <title>{{route.title}}: LIVE Tracker</title>
 
     <style>
           body {
@@ -198,8 +189,8 @@
           {{/if}}
         <div id="map"></div>
         <h2 id="info" style="whitespace: pre">
-          <p>{{route.runInfo}}</p>
-          <p>{{{route.description}}}</p>
+          <p>{{breaklines route.runInfo}}</p>
+          <p>{{{breaklines route.description}}}</p>
           Times shown on map are <em>estimates</em>; day of location of the Bike Bus is in real time<br />
           Brought to you by <a href="https://bikebus.nyc/">bikebus.nyc</a>
         </h2>

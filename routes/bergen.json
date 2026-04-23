@@ -5,6 +5,8 @@
       "mapHeight" : "250px",
       "mapWidth" : "550px",
       "publish" : true,
+      "runDayStr" : "Wednesday",
+      "startTimeStr" : "7:15am",
       "runInfo" : "Every Wednesday @ 7:15am west along Bergen; East New York ⇢ Downtown BK with a spur south on 4th Ave",
       "description" : "Bike to school with your kids! Track us live every Wed a.m. & JOIN as we roll by!",
       "title" : "Bergen Bike Bus",
