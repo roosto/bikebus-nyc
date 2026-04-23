@@ -11,14 +11,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="og:updated_time" content="1686368955">
-    <meta property="og:title" content="{{route.title}} Tracker">
-    <meta property="og:description" content="{{route.description}}">
-    <meta property="og:image" itemprop="image" content="/images/open-graph-preview.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tracker.bikebusnyc.org/bergen" />
+    <!-- Meta Tags -->
+    <title>Bergen Bike Bus Tracker</title>
+    <meta name="description" content="Track the Bergen Bike Bus live on the map above beginning at 7:15am every Wednesday morning.">
 
-    <title>{{route.title}} Bike Bus Tracker</title>
+    <!-- TODO: pull slug from element key & pull domain from ENV -->
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:updated_time" content="1686368955">
+    <meta property="og:title" content="{{route.title}}: Track us LIVE Wednesdays on bikebus.nyc">
+    <meta property="og:description" content="{{route.runInfo}} {{route.description}}">
+    <meta property="og:image" itemprop="image" content="/images/{{route.slug}}.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tracker.bikebusnyc.nyc/{{route.slug}}" />
+
+
+{{!-- <meta property="og:url" content="https://tracker.bikebusnyc.nyc/{{route.slug}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bergen Bike Bus Tracker">
+<meta property="og:description" content="Track the Bergen Bike Bus live on the map above beginning at 7:15am every Wednesday morning.">
+<meta property="og:image" content="/images/{{route.slug}}.png"> --}}
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tracker.bikebusnyc.nyc/{{route.slug}}">
+    <meta name="twitter:title" content="{{route.title}}: Track us LIVE Wednesdays on bikebus.nyc">
+    <meta name="twitter:description" content="{{route.runInfo}} {{route.description}}">
+    <meta name="twitter:image" content="/images/{{route.slug}}.png">
+
+    <title>{{route.title}}: LIVE Tracker</title>
 
     <style>
           body {

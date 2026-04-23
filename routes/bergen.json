@@ -1,11 +1,12 @@
 {
    "bergen" : {
       "color" : "#EFB143",
+      "slug" : "bergen",
       "mapHeight" : "250px",
       "mapWidth" : "550px",
       "publish" : true,
-      "runInfo" : "Kids & Families riding west along Bergen St. from East New York to Downtown BK & Gowanus (via 4th Ave) every Wednesday",
-      "description" : "Track the Bergen Bike Bus live on the map above beginning at 7:15am every Wednesday morning.",
+      "runInfo" : "Every Wednesday @ 7:15am west along Bergen; East New York ⇢ Downtown BK with a spur south on 4th Ave",
+      "description" : "Bike to school with your kids! Track us live every Wed a.m. & JOIN as we roll by!",
       "title" : "Bergen Bike Bus",
       "trackerBounds" : {
          "bottomLeft" : [
