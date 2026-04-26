@@ -52,7 +52,6 @@ let busIsRunning = true;
 
 //eventually the cms or bus_info.json
 const routes = require("./routes.js");
-const { hostname } = require('os');
 const published_routes = Object.fromEntries(Object.entries(routes).filter(([key, val]) => val.publish))
 
 // validate `combinedRouteKeys` properties
