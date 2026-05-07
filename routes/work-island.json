@@ -51,7 +51,8 @@
       {
         "coordinates": [40.682966, -73.997869],
         "name": "Clinton @ Union",
-        "waypointOnly": false
+        "waypointOnly": false,
+        "time": "8:25"
       },
       {
         "coordinates": [40.690253, -73.994366],
@@ -75,12 +76,28 @@
       },
       {
         "coordinates": [40.696357, -73.988740],
-        "name": "Tillary @ Adams",
-        "waypointOnly": false
+        "name": "Tillary @ BK Bridge",
+        "waypointOnly": false,
+        "time": "8:35"
       },
       {
         "coordinates": [40.699214, -73.988503],
         "name": "BK Bridge on-ramp before 1st curve",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.699465, -73.988533],
+        "name": "BK Brdg onramp: 1st curve: seg 1",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.699806, -73.988653],
+        "name": "BK Brdg onramp: 2nd curve: seg 2",
+        "waypointOnly": true
+      },
+      {
+        "coordinates": [40.700222, -73.989129],
+        "name": "BK Brdg onramp: 3rd curve: seg 3",
         "waypointOnly": true
       },
       {
@@ -100,8 +117,9 @@
       },
       {
         "coordinates": [40.713807, -74.003320],
-        "name": "Foley Square",
-        "waypointOnly": false
+        "name": "Foley Square (mass up)",
+        "waypointOnly": false,
+        "time": "8:45"
       },
       {
         "coordinates": [40.715167, -74.002139],
@@ -146,7 +164,8 @@
       {
         "coordinates": [40.730591, -73.990559],
         "name": "Astor Place",
-        "waypointOnly": false
+        "waypointOnly": false,
+        "time": "8:50"
       },
       {
         "coordinates": [40.733524, -73.989869],
@@ -192,12 +211,14 @@
       {
         "coordinates": [40.745741, -73.978120],
         "name": "3rd Ave @ 34th",
-        "waypointOnly": true
+        "waypointOnly": true,
+        "time": "9:10"
       },
         {
         "coordinates": [40.750782, -73.974452],
         "name": "3rd Ave @ 42nd",
-        "waypointOnly": false
+        "waypointOnly": false,
+        "time": "9:15"
       },
       {
         "coordinates": [40.761561, -73.966552],
@@ -207,7 +228,8 @@
       {
         "coordinates": [40.778823, -73.953986],
         "name": "3rd Ave @ 86th",
-        "waypointOnly": false
+        "waypointOnly": false,
+        "time": "9:35"
       },
       {
         "coordinates": [40.785204, -73.949333],
@@ -217,7 +239,8 @@
       {
         "coordinates": [40.803711, -73.935830],
         "name": "3rd Ave @ 125th",
-        "waypointOnly": false
+        "waypointOnly": false,
+        "time": "9:45"
       }
     ]
   }
