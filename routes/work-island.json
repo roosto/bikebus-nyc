@@ -110,6 +110,16 @@
         "name": "BK Bridge before off-ramp",
         "waypointOnly": true
       },
+        {
+      "coordinates": [40.712279, -74.004440],
+      "name": "BK Brdg offramp: curve;seg 1",
+      "waypointOnly": true
+    },
+      {
+        "coordinates": [40.712512, -74.004492],
+        "name": "BK Brdg offramp: curve;seg 2",
+        "waypointOnly": true
+      },
       {
         "coordinates": [40.713043, -74.004196],
         "name": "Center @ Chambers",
