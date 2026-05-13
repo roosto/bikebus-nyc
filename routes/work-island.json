@@ -9,7 +9,7 @@
     "runInfo": "Thursdays @ 8:00: GRownUp BikeBus (GRUBB): Princi ⇢ Work Island",
     "publish": true,
     "title": "BK ⇢ Work Island",
-    "description": "Do you commute from BK to Work Island?n Do you commute there on a 🚲?\n Do you like riding in group so as not to be hit and killed by a 🚖?\n Do you like social interactions & fostering community amongst cyclists?\nIf you answered 🙂‍↕️ to any of those Qs, you should join us for the GRUBB!Princi → Work Island GRownUp BikeBus: every Thursday @ 8am w/8:20 rollout.\n Join at Princi or anywhere along the route! Can‘t wait to see you on the GRUBB …",
+    "description": "Do you commute from BK to Work Island?\n Do you commute there on a 🚲?\n When in a group do you feel safer around 🚖?\n Do you like social interactions & fostering community amongst cyclists 🥰?\nIf you answered 🙂‍↕️ to any of those Qs, you should join us for the GRUBB!\nPrinci ⇢ Work Island GRownUp BikeBus: every Thursday @ 8am w/8:20 rollout.\n Join at Princi or anywhere along the route 🗺️\nCan‘t wait to see you on the GRUBB …",
     "trackerBounds": {
       "bottomLeft": [40.667294, -74.001482],
       "topRight": [40.805810, -73.930672]
@@ -233,7 +233,8 @@
       {
         "coordinates": [40.761561, -73.966552],
         "name": "3rd Ave @ 59th",
-        "waypointOnly": false
+        "waypointOnly": false,
+        "time": "9:25"
       },
       {
         "coordinates": [40.778823, -73.953986],
