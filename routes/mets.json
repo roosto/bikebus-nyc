@@ -1,0 +1,51 @@
+{
+   "mets" : {
+      "color" : "#FF5910",
+      "slug" : "mets",
+      "mapHeight" : "250px",
+      "mapWidth" : "550px",
+      "publish" : true,
+      "runDayStr" : "Select Mets Home Games",
+      "startTimeStr" : "6:00pm",
+      "runInfo" : "6pm from 34th Ave & 69th St on Thu, Apr 23; Fri, May 15; Mon, Jun 22; Mon, Jul 27; Tue, Aug 25; & Fri, Sep 4",
+      "description" : "A monthly casual social ride along 34th Ave in Jackson Heights to Citi Field for Mets home games.",
+      "title" : "Citi Field Bike Bus",
+      "trackerBounds" : {
+         "bottomLeft" : [
+            40.685828,
+            -73.91115
+         ],
+         "topRight" : [
+            40.667982,
+            -73.991364
+         ]
+      },
+      "stops" : [
+        {
+            "coordinates": [40.752474, -73.897162],
+            "name": "34th Ave @ 69th St",
+            "waypointOnly": false
+        },
+        {
+            "coordinates": [40.755035, -73.872690],
+            "name": "34th Ave @ Junction Blvd",
+            "waypointOnly": false
+        },
+        {
+            "coordinates": [40.756497, -73.858803],
+            "name": "34th Ave @ 110th St",
+            "waypointOnly": false
+        },
+        {
+            "coordinates": [40.757202, -73.855019],
+            "name": "34th Ave @ 114th St",
+            "waypointOnly": false
+        },
+        {
+            "coordinates": [40.757487, -73.847442],
+            "name": "Left Field Gate",
+            "waypointOnly": false
+        }
+    ]
+   }
+}
