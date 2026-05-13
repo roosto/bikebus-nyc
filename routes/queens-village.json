@@ -1,0 +1,35 @@
+{
+   "queens-village" : {
+      "color" : "#CC3333",
+      "mapHeight" : "450px",
+      "runInfo" : "\"The Funk Line,\" a dedicated route that connects local schools (including PS 33 Edward M. Funk Elementary School) and that prioritizes quiet residential streets and community safety",
+      "title" : "Queens Village Bike Bus: Fridays @ 7:00am to IS-109, Success Academy, PS-295 &, PS-33",
+      "trackerBounds" : {
+         "bottomLeft" : [40.719569, -73.747026],
+         "topRight" : [ 40.730078, -73.733187]
+      },
+      "publish" : true,
+      "stops" : [
+         {
+            "coordinates": [40.728148, -73.745327],
+            "name": "219th St @ 89th Ave",
+            "waypointOnly": false
+         },
+         {
+            "coordinates": [40.726712, -73.747510],
+            "name": "89th Ave @ 216th St",
+            "waypointOnly": false
+         },
+         {
+            "coordinates": [40.724849, -73.750402],
+            "name": "89th Ave @ 214th St",
+            "waypointOnly": false
+         },
+         {
+            "coordinates": [40.721786, -73.746972],
+            "name": "214th St @ 91st Ave",
+            "waypointOnly": false
+         }
+      ]
+   }
+}
