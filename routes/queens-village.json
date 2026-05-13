@@ -13,62 +13,66 @@
          {
             "coordinates": [40.728148, -73.745327],
             "name": "219th St @ 89th Ave",
-            "waypointOnly": false
+            "waypointOnly": false,
+            "time": "7:00"
          },
          {
             "coordinates": [40.726712, -73.747510],
             "name": "89th Ave @ 216th St",
-            "waypointOnly": false
+            "waypointOnly": true
          },
          {
             "coordinates": [40.724849, -73.750402],
             "name": "89th Ave @ 214th St",
-            "waypointOnly": false
+            "waypointOnly": false,
+            "time": "7:10"
          },
          {
             "coordinates": [40.721786, -73.746972],
             "name": "214th St @ 91st Ave",
-            "waypointOnly": false
+            "waypointOnly": true
          },
          {
             "coordinates": [40.721833, -73.746826],
-            "name": "91st Ave @ 214th St",
-            "waypointOnly": false
+            "name": "IS-109",
+            "waypointOnly": false,
+            "time": "7:20"
          },
          {
             "coordinates": [40.720930, -73.746340],
             "name": "214th St @ 92nd Ave",
-            "waypointOnly": false
+            "waypointOnly": true
          },
          {
             "coordinates": [40.721210, -73.745364],
             "name": "92nd Ave @ Vanderveer St",
-            "waypointOnly": false
+            "waypointOnly": true
          },
          {
             "coordinates": [40.721432, -73.744288],
             "name": "92nd Ave @ 215th St",
-            "waypointOnly": false
+            "waypointOnly": true
          },
             {
             "coordinates": [40.726074, -73.736742],
             "name": "92nd Ave before Winchester Blvd",
-            "waypointOnly": false
+            "waypointOnly": true
          },
          {
             "coordinates": [40.726219, -73.736797],
             "name": "92nd Ave after Winchester Blvd",
-            "waypointOnly": false
+            "waypointOnly": true
          },
          {
             "coordinates": [40.726633, -73.734914],
             "name": "92nd Ave @ 222nd St",
-            "waypointOnly": false
+            "waypointOnly": true
          },
          {
             "coordinates": [40.726990, -73.735012],
-            "name": "PS-033",
-            "waypointOnly": false
+            "name": "PS-33",
+            "waypointOnly": false,
+            "time": "8:00"
          }
       ]
    }
