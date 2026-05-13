@@ -237,11 +237,21 @@
               }, 10000);
             }
 
-            function updateMap(lat, long, routeKey)
+            function updateMap(lat, long, routeKey, timestamp)
             {
-                addBusPositionMarker(lat, long, routeKey);
+                addBusPositionMarker(lat, long, routeKey, timestamp);
             }
 
+
+            function getRelativeTime(timestamp) {
+              if (!timestamp) return null;
+              const seconds = Math.floor((Date.now() - timestamp) / 1000);
+              if (seconds < 0) return 'just now';
+              if (seconds < 30) return 'just now';
+              if (seconds < 60) return 'less than 1 min ago';
+              const minutes = Math.floor(seconds / 60) + 1;
+              return `less than ${minutes} min ago`;
+            }
 
             function getBusLocation(routeKey)
             {
@@ -251,7 +261,7 @@
                 .then((response) => response.json())
                 .then((data) => {
                   console.log('Success:', data)
-                  updateMap(data.latitude, data.longitude, routeKey)
+                  updateMap(data.latitude, data.longitude, routeKey, data.timestamp)
                 })
                 .catch((error) => {
                   console.error('Error:', error)
@@ -284,14 +294,19 @@
             }).addTo(map);
 
             const busPositionMarkers = {};
-            function addBusPositionMarker(latitude, longitude, routeKey) {
+            function addBusPositionMarker(latitude, longitude, routeKey, timestamp) {
               const busPositionMarker = busPositionMarkers[routeKey];
 
               if (busPositionMarker) {
                   map.removeLayer(busPositionMarker)
               }
 
-              busPositionMarkers[routeKey] = L.marker([latitude, longitude]).addTo(map)
+              const marker = L.marker([latitude, longitude]);
+              const label = getRelativeTime(timestamp);
+              if (label) {
+                marker.bindTooltip(label, { permanent: true, direction: 'right' });
+              }
+              busPositionMarkers[routeKey] = marker.addTo(map);
             }
 
             /* Stops */

@@ -158,7 +158,7 @@ async function sleep(ms) {
 async function move_to_stop(stop) {
   const data = JSON.stringify(geojsonToGeolibCoords(stop.coordinates));
   try {
-    const response = await axios.post(`http://${remoteHost}:${remotePort}/route/${routeKey}/location/${beaconHash}`, data, {
+    const response = await axios.post(`https://${remoteHost}:${remotePort}/route/${routeKey}/location/${beaconHash}`, data, {
       headers: {
         'Content-Type': 'application/json', // Set appropriate content type
       },
