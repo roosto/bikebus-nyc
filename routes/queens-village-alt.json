@@ -1,12 +1,12 @@
 {
    "queens-village-alt" : {
       "color" : "#CC3333",
-      "mapHeight" : "450px",
+      "mapHeight" : "300px",
       "runInfo" : "ALT QV version",
       "title" : "ALT QV",
       "trackerBounds" : {
-         "bottomLeft" : [40.719569, -73.747026],
-         "topRight" : [ 40.730078, -73.733187]
+         "bottomLeft" : [40.714018, -73.754053],
+         "topRight" : [40.733026, -73.727442]
       },
       "publish" : true,
       "stops" : [
