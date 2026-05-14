@@ -24,11 +24,15 @@
         {
             "coordinates": [40.752474, -73.897162],
             "name": "34th Ave @ 69th St",
+            "markerClass": "rotate-35",
+            "time": "6:00",
             "waypointOnly": false
         },
         {
             "coordinates": [40.755035, -73.872690],
             "name": "34th Ave @ Junction Blvd",
+            "markerClass": "rotate-65",
+            "time": "6:20",
             "waypointOnly": false
         },
         {
