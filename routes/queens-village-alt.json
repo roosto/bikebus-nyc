@@ -8,7 +8,7 @@
          "bottomLeft" : [40.714018, -73.754053],
          "topRight" : [40.733026, -73.727442]
       },
-      "publish" : true,
+      "publish" : false,
       "stops" : [
          {
             "coordinates": [40.728148, -73.745327],
