@@ -181,7 +181,8 @@
   {
     "coordinates": [40.726973, -74.003442],
     "name": "Prince @ 6th Ave",
-    "waypointOnly": false
+    "waypointOnly": false,
+    "time": "8:50"
   },
   {
     "coordinates": [40.731718, -74.000960],
@@ -191,7 +192,8 @@
   {
     "coordinates": [40.737357, -73.996839],
     "name": "6th Ave @ 14th",
-    "waypointOnly": false
+    "waypointOnly": false,
+    "time": "9:00"
   },
 
       {
