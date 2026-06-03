@@ -1,0 +1,79 @@
+{
+   "queens-village" : {
+      "color" : "#CC3333",
+      "mapHeight" : "300px",
+      "runInfo" : "\"The Funk Line,\" a dedicated route that connects local schools (including PS 33 Edward Funk, IS-109, Success Academy, & PS/IS-295) and that prioritizes quiet residential streets and community safety",
+      "title" : "Queens Village Bike Bus: Fridays @ 7:00am to IS-109, Success Academy, PS/IS-295, & PS-33",
+      "trackerBounds" : {
+         "bottomLeft" : [40.714018, -73.754053],
+         "topRight" : [40.733026, -73.727442]
+      },
+      "publish" : true,
+      "stops" : [
+         {
+            "coordinates": [40.728148, -73.745327],
+            "name": "219th St @ 89th Ave",
+            "waypointOnly": false,
+            "time": "7:00"
+         },
+         {
+            "coordinates": [40.726712, -73.747510],
+            "name": "89th Ave @ 216th St",
+            "waypointOnly": true
+         },
+         {
+            "coordinates": [40.724849, -73.750402],
+            "name": "89th Ave @ 214th St",
+            "waypointOnly": false,
+            "time": "7:10"
+         },
+         {
+            "coordinates": [40.721786, -73.746972],
+            "name": "214th St @ 91st Ave",
+            "waypointOnly": true
+         },
+         {
+            "coordinates": [40.721833, -73.746826],
+            "name": "IS-109",
+            "waypointOnly": false,
+            "time": "7:20"
+         },
+         {
+            "coordinates": [40.720930, -73.746340],
+            "name": "214th St @ 92nd Ave",
+            "waypointOnly": true
+         },
+         {
+            "coordinates": [40.721210, -73.745364],
+            "name": "92nd Ave @ Vanderveer St",
+            "waypointOnly": true
+         },
+         {
+            "coordinates": [40.721432, -73.744288],
+            "name": "92nd Ave @ 215th St",
+            "waypointOnly": true
+         },
+            {
+            "coordinates": [40.726074, -73.736742],
+            "name": "92nd Ave before Winchester Blvd",
+            "waypointOnly": true
+         },
+         {
+            "coordinates": [40.726219, -73.736797],
+            "name": "92nd Ave after Winchester Blvd",
+            "waypointOnly": true
+         },
+         {
+            "coordinates": [40.726633, -73.734914],
+            "name": "92nd Ave @ 222nd St",
+            "waypointOnly": true
+         },
+         {
+            "coordinates": [40.726990, -73.735012],
+            "name": "PS-33",
+            "waypointOnly": false,
+            "time": "8:00"
+         }
+      ]
+   }
+}
