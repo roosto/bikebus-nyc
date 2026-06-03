@@ -159,30 +159,51 @@
                40.68254,
                -73.97974
             ],
-            "name" : "4th Ave",
-            "markerClass" : "rotate-65",
-            "time": "7:55"
+            "name" : "7:55 4th Ave",
+            "markerClass" : "rotate-65"
          },
          {
             "coordinates" : [
                40.685023,
                -73.986139
             ],
-            "markerClass" : "rotate-65",
+            "markerClass" : "label-left",
             "name": "",
             "time" : "Bond St",
-            "subtitle" : ""
-         },
-         {
-            "coordinates" : [
-               40.687828,
-               -73.993264
-            ],
-            "markerClass" : "rotate-65",
-            "name" : "Court St",
             "subtitle" : "",
-            "time" : "8:05"
-         }
+            "waypointOnly": false
+         },
+
+  {
+    "coordinates": [40.688182, -73.983985],
+    "name": "Bond @ Schermerhorn",
+    "waypointOnly": false
+  },
+  {
+    "coordinates": [40.689868, -73.988271],
+    "name": "Schermerhorn @ Smith",
+    "waypointOnly": true
+  },
+  {
+    "coordinates": [40.691457, -73.987331],
+    "name": "Smith @ Fulton",
+    "waypointOnly": true
+  },
+  {
+    "coordinates": [40.693152, -73.987240],
+    "name": "Jay @ Metrotech Center",
+    "waypointOnly": true
+  },
+{
+    "coordinates": [40.693041, -73.985230],
+    "name": "Metrotech Center @ Jay",
+    "waypointOnly": true
+  },
+  {
+    "coordinates": [40.691965, -73.985306],
+    "name": "Brooklyn Prospect Charter",
+    "waypointOnly": false
+  }
       ],
       "trackerBounds" : {
          "bottomLeft" : [
