@@ -5,8 +5,8 @@ const geolib = require('geolib')
 const fs = require('node:fs');
 const { parseArgs } = require('node:util');
 
-const remoteHostDefault = 'localhost'
-const remotePortDefault = 80
+const remoteHostDefault = 'http://localhost'
+const remotePortDefault = ''
 const tickIntervalMilisecondsDefault = 15000
 function getUsageText() {
   return "Usage: ride-faker.js [--help] --beacon-hash beacon_hash --routekey routeKeyStr [--tick-interval miliseconds] routeFile"
@@ -27,12 +27,14 @@ will simulate a bike bus moving along the route.
                         locations to the API
     --tick-interval|-t  Time, in miliseconds, to wait between POSTing the
                         next coordinates along the route. Default: ${tickIntervalMilisecondsDefault}
-    --remote-host|-s    Address of the web server where we will POST to.
+    --remote-host|-s    Base URL (including scheme) of the web server
+                        where we will POST to.
                         Default: ${remoteHostDefault}
-    --remote-port|-p    TCP port on the remote host. Default: ${remotePortDefault}
+    --remote-port|-p    Optionally use non-standard TCP port; defaults to
+                        80 or 443 for 'http' or 'https', respectively.
                         If the ENV var 'PORT' is set, and '--remote-port'
                         is not specified as part of the cli invocation, the
-                        value from the ENV var will be used instead of ${remotePortDefault}
+                        value from the ENV var will be used.
 
  routeFile:
     path to a route file, though the file need not neccessarily be a route
@@ -104,7 +106,7 @@ if (tickIntervalAsInt === NaN || tickIntervalAsInt < 1) {
   exitWithUsage(`--tick-interval must be a non-zero positive integer; got: '${values['tick-interval']}'`)
 }
 
-const remoteHost = values['remote-host']
+const remoteHost = values['remote-host'].replace(/\/+$/, '') // remove trailing slashes, if any
 const remotePort = values['remote-port'] || process.env.PORT || remotePortDefault
 
 const tickIntervalMiliseconds = tickIntervalAsInt
@@ -158,7 +160,7 @@ async function sleep(ms) {
 async function move_to_stop(stop) {
   const data = JSON.stringify(geojsonToGeolibCoords(stop.coordinates));
   try {
-    const response = await axios.post(`https://${remoteHost}:${remotePort}/route/${routeKey}/location/${beaconHash}`, data, {
+    const response = await axios.post(`${remoteHost}${remotePort && `:${remotePort}`}/route/${routeKey}/location/${beaconHash}`, data, {
       headers: {
         'Content-Type': 'application/json', // Set appropriate content type
       },
