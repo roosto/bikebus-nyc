@@ -246,11 +246,12 @@
             function getRelativeTime(timestamp) {
               if (!timestamp) return null;
               const seconds = Math.floor((Date.now() - timestamp) / 1000);
-              if (seconds < 0) return 'just now';
-              if (seconds < 30) return 'just now';
-              if (seconds < 60) return 'less than 1 min ago';
+              if (seconds < 45) return 'just now';
+              if (seconds < 75) return '1 min ago';
+              if (seconds < 150) return '2 min ago';
+              if (seconds < 210) return '3 min ago';
               const minutes = Math.floor(seconds / 60) + 1;
-              return `less than ${minutes} min ago`;
+              return `${minutes} min ago`;
             }
 
             function getBusLocation(routeKey)
