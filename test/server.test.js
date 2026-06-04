@@ -156,7 +156,10 @@ test(`POST and GET location for \`mcs\` route`, async t => {
     url: '/route/mcs/location'
   })
   t.equal(get_response.statusCode, 200, 'GET returns a status code of 200')
-  t.equal(get_response.body, JSON.stringify(location), "GET returns a body equal to POST'ed coordinates")
+  const get_data = JSON.parse(get_response.body)
+  t.equal(get_data.latitude, location.latitude, "GET returns correct latitude")
+  t.equal(get_data.longitude, location.longitude, "GET returns correct longitude")
+  t.type(get_data.timestamp, 'number', "GET returns a numeric timestamp")
 
   fakeNow = 30 * 60 * 1000 + 1; // pretend 30 minutes passed
 
@@ -165,7 +168,10 @@ test(`POST and GET location for \`mcs\` route`, async t => {
     url: '/route/mcs/location'
   })
   t.equal(get_response_later.statusCode, 200, 'GET returns a status code of 200')
-  t.equal(get_response_later.body, JSON.stringify({ latitude: 0, longitude: 0 }), "GET returns a body with zeroed coordinates since they expired")
+  const get_data_later = JSON.parse(get_response_later.body)
+  t.equal(get_data_later.latitude, 0, "GET returns latitude 0 after expiry")
+  t.equal(get_data_later.longitude, 0, "GET returns longitude 0 after expiry")
+  t.equal(get_data_later.timestamp, null, "GET returns null timestamp after expiry")
 
   fakeNow = null;
 })

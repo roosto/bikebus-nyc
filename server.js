@@ -177,6 +177,7 @@ server.post(
 
     cache.set(routeKey + ".latitude", request.body.latitude);
     cache.set(routeKey + ".longitude", request.body.longitude);
+    cache.set(routeKey + ".timestamp", Date.now());
     return request.body;
   }
 );
@@ -189,15 +190,18 @@ server.get("/route/:routeKey/location", async function (request, reply) {
 
   let latitude;
   let longitude;
+  let timestamp;
 
   if (busIsRunning) {
     latitude = cache.get(routeKey + ".latitude");
     longitude = cache.get(routeKey + ".longitude");
+    timestamp = cache.get(routeKey + ".timestamp");
   }
 
   let response = {
     latitude: latitude || 0,
     longitude: longitude || 0,
+    timestamp: timestamp || null,
   };
   return response;
 });
