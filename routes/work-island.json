@@ -5,11 +5,11 @@
     "mapHeight": "550px",
     "mapWidth" : "300px",
     "runDayStr": "Thursday",
-    "startTimeStr": "8:00am",
-    "runInfo": "Thursdays @ 8:00: GRownUp BikeBus (GRUBB): Princi ⇢ Work Island",
+    "startTimeStr": "7:15am",
+    "runInfo": "Ticker Tape Days@7am: GRownUp BikeBus (GRUBB): Princi ⇢ Knicks Parade",
     "publish": true,
-    "title": "BK ⇢ Work Island",
-    "description": "Do you commute from BK to Work Island?\n Do you commute there on a 🚲?\n When in a group do you feel safer around 🚖?\n Do you like social interactions & fostering community amongst cyclists 🥰?\nIf you answered 🙂‍↕️ to any of those Qs, you should join us for the GRUBB!\nPrinci ⇢ Work Island GRownUp BikeBus: every Thursday @ 8am w/8:20 rollout.\n Join at Princi or anywhere along the route 🗺️\nCan‘t wait to see you on the GRUBB …",
+    "title": "BK ⇢ Ticker Tape",
+    "description": "Do you commute from BK to the Ticker Tape Parade?\nDo you have a Mayor Muslim?\nIs your bagels Jewish?\nJoin us for the GrUBB to the parade!",
     "trackerBounds": {
       "bottomLeft": [40.667294, -74.001482],
       "topRight": [40.805810, -73.930672]
