@@ -175,3 +175,36 @@ test(`POST and GET location for \`mcs\` route`, async t => {
 
   fakeNow = null;
 })
+
+test(`POST location far from route is ignored for \`mcs\` route`, async t => {
+  fakeNow = 1;
+
+  // First, post a valid on-route location so there's something in the cache
+  const onRouteLocation = { latitude: 40.803917, longitude: -73.946054 }
+  await server.inject({
+    method: 'POST',
+    url: `/route/mcs/location/${process.env.beacon_hash}`,
+    body: onRouteLocation
+  })
+
+  // Now post a location far from the route (Newark, NJ — several km away)
+  const offRouteLocation = { latitude: 40.735657, longitude: -74.172367 }
+  const post_response = await server.inject({
+    method: 'POST',
+    url: `/route/mcs/location/${process.env.beacon_hash}`,
+    body: offRouteLocation
+  })
+  t.equal(post_response.statusCode, 200, 'POST returns a status code of 200')
+  t.same(JSON.parse(post_response.body), { ignored: true }, "POST returns { ignored: true } for off-route location")
+
+  // The cache should still hold the previous on-route location
+  const get_response = await server.inject({
+    method: 'GET',
+    url: '/route/mcs/location'
+  })
+  const get_data = JSON.parse(get_response.body)
+  t.equal(get_data.latitude, onRouteLocation.latitude, "GET still returns the previous on-route latitude")
+  t.equal(get_data.longitude, onRouteLocation.longitude, "GET still returns the previous on-route longitude")
+
+  fakeNow = null;
+})
