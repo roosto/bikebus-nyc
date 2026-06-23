@@ -9,6 +9,7 @@ require('heroku-self-ping').default("https://tracker.bikebus.nyc/", {
 
 const path = require("path");
 const filterObj = require('filter-obj')
+const geolib = require('geolib')
 
 // Require the fastify framework and instantiate it
 const server = require("fastify")({routerOptions:
@@ -49,6 +50,28 @@ server.register(require("@fastify/view"), {
 });
 
 let busIsRunning = true;
+
+// Maximum distance in meters from the route before a GPS ping is ignored.
+// This prevents ride leaders from accidentally sharing their location
+// when traveling to/from the route (e.g., home or work).
+const MAX_DISTANCE_FROM_ROUTE_METERS = 500;
+
+// Returns true if the given coordinates are within MAX_DISTANCE_FROM_ROUTE_METERS
+// of any segment of the route, or if the route has no stops defined.
+function isLocationNearRoute(routeStops, latitude, longitude) {
+  if (!routeStops || routeStops.length < 2) return true;
+
+  const point = { latitude, longitude };
+  const stops = routeStops.map(s => ({ latitude: s.coordinates[0], longitude: s.coordinates[1] }));
+
+  for (let i = 0; i < stops.length - 1; i++) {
+    if (geolib.isPointNearLine(point, stops[i], stops[i + 1], MAX_DISTANCE_FROM_ROUTE_METERS)) {
+      return true;
+    }
+  }
+
+  return false;
+}
 
 //eventually the cms or bus_info.json
 const routes = require("./routes.js");
@@ -173,6 +196,10 @@ server.post(
     const { routeKey } = request.params;
     if (!routes.hasOwnProperty(routeKey)) {
       return reply.code(404).type("text/plain").send("Route not found.");
+    }
+
+    if (!isLocationNearRoute(routes[routeKey].stops, request.body.latitude, request.body.longitude)) {
+      return reply.code(200).send({ ignored: true });
     }
 
     cache.set(routeKey + ".latitude", request.body.latitude);
