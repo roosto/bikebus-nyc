@@ -177,8 +177,6 @@ test(`POST and GET location for \`mcs\` route`, async t => {
 })
 
 test(`POST location far from route is ignored for \`mcs\` route`, async t => {
-  fakeNow = 1;
-
   // First, post a valid on-route location so there's something in the cache
   const onRouteLocation = { latitude: 40.803917, longitude: -73.946054 }
   await server.inject({
@@ -205,6 +203,4 @@ test(`POST location far from route is ignored for \`mcs\` route`, async t => {
   const get_data = JSON.parse(get_response.body)
   t.equal(get_data.latitude, onRouteLocation.latitude, "GET still returns the previous on-route latitude")
   t.equal(get_data.longitude, onRouteLocation.longitude, "GET still returns the previous on-route longitude")
-
-  fakeNow = null;
 })
