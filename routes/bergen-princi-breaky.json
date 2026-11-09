@@ -154,14 +154,14 @@
         "waypointOnly": true
       },
       {
-        "coordinates": [40.670972, -73.988218],
-        "name": "8th St",
+        "coordinates": [40.672165, -73.987199],
+        "name": "6th St",
         "markerClass": "rotate-65",
         "waypointOnly": false
       },
       {
-        "coordinates": [40.673227, -73.992922],
-        "name": "8th St @ 2nd Ave",
+        "coordinates": [40.674417, -73.991877],
+        "name": "6th St @ 2nd Ave",
         "waypointOnly": true
       },
       {
