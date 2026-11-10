@@ -21,7 +21,7 @@ test('requests the home page at `/`', async t => {
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
   t.match(response.body, /<h1>bikebus.nyc Trackers<\/h1>/, "<h1> tag says 'bikebus.nyc Trackers'")
-  t.match(response.body, /<a href="bergen">Bergen Bike Bus/, "Link to Bergen Bike exists")
+  t.match(response.body, /<a href="bergen">Bergen Bike Brunch/, "Link to 'Bergen Bike Brunch' exists")
   t.notMatch(response.body, /<a href="ps770">PS 770 Bike Bus/, "`ps770` route is not published on home page")
   t.notMatch(response.body, /<a href="bergen-to-court">/, "`bergen-to-court` route is not published on home page")
 })
@@ -46,16 +46,17 @@ test('requests the `/mcs/` route with a trailing slash', async t => {
   t.match(response.body, /routes\s*=\s*\{\s*"mcs"\s*:\s*\{/, "Route JSON for `mcs` is embedded in page body")
 })
 
-test('requests the `/bergen` "meta" route', async t => {
+test('requests the `/bergen` route for Bike Brunch', async t => {
   const response = await server.inject({
     method: 'GET',
     url: '/bergen'
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
-  t.match(response.body, /<[hH]1>\s*Bergen Bike Bus/, "<h1> tag contents match 'Bergen Bike Bus'")
-  t.match(response.body, /routes\s*=\s*\{\s*"bergen-to-court"\s*:\s*\{/, "Route JSON is embedded in page body")
-  t.match(response.body, /trackBusLocation\('bergen-to-court'\)/, 'Sets up GET calls for `bergen-to-court` location endpoint')
-  t.match(response.body, /trackBusLocation\('bergen-to-ps372'\)/, 'Sets up GET calls for `bergen-to-ps378` location endpoint')
+  t.match(response.body, /<[hH]1>\s*Bergen Bike Brunch/, "<h1> tag contents match 'Bergen Bike Bus'")
+  t.match(response.body, /routes\s*=\s*\{\s*"bergen"\s*:\s*\{/, "Route JSON is embedded in page body")
+  t.match(response.body, /trackBusLocation\('bergen'\)/, 'Sets up GET calls for `bergen` location endpoint')
+  // #TODO: re-add after temp Bergen Bike Brunch event is over
+  // t.match(response.body, /trackBusLocation\('bergen-to-ps372'\)/, 'Sets up GET calls for `bergen-to-ps378` location endpoint')
 })
 
 test('requests the `/I-AM-NOT_HERE` route', async t => {
@@ -114,17 +115,18 @@ test(`requests the beacon page, with a hash, at: \`/beacon/mcs/${process.env.bea
   t.match(response.body, /<iframe[^>]+src="\/mcs"/)
 })
 
-test(`requests the beacon page for a "meta" route at: \`/beacon/bergen/${process.env.beacon_hash}\` route`, async t => {
+test(`requests the beacon page for a route at: \`/beacon/bergen/${process.env.beacon_hash}\` route`, async t => {
   const response = await server.inject({
     method: 'GET',
     url: `/beacon/bergen/${process.env.beacon_hash}`
   })
   t.equal(response.statusCode, 200, 'returns a status code of 200')
-  t.match(response.body, /<h1[^>]*>Choose your Bike Bus Branch<\/h1>/)
-  let regex_pattern = new RegExp('<a href="[^"]+/bergen-to-ps372/' + process.env.beacon_hash)
-  t.match(response.body, regex_pattern)
-  regex_pattern = new RegExp('<a href="[^"]+/bergen-to-court/' + process.env.beacon_hash)
-  t.match(response.body, regex_pattern)
+  // #TODO: re-add after temp Bergen Bike Brunch event is over
+  // t.match(response.body, /<h1[^>]*>Choose your Bike Bus Branch<\/h1>/)
+  // let regex_pattern = new RegExp('<a href="[^"]+/bergen-to-ps372/' + process.env.beacon_hash)
+  // t.match(response.body, regex_pattern)
+  // regex_pattern = new RegExp('<a href="[^"]+/bergen/' + process.env.beacon_hash)
+  // t.match(response.body, regex_pattern)
 })
 
 test(`requests the beacon page for branch of a "meta" route, with a hash, at: \`/beacon/bergen-to-ps372/${process.env.beacon_hash}\` route`, async t => {
